@@ -76,7 +76,6 @@ This project helps practice and reinforce:
 - Designing scalable front-end architectures.
 - Separating structure, styling, and behavior responsibly.
 - Preparing for modern component-based frameworks.
-- Improving performance through minimal CSS output.
 
 ---
 
