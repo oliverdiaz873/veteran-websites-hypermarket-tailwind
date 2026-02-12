@@ -1,6 +1,6 @@
 # Veteran Websites – Hypermarket (Tailwind Edition)
 
-A veteran-level hypermarket website built with **HTML**, **Tailwind CSS**, and **JavaScript**, following a more professional and responsibility-driven front-end architecture.
+A veteran-level hypermarket website built with **HTML**, **Tailwind CSS**, and **JavaScript**.
 
 ---
 
