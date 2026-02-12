@@ -1,0 +1,58 @@
+/* ==================== FUENTES PERSONALIZADAS ==================== */
+
+/* Fuente Domine - Regular */
+@font-face {
+    font-family: 'Domine';
+    src: url('../assets/fonts/Domine/Domine-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Fuente Domine - Medium */
+@font-face {
+    font-family: 'Domine';
+    src: url('../assets/fonts/Domine/Domine-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Fuente Domine - SemiBold */
+@font-face {
+    font-family: 'Domine';
+    src: url('../assets/fonts/Domine/Domine-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Fuente Domine - Bold */
+@font-face {
+    font-family: 'Domine';
+    src: url('../assets/fonts/Domine/Domine-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ==================== VARIABLES DE FUENTES ==================== */
+
+:root {
+    --font-family-primary: 'Domine', Georgia, serif;
+    --font-weight-light: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+}
+
+/* ==================== APLICACIÓN DE FUENTES ==================== */
+
+/* Aplicar fuente al h1 del header y al span del brand */
+.brand h1, .brand span {
+    font-family: var(--font-family-primary);
+}
+
+
+
+

@@ -1,0 +1,962 @@
+/* ==========================================================================
+   HEADER STYLES
+   ========================================================================== */
+
+/* Header global */
+header {
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    box-sizing: border-box;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Contenedor principal */
+.header-container {
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-start;
+    display: inline-flex;
+    padding: 5px 15px;
+}
+
+/* Logo + título */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: white;
+
+}
+
+.brand img {
+    width: clamp(25px, 8vw, 40px);
+}
+
+.brand h1,
+.brand span {
+    font-size: clamp(14px, 4vw, 20px);
+    margin: 0;
+    flex-wrap: nowrap;
+}
+
+/* Botón hamburguesa */
+.menu-btn {
+    font-size: 22px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.menu-btn:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Menú principal */
+.nav-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    display: block;
+    text-align: left;
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+}
+
+/* hover de los botones del menú */
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* ==========================================================================
+   UTILITY STYLES (iconos search y shopping-car)
+   ========================================================================== */
+
+/* Container for utilities */
+.header-utils {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    /* Equivalent to gap-2 */
+    margin-left: auto;
+}
+
+@media (min-width: 768px) {
+    .header-utils {
+        gap: 0.75rem;
+        /* Equivalent to md:gap-3 */
+        margin-left: 0;
+    }
+}
+
+/* Common utility button style (botones de Search & Cart) */
+.util-btn {
+    background-color: transparent !important;
+    border: none !important;
+    color: white !important;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    width: 33px;
+    height: 33px;
+    padding: 0;
+    position: relative;
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    .util-btn {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.util-btn:hover {
+    background-color: rgba(255, 255, 255, 0.25) !important;
+    transform: scale(1.1);
+}
+
+/* Icons inside utilities (SVG size parity) iconos de Search y Cart */
+.util-icon {
+    width: 22px;
+    height: 22px;
+    display: block;
+}
+
+/* Search input field */
+.search-input-modern {
+    display: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: white;
+    color: black;
+    margin-right: 0.5rem;
+    width: 150px;
+    font-size: 0.875rem;
+    /* text-sm */
+    transition: all 0.3s ease;
+}
+
+@media (min-width: 640px) {
+    .search-input-modern {
+        width: 200px;
+    }
+}
+
+@media (min-width: 768px) {
+    .search-input-modern {
+        width: 300px;
+        font-size: 1rem;
+        /* md:text-base */
+    }
+}
+
+.search-input-modern:focus {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Search dropdown list */
+.search-results-list {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.95);
+    color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    max-height: 250px;
+    overflow-y: auto;
+    display: none;
+    z-index: 10001;
+    list-style: none;
+    padding: 0;
+    margin-top: 5px;
+}
+
+@media (min-width: 768px) {
+    .search-results-list {
+        width: 400px;
+    }
+}
+
+.search-results-list li {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.2s;
+}
+
+.search-results-list li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Cart counter badge (circulo rojo con el número de productos en el boton del carrito) */
+.cart-badge {
+    position: absolute;
+    top: -1px;
+    right: -4px;
+    background-color: #dc2626;
+    /* bg-red-600 */
+    color: white;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 9999px;
+    line-height: 1;
+    font-size: 9px;
+    pointer-events: none;
+}
+
+@media (min-width: 768px) {
+    .cart-badge {
+        font-size: 10px;
+    }
+}
+
+/* Logic for active search state */
+body.menu-busqueda-activa #input-buscar {
+    display: inline-block !important;
+}
+
+@media (min-width: 768px) {
+    body.menu-busqueda-activa .nav-links>ul>li:not(.buscador-header):not(.carrito-item) {
+        display: none;
+    }
+}
+
+@media (max-width: 767.98px) {
+    body.menu-busqueda-activa .brand {
+        display: none;
+    }
+
+    body.menu-busqueda-activa .menu-btn {
+        display: none;
+    }
+
+    body.menu-busqueda-activa .header-utils {
+        width: 100%;
+        justify-content: center;
+        margin: 0;
+    }
+
+    body.menu-busqueda-activa #input-buscar {
+        flex: 1;
+        max-width: calc(100vw - 80px);
+    }
+}
+
+
+/* Estilo para la flecha desplegable del botón categorías */
+.dropdown-arrow {
+    font-size: 0.7em;
+    margin-left: 3px;
+    opacity: 0.8;
+}
+
+/* Estilo para las flechas hacia la derecha de submenús */
+.right-arrow {
+    font-size: 1.5em;
+    margin-left: 3px;
+    opacity: 0.8;
+    vertical-align: middle;
+    line-height: 1;
+}
+
+/* Submenús nivel 2 y 3 */
+.nav-links li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 8px;
+    min-width: 220px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    text-align: left;
+}
+
+/* Enlaces dentro de submenús nivel 2 y 3 */
+.nav-links li ul li a {
+    text-align: left;
+}
+
+.nav-links li ul li ul {
+    top: 0;
+    left: 100%;
+}
+
+/* Mostrar submenús al hover (desktop) */
+@media (min-width: 768px) {
+    .nav-links li:hover>ul {
+        display: block;
+    }
+}
+
+
+.nav-links-mobile li ul {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding-left: 10px;
+}
+
+/* Mostrar submenús en móvil cuando se clickea */
+.nav-links-mobile li.show>ul {
+    display: flex;
+}
+
+/* ======================== Desktop (>=768px) ======================== */
+@media (min-width: 768px) {
+
+    .menu-btn,
+    .nav-links-mobile {
+        display: none;
+    }
+
+    .header-container {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        width: max-content;
+        margin: 0 auto;
+        max-width: calc(100vw - 40px);
+        /* Limitar ancho máximo */
+    }
+
+    .nav-links {
+        display: flex;
+        margin-left: 0;
+    }
+}
+
+/* ======================== Pantallas intermedias (768px - 920px) ======================== */
+@media (min-width: 768px) and (max-width: 920px) {
+    .header-container {
+        gap: 10px;
+        /* Reducir espacio entre elementos */
+        padding: 5px 10px;
+        /* Reducir padding */
+    }
+
+    .nav-links {
+        gap: 15px;
+        /* Reducir espacio entre enlaces */
+    }
+
+    .brand h1,
+    .brand span {
+        font-size: clamp(14px, 3vw, 18px);
+        /* Título más pequeño */
+    }
+
+    .nav-links a {
+        font-size: 14px;
+        /* Enlaces más pequeños */
+        padding: 3px 6px;
+        /* Menos padding */
+    }
+
+    /* ==================== BUSCADOR PARA TABLETS ==================== */
+    /* Estilos del contenedor de resultados para tablets */
+    .resultados-busqueda {
+        background-color: rgba(0, 0, 0, 0.95) !important;
+        color: white !important;
+        border-radius: 5px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        max-height: 250px;
+        /* Altura intermedia entre desktop y móvil */
+    }
+
+    /* Items de resultados para tablets */
+    .resultados-busqueda li {
+        color: white !important;
+        padding: 10px 12px;
+        /* Padding intermedio */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .resultados-busqueda li:hover {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+    }
+
+    .resultados-busqueda li:last-child {
+        border-bottom: none;
+    }
+
+    /* Forzar color blanco en todos los elementos anidados */
+    .resultados-busqueda li *,
+    .resultados-busqueda li span,
+    .resultados-busqueda li div,
+    .resultados-busqueda li a {
+        color: white !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    /* Estilos específicos para móvil si fuera necesario, 
+       pero la estructura base ahora la maneja Tailwind */
+
+    .header-container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        /* <-- Esto empuja la lupa y carrito a la derecha */
+        padding: 0 10px;
+        /* Agregar padding para no salirse */
+        box-sizing: border-box;
+        /* Asegurar que el padding se incluya en el ancho */
+        gap: 5px;
+        /* Reducir espacio entre elementos */
+    }
+
+    /* Oculta los links normales */
+    .nav-links ul>li:not(.buscador-header):not(:has(.carrito-header)) {
+        display: none;
+    }
+
+
+    .menu-btn {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        margin-left: 5px;
+        /* Pequeño margen izquierdo */
+    }
+
+    .menu-btn i {
+        font-size: 24px;
+        /* Tamaño del icono */
+    }
+
+    /* Empuja el menú completo hacia la derecha */
+    .nav-links ul {
+        width: 100%;
+    }
+
+    /* Lupa y carrito a la derecha */
+    .buscador-header,
+    .carrito-header {
+        margin-left: auto;
+
+    }
+
+    .brand h1,
+    .brand span {
+        white-space: nowrap;
+        margin-left: 5px;
+        /* Reducir espacio después del logo */
+    }
+
+}
+
+
+/* Estilos específicos para móviles cuando el buscador está activo */
+@media (max-width: 767.98px) {
+    body.menu-busqueda-activa .brand {
+        display: none;
+        /* Ocultar logo y h1 */
+    }
+
+    body.menu-busqueda-activa .carrito-item {
+        display: none;
+        /* Ocultar carrito */
+    }
+
+    body.menu-busqueda-activa .menu-btn {
+        display: none;
+        /* Ocultar botón hamburguesa */
+    }
+
+    body.menu-busqueda-activa .header-container {
+        justify-content: center;
+        /* Centrar el contenido */
+        padding: 0;
+        /* Eliminar padding para eliminar espacio vacío */
+        margin: 0;
+        /* Eliminar margen */
+        width: 100vw;
+        /* Ocupar todo el viewport */
+        max-width: 100%;
+        /* Asegurar no exceder */
+    }
+
+    body.menu-busqueda-activa .buscador-header {
+        width: 100%;
+        /* Ocupar todo el ancho */
+        display: flex !important;
+        /* Asegurar que sea visible */
+        align-items: center;
+        gap: 8px;
+        margin: 0;
+        /* Eliminar margen */
+        padding: 0;
+        /* Eliminar padding */
+        position: relative;
+        /* Para posicionamiento preciso */
+        left: 0;
+        /* Forzar alineación izquierda */
+    }
+
+    body.menu-busqueda-activa #input-buscar {
+        flex: 1;
+        /* Tomar el espacio restante */
+        max-width: calc(100vw - 50px);
+        /* Usar casi todo el ancho disponible */
+        margin-right: 5px;
+        /* Reducir margen derecho */
+        display: inline-block !important;
+        /* Asegurar que sea visible */
+    }
+
+    body.menu-busqueda-activa .buscador-header button {
+        flex-shrink: 0;
+        /* No encoger el botón */
+        display: flex !important;
+        /* Asegurar que sea visible */
+    }
+
+    /* Estilos para resultados de búsqueda en móviles */
+    body.menu-busqueda-activa .resultados-busqueda.mostrar-resultados {
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        width: 100% !important;
+        max-width: calc(100vw - 20px) !important;
+        /* Considerar padding del header */
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white !important;
+        /* Texto visible */
+        border-radius: 5px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        list-style: none;
+        padding: 0;
+        margin: 5px 0 0 0;
+        max-height: 300px;
+        /* Más altura en móviles */
+        display: block !important;
+        /* Forzar visibilidad cuando hay resultados */
+    }
+
+    /* Forzar visibilidad en móviles */
+    @media (max-width: 767.98px) {
+        .resultados-busqueda.mostrar-resultados {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            z-index: 10001 !important;
+            position: fixed !important;
+            top: auto !important;
+            bottom: auto !important;
+            left: 0 !important;
+            width: 100vw !important;
+            min-height: 200px !important;
+            /* Altura mínima */
+            max-height: 300px !important;
+            /* Altura máxima */
+            overflow-y: auto !important;
+            overflow-x: hidden !important;
+            background-color: rgba(0, 0, 0, 0.95) !important;
+            /* Fondo oscuro como desktop */
+            border: 1px solid #333 !important;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5) !important;
+            padding: 10px 0 !important;
+            /* Padding vertical */
+            margin: 0 !important;
+        }
+
+        .resultados-busqueda.mostrar-resultados li {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            height: auto !important;
+            min-height: 50px !important;
+            /* Altura mínima por item */
+            background-color: transparent !important;
+            /* Fondo transparente */
+            color: white !important;
+            /* Texto blanco como desktop */
+            padding: 12px 15px !important;
+            margin: 0 !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+            /* Borde sutil */
+        }
+
+        .resultados-busqueda.mostrar-resultados li:hover {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            /* Hover sutil */
+        }
+
+        /* Regla adicional para asegurar color blanco en todos los casos */
+        body.menu-busqueda-activa .resultados-busqueda.mostrar-resultados li {
+            color: white !important;
+        }
+    }
+
+    body.menu-busqueda-activa .resultados-busqueda li {
+        padding: 12px 15px;
+        /* Más padding para tactil */
+        cursor: pointer;
+        transition: background-color 0.2s;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        /* Separación visual */
+        color: white !important;
+        /* Texto blanco */
+    }
+
+    /* hover al hacer clic en la lista de coincidencias en movil */
+    body.menu-busqueda-activa .resultados-busqueda li:hover {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+    }
+
+    body.menu-busqueda-activa .resultados-busqueda li:last-child {
+        border-bottom: none;
+    }
+}
+
+/* Dispositivos pequeños (360px - 480px) */
+@media (max-width: 480px) and (min-width: 361px) {
+    .header-container {
+        padding: 0 8px !important;
+        /* Padding reducido */
+        box-sizing: border-box;
+    }
+
+    .brand h1,
+    .brand span {
+        font-size: clamp(14px, 3.5vw, 16px);
+        /* Título más pequeño */
+    }
+
+    .menu-btn {
+        font-size: 20px;
+        /* Botón hamburguesa más pequeño */
+    }
+
+    .carrito-header {
+        width: 35px !important;
+        height: 35px !important;
+    }
+
+    .icono-carrito {
+        width: 30px;
+        height: 30px;
+    }
+
+    .buscador-header button {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Dispositivos muy pequeños (Galaxy Z Fold, etc.) */
+@media (max-width: 360px) {
+
+    /* Ajustes generales para móviles pequeños */
+    .header-container {
+        padding: 0 3px !important;
+        /* Padding mínimo */
+        box-sizing: border-box;
+        gap: 2px;
+        /* Espacio mínimo entre elementos */
+    }
+
+    .brand h1,
+    .brand span {
+        font-size: clamp(10px, 4vw, 14px);
+        /* Título muy pequeño */
+        margin-left: 2px;
+    }
+
+    .brand img {
+        width: clamp(20px, 6vw, 30px);
+        /* Logo más pequeño */
+    }
+
+    .menu-btn {
+        font-size: 18px;
+        /* Botón hamburguesa más pequeño */
+        padding: 2px;
+    }
+
+    /* Ajustar carrito para dispositivos muy pequeños */
+    .carrito-header {
+        width: 30px !important;
+        height: 30px !important;
+        margin-right: 2px !important;
+        padding: 2px !important;
+    }
+
+    .icono-carrito {
+        width: 24px !important;
+        height: 24px !important;
+    }
+
+    .buscador-header {
+        margin-right: 2px !important;
+    }
+
+    .buscador-header button {
+        width: 30px !important;
+        height: 30px !important;
+        padding: 4px !important;
+    }
+
+    /* Ajustes cuando el buscador está activo */
+    body.menu-busqueda-activa .header-container {
+        padding: 0 3px;
+        /* Padding mínimo */
+        width: calc(100vw - 6px);
+        /* Ajustar al viewport */
+    }
+
+    body.menu-busqueda-activa #input-buscar {
+        max-width: calc(100vw - 55px);
+        /* Reducir más para pantallas pequeñas */
+        margin-right: 2px;
+        /* Margen más pequeño */
+        font-size: 12px;
+        /* Texto más pequeño */
+    }
+
+    body.menu-busqueda-activa .buscador-header button {
+        width: 28px;
+        /* Botón más pequeño */
+        height: 28px;
+        padding: 3px 5px;
+    }
+
+    body.menu-busqueda-activa .resultados-busqueda.mostrar-resultados {
+        max-width: calc(100vw - 10px) !important;
+        /* Ajustar resultados */
+        left: 3px !important;
+        /* Pequeño offset */
+    }
+}
+
+/* Menú móvil full-width */
+.nav-links-mobile {
+    position: fixed;
+    top: 49px;
+    /* justo pegado al header */
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    color: white;
+    display: none;
+    /* oculto por defecto */
+    z-index: 999;
+    max-height: calc(100vh - 49px);
+    /* Usar toda la altura disponible menos el header */
+    overflow-y: auto;
+    /* Permitir scroll siempre */
+    padding: 20px 0;
+    scrollbar-width: thin;
+    /* Scrollbar más delgado en Firefox */
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+    /* Color scrollbar */
+}
+
+/* Anular overflow para elementos de búsqueda en móvil */
+.nav-links-mobile .buscador-header {
+    overflow: visible !important;
+    position: relative !important;
+    z-index: 10000 !important;
+}
+
+/* Scrollbar personalizado para Chrome/Webkit */
+.nav-links-mobile::-webkit-scrollbar {
+    width: 6px;
+}
+
+.nav-links-mobile::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.nav-links-mobile::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
+
+.nav-links-mobile::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Estilos de los enlaces */
+.nav-links-mobile ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links-mobile li {
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-links-mobile li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+/* Estilo para la flecha desplegable en móvil */
+.nav-links-mobile .dropdown-arrow {
+    font-size: 0.6em;
+    margin-left: 3px;
+    opacity: 0.7;
+}
+
+/* Estilo para las flechas hacia la derecha en móvil */
+.nav-links-mobile .right-arrow {
+    font-size: 1.2em;
+    margin-left: 3px;
+    opacity: 0.7;
+    vertical-align: middle;
+    line-height: 1;
+}
+
+
+/* Nivel 1 */
+.nav-links-mobile>ul>li>a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    text-align: left;
+    min-width: 100px;
+    /* Ancho mínimo uniforme para todos los botones */
+}
+
+/* Submenús móviles */
+.nav-links-mobile li ul {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    display: block;
+    /* siempre block, se controla con max-height y opacity */
+}
+
+/* Submenú abierto */
+.nav-links-mobile li.show>ul {
+    max-height: none;
+    /* Eliminar límite fijo */
+    opacity: 1;
+    overflow: visible;
+    /* Permitir que el contenido sea visible */
+}
+
+
+/* Nivel 2 */
+.nav-links-mobile li ul li a {
+    padding: 12px 40px;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Nivel 3 */
+.nav-links-mobile li ul li ul li a {
+    padding-left: 60px;
+}
+
+
+.nav-links-mobile a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-links-mobile a:last-child {
+    border-bottom: none;
+}
+
+
+
+
+/* Clase que activa la animación del submenú en desktop*/
+
+/* Submenú abierto */
+.nav-links-mobile li.show>ul {
+    display: block;
+}
+
+/* Estilos específicos para buscador en menú móvil */
+.nav-links-mobile .buscador-header {
+    position: relative !important;
+    z-index: 10000 !important;
+}
+
+.nav-links-mobile .resultados-busqueda {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 10001 !important;
+    background-color: rgba(0, 0, 0, 0.95) !important;
+    color: white !important;
+    border-radius: 5px !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 5px 0 0 0 !important;
+    max-height: 200px !important;
+    overflow-y: auto !important;
+    display: none !important;
+}
+
+.nav-links-mobile .resultados-busqueda.mostrar-resultados {
+    display: block !important;
+}
+
+.nav-links-mobile .resultados-busqueda li {
+    padding: 12px 15px !important;
+    cursor: pointer !important;
+    transition: background-color 0.2s !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+    background-color: transparent !important;
+}
+
+.nav-links-mobile .resultados-busqueda li:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.nav-links-mobile .resultados-busqueda li:last-child {
+    border-bottom: none !important;
+}
