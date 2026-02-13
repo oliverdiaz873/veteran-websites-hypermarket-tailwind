@@ -43,7 +43,8 @@
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Estilos personalizados (Opcional) -->
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/components/header.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -57,7 +58,8 @@
 
   <!-- ===== HEADER GLOBAL ===== -->
   <header class="fixed top-0 left-0 w-full rounded-none xl:top-[10px] xl:left-1/2 xl:-translate-x-1/2 xl:rounded-[20px] xl:w-max xl:max-w-[calc(100vw-40px)] bg-black/85 px-2.5 py-1.5 z-[1000] flex justify-center text-white">
-    <div class="flex items-center gap-2.5 justify-between md:justify-center w-full px-3.5">
+    <div class="flex items-center gap-2.5 justify-between md:justify-center w-full px-0 md:px-3.5">
+
       <!-- Botón hamburguesa solo en móvil -->
       <button class="menu-btn text-[22px] bg-transparent border-none text-white cursor-pointer transition-colors duration-300 rounded hover:bg-white/15 p-1 md:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
@@ -68,11 +70,11 @@
       <!-- Logo -->
       <a href="index.html" class="flex items-center gap-1 text-white no-underline" aria-label="Ir a la página principal de Hipermercado Superior">
         <img src="assets/images/logo/logo.png" alt="Logo de Hipermercado Superior" class="w-[clamp(25px,10vw,30px)]">
-        <h1 class="text-xs sm:text-sm md:text-base font-bold whitespace-nowrap block">Hipermercado Superior</h1>
+        <h1 class="text-sm sm:text-base font-bold whitespace-nowrap block ml-1">Hipermercado Superior</h1>
       </a>
 
       <!-- Menú de navegación Desktop (Solo enlaces) - Visible en Tablets y Desktop -->
-      <nav class="hidden md:flex justify-center" role="navigation" aria-label="Menú principal">
+      <nav class="nav-links hidden md:flex justify-center" role="navigation" aria-label="Menú principal">
         <ul class="flex gap-5 items-center list-none p-0 m-0">
           <li><a href="index.html" class="text-white no-underline text-base px-2.5 py-2 block text-left transition-colors duration-300 rounded-[10px] hover:bg-white/15">Inicio</a></li>
 
@@ -229,7 +231,7 @@
               <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
                 Alimentos <span class="opacity-50 transition-transform duration-300">▸</span>
               </button>
-              <ul class="hidden pl-4 pb-2 text-xs opacity-70">
+              <ul class="hidden pl-4 pb-2 text-xs">
                 <li><a href="categorias/Alimentos.html#frutas_y_verduras" class="block py-2">Frutas y Verduras</a></li>
                 <li><a href="categorias/Alimentos.html#despensa" class="block py-2">Despensa</a></li>
                 <li><a href="categorias/Alimentos.html#carnes_pescados_mariscos" class="block py-2">Carnes y Mariscos</a></li>
@@ -243,7 +245,7 @@
               <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
                 Electrodomésticos <span class="opacity-50 transition-transform duration-300">▸</span>
               </button>
-              <ul class="hidden pl-4 pb-2 text-xs opacity-70">
+              <ul class="hidden pl-4 pb-2 text-xs">
                 <li><a href="categorias/Electrodomesticos.html#cocina" class="block py-2">Cocina</a></li>
                 <li><a href="categorias/Electrodomesticos.html#lavado" class="block py-2">Lavado</a></li>
                 <li><a href="categorias/Electrodomesticos.html#climatizacion" class="block py-2">Climatización</a></li>
@@ -254,7 +256,7 @@
               <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
                 Tecnología <span class="opacity-50 transition-transform duration-300">▸</span>
               </button>
-              <ul class="hidden pl-4 pb-2 text-xs opacity-70">
+              <ul class="hidden pl-4 pb-2 text-xs">
                 <li><a href="categorias/tecnologia.html#televisores" class="block py-2">Televisores</a></li>
                 <li><a href="categorias/tecnologia.html#laptops" class="block py-2">Laptops</a></li>
                 <li><a href="categorias/tecnologia.html#tablets" class="block py-2">Tablets</a></li>
@@ -267,7 +269,7 @@
               <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
                 Ropa <span class="opacity-50 transition-transform duration-300">▸</span>
               </button>
-              <ul class="hidden pl-4 pb-2 text-xs opacity-70">
+              <ul class="hidden pl-4 pb-2 text-xs">
                 <li><a href="categorias/Ropa.html#pantalones_para_hombres" class="block py-2">Hombres</a></li>
                 <li><a href="categorias/Ropa.html#pantalones_para_mujeres" class="block py-2">Mujeres</a></li>
                 <li><a href="categorias/Ropa.html#pantalones_para_niños" class="block py-2">Niños</a></li>
@@ -280,7 +282,7 @@
               <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
                 Muebles <span class="opacity-50 transition-transform duration-300">▸</span>
               </button>
-              <ul class="hidden pl-4 pb-2 text-xs opacity-70">
+              <ul class="hidden pl-4 pb-2 text-xs">
                 <li><a href="categorias/muebles_y_decoracion.html#sofas" class="block py-2">Sofás</a></li>
                 <li><a href="categorias/muebles_y_decoracion.html#sillones" class="block py-2">Sillones</a></li>
                 <li><a href="categorias/muebles_y_decoracion.html#mesas" class="block py-2">Mesas</a></li>
@@ -292,7 +294,7 @@
               <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
                 Farmacia <span class="opacity-50 transition-transform duration-300">▸</span>
               </button>
-              <ul class="hidden pl-4 pb-2 text-xs opacity-70">
+              <ul class="hidden pl-4 pb-2 text-xs">
                 <li><a href="categorias/Farmacia.html#analgesicos" class="block py-2">Analgésicos</a></li>
                 <li><a href="categorias/Farmacia.html#dermocosmetica" class="block py-2">Dermocosmética</a></li>
                 <li><a href="categorias/Farmacia.html#vitaminas" class="block py-2">Vitaminas</a></li>
@@ -304,7 +306,7 @@
               <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
                 Ferretería <span class="opacity-50 transition-transform duration-300">▸</span>
               </button>
-              <ul class="hidden pl-4 pb-2 text-xs opacity-70">
+              <ul class="hidden pl-4 pb-2 text-xs">
                 <li><a href="categorias/Ferreteria.html#herramientas" class="block py-2">Herramientas</a></li>
                 <li><a href="categorias/Ferreteria.html#pinturas" class="block py-2">Pinturas</a></li>
                 <li><a href="categorias/Ferreteria.html#electricidad" class="block py-2">Electricidad</a></li>
@@ -316,7 +318,7 @@
               <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
                 Juguetes <span class="opacity-50 transition-transform duration-300">▸</span>
               </button>
-              <ul class="hidden pl-4 pb-2 text-xs opacity-70">
+              <ul class="hidden pl-4 pb-2 text-xs">
                 <li><a href="categorias/juguetes.html#niños" class="block py-2">Niños</a></li>
                 <li><a href="categorias/juguetes.html#niñas" class="block py-2">Niñas</a></li>
               </ul>
@@ -341,6 +343,7 @@
 
     <script src="assets/js/productos.js"></script>
     <script src="assets/js/boton_de_busqueda.js"></script>
-    <script src="assets/js/header.js"></script>
+    <script src="assets/js/hamburger_menu.js"></script>
+    <script src="assets/js/tablet_menu_click.js"></script>
 </body>
 </html>

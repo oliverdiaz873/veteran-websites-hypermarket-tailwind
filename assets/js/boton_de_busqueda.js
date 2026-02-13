@@ -222,6 +222,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (btnBuscar && inputBuscar) {
         const iconoBuscar = document.getElementById("icono-buscar");
         const iconoCerrar = document.getElementById("icono-cerrar");
+        const desktopNav = document.querySelector('header nav'); // Menú de navegación desktop
 
         btnBuscar.addEventListener("click", () => {
             const activo = body.classList.toggle("menu-busqueda-activa");
@@ -231,12 +232,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (iconoBuscar) iconoBuscar.classList.add("hidden");
                 if (iconoCerrar) iconoCerrar.classList.remove("hidden");
                 inputBuscar.focus();
+
+                // Ocultar menú de navegación desktop
+                if (desktopNav) desktopNav.classList.add('md:hidden');
             } else {
                 // Volver a icono Lupa
                 if (iconoBuscar) iconoBuscar.classList.remove("hidden");
                 if (iconoCerrar) iconoCerrar.classList.add("hidden");
                 inputBuscar.value = "";
                 resultados.style.display = "none";
+
+                // Mostrar menú de navegación desktop
+                if (desktopNav) desktopNav.classList.remove('md:hidden');
             }
         });
     }

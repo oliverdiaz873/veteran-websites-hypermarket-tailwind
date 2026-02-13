@@ -251,23 +251,44 @@ body.menu-busqueda-activa #input-buscar {
 }
 
 @media (max-width: 767.98px) {
-    body.menu-busqueda-activa .brand {
-        display: none;
+
+    /* Ocultar el enlace que contiene logo + h1 y el botón hamburguesa cuando el buscador está activo */
+    body.menu-busqueda-activa header a[href="index.html"],
+    body.menu-busqueda-activa .menu-btn,
+    body.menu-busqueda-activa .util-btn[aria-label="Ver carrito"] {
+        display: none !important;
     }
 
-    body.menu-busqueda-activa .menu-btn {
-        display: none;
-    }
-
+    /* El contenedor de utilidades se expande para ocupar todo el header */
     body.menu-busqueda-activa .header-utils {
         width: 100%;
-        justify-content: center;
+        justify-content: space-between;
         margin: 0;
+        gap: 0;
     }
 
-    body.menu-busqueda-activa #input-buscar {
+    /* El contenedor relativo del input se expande */
+    body.menu-busqueda-activa .header-utils>div.relative {
         flex: 1;
-        max-width: calc(100vw - 80px);
+        display: flex;
+        align-items: center;
+    }
+
+    /* El input de búsqueda ocupa todo el espacio disponible */
+    body.menu-busqueda-activa #input-buscar {
+        display: block !important;
+        flex: 1;
+        width: 100%;
+        margin: 0 10px 0 0;
+        padding: 8px 12px;
+        font-size: 16px;
+        /* Evita zoom automático en iOS */
+        border-radius: 8px;
+    }
+
+    /* El botón de búsqueda (ahora con icono X) se mantiene a la derecha */
+    body.menu-busqueda-activa #btn-buscar {
+        flex-shrink: 0;
     }
 }
 
@@ -317,6 +338,11 @@ body.menu-busqueda-activa #input-buscar {
     .nav-links li:hover>ul {
         display: block;
     }
+}
+
+/* Clase para forzar la visibilidad del submenú en tablets (activada por JS) */
+.tablet-active {
+    display: flex !important;
 }
 
 
@@ -480,168 +506,7 @@ body.menu-busqueda-activa #input-buscar {
 }
 
 
-/* Estilos específicos para móviles cuando el buscador está activo */
-@media (max-width: 767.98px) {
-    body.menu-busqueda-activa .brand {
-        display: none;
-        /* Ocultar logo y h1 */
-    }
 
-    body.menu-busqueda-activa .carrito-item {
-        display: none;
-        /* Ocultar carrito */
-    }
-
-    body.menu-busqueda-activa .menu-btn {
-        display: none;
-        /* Ocultar botón hamburguesa */
-    }
-
-    body.menu-busqueda-activa .header-container {
-        justify-content: center;
-        /* Centrar el contenido */
-        padding: 0;
-        /* Eliminar padding para eliminar espacio vacío */
-        margin: 0;
-        /* Eliminar margen */
-        width: 100vw;
-        /* Ocupar todo el viewport */
-        max-width: 100%;
-        /* Asegurar no exceder */
-    }
-
-    body.menu-busqueda-activa .buscador-header {
-        width: 100%;
-        /* Ocupar todo el ancho */
-        display: flex !important;
-        /* Asegurar que sea visible */
-        align-items: center;
-        gap: 8px;
-        margin: 0;
-        /* Eliminar margen */
-        padding: 0;
-        /* Eliminar padding */
-        position: relative;
-        /* Para posicionamiento preciso */
-        left: 0;
-        /* Forzar alineación izquierda */
-    }
-
-    body.menu-busqueda-activa #input-buscar {
-        flex: 1;
-        /* Tomar el espacio restante */
-        max-width: calc(100vw - 50px);
-        /* Usar casi todo el ancho disponible */
-        margin-right: 5px;
-        /* Reducir margen derecho */
-        display: inline-block !important;
-        /* Asegurar que sea visible */
-    }
-
-    body.menu-busqueda-activa .buscador-header button {
-        flex-shrink: 0;
-        /* No encoger el botón */
-        display: flex !important;
-        /* Asegurar que sea visible */
-    }
-
-    /* Estilos para resultados de búsqueda en móviles */
-    body.menu-busqueda-activa .resultados-busqueda.mostrar-resultados {
-        position: absolute !important;
-        top: 100% !important;
-        left: 0 !important;
-        width: 100% !important;
-        max-width: calc(100vw - 20px) !important;
-        /* Considerar padding del header */
-        background-color: rgba(0, 0, 0, 0.8);
-        color: white !important;
-        /* Texto visible */
-        border-radius: 5px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        list-style: none;
-        padding: 0;
-        margin: 5px 0 0 0;
-        max-height: 300px;
-        /* Más altura en móviles */
-        display: block !important;
-        /* Forzar visibilidad cuando hay resultados */
-    }
-
-    /* Forzar visibilidad en móviles */
-    @media (max-width: 767.98px) {
-        .resultados-busqueda.mostrar-resultados {
-            display: block !important;
-            visibility: visible !important;
-            opacity: 1 !important;
-            z-index: 10001 !important;
-            position: fixed !important;
-            top: auto !important;
-            bottom: auto !important;
-            left: 0 !important;
-            width: 100vw !important;
-            min-height: 200px !important;
-            /* Altura mínima */
-            max-height: 300px !important;
-            /* Altura máxima */
-            overflow-y: auto !important;
-            overflow-x: hidden !important;
-            background-color: rgba(0, 0, 0, 0.95) !important;
-            /* Fondo oscuro como desktop */
-            border: 1px solid #333 !important;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5) !important;
-            padding: 10px 0 !important;
-            /* Padding vertical */
-            margin: 0 !important;
-        }
-
-        .resultados-busqueda.mostrar-resultados li {
-            display: block !important;
-            visibility: visible !important;
-            opacity: 1 !important;
-            height: auto !important;
-            min-height: 50px !important;
-            /* Altura mínima por item */
-            background-color: transparent !important;
-            /* Fondo transparente */
-            color: white !important;
-            /* Texto blanco como desktop */
-            padding: 12px 15px !important;
-            margin: 0 !important;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-            /* Borde sutil */
-        }
-
-        .resultados-busqueda.mostrar-resultados li:hover {
-            background-color: rgba(255, 255, 255, 0.1) !important;
-            /* Hover sutil */
-        }
-
-        /* Regla adicional para asegurar color blanco en todos los casos */
-        body.menu-busqueda-activa .resultados-busqueda.mostrar-resultados li {
-            color: white !important;
-        }
-    }
-
-    body.menu-busqueda-activa .resultados-busqueda li {
-        padding: 12px 15px;
-        /* Más padding para tactil */
-        cursor: pointer;
-        transition: background-color 0.2s;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        /* Separación visual */
-        color: white !important;
-        /* Texto blanco */
-    }
-
-    /* hover al hacer clic en la lista de coincidencias en movil */
-    body.menu-busqueda-activa .resultados-busqueda li:hover {
-        background-color: rgba(255, 255, 255, 0.1) !important;
-    }
-
-    body.menu-busqueda-activa .resultados-busqueda li:last-child {
-        border-bottom: none;
-    }
-}
 
 /* Dispositivos pequeños (360px - 480px) */
 @media (max-width: 480px) and (min-width: 361px) {
