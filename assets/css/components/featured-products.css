@@ -1,0 +1,341 @@
+/* assets/css/components/featured-products.css */
+
+/* ==========================================================================
+   SECCIÓN PRODUCTOS DESTACADOS Y OFERTAS
+   ========================================================================== */
+
+.productos-destacados {
+    padding: 30px 20px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.8);
+    max-width: 1280px;
+    margin: 0 auto;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    height: 510px;
+}
+
+/* Título centrado con fondo negro transparente */
+.productos-destacados h2 {
+    font-size: 24px;
+    color: white;
+    padding: 8px 16px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: fit-content;
+    max-width: 90%;
+}
+
+/* Tarjeta de productos */
+.productos-destacados .producto {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    width: 220px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 0 0 auto;
+    flex-direction: column;
+    height: 360px;
+    justify-content: space-between;
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+}
+
+.productos-destacados .producto>* {
+    flex-shrink: 0;
+}
+
+/* Espacio flexible para el nombre del producto */
+.productos-destacados .producto h3 {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-start;
+    min-height: 40px;
+}
+
+/* Eliminar text-decoration de enlaces dentro de productos */
+.productos-destacados .productos-container,
+.productos-destacados .productos-container *,
+.productos-destacados .productos-container a,
+.productos-destacados .productos-container a * {
+    text-decoration: none;
+    border-bottom: none;
+}
+
+.productos-destacados .producto a h3,
+.productos-destacados .producto a p {
+    text-decoration: none;
+    border-bottom: none;
+    color: inherit;
+}
+
+/* Contenedor de productos para fila horizontal */
+.productos-destacados .productos-container-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
+
+.productos-destacados .productos-container {
+    display: flex;
+    gap: 22px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 0 20px 12px 30px;
+    flex: 1;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    justify-content: flex-start;
+}
+
+.productos-destacados .productos-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Botones de navegación estilo carrusel */
+.productos-control-prev,
+.productos-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    font-size: 16px;
+}
+
+.productos-container {
+    padding-left: 0;
+    padding-right: 0;
+    scroll-padding-left: 0;
+}
+
+@media (min-width: 768px) {
+    .productos-container {
+        padding-left: 0;
+        padding-right: 0;
+        scroll-padding-left: 0;
+    }
+}
+
+.productos-control-prev {
+    left: -44px;
+}
+
+.productos-control-next {
+    right: -44px;
+}
+
+.productos-control-prev:hover,
+.productos-control-next:hover {
+    background: rgba(0, 0, 0, 0.9);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.productos-control-prev:focus,
+.productos-control-next:focus {
+    outline: 2px solid #ffcc00;
+    outline-offset: 2px;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+/* Móviles */
+@media (max-width: 767.98px) {
+    .productos-destacados {
+        padding: 20px 10px;
+        margin: 0 auto 30px;
+        height: auto;
+        min-height: 400px;
+        max-width: calc(100vw - 20px);
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .productos-destacados .producto {
+        scroll-snap-align: start;
+        width: 160px;
+        height: 280px;
+    }
+
+    .productos-destacados .producto h3 {
+        font-size: 16px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    .productos-destacados .producto p {
+        font-size: 14px;
+        line-height: 1;
+        margin: 10px;
+    }
+
+    .productos-destacados .producto img {
+        height: 120px;
+    }
+
+    .productos-destacados .productos-container-wrapper {
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .productos-destacados .productos-container {
+        padding: 20px 40px 40px 40px;
+        gap: 15px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .productos-control-prev,
+    .productos-control-next {
+        display: none;
+    }
+
+    .productos-destacados .productos-container::-webkit-scrollbar {
+        display: block;
+        height: 6px;
+    }
+}
+
+/* Tablets (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .productos-control-prev,
+    .productos-control-next {
+        display: none !important;
+    }
+
+    .productos-destacados {
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+        max-width: calc(100vw - 40px) !important;
+    }
+
+    .productos-destacados .productos-container::-webkit-scrollbar {
+        display: block;
+        height: 6px;
+    }
+
+    .productos-destacados .productos-container {
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .productos-destacados .producto {
+        scroll-snap-align: start;
+    }
+}
+
+/* Desktop (1025px+) */
+@media (min-width: 1025px) {
+    .productos-destacados .productos-container {
+        gap: 20px;
+    }
+
+    .productos-destacados .producto p {
+        max-height: none !important;
+        overflow: visible !important;
+        display: block !important;
+        -webkit-line-clamp: unset !important;
+        line-clamp: unset !important;
+        -webkit-box-orient: unset !important;
+        white-space: normal !important;
+        text-overflow: unset !important;
+        font-size: 16px !important;
+    }
+}
+
+/* Pantallas grandes (1290px+) */
+@media (min-width: 1290px) {
+    .productos-destacados {
+        width: calc(100vw - 86px) !important;
+        margin: 40px auto 60px auto !important;
+        max-width: 100% !important;
+    }
+}
+
+/* Pantallas extra grandes (1400px+) */
+@media (min-width: 1400px) {
+    .productos-destacados {
+        width: calc(100vw - 100px) !important;
+        margin: 50px auto 70px auto !important;
+        max-width: 100% !important;
+    }
+}
+
+/* ==========================================================================
+   ESTILOS ESPECÍFICOS PARA OFERTAS (#ofertas)
+   ========================================================================== */
+
+#ofertas.productos-destacados {
+    margin-bottom: 15px !important;
+}
+
+@media (min-width: 768px) {
+    #ofertas.productos-destacados {
+        height: 550px;
+        margin-bottom: 15px;
+    }
+}
+
+#ofertas {
+    margin-bottom: 15px !important;
+    /* style.css had 10px too, but 15px wins with !important earlier */
+}
+
+.productos-destacados .oferta_height {
+    height: 330px;
+}
+
+@media (max-width: 767.98px) {
+    .productos-destacados .oferta_height {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .productos-destacados .oferta_height .btn-agregar {
+        align-self: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .productos-destacados .oferta_height {
+        height: 400px;
+    }
+
+    .productos-destacados .oferta_height h3 {
+        margin-bottom: 0px;
+    }
+}
