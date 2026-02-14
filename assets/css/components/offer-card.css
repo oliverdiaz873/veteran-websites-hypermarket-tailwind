@@ -1,0 +1,92 @@
+/* assets/css/components/offer-card.css */
+
+/* ==========================================================================
+   TARJETAS DE OFERTAS — ESTILOS ESPECIALIZADOS
+   Bloque "Antes → Ahora" y precios tachado/nuevo. La base (.producto) está
+   en product-card.css
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Etiquetas y precios del bloque de oferta (Antes / Ahora)
+   -------------------------------------------------------------------------- */
+.texto-antes {
+    font-size: 14px;
+    color: #3f3f3f;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.precio-antiguo {
+    font-size: 14px;
+    text-decoration: line-through;
+    color: #3f3f3f;
+    margin-bottom: 2px;
+    font-weight: 500;
+}
+
+.precio-antiguo::before {
+    content: "";
+}
+
+.texto-ahora {
+    font-size: 14px;
+    color: #141414;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.flecha {
+    display: inline-block;
+    margin: 0 8px;
+    color: #6b7280;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.precio-nuevo {
+    font-size: 14px;
+    font-weight: 700;
+    color: #141414;
+}
+
+/* ==========================================================================
+   RESPONSIVE — TARJETAS DE OFERTAS
+   ========================================================================== */
+
+/* Desktop: precios más grandes */
+@media (min-width: 768px) {
+    .texto-antes {
+        font-size: 16px;
+    }
+
+    .precio-antiguo {
+        font-size: 16px;
+    }
+
+    .texto-ahora {
+        font-size: 16px;
+    }
+
+    .flecha {
+        font-size: 16px;
+    }
+
+    .precio-nuevo {
+        font-size: 16px;
+    }
+}
+
+/* Móviles: precios más chicos y separación del título */
+@media (max-width: 767.98px) {
+    .producto p .texto-antes,
+    .producto p .precio-antiguo,
+    .producto p .texto-ahora,
+    .producto p .precio-nuevo,
+    .producto p .flecha {
+        font-size: 12px;
+    }
+
+    .producto p {
+        margin-top: 4px;
+    }
+}

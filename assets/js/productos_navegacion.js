@@ -1,7 +1,7 @@
 // Botones del carrusel para la navegación de productos destacados y ofertas 
 document.addEventListener('DOMContentLoaded', function () {
-    // Configurar para productos destacados
-    setupCarousel('productos');
+    // Configurar para productos destacados (id de sección: productos-destacados)
+    setupCarousel('productos-destacados');
 
     // Configurar para ofertas
     setupCarousel('ofertas');
@@ -26,10 +26,18 @@ document.addEventListener('DOMContentLoaded', function () {
     setupCarousel('antigripales_y_resfriado');
 
     function setupCarousel(type) {
-        const container = document.querySelector(`#${type}.productos-destacados .productos-container`) ||
-            document.querySelector(`.productos-destacados .productos-container`);
+        const container = document.querySelector(`#${type} .productos-container`);
         const prevBtn = document.getElementById(`${type}-prev`);
         const nextBtn = document.getElementById(`${type}-next`);
+
+        console.log(`Setup carousel for ${type}:`, {
+            container: !!container,
+            prevBtn: !!prevBtn,
+            nextBtn: !!nextBtn,
+            containerWidth: container ? container.clientWidth : 'N/A',
+            scrollWidth: container ? container.scrollWidth : 'N/A',
+            maxScroll: container ? container.scrollWidth - container.clientWidth : 'N/A'
+        });
 
         if (!container || !prevBtn || !nextBtn) return;
 
@@ -44,6 +52,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const atStart = scrollLeft <= 5;
             const atEnd = scrollLeft >= maxScroll - 5;
+
+            console.log(`Update buttons for ${type}:`, {
+                scrollLeft,
+                maxScroll,
+                atStart,
+                atEnd,
+                containerWidth: container.clientWidth,
+                scrollWidth: container.scrollWidth
+            });
 
             // smooth opacity Transitions via style (handled by CSS transitions if present)
             prevBtn.style.opacity = atStart ? '0' : '1';

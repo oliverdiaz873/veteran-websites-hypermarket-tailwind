@@ -7,7 +7,8 @@
 .productos-destacados {
     padding: 30px 20px;
     box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.85);
+    /* Coincide con el header */
     max-width: 1280px;
     margin: 0 auto;
     border-radius: 20px;
@@ -31,35 +32,6 @@
     max-width: 90%;
 }
 
-/* Tarjeta de productos */
-.productos-destacados .producto {
-    background-color: rgb(255, 255, 255);
-    color: black;
-    padding: 20px;
-    border-radius: 10px;
-    width: 220px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    flex: 0 0 auto;
-    flex-direction: column;
-    height: 360px;
-    justify-content: space-between;
-    overflow: hidden;
-    text-decoration: none;
-    display: flex;
-}
-
-.productos-destacados .producto>* {
-    flex-shrink: 0;
-}
-
-/* Espacio flexible para el nombre del producto */
-.productos-destacados .producto h3 {
-    flex-grow: 1;
-    display: flex;
-    align-items: flex-start;
-    min-height: 40px;
-}
-
 /* Eliminar text-decoration de enlaces dentro de productos */
 .productos-destacados .productos-container,
 .productos-destacados .productos-container *,
@@ -67,13 +39,6 @@
 .productos-destacados .productos-container a * {
     text-decoration: none;
     border-bottom: none;
-}
-
-.productos-destacados .producto a h3,
-.productos-destacados .producto a p {
-    text-decoration: none;
-    border-bottom: none;
-    color: inherit;
 }
 
 /* Contenedor de productos para fila horizontal */
@@ -90,7 +55,7 @@
     gap: 22px;
     overflow-x: auto;
     scroll-behavior: smooth;
-    padding: 0 20px 12px 30px;
+    padding: 0 24px 16px 24px;
     flex: 1;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -163,42 +128,17 @@
 /* Móviles */
 @media (max-width: 767.98px) {
     .productos-destacados {
-        padding: 20px 10px;
+        padding: 20px 16px 24px;
         margin: 0 auto 30px;
         height: auto;
         min-height: 400px;
-        max-width: calc(100vw - 20px);
+        max-width: calc(100vw - 24px);
         width: 100%;
         box-sizing: border-box;
         border-radius: 15px;
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-
-    .productos-destacados .producto {
-        scroll-snap-align: start;
-        width: 160px;
-        height: 280px;
-    }
-
-    .productos-destacados .producto h3 {
-        font-size: 16px;
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        line-clamp: 2;
-        -webkit-box-orient: vertical;
-    }
-
-    .productos-destacados .producto p {
-        font-size: 14px;
-        line-height: 1;
-        margin: 10px;
-    }
-
-    .productos-destacados .producto img {
-        height: 120px;
     }
 
     .productos-destacados .productos-container-wrapper {
@@ -208,10 +148,12 @@
     }
 
     .productos-destacados .productos-container {
-        padding: 20px 40px 40px 40px;
-        gap: 15px;
+        padding: 16px 24px 32px;
+        gap: 16px;
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
+        scroll-padding-left: 24px;
+        scroll-padding-right: 24px;
     }
 
     .productos-control-prev,
@@ -227,7 +169,6 @@
 
 /* Tablets (768px - 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
-
     .productos-control-prev,
     .productos-control-next {
         display: none !important;
@@ -237,16 +178,19 @@
         margin-left: 20px !important;
         margin-right: 20px !important;
         max-width: calc(100vw - 40px) !important;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .productos-destacados .productos-container {
+        padding: 0 24px 16px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
     }
 
     .productos-destacados .productos-container::-webkit-scrollbar {
         display: block;
         height: 6px;
-    }
-
-    .productos-destacados .productos-container {
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
     }
 
     .productos-destacados .producto {
@@ -258,18 +202,6 @@
 @media (min-width: 1025px) {
     .productos-destacados .productos-container {
         gap: 20px;
-    }
-
-    .productos-destacados .producto p {
-        max-height: none !important;
-        overflow: visible !important;
-        display: block !important;
-        -webkit-line-clamp: unset !important;
-        line-clamp: unset !important;
-        -webkit-box-orient: unset !important;
-        white-space: normal !important;
-        text-overflow: unset !important;
-        font-size: 16px !important;
     }
 }
 
@@ -304,11 +236,20 @@
         height: 550px;
         margin-bottom: 15px;
     }
+    
+    #productos-destacados.productos-destacados {
+        height: 550px;
+        margin-bottom: 15px;
+    }
 }
 
 #ofertas {
     margin-bottom: 15px !important;
     /* style.css had 10px too, but 15px wins with !important earlier */
+}
+
+#productos-destacados {
+    margin-bottom: 15px !important;
 }
 
 .productos-destacados .oferta_height {

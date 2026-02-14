@@ -42,12 +42,12 @@
 
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
+   
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/components/header.css">
+    <link rel="stylesheet" href="assets/css/components/product-card.css">
+    <link rel="stylesheet" href="assets/css/components/offer-card.css">
     <link rel="stylesheet" href="assets/css/components/featured-products.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -56,11 +56,11 @@
 
 
 
-<body class="bg-gray-50 text-gray-900">
+<body class="text-gray-900">
    
 
   <!-- ===== HEADER GLOBAL ===== -->
-  <header class="fixed top-0 left-0 w-full rounded-none xl:top-[10px] xl:left-1/2 xl:-translate-x-1/2 xl:rounded-[20px] xl:w-max xl:max-w-[calc(100vw-40px)] bg-black/85 px-2.5 py-1.5 z-[1000] flex justify-center text-white">
+  <header class="fixed top-0 left-0 w-full rounded-none xl:top-[10px] xl:left-1/2 xl:-translate-x-1/2 xl:rounded-[20px] xl:w-max xl:max-w-[calc(100vw-40px)] bg-black/80 px-2.5 py-1.5 z-[1000] flex justify-center text-white">
     <div class="flex items-center gap-2.5 justify-between md:justify-center w-full px-0 md:px-3.5">
 
       <!-- Botón hamburguesa solo en móvil -->
@@ -72,7 +72,7 @@
 
       <!-- Logo -->
       <a href="index.html" class="flex items-center gap-1 text-white no-underline" aria-label="Ir a la página principal de Hipermercado Superior">
-        <img src="assets/images/logo/logo.png" alt="Logo de Hipermercado Superior" class="w-[clamp(25px,10vw,30px)]">
+        <img src="assets/images/logo/logo.png" alt="Logo de Hipermercado Superior" class="w-[clamp(25px,10vw,27px)]">
         <h1 class="text-sm sm:text-base font-bold whitespace-nowrap block ml-1">Hipermercado Superior</h1>
       </a>
 
@@ -338,99 +338,221 @@
     <main>
 
     <!-- Sección: Productos Destacados -->
-    <section class="productos-destacados bg-black/80 backdrop-blur-sm rounded-[20px] p-5 md:py-7.5 md:px-[56px] mx-auto mb-10 max-w-[1280px] xl:max-w-[calc(100vw-100px)] lg:max-w-[calc(100vw-86px)]">
+    <section class="productos-destacados bg-black/80 rounded-[20px] p-5 md:py-7.5 md:px-[56px] mx-auto mb-10 max-w-[1280px] xl:max-w-[calc(100vw-100px)] lg:max-w-[calc(100vw-86px)] reveal" id="productos-destacados">
         <div class="container mx-auto">
             <h2 class="text-xl md:text-2xl font-bold text-white bg-black/70 px-4 py-2 rounded-xl mb-5 w-fit mx-auto text-center">Productos Destacados</h2>
 
             <div class="productos-container-wrapper relative flex items-center justify-center">
-                <button class="productos-control-prev absolute left-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="productos-prev">
-                    <i class="bi bi-chevron-left text-xl"></i>
+                <button class="productos-control-prev absolute left-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="productos-destacados-prev">
+                    <svg class="w-5 h-5 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
                     <span class="sr-only">Anterior</span>
                 </button>
                 
                 <div class="productos-container flex w-full gap-4 md:gap-5 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory">
                     <!-- Producto 1 -->
                     <a href="productos/tecnologia/televisores/tv_samsung_75.html" class="block shrink-0 snap-start">
-                        <article class="producto group relative bg-white text-black p-3 md:p-5 rounded-lg w-[160px] h-[280px] md:w-[220px] md:h-[360px] flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl overflow-hidden before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:h-1 before:bg-gradient-to-r before:from-[#ffcc00] before:to-[#ff9900] before:scale-x-0 group-hover:before:scale-x-100 before:transition-transform before:duration-300">
-                            <div class="h-30 md:h-40 flex items-center justify-center overflow-hidden mb-3">
-                                <img src="assets/images/productos/Tecnologia/Televisores/TV_led_samsung.avif" alt="Televisor Samsung 75 pulgadas" class="max-h-full max-w-full object-contain" loading="lazy">
+                        <article class="producto">
+                            <div class="producto-img-container">
+                                <img src="assets/images/productos/Tecnologia/Televisores/tv_samsung_75_sinfondo.png" alt="Televisor Samsung 75 pulgadas" loading="lazy">
                             </div>
-                            <h3 class="text-sm md:text-base font-semibold line-clamp-2 min-h-[35px] md:min-h-[40px] leading-tight mb-2">Televisor Samsung 75 pulgadas</h3>
-                            <p class="text-sm md:text-lg font-bold text-black mb-4">Precio: $44,000</p>
-                            <button class="btn-agregar w-full py-1.5 md:py-2 bg-[#ffcc00] text-black font-bold rounded-lg hover:bg-[#ff9900] transition-colors text-xs md:text-sm" id="televisor_samsung_75_pulgadas">Agregar</button>
+                            <h3 class="producto-title">Televisor Samsung 75 pulgadas</h3>
+                            <p class="producto-price">Precio: $44,000</p>
+                            <button class="btn-agregar" id="televisor_samsung_75_pulgadas">Agregar</button>
                         </article>
                     </a>
 
                     <!-- Producto 2 -->
                     <a href="productos/electrodomesticos/cocina/nevera_lg.html" class="block shrink-0 snap-start">
-                        <article class="producto group relative bg-white text-black p-3 md:p-5 rounded-lg w-[160px] h-[280px] md:w-[220px] md:h-[360px] flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl overflow-hidden before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:h-1 before:bg-gradient-to-r before:from-[#ffcc00] before:to-[#ff9900] before:scale-x-0 group-hover:before:scale-x-100 before:transition-transform before:duration-300">
-                            <div class="h-30 md:h-40 flex items-center justify-center overflow-hidden mb-3">
-                                <img src="assets/images/productos/Electrodomesticos/cocina/Neveras/Nevera_LG.png" alt="Nevera LG Grande" class="max-h-full max-w-full object-contain" loading="lazy">
+                        <article class="producto">
+                            <div class="producto-img-container">
+                                <img src="assets/images/productos/Electrodomesticos/cocina/Neveras/Nevera_LG.png" alt="Nevera LG Grande" loading="lazy">
                             </div>
-                            <h3 class="text-sm md:text-base font-semibold line-clamp-2 min-h-[35px] md:min-h-[40px] leading-tight mb-2">Nevera LG Grande Moderna</h3>
-                            <p class="text-sm md:text-lg font-bold text-black mb-4">Precio: $80,000</p>
-                            <button class="btn-agregar w-full py-1.5 md:py-2 bg-[#ffcc00] text-black font-bold rounded-lg hover:bg-[#ff9900] transition-colors text-xs md:text-sm" id="nevera_lg_grande_moderna">Agregar</button>
+                            <h3 class="producto-title">Nevera LG Grande Moderna</h3>
+                            <p class="producto-price">Precio: $80,000</p>
+                            <button class="btn-agregar" id="nevera_lg_grande_moderna">Agregar</button>
                         </article>
                     </a>
 
                     <!-- Producto 3 -->
                     <a href="productos/electrodomesticos/climatizacion/ventilador_daiwa.html" class="block shrink-0 snap-start">
-                        <article class="producto group relative bg-white text-black p-3 md:p-5 rounded-lg w-[160px] h-[280px] md:w-[220px] md:h-[360px] flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl overflow-hidden before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:h-1 before:bg-gradient-to-r before:from-[#ffcc00] before:to-[#ff9900] before:scale-x-0 group-hover:before:scale-x-100 before:transition-transform before:duration-300">
-                            <div class="h-30 md:h-40 flex items-center justify-center overflow-hidden mb-3">
-                                <img src="assets/images/productos/Electrodomesticos/climatizacion/ventiladores/ventilador_Daiwa.png" alt="Ventilador Daiwa de mesa color negro" class="max-h-full max-w-full object-contain" loading="lazy">
+                        <article class="producto">
+                            <div class="producto-img-container">
+                                <img src="assets/images/productos/Electrodomesticos/climatizacion/ventiladores/ventilador_Daiwa.png" alt="Ventilador Daiwa de mesa color negro" loading="lazy">
                             </div>
-                            <h3 class="text-sm md:text-base font-semibold line-clamp-2 min-h-[35px] md:min-h-[40px] leading-tight mb-2">Ventilador Daiwa</h3>
-                            <p class="text-sm md:text-lg font-bold text-black mb-4">Precio: $15,000</p>
-                            <button class="btn-agregar w-full py-1.5 md:py-2 bg-[#ffcc00] text-black font-bold rounded-lg hover:bg-[#ff9900] transition-colors text-xs md:text-sm" id="ventilador_daiwa">Agregar</button>
+                            <h3 class="producto-title">Ventilador Daiwa</h3>
+                            <p class="producto-price">Precio: $15,000</p>
+                            <button class="btn-agregar" id="ventilador_daiwa">Agregar</button>
                         </article>
                     </a>
 
                     <!-- Producto 4 -->
                     <a href="productos/muebles_y_decoracion/sofas/sofa_cama_blanco.html" class="block shrink-0 snap-start">
-                        <article class="producto group relative bg-white text-black p-3 md:p-5 rounded-lg w-[160px] h-[280px] md:w-[220px] md:h-[360px] flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl overflow-hidden before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:h-1 before:bg-gradient-to-r before:from-[#ffcc00] before:to-[#ff9900] before:scale-x-0 group-hover:before:scale-x-100 before:transition-transform before:duration-300">
-                            <div class="h-30 md:h-40 flex items-center justify-center overflow-hidden mb-3">
-                                <img src="assets/images/productos/Muebles_y_decoracion/sofa/sofa_cama_blanco.png" alt="Sofá cama blanco" class="max-h-full max-w-full object-contain" loading="lazy">
+                        <article class="producto">
+                            <div class="producto-img-container">
+                                <img src="assets/images/productos/Muebles_y_decoracion/sofa/sofa_cama_blanco.png" alt="Sofá cama blanco" loading="lazy">
                             </div>
-                            <h3 class="text-sm md:text-base font-semibold line-clamp-2 min-h-[35px] md:min-h-[40px] leading-tight mb-2">Sofá cama blanco</h3>
-                            <p class="text-sm md:text-lg font-bold text-black mb-4">Precio: $9,000</p>
-                            <button class="btn-agregar w-full py-1.5 md:py-2 bg-[#ffcc00] text-black font-bold rounded-lg hover:bg-[#ff9900] transition-colors text-xs md:text-sm" id="sofa_cama_blanco">Agregar</button>
+                            <h3 class="producto-title">Sofá cama blanco</h3>
+                            <p class="producto-price">Precio: $9,000</p>
+                            <button class="btn-agregar" id="sofa_cama_blanco">Agregar</button>
                         </article>
                     </a>
 
                     <!-- Producto 5 -->
                     <a href="productos/alimentos/carnes_pescados_y_mariscos/carne_de_res_para_hamburguesas.html" class="block shrink-0 snap-start">
-                        <article class="producto group relative bg-white text-black p-3 md:p-5 rounded-lg w-[160px] h-[280px] md:w-[220px] md:h-[360px] flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl overflow-hidden before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:h-1 before:bg-gradient-to-r before:from-[#ffcc00] before:to-[#ff9900] before:scale-x-0 group-hover:before:scale-x-100 before:transition-transform before:duration-300">
-                            <div class="h-30 md:h-40 flex items-center justify-center overflow-hidden mb-3">
-                                <img src="assets/images/productos/Alimentos/carnes_pescados_mariscos/res/carne_de_res.avif" alt="Carne de Res para Hamburguesas" class="max-h-full max-w-full object-contain" loading="lazy">
+                        <article class="producto">
+                            <div class="producto-img-container">
+                                <img src="assets/images/productos/Alimentos/carnes_pescados_mariscos/res/carne_de_res.avif" alt="Carne de Res para Hamburguesas" loading="lazy">
                             </div>
-                            <h3 class="text-sm md:text-base font-semibold line-clamp-2 min-h-[35px] md:min-h-[40px] leading-tight mb-2">Carne de Res para Hamburguesas</h3>
-                            <p class="text-sm md:text-lg font-bold text-black mb-4">Precio: $370.00 /1 LB</p>
-                            <button class="btn-agregar w-full py-1.5 md:py-2 bg-[#ffcc00] text-black font-bold rounded-lg hover:bg-[#ff9900] transition-colors text-xs md:text-sm" id="carne_de_res_para_hamburguesas">Agregar</button>
+                            <h3 class="producto-title">Carne de Res para Hamburguesas</h3>
+                            <p class="producto-price">Precio: $370.00 /1 LB</p>
+                            <button class="btn-agregar" id="carne_de_res_para_hamburguesas">Agregar</button>
                         </article>
                     </a>
 
                     <!-- Producto 6 -->
                     <a href="productos/Alimentos/carnes_pescados_y_mariscos/pollo_entero_don_pollo.html" class="block shrink-0 snap-start">
-                        <article class="producto group relative bg-white text-black p-3 md:p-5 rounded-lg w-[160px] h-[280px] md:w-[220px] md:h-[360px] flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl overflow-hidden before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:h-1 before:bg-gradient-to-r before:from-[#ffcc00] before:to-[#ff9900] before:scale-x-0 group-hover:before:scale-x-100 before:transition-transform before:duration-300">
-                            <div class="h-30 md:h-40 flex items-center justify-center overflow-hidden mb-3">
-                                <img src="assets/images/productos/Alimentos/carnes_pescados_mariscos/pollo/pollo.avif" alt="Pollo fresco entero" class="max-h-full max-w-full object-contain" loading="lazy">
+                        <article class="producto">
+                            <div class="producto-img-container">
+                                <img src="assets/images/productos/Alimentos/carnes_pescados_mariscos/pollo/pollo.avif" alt="Pollo fresco entero" loading="lazy">
                             </div>
-                            <h3 class="text-sm md:text-base font-semibold line-clamp-2 min-h-[35px] md:min-h-[40px] leading-tight mb-2">Pollo Entero Don Pollo</h3>
-                            <p class="text-sm md:text-lg font-bold text-black mb-4">$300.00 / 1 unidad</p>
-                            <button class="btn-agregar w-full py-1.5 md:py-2 bg-[#ffcc00] text-black font-bold rounded-lg hover:bg-[#ff9900] transition-colors text-xs md:text-sm" id="pollo_entero_don_pollo">Agregar</button>
+                            <h3 class="producto-title">Pollo Entero Don Pollo</h3>
+                            <p class="producto-price">$300.00 / 1 unidad</p>
+                            <button class="btn-agregar" id="pollo_entero_don_pollo">Agregar</button>
                         </article>
                     </a>
                 </div>
                 
-                <button class="productos-control-next absolute right-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="productos-next">
-                    <i class="bi bi-chevron-right text-xl"></i>
+                <button class="productos-control-next absolute right-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="productos-destacados-next">
+                    <svg class="w-5 h-5 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
                     <span class="sr-only">Siguiente</span>
                 </button>
             </div>
         </div>
     </section>
+
+    <section class="productos-destacados bg-black/80 rounded-[20px] p-5 md:py-7.5 md:px-[56px] mx-auto mb-10 max-w-[1280px] xl:max-w-[calc(100vw-100px)] lg:max-w-[calc(100vw-86px)] reveal" id="ofertas">
+        <div class="container mx-auto">
+            <h2 class="text-xl md:text-2xl font-bold text-white bg-black/70 px-4 py-2 rounded-xl mb-5 w-fit mx-auto text-center">Ofertas de la Semana</h2>
+
+            <div class="productos-container-wrapper relative flex items-center justify-center">
+                <button class="productos-control-prev absolute left-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="ofertas-prev">
+                    <svg class="w-5 h-5 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
+                    <span class="sr-only">Anterior</span>
+                </button>
+                
+                <div class="productos-container flex w-full gap-4 md:gap-5 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory">
+                    <!-- Producto 1 -->
+                    <a href="productos/Alimentos/Frutas_y_verduras/manzanas_verdes.html" class="block shrink-0 snap-start">
+                        <article class="producto">
+                            <div class="producto-img-container">
+                                <img src="assets/images/productos/Alimentos/frutas_y_verduras/manzana_verde.avif" alt="Descuento en Manzanas Verdes" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Manzanas Verdes -20%</h3>
+                            <p>
+                                <span class="texto-antes">Antes:</span> <span class="precio-antiguo">RD$ 56.25/ 1 KG</span>
+                                <span class="flecha">→</span>
+                                <span class="texto-ahora">Ahora:</span> <span class="precio-nuevo">RD$ 45.00/ 1 KG</span>
+                            </p>
+                            <button class="btn-agregar" id="manzanas_verdes">Agregar</button> 
+                        </article>
+                    </a>
+
+                    <!-- Producto 2 -->
+                    <a href="productos/Alimentos/lacteos_y_huevos/huevos.html" class="block shrink-0 snap-start">
+                        <article class="producto">
+                            <div class="producto-img-container">
+                                <img src="assets/images/productos/Alimentos/lacteos_y_huevos/huevos/huevos_30unidades.avif" alt="Huevos en Oferta" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Huevos -10%</h3>
+                            <p>
+                                <span class="texto-antes">Antes:</span> <span class="precio-antiguo">RD$ 222.22 / 30 unidades</span>
+                                <span class="flecha">→</span>
+                                <span class="texto-ahora">Ahora:</span> <span class="precio-nuevo">RD$ 200.00 / 30 unidades</span>
+                            </p>
+                            <button class="btn-agregar" id="huevos_don_pancho">Agregar</button>
+                        </article>
+                    </a>
+
+                    <!-- Producto 3 -->
+                    <a href="productos/electrodomesticos/cocina/freezer_7_pies.html" class="block shrink-0 snap-start">
+                        <article class="producto">
+                            <div class="producto-img-container">
+                                <img src="assets/images/productos/Electrodomesticos/cocina/freezer/freezer_7pies.png" alt="Freezer en Oferta" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Freezer 7 pies -15%</h3>
+                            <p>
+                                <span class="texto-antes">Antes:</span> <span class="precio-antiguo">RD$ 19,411</span>
+                                <span class="flecha">→</span>
+                                <span class="texto-ahora">Ahora:</span> <span class="precio-nuevo">RD$ 16,500</span>
+                            </p>
+                            <button class="btn-agregar" id="freezer_7_pies">Agregar</button>
+                        </article>
+                    </a>
+
+                    <!-- Producto 4 -->
+                    <a href="productos/tecnologia/celulares/celular_a26.html" class="block shrink-0 snap-start">
+                        <article class="producto">
+                            <div class="producto-img-container">
+                                <img src="assets/images/productos/Tecnologia/Celulares/celular_samsung_A26.png" alt="Oferta en Celulares Samsung" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Celular Samsung A26 -10%</h3>
+                            <p>
+                                <span class="texto-antes">Antes:</span> <span class="precio-antiguo">RD$ 44,444</span>
+                                <span class="flecha">→</span>
+                                <span class="texto-ahora">Ahora:</span> <span class="precio-nuevo">RD$ 40,000</span>
+                            </p>
+                            <button class="btn-agregar" id="celular_samsung_a26">Agregar</button>
+                        </article>
+                    </a>
+
+                    <!-- Producto 5 -->
+                    <a href="productos/electrodomesticos/cocina/cilindro_duragas.html" class="block shrink-0 snap-start">
+                        <article class="producto">
+                            <div class="producto-img-container">
+                                <img src="assets/images/productos/Electrodomesticos/cocina/Cilindros_de_gas/cilindro_de_gas_duragas.avif" alt="Oferta en Cilindros de Gas" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Cilindros de Gas -15%</h3>
+                            <p>
+                                <span class="texto-antes">Antes:</span> <span class="precio-antiguo">RD$ 6,117</span>
+                                <span class="flecha">→</span>
+                                <span class="texto-ahora">Ahora:</span> <span class="precio-nuevo">RD$ 5,200</span>
+                            </p>
+                            <button class="btn-agregar" id="cilindro_de_gas_duragas">Agregar</button>
+                        </article>
+                    </a>
+
+                    <!-- Producto 6 -->
+                    <a href="productos/Alimentos/bebidas/coca_cola_zero.html" class="block shrink-0 snap-start">
+                        <article class="producto">
+                            <div class="producto-img-container">
+                                <img src="assets/images/productos/Alimentos/Bebidas/refresco/coca_cola_zero.avif" alt="Oferta en Coca Cola Zero" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Coca Cola Zero -5%</h3>
+                            <p>
+                                <span class="texto-antes">Antes:</span> <span class="precio-antiguo">RD$ 84.21</span>
+                                <span class="flecha">→</span>
+                                <span class="texto-ahora">Ahora:</span> <span class="precio-nuevo">RD$ 80.00</span>
+                            </p>
+                            <button class="btn-agregar" id="coca_cola_zero">Agregar</button>
+                        </article>
+                    </a>
+                </div>
+                
+                <button class="productos-control-next absolute right-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="ofertas-next">
+                    <svg class="w-5 h-5 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
+                    <span class="sr-only">Siguiente</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
         
     </main>
+
+
+
+
 
     <!-- Footer -->
     <footer class="bg-white border-t py-12">
@@ -442,5 +564,6 @@
     <script src="assets/js/hamburger_menu.js"></script>
     <script src="assets/js/tablet_menu_click.js"></script>
     <script src="assets/js/productos_navegacion.js"></script>
+    <script src="assets/js/ofertas_animation.js"></script>
 </body>
 </html>
