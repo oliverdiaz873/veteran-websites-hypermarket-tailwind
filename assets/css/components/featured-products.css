@@ -245,7 +245,7 @@
 
 #ofertas {
     margin-bottom: 15px !important;
-    /* style.css had 10px too, but 15px wins with !important earlier */
+    /* global.css también define márgenes; aquí 15px con !important */
 }
 
 #productos-destacados {

@@ -1,0 +1,35 @@
+/* assets/css/components/about-us-section.css */
+
+/* ==========================================================================
+   ABOUT US SECTION — Animaciones de scroll (JS añade scale-33/66/100 o scale-50/100)
+   Layout y colores se manejan con Tailwind en el HTML.
+   ========================================================================== */
+
+.about-us-section {
+  transform: scale(0.1);
+  opacity: 0.3;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-origin: center center;
+}
+
+
+.about-us-section.scale-33 {
+  transform: scale(0.33);
+  opacity: 0.4;
+}
+
+.about-us-section.scale-50 {
+  transform: scale(0.5);
+  opacity: 0.6;
+}
+
+.about-us-section.scale-66 {
+  transform: scale(0.66);
+  opacity: 0.7;
+}
+
+.about-us-section.scale-100 {
+  transform: scale(1);
+  opacity: 1;
+}

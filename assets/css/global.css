@@ -1,4 +1,4 @@
-/* assets/css/style.css */
+/* assets/css/global.css — Estilos globales: layout, secciones, responsive */
 
 /* Estilos generales del body - Solo para página principal */
 body:not([id^="fondo_"]):not([id="ferreteria"]) {
@@ -37,60 +37,6 @@ main .container {
   max-width: 100%;
   padding: 0;
   width: 100%;
-}
-
-/* Sección Sobre Nosotros */
-.sobre-nosotros {
-  width: calc(100vw - 40px);
-  background-color: rgb(0, 0, 0);
-  color: #fff;
-  padding: 20px 0;
-  border-radius: 20px;
-  margin: 80px auto 60px auto;
-  overflow: hidden;
-  position: relative;
-  transform: scale(0.1);
-  opacity: 0.3;
-  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-    opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transform-origin: center center;
-  display: block;
-}
-
-/* Reducir separación superior de Sobre Nosotros en desktop */
-@media (min-width: 768px) {
-  .sobre-nosotros {
-    margin: 35px auto 60px auto !important;
-  }
-}
-
-.sobre-nosotros .contenedor {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 60px;
-}
-
-.sobre-nosotros img {
-  width: 450px;
-  height: auto;
-  border-radius: 15px;
-  flex-shrink: 0;
-}
-
-.sobre-nosotros .texto {
-  max-width: 600px;
-  text-align: left;
-}
-
-.sobre-nosotros h2 {
-  font-size: 2em;
-  margin-bottom: 15px;
-}
-
-.sobre-nosotros p {
-  font-size: 1.1em;
-  line-height: 1.6;
 }
 
 /* Animación de scroll de la sección de ofertas - Solo fade-in */
@@ -135,7 +81,7 @@ html {
 @media (max-width: 767.98px) {
   main {
     padding: 60px 10px 20px 10px;
-    padding-top: 95px;
+    padding-top: 70px;
   }
 }
 
@@ -291,92 +237,6 @@ html {
 }
 
 /* ==========================================================================
-   SOBRE NOSOTROS ANIMATIONS
-   ========================================================================== */
-
-.sobre-nosotros.scale-33 {
-  transform: scale(0.33);
-  opacity: 0.4;
-}
-
-.sobre-nosotros.scale-66 {
-  transform: scale(0.66);
-  opacity: 0.7;
-}
-
-.sobre-nosotros.scale-100 {
-  transform: scale(1);
-  opacity: 1;
-}
-
-.sobre-nosotros .section-inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 60px;
-}
-
-.sobre-nosotros .texto {
-  max-width: 600px;
-  text-align: left;
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .sobre-nosotros .section-inner {
-    flex-direction: row;
-    gap: 40px;
-    padding: 0 20px;
-    align-items: center;
-  }
-
-  .sobre-nosotros img {
-    width: 350px;
-  }
-
-  .sobre-nosotros .texto {
-    max-width: 50%;
-    flex: 1;
-  }
-
-  .sobre-nosotros h2 {
-    font-size: 1.8em;
-  }
-
-  .sobre-nosotros p {
-    font-size: 1em;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .sobre-nosotros .section-inner {
-    flex-direction: column;
-    gap: 30px;
-    text-align: center;
-  }
-
-  .sobre-nosotros img {
-    width: 250px;
-    margin: 0 auto;
-  }
-
-  .sobre-nosotros .texto {
-    text-align: center;
-    max-width: 90%;
-  }
-
-  .sobre-nosotros {
-    margin: 40px auto 30px auto;
-    width: calc(100vw - 40px);
-    max-width: 100%;
-  }
-
-  .sobre-nosotros.scale-50 {
-    transform: scale(0.5);
-    opacity: 0.6;
-  }
-}
-
-/* ==========================================================================
    ELEMENTOS GLOBALES
    ========================================================================== */
 
@@ -387,93 +247,4 @@ section {
 
 section>* {
   margin: 0 auto;
-}
-
-/* ==========================================================================
-   FOOTER
-   ========================================================================== */
-
-footer {
-  color: white;
-  padding: 20px;
-  margin: 0;
-  text-align: center;
-  font-size: 18px;
-  background-color: rgba(0, 0, 0, 0.85);
-}
-
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
-
-.social-icons {
-  display: flex;
-  gap: 25px;
-}
-
-.social-icons i {
-  font-size: 24px;
-  color: white;
-  transition: transform 0.3s, color 0.3s;
-}
-
-.social-icons a:hover i {
-  transform: scale(1.2);
-  color: #ffcc00;
-}
-
-.footer-links a {
-  color: #ccc;
-  text-decoration: none;
-  margin: 0 5px;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
-}
-
-@media (min-width: 768px) {
-  footer {
-    padding: 15px 0px 25px;
-    font-size: 18px;
-  }
-
-  .footer-content {
-    gap: 15px;
-  }
-
-  .social-icons i {
-    font-size: 28px;
-  }
-
-  .footer-links a {
-    margin: 0 10px;
-    font-size: 14px;
-  }
-}
-
-@media (min-width: 1024px) {
-  footer {
-    padding: 20px 30px 30px;
-    font-size: 18px;
-  }
-
-  .footer-content {
-    flex-direction: column;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .social-icons i {
-    font-size: 32px;
-  }
-
-  .footer-links a {
-    margin: 0 10px;
-    font-size: 16px;
-  }
 }

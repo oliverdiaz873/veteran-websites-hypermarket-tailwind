@@ -49,7 +49,9 @@
     <link rel="stylesheet" href="assets/css/components/product-card.css">
     <link rel="stylesheet" href="assets/css/components/offer-card.css">
     <link rel="stylesheet" href="assets/css/components/featured-products.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components/about-us-section.css">
+    <link rel="stylesheet" href="assets/css/components/footer.css">
+    <link rel="stylesheet" href="assets/css/global.css">
 </head>
 
 
@@ -65,9 +67,7 @@
 
       <!-- Botón hamburguesa solo en móvil -->
       <button class="menu-btn text-[22px] bg-transparent border-none text-white cursor-pointer transition-colors duration-300 rounded hover:bg-white/15 p-1 md:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-        </svg>
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-menu"/></svg>
       </button>
 
       <!-- Logo -->
@@ -198,23 +198,16 @@
         <div class="relative flex items-center">
           <input type="text" id="input-buscar" placeholder="Buscar productos..." class="search-input-modern" autocomplete="off">
           <button type="button" id="btn-buscar" class="util-btn">
-            <!-- Icono Lupa -->
-            <svg id="icono-buscar" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" class="util-icon">
-              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-            </svg>
-            <!-- Icono X (Cerrar) -->
-            <svg id="icono-cerrar" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" class="util-icon hidden">
-              <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-            </svg>
+            <!-- Icono Lupa / Cerrar (sprite) -->
+            <svg id="icono-buscar" class="util-icon" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-search"/></svg>
+            <svg id="icono-cerrar" class="util-icon hidden" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-close"/></svg>
           </button>
           <ul id="resultados-busqueda" class="search-results-list"></ul>
         </div>
 
         <!-- Carrito -->
         <a href="pages/cart/index.html" class="util-btn" aria-label="Ver carrito">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" class="util-icon">
-            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.212 8.348-.418L13.102 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-          </svg>
+          <svg class="util-icon" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-cart"/></svg>
           <span id="contador-carrito" class="cart-badge">0</span>
         </a>
       </div>
@@ -344,7 +337,7 @@
 
             <div class="productos-container-wrapper relative flex items-center justify-center">
                 <button class="productos-control-prev absolute left-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="productos-destacados-prev">
-                    <svg class="w-5 h-5 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
+                    <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-chevron-left"/></svg>
                     <span class="sr-only">Anterior</span>
                 </button>
                 
@@ -423,20 +416,21 @@
                 </div>
                 
                 <button class="productos-control-next absolute right-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="productos-destacados-next">
-                    <svg class="w-5 h-5 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
+                    <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-chevron-right"/></svg>
                     <span class="sr-only">Siguiente</span>
                 </button>
             </div>
         </div>
     </section>
 
-    <section class="productos-destacados bg-black/80 rounded-[20px] p-5 md:py-7.5 md:px-[56px] mx-auto mb-10 max-w-[1280px] xl:max-w-[calc(100vw-100px)] lg:max-w-[calc(100vw-86px)] reveal" id="ofertas">
+    <!-- Sección ofertas de la semana -->
+    <section class="productos-destacados mt-12 md:mt-20 bg-black/80 rounded-[20px] p-5 md:py-7.5 md:px-[56px] mx-auto mb-10 max-w-[1280px] xl:max-w-[calc(100vw-100px)] lg:max-w-[calc(100vw-86px)] reveal" id="ofertas">
         <div class="container mx-auto">
             <h2 class="text-xl md:text-2xl font-bold text-white bg-black/70 px-4 py-2 rounded-xl mb-5 w-fit mx-auto text-center">Ofertas de la Semana</h2>
 
             <div class="productos-container-wrapper relative flex items-center justify-center">
                 <button class="productos-control-prev absolute left-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="ofertas-prev">
-                    <svg class="w-5 h-5 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
+                    <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-chevron-left"/></svg>
                     <span class="sr-only">Anterior</span>
                 </button>
                 
@@ -539,7 +533,7 @@
                 </div>
                 
                 <button class="productos-control-next absolute right-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="ofertas-next">
-                    <svg class="w-5 h-5 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
+                    <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-chevron-right"/></svg>
                     <span class="sr-only">Siguiente</span>
                 </button>
             </div>
@@ -547,17 +541,52 @@
     </section>
 
 
-        
+      <!-- Sección: Sobre Nosotros -->
+      <section class="about-us-section w-[calc(100vw-40px)] max-w-full mx-auto mt-10 mb-6 md:mt-9 md:mb-10 bg-black text-white py-5 rounded-[20px] overflow-hidden">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-10 lg:gap-16 px-5 py-4 md:px-8">
+          <img src="assets/images/logo/logo_with_background.jpeg" alt="Logo del Hipermercado Superior" class="w-[250px] md:w-[350px] lg:w-[450px] h-auto rounded-[15px] shrink-0" loading="lazy">
+          <div class="max-w-[600px] text-center md:text-left">
+            <h2 class="text-2xl md:text-3xl font-semibold mb-4">Sobre Nosotros</h2>
+            <p class="text-base md:text-lg leading-relaxed">
+              En <strong>Hipermercado Superior</strong> trabajamos para ofrecerte calidad, variedad y precios justos.
+              Nuestro compromiso es brindarte la mejor experiencia de compra tanto en tienda física como online.
+            </p>
+          </div>
+        </div>
+      </section>
+
+
     </main>
 
+    <!-- Footer global -->
+    <footer class="bg-black/85 text-white text-center py-5 px-5 md:py-6 md:px-8 lg:py-8 lg:px-12 text-base md:text-lg">
+      <div class="footer-content w-full max-w-7xl mx-auto flex flex-col items-center gap-4 md:gap-5 lg:gap-6">
+        <!-- Derechos reservados -->
+        <small class="block text-base md:text-lg lg:text-base">&copy; 2026 Hipermercado Superior. Todos los derechos reservados.</small>
 
+        <!-- Íconos de redes sociales (sprite SVG) -->
+        <div class="social-icons flex gap-6 md:gap-7">
+          <a href="https://facebook.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Facebook" class="group text-white hover:text-amber-400 transition-all duration-300 hover:scale-125">
+            <svg class="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-facebook"/></svg>
+          </a>
+          <a href="https://twitter.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en X (antes Twitter)" class="group text-white hover:text-amber-400 transition-all duration-300 hover:scale-125">
+            <svg class="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-x"/></svg>
+          </a>
+          <a href="https://instagram.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Instagram" class="group text-white hover:text-amber-400 transition-all duration-300 hover:scale-125">
+            <svg class="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-instagram"/></svg>
+          </a>
+        </div>
 
-
-
-    <!-- Footer -->
-    <footer class="bg-white border-t py-12">
-       
+        <!-- Enlaces legales -->
+        <div class="footer-links">
+          <a href="legal/privacy.html" title="Política de Privacidad" class="text-gray-300 hover:text-amber-400 no-underline mx-2 md:mx-3 hover:underline transition-colors">Política de Privacidad</a>
+          <span class="text-gray-500">|</span>
+          <a href="legal/terms.html" title="Términos de Uso" class="text-gray-300 hover:text-amber-400 no-underline mx-2 md:mx-3 hover:underline transition-colors">Términos de Uso</a>
+        </div>
+      </div>
     </footer>
+
+
 
     <script src="assets/js/productos.js"></script>
     <script src="assets/js/boton_de_busqueda.js"></script>
@@ -565,5 +594,6 @@
     <script src="assets/js/tablet_menu_click.js"></script>
     <script src="assets/js/productos_navegacion.js"></script>
     <script src="assets/js/ofertas_animation.js"></script>
+    <script src="assets/js/scroll_animations.js"></script>
 </body>
 </html>

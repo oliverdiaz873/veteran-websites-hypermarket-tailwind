@@ -76,14 +76,14 @@
     }
 }
 
-/* Móviles: precios más chicos y separación del título */
+/* Móviles: precios más grandes y separación del título */
 @media (max-width: 767.98px) {
     .producto p .texto-antes,
     .producto p .precio-antiguo,
     .producto p .texto-ahora,
     .producto p .precio-nuevo,
     .producto p .flecha {
-        font-size: 12px;
+        font-size: 13px;
     }
 
     .producto p {

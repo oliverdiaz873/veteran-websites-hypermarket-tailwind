@@ -91,7 +91,7 @@
    Título
    -------------------------------------------------------------------------- */
 .producto-title {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
     line-height: 1.25;
     margin-bottom: 0px;
@@ -148,12 +148,16 @@
 /* Móviles: separación título–precio y precio más chico */
 @media (max-width: 767.98px) {
     .producto-title {
+        font-size: 16px;
+        line-height: 1.4;
+        min-height: 45px;
         margin-bottom: 10px;
+        padding-bottom: 2px;
     }
 
     .producto .producto-price {
-        font-size: 12px;
-        margin-top: 4px;
+        font-size: 14px;
+        margin-top: 5px;
     }
 
     .producto .btn-agregar {
