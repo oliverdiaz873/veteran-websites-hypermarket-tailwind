@@ -146,6 +146,20 @@ header {
     display: block;
 }
 
+/* Estilos específicos para el icono 'cerrar' (X) del buscador */
+/* Cuando el SVG no tenga la clase `hidden` lo mostramos más grande y en rojo */
+#icono-cerrar {
+    transition: width .12s ease, height .12s ease, color .12s ease, transform .12s ease;
+    color: inherit;
+}
+
+#icono-cerrar:not(.hidden) {
+    width: 34px;
+    height: 34px;
+    color: #dc2626; /* rojo */
+    transform: scale(1.12);
+}
+
 /* Search input field */
 .search-input-modern {
     display: none;
@@ -320,11 +334,22 @@ body.menu-busqueda-activa #input-buscar {
     flex-direction: column;
     z-index: 1000;
     text-align: left;
+    gap: 4px; /* reducir separación entre items del dropdown */
+    padding: 6px 0; /* pequeño padding interno para el contenedor */
+    align-items: stretch; /* asegurar que los enlaces ocupen todo el ancho y el texto quede a la izquierda */
 }
 
 /* Enlaces dentro de submenús nivel 2 y 3 */
+.nav-links li ul li {
+    padding: 0; /* eliminar padding extra en los li para controlar mediante el a */
+}
+
 .nav-links li ul li a {
     text-align: left;
+    display: block;
+    width: 100%;
+    padding: 4px 12px; /* padding más pequeño para compactar los items */
+    line-height: 1.1;
 }
 
 .nav-links li ul li ul {
