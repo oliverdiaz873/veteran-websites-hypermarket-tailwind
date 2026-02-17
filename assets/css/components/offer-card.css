@@ -26,11 +26,12 @@
 .offer-card .producto-title {
     text-align: left;
     margin-bottom: 0.5rem;
-    height: 3rem;
-    /* Altura fija para 2 líneas exacta */
+    min-height: 3rem;
+    height: auto;
+    /* Altura flexible hasta 3 líneas */
     display: -webkit-box;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     line-height: 1.25;
