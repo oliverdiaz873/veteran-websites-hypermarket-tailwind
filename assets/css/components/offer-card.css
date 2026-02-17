@@ -24,7 +24,7 @@
 }
 
 .offer-card .producto-title {
-    text-align: center;
+    text-align: left;
     margin-bottom: 0.5rem;
     height: 3rem;
     /* Altura fija para 2 líneas exacta */
