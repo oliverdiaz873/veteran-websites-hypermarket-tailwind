@@ -7,21 +7,67 @@
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   Etiquetas y precios del bloque de oferta (Antes / Ahora)
+   Contenedor principal de la tarjeta de oferta - Asegurar simetría
    -------------------------------------------------------------------------- */
+.offer-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+}
+
+.offer-card .producto-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.offer-card .producto-title {
+    text-align: center;
+    margin-bottom: 0.75rem;
+    min-height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --------------------------------------------------------------------------
+   Etiquetas y precios del bloque de oferta (Antes / Ahora) - Simetría perfecta
+   -------------------------------------------------------------------------- */
+.offer-card p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem 0;
+    min-height: 3rem;
+    text-align: center;
+}
+
+.precio-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0.25rem 0;
+}
+
 .texto-antes {
     font-size: 14px;
     color: #3f3f3f;
     font-weight: 500;
     text-decoration: none;
+    text-align: right;
+    min-width: 50px;
+    margin-right: 8px;
 }
 
 .precio-antiguo {
-    font-size: 14px;
+    font-size: 12px;
     text-decoration: line-through;
-    color: #3f3f3f;
-    margin-bottom: 2px;
-    font-weight: 500;
+    text-align: left;
+    min-width: 80px;
 }
 
 .precio-antiguo::before {
@@ -29,10 +75,13 @@
 }
 
 .texto-ahora {
-    font-size: 14px;
+    font-size: 12px;
     color: #141414;
     font-weight: 700;
     text-decoration: none;
+    text-align: right;
+    min-width: 50px;
+    margin-right: 8px;
 }
 
 .flecha {
@@ -41,52 +90,85 @@
     color: #6b7280;
     font-weight: bold;
     font-size: 14px;
+    text-align: center;
+    width: 20px;
 }
 
 .precio-nuevo {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 700;
     color: #141414;
+    text-align: left;
+    min-width: 80px;
 }
 
 /* ==========================================================================
    RESPONSIVE — TARJETAS DE OFERTAS
    ========================================================================== */
 
-/* Desktop: precios más grandes */
+/* Desktop: precios más grandes manteniendo simetría */
 @media (min-width: 768px) {
     .texto-antes {
         font-size: 16px;
+        min-width: 55px;
     }
 
     .precio-antiguo {
         font-size: 16px;
+        min-width: 90px;
     }
 
     .texto-ahora {
         font-size: 16px;
+        min-width: 55px;
     }
 
     .flecha {
         font-size: 16px;
+        width: 24px;
     }
 
     .precio-nuevo {
         font-size: 16px;
+        min-width: 90px;
     }
 }
 
-/* Móviles: precios más grandes y separación del título */
+/* Móviles: mantener simetría con tamaños ajustados */
 @media (max-width: 767.98px) {
-    .producto p .texto-antes,
-    .producto p .precio-antiguo,
-    .producto p .texto-ahora,
-    .producto p .precio-nuevo,
-    .producto p .flecha {
+
+    .offer-card .texto-antes,
+    .offer-card .precio-antiguo,
+    .offer-card .texto-ahora,
+    .offer-card .precio-nuevo,
+    .offer-card .flecha {
         font-size: 13px;
     }
 
-    .producto p {
-        margin-top: 4px;
+    .offer-card .texto-antes {
+        min-width: 45px;
+        margin-right: 6px;
+    }
+
+    .offer-card .precio-antiguo {
+        min-width: 70px;
+    }
+
+    .offer-card .texto-ahora {
+        min-width: 45px;
+        margin-right: 6px;
+    }
+
+    .offer-card .flecha {
+        width: 18px;
+        margin: 0 6px;
+    }
+
+    .offer-card .precio-nuevo {
+        min-width: 70px;
+    }
+
+    .offer-card p {
+        margin-top: 0;
     }
 }

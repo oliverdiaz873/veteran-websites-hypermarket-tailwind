@@ -35,10 +35,10 @@
     <!-- Título -->
     <title>Hipermercado Superior | Compras inteligentes y productos de calidad</title>
    
-    <!-- Favicons (Rutas corregidas) -->
-    <link rel="icon" href="assets/icons/favicons/icon-16x16.jpg" type="image/jpg" sizes="16x16">
-    <link rel="icon" href="assets/icons/favicons/icon-32x32.jpg" type="image/jpg" sizes="32x32">
-    <link rel="icon" href="assets/icons/favicons/icon-48x48.jpg" type="image/jpg" sizes="48x48">
+    <!-- Favicons (Rutas absolutas) -->
+    <link rel="icon" href="/assets/icons/favicons/icon-16x16.jpg" type="image/jpg" sizes="16x16">
+    <link rel="icon" href="/assets/icons/favicons/icon-32x32.jpg" type="image/jpg" sizes="32x32">
+    <link rel="icon" href="/assets/icons/favicons/icon-48x48.jpg" type="image/jpg" sizes="48x48">
 
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -46,6 +46,7 @@
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/components/header.css">
+    <link rel="stylesheet" href="assets/css/components/navigation.css">
     <link rel="stylesheet" href="assets/css/components/product-card.css">
     <link rel="stylesheet" href="assets/css/components/offer-card.css">
     <link rel="stylesheet" href="assets/css/components/featured-products.css">
@@ -67,7 +68,7 @@
 
       <!-- Botón hamburguesa solo en móvil -->
       <button class="menu-btn text-[22px] bg-transparent border-none text-white cursor-pointer transition-colors duration-300 rounded hover:bg-white/15 p-1 md:hidden">
-        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-menu"/></svg>
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-menu"/></svg>
       </button>
 
       <!-- Logo -->
@@ -199,15 +200,15 @@
           <input type="text" id="input-buscar" placeholder="Buscar productos..." class="search-input-modern" autocomplete="off">
           <button type="button" id="btn-buscar" class="util-btn">
             <!-- Icono Lupa / Cerrar (sprite) -->
-            <svg id="icono-buscar" class="util-icon" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-search"/></svg>
-            <svg id="icono-cerrar" class="util-icon hidden" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-close"/></svg>
+            <svg id="icono-buscar" class="util-icon" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-search"/></svg>
+            <svg id="icono-cerrar" class="util-icon hidden" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-close"/></svg>
           </button>
           <ul id="resultados-busqueda" class="search-results-list"></ul>
         </div>
 
         <!-- Carrito -->
         <a href="pages/cart/index.html" class="util-btn" aria-label="Ver carrito">
-          <svg class="util-icon" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-cart"/></svg>
+          <svg class="util-icon" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-cart"/></svg>
           <span id="contador-carrito" class="cart-badge">0</span>
         </a>
       </div>
@@ -337,86 +338,80 @@
 
             <div class="productos-container-wrapper relative flex items-center justify-center">
                 <button class="productos-control-prev absolute left-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="productos-destacados-prev">
-                    <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-chevron-left"/></svg>
+                    <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-chevron-left"/></svg>
                     <span class="sr-only">Anterior</span>
                 </button>
                 
                 <div class="productos-container flex w-full gap-4 md:gap-5 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory">
                     <!-- Producto 1 -->
-                    <a href="productos/tecnologia/televisores/tv_samsung_75.html" class="block shrink-0 snap-start">
-                        <article class="producto">
-                            <div class="producto-img-container">
-                                <img src="assets/images/productos/Tecnologia/Televisores/tv_samsung_75_sinfondo.png" alt="Televisor Samsung 75 pulgadas" loading="lazy">
-                            </div>
-                            <h3 class="producto-title">Televisor Samsung 75 pulgadas</h3>
-                            <p class="producto-price">Precio: $44,000</p>
-                            <button class="btn-agregar" id="televisor_samsung_75_pulgadas">Agregar</button>
-                        </article>
-                    </a>
+                    <article class="producto product-card offer-card block shrink-0 snap-start">
+                        <a href="productos/tecnologia/televisores/tv_samsung_75.html" class="product-card__overlay-link" aria-label="Ver detalles de Televisor Samsung 75 pulgadas"></a>
+                        <div class="producto-img-container">
+                            <img src="assets/images/productos/Tecnologia/Televisores/tv_samsung_75_sinfondo.png" alt="Televisor Samsung 75 pulgadas" loading="lazy">
+                        </div>
+                        <h3 class="producto-title">Televisor Samsung 75 pulgadas</h3>
+                        <p class="producto-price">Precio: $44,000</p>
+                        <button class="btn-agregar product-card__add-btn" id="televisor_samsung_75_pulgadas">Agregar</button>
+                    </article>
 
                     <!-- Producto 2 -->
-                    <a href="productos/electrodomesticos/cocina/nevera_lg.html" class="block shrink-0 snap-start">
-                        <article class="producto">
-                            <div class="producto-img-container">
-                                <img src="assets/images/productos/Electrodomesticos/cocina/Neveras/Nevera_LG.png" alt="Nevera LG Grande" loading="lazy">
-                            </div>
-                            <h3 class="producto-title">Nevera LG Grande Moderna</h3>
-                            <p class="producto-price">Precio: $80,000</p>
-                            <button class="btn-agregar" id="nevera_lg_grande_moderna">Agregar</button>
-                        </article>
-                    </a>
+                    <article class="producto product-card offer-card block shrink-0 snap-start">
+                        <a href="productos/electrodomesticos/cocina/nevera_lg.html" class="product-card__overlay-link" aria-label="Ver detalles de Nevera LG Grande Moderna"></a>
+                        <div class="producto-img-container">
+                            <img src="assets/images/productos/Electrodomesticos/cocina/Neveras/Nevera_LG.png" alt="Nevera LG Grande" loading="lazy">
+                        </div>
+                        <h3 class="producto-title">Nevera LG Grande Moderna</h3>
+                        <p class="producto-price">Precio: $80,000</p>
+                        <button class="btn-agregar product-card__add-btn" id="nevera_lg_grande_moderna">Agregar</button>
+                    </article>
 
                     <!-- Producto 3 -->
-                    <a href="productos/electrodomesticos/climatizacion/ventilador_daiwa.html" class="block shrink-0 snap-start">
-                        <article class="producto">
-                            <div class="producto-img-container">
-                                <img src="assets/images/productos/Electrodomesticos/climatizacion/ventiladores/ventilador_Daiwa.png" alt="Ventilador Daiwa de mesa color negro" loading="lazy">
-                            </div>
-                            <h3 class="producto-title">Ventilador Daiwa</h3>
-                            <p class="producto-price">Precio: $15,000</p>
-                            <button class="btn-agregar" id="ventilador_daiwa">Agregar</button>
-                        </article>
-                    </a>
+                    <article class="producto product-card offer-card block shrink-0 snap-start">
+                        <a href="productos/electrodomesticos/climatizacion/ventilador_daiwa.html" class="product-card__overlay-link" aria-label="Ver detalles de Ventilador Daiwa"></a>
+                        <div class="producto-img-container">
+                            <img src="assets/images/productos/Electrodomesticos/climatizacion/ventiladores/ventilador_Daiwa.png" alt="Ventilador Daiwa de mesa color negro" loading="lazy">
+                        </div>
+                        <h3 class="producto-title">Ventilador Daiwa</h3>
+                        <p class="producto-price">Precio: $15,000</p>
+                        <button class="btn-agregar product-card__add-btn" id="ventilador_daiwa">Agregar</button>
+                    </article>
 
                     <!-- Producto 4 -->
-                    <a href="productos/muebles_y_decoracion/sofas/sofa_cama_blanco.html" class="block shrink-0 snap-start">
-                        <article class="producto">
-                            <div class="producto-img-container">
-                                <img src="assets/images/productos/Muebles_y_decoracion/sofa/sofa_cama_blanco.png" alt="Sofá cama blanco" loading="lazy">
-                            </div>
-                            <h3 class="producto-title">Sofá cama blanco</h3>
-                            <p class="producto-price">Precio: $9,000</p>
-                            <button class="btn-agregar" id="sofa_cama_blanco">Agregar</button>
-                        </article>
-                    </a>
+                    <article class="producto product-card offer-card block shrink-0 snap-start">
+                        <a href="productos/muebles_y_decoracion/sofas/sofa_cama_blanco.html" class="product-card__overlay-link" aria-label="Ver detalles de Sofá cama blanco"></a>
+                        <div class="producto-img-container">
+                            <img src="assets/images/productos/Muebles_y_decoracion/sofa/sofa_cama_blanco.png" alt="Sofá cama blanco" loading="lazy">
+                        </div>
+                        <h3 class="producto-title">Sofá cama blanco</h3>
+                        <p class="producto-price">Precio: $9,000</p>
+                        <button class="btn-agregar product-card__add-btn" id="sofa_cama_blanco">Agregar</button>
+                    </article>
 
                     <!-- Producto 5 -->
-                    <a href="productos/alimentos/carnes_pescados_y_mariscos/carne_de_res_para_hamburguesas.html" class="block shrink-0 snap-start">
-                        <article class="producto">
-                            <div class="producto-img-container">
-                                <img src="assets/images/productos/Alimentos/carnes_pescados_mariscos/res/carne_de_res.avif" alt="Carne de Res para Hamburguesas" loading="lazy">
-                            </div>
-                            <h3 class="producto-title">Carne de Res para Hamburguesas</h3>
-                            <p class="producto-price">Precio: $370.00 /1 LB</p>
-                            <button class="btn-agregar" id="carne_de_res_para_hamburguesas">Agregar</button>
-                        </article>
-                    </a>
+                    <article class="producto product-card offer-card block shrink-0 snap-start">
+                        <a href="productos/alimentos/carnes_pescados_y_mariscos/carne_de_res_para_hamburguesas.html" class="product-card__overlay-link" aria-label="Ver detalles de Carne de Res para Hamburguesas"></a>
+                        <div class="producto-img-container">
+                            <img src="assets/images/productos/Alimentos/carnes_pescados_mariscos/res/carne_de_res.avif" alt="Carne de Res para Hamburguesas" loading="lazy">
+                        </div>
+                        <h3 class="producto-title">Carne de Res para Hamburguesas</h3>
+                        <p class="producto-price">Precio: $370.00 /1 LB</p>
+                        <button class="btn-agregar product-card__add-btn" id="carne_de_res_para_hamburguesas">Agregar</button>
+                    </article>
 
                     <!-- Producto 6 -->
-                    <a href="productos/Alimentos/carnes_pescados_y_mariscos/pollo_entero_don_pollo.html" class="block shrink-0 snap-start">
-                        <article class="producto">
-                            <div class="producto-img-container">
-                                <img src="assets/images/productos/Alimentos/carnes_pescados_mariscos/pollo/pollo.avif" alt="Pollo fresco entero" loading="lazy">
-                            </div>
-                            <h3 class="producto-title">Pollo Entero Don Pollo</h3>
-                            <p class="producto-price">$300.00 / 1 unidad</p>
-                            <button class="btn-agregar" id="pollo_entero_don_pollo">Agregar</button>
-                        </article>
-                    </a>
+                    <article class="producto product-card offer-card block shrink-0 snap-start">
+                        <a href="productos/Alimentos/carnes_pescados_y_mariscos/pollo_entero_don_pollo.html" class="product-card__overlay-link" aria-label="Ver detalles de Pollo Entero Don Pollo"></a>
+                        <div class="producto-img-container">
+                            <img src="assets/images/productos/Alimentos/carnes_pescados_mariscos/pollo/pollo.avif" alt="Pollo fresco entero" loading="lazy">
+                        </div>
+                        <h3 class="producto-title">Pollo Entero Don Pollo</h3>
+                        <p class="producto-price">$300.00 / 1 unidad</p>
+                        <button class="btn-agregar product-card__add-btn" id="pollo_entero_don_pollo">Agregar</button>
+                    </article>
                 </div>
                 
                 <button class="productos-control-next absolute right-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="productos-destacados-next">
-                    <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-chevron-right"/></svg>
+                    <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-chevron-right"/></svg>
                     <span class="sr-only">Siguiente</span>
                 </button>
             </div>
@@ -430,110 +425,104 @@
 
             <div class="productos-container-wrapper relative flex items-center justify-center">
                 <button class="productos-control-prev absolute left-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="ofertas-prev">
-                    <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-chevron-left"/></svg>
+                    <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-chevron-left"/></svg>
                     <span class="sr-only">Anterior</span>
                 </button>
                 
                 <div class="productos-container flex w-full gap-4 md:gap-5 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory">
                     <!-- Producto 1 -->
-                    <a href="productos/Alimentos/Frutas_y_verduras/manzanas_verdes.html" class="block shrink-0 snap-start">
-                        <article class="producto">
-                            <div class="producto-img-container">
-                                <img src="assets/images/productos/Alimentos/frutas_y_verduras/manzana_verde.avif" alt="Descuento en Manzanas Verdes" loading="lazy">
-                            </div>
-                            <h3 class="producto-title">Manzanas Verdes -20%</h3>
-                            <p>
-                                <span class="texto-antes">Antes:</span> <span class="precio-antiguo">RD$ 56.25/ 1 KG</span>
-                                <span class="flecha">→</span>
-                                <span class="texto-ahora">Ahora:</span> <span class="precio-nuevo">RD$ 45.00/ 1 KG</span>
-                            </p>
-                            <button class="btn-agregar" id="manzanas_verdes">Agregar</button> 
-                        </article>
-                    </a>
+                    <article class="producto product-card offer-card block shrink-0 snap-start oferta_height">
+                        <a href="productos/Alimentos/Frutas_y_verduras/manzanas_verdes.html" class="product-card__overlay-link" aria-label="Ver detalles de Manzanas Verdes -20%"></a>
+                        <div class="producto-img-container">
+                            <img src="assets/images/productos/Alimentos/frutas_y_verduras/manzana_verde.avif" alt="Descuento en Manzanas Verdes" loading="lazy">
+                        </div>
+                        <h3 class="producto-title">Manzanas Verdes -20%</h3>
+                        <p>
+                            <span class="texto-antes">Antes:</span> <span class="precio-antiguo">RD$ 56.25/ 1 KG</span>
+                            <span class="flecha">→</span>
+                            <span class="texto-ahora">Ahora:</span> <span class="precio-nuevo">RD$ 45.00/ 1 KG</span>
+                        </p>
+                        <button class="btn-agregar product-card__add-btn" id="manzanas_verdes">Agregar</button> 
+                    </article>
 
                     <!-- Producto 2 -->
-                    <a href="productos/Alimentos/lacteos_y_huevos/huevos.html" class="block shrink-0 snap-start">
-                        <article class="producto">
-                            <div class="producto-img-container">
-                                <img src="assets/images/productos/Alimentos/lacteos_y_huevos/huevos/huevos_30unidades.avif" alt="Huevos en Oferta" loading="lazy">
-                            </div>
-                            <h3 class="producto-title">Huevos -10%</h3>
-                            <p>
-                                <span class="texto-antes">Antes:</span> <span class="precio-antiguo">RD$ 222.22 / 30 unidades</span>
-                                <span class="flecha">→</span>
-                                <span class="texto-ahora">Ahora:</span> <span class="precio-nuevo">RD$ 200.00 / 30 unidades</span>
-                            </p>
-                            <button class="btn-agregar" id="huevos_don_pancho">Agregar</button>
-                        </article>
-                    </a>
+                    <article class="producto product-card offer-card block shrink-0 snap-start oferta_height">
+                        <a href="productos/Alimentos/lacteos_y_huevos/huevos.html" class="product-card__overlay-link" aria-label="Ver detalles de Huevos -10%"></a>
+                        <div class="producto-img-container">
+                            <img src="assets/images/productos/Alimentos/lacteos_y_huevos/huevos/huevos_30unidades.avif" alt="Huevos en Oferta" loading="lazy">
+                        </div>
+                        <h3 class="producto-title">Huevos -10%</h3>
+                        <p>
+                            <span class="texto-antes">Antes:</span> <span class="precio-antiguo">RD$ 222.22 / 30 unidades</span>
+                            <span class="flecha">→</span>
+                            <span class="texto-ahora">Ahora:</span> <span class="precio-nuevo">RD$ 200.00 / 30 unidades</span>
+                        </p>
+                        <button class="btn-agregar product-card__add-btn" id="huevos_don_pancho">Agregar</button>
+                    </article>
 
                     <!-- Producto 3 -->
-                    <a href="productos/electrodomesticos/cocina/freezer_7_pies.html" class="block shrink-0 snap-start">
-                        <article class="producto">
-                            <div class="producto-img-container">
-                                <img src="assets/images/productos/Electrodomesticos/cocina/freezer/freezer_7pies.png" alt="Freezer en Oferta" loading="lazy">
-                            </div>
-                            <h3 class="producto-title">Freezer 7 pies -15%</h3>
-                            <p>
-                                <span class="texto-antes">Antes:</span> <span class="precio-antiguo">RD$ 19,411</span>
-                                <span class="flecha">→</span>
-                                <span class="texto-ahora">Ahora:</span> <span class="precio-nuevo">RD$ 16,500</span>
-                            </p>
-                            <button class="btn-agregar" id="freezer_7_pies">Agregar</button>
-                        </article>
-                    </a>
+                    <article class="producto product-card offer-card block shrink-0 snap-start oferta_height">
+                        <a href="productos/electrodomesticos/cocina/freezer_7_pies.html" class="product-card__overlay-link" aria-label="Ver detalles de Freezer 7 pies -15%"></a>
+                        <div class="producto-img-container">
+                            <img src="assets/images/productos/Electrodomesticos/cocina/freezer/freezer_7pies.png" alt="Freezer en Oferta" loading="lazy">
+                        </div>
+                        <h3 class="producto-title">Freezer 7 pies -15%</h3>
+                        <p>
+                            <span class="texto-antes">Antes:</span> <span class="precio-antiguo">RD$ 19,411</span>
+                            <span class="flecha">→</span>
+                            <span class="texto-ahora">Ahora:</span> <span class="precio-nuevo">RD$ 16,500</span>
+                        </p>
+                        <button class="btn-agregar product-card__add-btn" id="freezer_7_pies">Agregar</button>
+                    </article>
 
                     <!-- Producto 4 -->
-                    <a href="productos/tecnologia/celulares/celular_a26.html" class="block shrink-0 snap-start">
-                        <article class="producto">
-                            <div class="producto-img-container">
-                                <img src="assets/images/productos/Tecnologia/Celulares/celular_samsung_A26.png" alt="Oferta en Celulares Samsung" loading="lazy">
-                            </div>
-                            <h3 class="producto-title">Celular Samsung A26 -10%</h3>
-                            <p>
-                                <span class="texto-antes">Antes:</span> <span class="precio-antiguo">RD$ 44,444</span>
-                                <span class="flecha">→</span>
-                                <span class="texto-ahora">Ahora:</span> <span class="precio-nuevo">RD$ 40,000</span>
-                            </p>
-                            <button class="btn-agregar" id="celular_samsung_a26">Agregar</button>
-                        </article>
-                    </a>
+                    <article class="producto product-card offer-card block shrink-0 snap-start oferta_height">
+                        <a href="productos/tecnologia/celulares/celular_a26.html" class="product-card__overlay-link" aria-label="Ver detalles de Celular Samsung A26 -10%"></a>
+                        <div class="producto-img-container">
+                            <img src="assets/images/productos/Tecnologia/Celulares/celular_samsung_A26.png" alt="Oferta en Celulares Samsung" loading="lazy">
+                        </div>
+                        <h3 class="producto-title">Celular Samsung A26 -10%</h3>
+                        <p>
+                            <span class="texto-antes">Antes:</span> <span class="precio-antiguo">RD$ 44,444</span>
+                            <span class="flecha">→</span>
+                            <span class="texto-ahora">Ahora:</span> <span class="precio-nuevo">RD$ 40,000</span>
+                        </p>
+                        <button class="btn-agregar product-card__add-btn" id="celular_samsung_a26">Agregar</button>
+                    </article>
 
                     <!-- Producto 5 -->
-                    <a href="productos/electrodomesticos/cocina/cilindro_duragas.html" class="block shrink-0 snap-start">
-                        <article class="producto">
-                            <div class="producto-img-container">
-                                <img src="assets/images/productos/Electrodomesticos/cocina/Cilindros_de_gas/cilindro_de_gas_duragas.avif" alt="Oferta en Cilindros de Gas" loading="lazy">
-                            </div>
-                            <h3 class="producto-title">Cilindros de Gas -15%</h3>
-                            <p>
-                                <span class="texto-antes">Antes:</span> <span class="precio-antiguo">RD$ 6,117</span>
-                                <span class="flecha">→</span>
-                                <span class="texto-ahora">Ahora:</span> <span class="precio-nuevo">RD$ 5,200</span>
-                            </p>
-                            <button class="btn-agregar" id="cilindro_de_gas_duragas">Agregar</button>
-                        </article>
-                    </a>
+                    <article class="producto product-card offer-card block shrink-0 snap-start oferta_height">
+                        <a href="productos/electrodomesticos/cocina/cilindro_duragas.html" class="product-card__overlay-link" aria-label="Ver detalles de Cilindros de Gas -15%"></a>
+                        <div class="producto-img-container">
+                            <img src="assets/images/productos/Electrodomesticos/cocina/Cilindros_de_gas/cilindro_de_gas_duragas.avif" alt="Oferta en Cilindros de Gas" loading="lazy">
+                        </div>
+                        <h3 class="producto-title">Cilindros de Gas -15%</h3>
+                        <p>
+                            <span class="texto-antes">Antes:</span> <span class="precio-antiguo">RD$ 6,117</span>
+                            <span class="flecha">→</span>
+                            <span class="texto-ahora">Ahora:</span> <span class="precio-nuevo">RD$ 5,200</span>
+                        </p>
+                        <button class="btn-agregar product-card__add-btn" id="cilindro_de_gas_duragas">Agregar</button>
+                    </article>
 
                     <!-- Producto 6 -->
-                    <a href="productos/Alimentos/bebidas/coca_cola_zero.html" class="block shrink-0 snap-start">
-                        <article class="producto">
-                            <div class="producto-img-container">
-                                <img src="assets/images/productos/Alimentos/Bebidas/refresco/coca_cola_zero.avif" alt="Oferta en Coca Cola Zero" loading="lazy">
-                            </div>
-                            <h3 class="producto-title">Coca Cola Zero -5%</h3>
-                            <p>
-                                <span class="texto-antes">Antes:</span> <span class="precio-antiguo">RD$ 84.21</span>
-                                <span class="flecha">→</span>
-                                <span class="texto-ahora">Ahora:</span> <span class="precio-nuevo">RD$ 80.00</span>
-                            </p>
-                            <button class="btn-agregar" id="coca_cola_zero">Agregar</button>
-                        </article>
-                    </a>
+                    <article class="producto product-card offer-card block shrink-0 snap-start oferta_height">
+                        <a href="productos/Alimentos/bebidas/coca_cola_zero.html" class="product-card__overlay-link" aria-label="Ver detalles de Coca Cola Zero -5%"></a>
+                        <div class="producto-img-container">
+                            <img src="assets/images/productos/Alimentos/Bebidas/refresco/coca_cola_zero.avif" alt="Oferta en Coca Cola Zero" loading="lazy">
+                        </div>
+                        <h3 class="producto-title">Coca Cola Zero -5%</h3>
+                        <p>
+                            <span class="texto-antes">Antes:</span> <span class="precio-antiguo">RD$ 84.21</span>
+                            <span class="flecha">→</span>
+                            <span class="texto-ahora">Ahora:</span> <span class="precio-nuevo">RD$ 80.00</span>
+                        </p>
+                        <button class="btn-agregar product-card__add-btn" id="coca_cola_zero">Agregar</button>
+                    </article>
                 </div>
                 
                 <button class="productos-control-next absolute right-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="ofertas-next">
-                    <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-chevron-right"/></svg>
+                    <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-chevron-right"/></svg>
                     <span class="sr-only">Siguiente</span>
                 </button>
             </div>
@@ -567,13 +556,13 @@
         <!-- Íconos de redes sociales (sprite SVG) -->
         <div class="social-icons flex gap-6 md:gap-7">
           <a href="https://facebook.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Facebook" class="group text-white hover:text-amber-400 transition-all duration-300 hover:scale-125">
-            <svg class="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-facebook"/></svg>
+            <svg class="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-facebook"/></svg>
           </a>
           <a href="https://twitter.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en X (antes Twitter)" class="group text-white hover:text-amber-400 transition-all duration-300 hover:scale-125">
-            <svg class="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-x"/></svg>
+            <svg class="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-x"/></svg>
           </a>
           <a href="https://instagram.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Instagram" class="group text-white hover:text-amber-400 transition-all duration-300 hover:scale-125">
-            <svg class="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-instagram"/></svg>
+            <svg class="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-instagram"/></svg>
           </a>
         </div>
 

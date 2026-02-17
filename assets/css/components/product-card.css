@@ -27,15 +27,47 @@
     padding: 12px;
     border-radius: 12px;
     width: 160px;
-    height: 280px;
+    min-height: 300px; /* Aumentado para acomodar contenido de ofertas */
+    height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 0; /* Evitar depender de flex-gap por compatibilidad */
     transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
     position: relative;
     overflow: hidden;
     text-decoration: none;
     flex-shrink: 0;
+}
+
+.producto > * {
+    margin: 0;
+}
+
+/* Fallback universal al gap: separación entre hermanos directos */
+.producto > * + * {
+    margin-top: 12px;
+}
+
+/* Overlay link clickable */
+.product-card {
+    position: relative;
+}
+
+.product-card__overlay-link {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.product-card__add-btn {
+    position: relative;
+    z-index: 2;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-flex;
+    margin-top: auto; /* Empuja el botón hacia abajo */
 }
 
 /* --------------------------------------------------------------------------
@@ -72,7 +104,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    margin-bottom: 12px;
+    margin-bottom: 0;
 }
 
 .producto-img-container img {
@@ -103,6 +135,7 @@
     overflow: hidden;
     min-height: 35px;
     text-decoration: none !important;
+    text-align: center; /* Centra el título */
 }
 
 /* --------------------------------------------------------------------------
@@ -110,9 +143,11 @@
    -------------------------------------------------------------------------- */
 .producto-price {
     font-size: 14px;
-    margin-bottom: 16px;
+    margin-bottom: 0;
     color: black;
+    text-align: center; /* Centra el precio */
 }
+ 
 
 /* --------------------------------------------------------------------------
    Botón "Agregar"
@@ -160,8 +195,18 @@
         margin-top: 5px;
     }
 
+    /* Limitar texto variable en móvil para mantener altura consistente */
+    .producto > p:not(.producto-price) {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
     .producto .btn-agregar {
-        margin-top: 10px;
+        margin-top: 12px; /* separación del precio */
     }
 }
 
@@ -169,23 +214,35 @@
 @media (min-width: 768px) {
     .producto {
         width: 220px;
-        height: 360px;
+        height: auto;
         padding: 20px;
+        gap: 0;
+        min-height: 350px; /* Altura consistente para desktop */
     }
 
+
     .producto-img-container {
-        height: 160px;
+        height: 150px;
     }
 
     .producto-title {
         font-size: 18px;
-        min-height: 40px;
+        min-height: 36px;
         margin-bottom: 10px;
     }
 
     .producto-price {
         font-size: 16px;
         margin-top: 4px;
+    }
+
+    .producto > p:not(.producto-price) {
+        display: block;
+        overflow: visible;
+        -webkit-line-clamp: unset;
+        line-clamp: unset;
+        -webkit-box-orient: unset;
+        text-overflow: initial;
     }
 
     .producto .btn-agregar {
