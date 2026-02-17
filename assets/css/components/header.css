@@ -138,7 +138,8 @@ header {
 #icono-cerrar:not(.hidden) {
     width: 34px;
     height: 34px;
-    color: #dc2626; /* rojo */
+    color: #dc2626;
+    /* rojo */
     transform: scale(1.12);
 }
 
@@ -328,7 +329,7 @@ body.menu-busqueda-activa #input-buscar {
         font-size: clamp(14px, 3vw, 18px);
         /* Título más pequeño */
     }
-    
+
 
     /* ==================== BUSCADOR PARA TABLETS ==================== */
     /* Estilos del contenedor de resultados para tablets */
@@ -384,14 +385,13 @@ body.menu-busqueda-activa #input-buscar {
         /* Reducir espacio entre elementos */
     }
 
+    /* Botón de menú hamburguesa */
     .menu-btn {
         display: block;
         background: none;
         border: none;
         color: white;
         cursor: pointer;
-        margin-left: 5px;
-        /* Pequeño margen izquierdo */
     }
 
     .menu-btn i {
