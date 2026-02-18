@@ -122,6 +122,16 @@
     transform: scale(1.05);
 }
 
+/* Fallback: soportar markup donde la imagen está directa dentro de .producto */
+.producto > img {
+    display: block;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    margin: 0 auto;
+    transition: transform 0.5s ease;
+}
+
 /* --------------------------------------------------------------------------
    Título
    -------------------------------------------------------------------------- */
@@ -153,6 +163,14 @@
     /* Centra el precio */
 }
 
+/* Fallback: aplicar precio cuando se usa <p> directo dentro de .producto */
+.producto > p {
+    font-size: 14px;
+    margin-bottom: 0;
+    color: black;
+    text-align: center;
+}
+
 
 /* --------------------------------------------------------------------------
    Botón "Agregar"
@@ -176,9 +194,28 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Asegurar font-weight consistente en todos los contextos */
+.producto .btn-agregar,
+article .btn-agregar,
+.product-card .btn-agregar,
+* .btn-agregar {
+    font-weight: 600 !important;
+}
+
 .btn-agregar:hover {
     background-color: #ff9900;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Fallback: garantizar que botones .btn-agregar dentro de .producto reciban igual comportamiento */
+.producto .btn-agregar {
+    position: relative;
+    z-index: 2;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-flex;
+    margin-top: auto;
 }
 
 /* ==========================================================================
@@ -244,12 +281,13 @@
     }
 
     .producto>p:not(.producto-price) {
-        display: block;
-        overflow: visible;
-        -webkit-line-clamp: unset;
-        line-clamp: unset;
-        -webkit-box-orient: unset;
-        text-overflow: initial;
+        /* Mantener truncamiento consistente en desktop para evitar alturas variables */
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .producto .btn-agregar {
@@ -257,4 +295,28 @@
         padding: 8px 0;
         font-size: 14px;
     }
+
+    /* Asegurar comportamiento tipo "carrusel" como en featured-products */
+    .productos-destacados .producto {
+        scroll-snap-align: start;
+        flex-shrink: 0;
+        display: block;
+    }
+}
+
+/* Fallback: estilos aplicables cuando el markup usa <h3> directo dentro de .producto */
+.producto > h3 {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 0px;
+    color: black;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 35px;
+    text-decoration: none !important;
+    text-align: left;
 }

@@ -293,3 +293,62 @@
  .nav-links-mobile .resultados-busqueda li:last-child {
    border-bottom: none !important;
  }
+
+/* ==========================================================================
+   RESPONSIVE DE NAVEGACIÓN (MOVIDO DESDE GLOBAL.CSS)
+   ========================================================================== */
+
+/* Tablets (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .nav-links {
+    display: flex !important;
+    position: static !important;
+    background: transparent !important;
+    width: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .nav-links-mobile {
+    display: none !important;
+  }
+}
+
+/* Tablets Dinámico */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .nav-links>ul>li:hover>ul {
+    display: none !important;
+  }
+
+  .nav-links>ul>li>ul {
+    display: none !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 8px;
+    min-width: 220px;
+    z-index: 9999;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    margin-right: 10px;
+    max-width: calc(100vw - 50px);
+  }
+
+  .nav-links>ul>li>ul>li>ul {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 8px;
+    min-width: 200px;
+    z-index: 9999;
+    margin-right: 10px;
+    max-width: calc(100vw - 50px);
+  }
+
+  .nav-links>ul>li>ul.tablet-active,
+  .nav-links>ul>li>ul>li>ul.tablet-active {
+    display: block !important;
+  }
+}

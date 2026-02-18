@@ -10,34 +10,34 @@ body {
 }
 
 /* Espacio adicional para separar secciones del header y el breadcrumb (Mobile First) */
-main {
+body main {
     padding-top: 115px !important;
 }
 
 /* Espacio adicional para separar secciones del header y el breadcrumb - Tablets e iPads */
 @media (min-width: 768px) and (max-width: 1023px) {
-    main {
+    body main {
         padding-top: 130px !important;
     }
 }
 
 /* Espacio adicional para separar secciones del header y el breadcrumb - ipad pro (1024px - 1127px) */
 @media (min-width: 1024px) and (max-width: 1127px) {
-    main {
+    body main {
         padding-top: 130px !important;
     }
 }
 
 /* Espacio adicional para separar secciones del header y el breadcrumb - Desktop grande (1128px en adelante) */
 @media (min-width: 1128px) and (max-width: 2000px) {
-    main {
+    body main {
         padding-top: 85px !important;
     }
 }
 
 /* Espacio adicional para separar secciones del header y el breadcrumb - Ultra grande (más de 2000px) */
 @media (min-width: 2001px) {
-    main {
+    body main {
         padding-top: 125px !important;
     }
 }
@@ -99,15 +99,6 @@ main {
     min-height: 100vh !important;
 }
 
-#ferreteria {
-    background-image: url('../images/fondos/ferreteria.jpg') !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    background-attachment: fixed !important;
-    min-height: 100vh !important;
-}
-
 #fondo_ferreteria {
     background-image: url('../images/fondos/ferreteria.jpg') !important;
     background-size: cover !important;
@@ -129,23 +120,23 @@ main {
 
 /* Estilos generales del breadcrumb - Mobile First ------------------------------- */
 .breadcrumb {
-  display: inline-block !important;
-  width: auto !important;
-  max-width: 90% !important;
+  display: inline-block;
+  width: auto;
+  max-width: 90%;
   background: rgba(0,0,0,0.85) !important;
-  padding: 8px 15px !important;
-  border-radius: 10px !important;
+  padding: 8px 15px;
+  border-radius: 10px;
   font-family: Arial, sans-serif;
-  font-size: 14px !important;
-  color: #ffffff !important;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3) !important;
-  margin: 15px auto !important;
-  text-align: center !important;
-  white-space: nowrap !important;
+  font-size: 14px;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  margin: 15px auto;
+  text-align: center;
+  white-space: nowrap;
   
   /* Centrado perfecto bajo el header fijo */
   position: fixed;
-  top: 55px !important;
+  top: 45px !important;
   left: 50% !important;
   transform: translateX(-50%) !important;
   z-index:  100;
@@ -154,25 +145,25 @@ main {
 /* Tablets y pantallas medianas (768px en adelante) */
 @media (min-width: 768px) {
   .breadcrumb {
-    width: auto !important;
-    max-width: 80% !important;
-    padding: 8px 20px !important;
-    border-radius: 10px !important;
-    font-size: 14px !important;
+    width: auto;
+    max-width: 80%;
+    padding: 8px 20px;
+    border-radius: 10px;
+    font-size: 14px;
     top: 60px !important;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.4) !important;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.4);
   }
 }
 
 /* Desktop y pantallas grandes (1024px en adelante) */
 @media (min-width: 1024px) {
   .breadcrumb {
-    max-width: 70% !important;
-    padding: 8px 20px !important;
-    border-radius: 10px !important;
-    font-size: 14px !important;
-    top: 65px !important;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.5) !important;
+    max-width: 70%;
+    padding: 8px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    top: 60px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
   }
 }
 
