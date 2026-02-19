@@ -259,6 +259,8 @@
 
 @media (max-width: 767.98px) {
     .productos-destacados .oferta_height {
+        min-height: 320px;
+        /* Altura mínima consistente, permite crecer según contenido */
         display: flex;
         flex-direction: column;
         justify-content: space-between;

@@ -21,7 +21,6 @@ body {
 }
 
 
-
 /* Estilos generales para el main */
 main {
   padding-top: 0px;
@@ -39,7 +38,7 @@ main .container {
   width: 100%;
 }
 
-/* Animación de scroll de la sección de ofertas - Solo fade-in */
+/* Animación global de scroll para secciones con clase .reveal - Aplica fade-in a todas las secciones*/
 .reveal {
   opacity: 0;
   transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1);
