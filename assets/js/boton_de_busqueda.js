@@ -417,6 +417,10 @@ function getRelativePrefix() {
         return '../';
     }
 
+    if (path.includes('/pages/category/')) {
+        return '../../';
+    }
+
     if (path.includes('/pages/search/')) {
         return '../../';
     }
@@ -426,6 +430,10 @@ function getRelativePrefix() {
     }
 
     if (path.includes('/contacto/')) {
+        return '../';
+    }
+
+    if (path.includes('/legal/')) {
         return '../';
     }
 

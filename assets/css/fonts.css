@@ -48,7 +48,8 @@
 
 /* ==================== APLICACIÓN DE FUENTES ==================== */
 
-/* Aplicar fuente al h1 del header */
-header h1 {
+/* Aplicar fuente al h1 y span del brand en el header */
+header .brand h1,
+header .brand span {
     font-family: var(--font-family-primary);
 }
