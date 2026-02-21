@@ -53,6 +53,15 @@
     <link rel="stylesheet" href="assets/css/components/about-us-section.css">
     <link rel="stylesheet" href="assets/css/components/footer.css">
     <link rel="stylesheet" href="assets/css/global.css">
+
+    <!-- Scripts -->
+    <script src="assets/js/productos.js" defer></script>
+    <script src="assets/js/boton_de_busqueda.js" defer></script>
+    <script src="assets/js/hamburger_menu.js" defer></script>
+    <script src="assets/js/tablet_menu_click.js" defer></script>
+    <script src="assets/js/productos_navegacion.js" defer></script>
+    <script src="assets/js/ofertas_animation.js" defer></script>
+    <script src="assets/js/scroll_animations.js" defer></script>
 </head>
 
 
@@ -189,7 +198,7 @@
           </li>
 
           <li><a href="index.html#ofertas" class="text-white no-underline text-base px-2.5 py-2 block transition-colors duration-300 rounded-[10px] hover:bg-white/15">Ofertas</a></li>
-          <li><a href="contacto/index.html" class="text-white no-underline text-base px-2.5 py-2 block transition-colors duration-300 rounded-[10px] hover:bg-white/15">Contacto</a></li>
+          <li><a href="pages/contacto/index.html" class="text-white no-underline text-base px-2.5 py-2 block transition-colors duration-300 rounded-[10px] hover:bg-white/15">Contacto</a></li>
         </ul>
       </nav>
 
@@ -323,7 +332,7 @@
           </ul>
         </li>
         <li class="px-5 py-2.5 border-b border-white/10"><a href="index.html#ofertas" class="block">Ofertas</a></li>
-        <li class="px-5 py-2.5 border-b border-white/10"><a href="contacto/index.html" class="block">Contacto</a></li>
+        <li class="px-5 py-2.5 border-b border-white/10"><a href="pages/contacto/index.html" class="block">Contacto</a></li>
       </ul>
     </nav>
   </header>
@@ -522,7 +531,7 @@
 
                     <!-- Producto 6 -->
                     <article class="producto product-card offer-card block shrink-0 snap-start oferta_height">
-                        <a href="productos/alimentos/bebidas/coca_cola_zero.html" class="product-card__overlay-link" aria-label="Ver detalles de Coca Cola Zero -5%"></a>
+                        <a href="pages/product/Alimentos/bebidas/coca_cola_zero.html" class="product-card__overlay-link" aria-label="Ver detalles de Coca Cola Zero -5%"></a>
                         <div class="producto-img-container">
                             <img src="assets/images/productos/alimentos/bebidas/refresco/coca_cola_zero.avif" alt="Oferta en Coca Cola Zero" loading="lazy">
                         </div>
@@ -566,40 +575,33 @@
     </main>
 
     <!-- Footer global -->
-    <footer class="bg-black/85 text-white text-center py-5 px-5 md:py-6 md:px-8 lg:py-8 lg:px-12 text-base md:text-lg">
-      <div class="footer-content w-full max-w-7xl mx-auto flex flex-col items-center gap-4 md:gap-5 lg:gap-6">
+    <footer class="footer-global">
+      <div class="footer-content">
         <!-- Derechos reservados -->
-        <small class="block text-base md:text-lg lg:text-base">&copy; 2026 Hipermercado Superior. Todos los derechos reservados.</small>
+        <small>&copy; 2026 Hipermercado Superior. Todos los derechos reservados.</small>
 
         <!-- Íconos de redes sociales (sprite SVG) -->
-        <div class="social-icons flex gap-6 md:gap-7">
-          <a href="https://facebook.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Facebook" class="group text-white hover:text-amber-400 transition-all duration-300 hover:scale-125">
-            <svg class="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-facebook"/></svg>
+        <div class="social-icons">
+          <a href="https://facebook.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Facebook" class="social-link">
+            <svg aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-facebook"/></svg>
           </a>
-          <a href="https://twitter.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en X (antes Twitter)" class="group text-white hover:text-amber-400 transition-all duration-300 hover:scale-125">
-            <svg class="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-x"/></svg>
+          <a href="https://twitter.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en X (antes Twitter)" class="social-link">
+            <svg aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-x"/></svg>
           </a>
-          <a href="https://instagram.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Instagram" class="group text-white hover:text-amber-400 transition-all duration-300 hover:scale-125">
-            <svg class="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-instagram"/></svg>
+          <a href="https://instagram.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Instagram" class="social-link">
+            <svg aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-instagram"/></svg>
           </a>
         </div>
 
         <!-- Enlaces legales -->
         <div class="footer-links">
-          <a href="legal/privacy.html" title="Política de Privacidad" class="text-gray-300 hover:text-amber-400 no-underline mx-2 md:mx-3 hover:underline transition-colors">Política de Privacidad</a>
-          <span class="text-gray-500">|</span>
-          <a href="legal/terms.html" title="Términos de Uso" class="text-gray-300 hover:text-amber-400 no-underline mx-2 md:mx-3 hover:underline transition-colors">Términos de Uso</a>
+          <a href="legal/privacy.html" title="Política de Privacidad">Política de Privacidad</a>
+          <span class="separator">|</span>
+          <a href="legal/terms.html" title="Términos de Uso">Términos de Uso</a>
         </div>
       </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="assets/js/productos.js"></script>
-    <script src="assets/js/boton_de_busqueda.js"></script>
-    <script src="assets/js/hamburger_menu.js"></script>
-    <script src="assets/js/tablet_menu_click.js"></script>
-    <script src="assets/js/productos_navegacion.js"></script>
-    <script src="assets/js/ofertas_animation.js"></script>
-    <script src="assets/js/scroll_animations.js"></script>
+
 </body>
 </html>

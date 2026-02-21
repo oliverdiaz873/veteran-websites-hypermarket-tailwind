@@ -1,3 +1,144 @@
 /* assets/css/components/footer.css — Footer global */
 
-/* Íconos: Simple Icons vía Iconify (librería SVG). Hover con Tailwind (hover:text-amber-400, hover:scale-125). */
+.footer-global {
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    text-align: center;
+    padding: 1.25rem 1.25rem;
+    /* py-5 px-5 */
+}
+
+@media (min-width: 768px) {
+    .footer-global {
+        padding: 1.5rem 2rem;
+        /* md:py-6 md:px-8 */
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer-global {
+        padding: 2rem 3rem;
+        /* lg:py-8 lg:px-12 */
+    }
+}
+
+.footer-content {
+    width: 100%;
+    max-width: 80rem;
+    /* max-w-7xl */
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    /* gap-4 */
+}
+
+.footer-content small {
+    display: block;
+    font-size: 0.88rem;
+    /* ~14px, un px más que el default de small (~13px) */
+}
+
+@media (min-width: 768px) {
+    .footer-content {
+        gap: 1.25rem;
+        /* md:gap-5 */
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer-content {
+        gap: 1.5rem;
+        /* lg:gap-6 */
+    }
+}
+
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+    /* gap-6 */
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .social-icons {
+        gap: 1.75rem;
+        /* md:gap-7 */
+    }
+}
+
+.social-link {
+    color: #fff;
+    fill: #fff;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.social-link i,
+.social-link svg {
+    color: #fff;
+    fill: #fff;
+}
+
+.social-link:hover {
+    color: #fbbf24;
+    fill: #fbbf24;
+    transform: scale(1.25);
+}
+
+.social-link:hover i,
+.social-link:hover svg {
+    color: #fbbf24;
+    fill: #fbbf24;
+}
+
+.social-link svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: #fff;
+}
+
+@media (min-width: 768px) {
+    .social-link svg {
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .social-link svg {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.footer-links a {
+    color: #d1d5db;
+    /* text-gray-300 */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin: 0 0.5rem;
+}
+
+.footer-links a:hover {
+    color: #fbbf24;
+    /* text-amber-400 */
+    text-decoration: underline;
+}
+
+.footer-links .separator {
+    color: #6b7280;
+    /* text-gray-500 */
+}

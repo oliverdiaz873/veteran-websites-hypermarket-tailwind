@@ -29,634 +29,621 @@
 
     <!-- TÍTULO, CSS Y FUENTES -->
     <title>Ferretería | Hipermercado Superior</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/categorias.css">
-    <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/categorias.css">
+    <link rel="stylesheet" href="../../assets/css/components/footer.css">
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
      <!-- Favicons -->
-    <link rel="icon" href="../assets/icons/favicons/icon-16x16.jpg" type="image/jpg" sizes="16x16">
-    <link rel="icon" href="../assets/icons/favicons/icon-32x32.jpg" type="image/jpg" sizes="32x32">
-    <link rel="icon" href="../assets/icons/favicons/icon-48x48.jpg" type="image/jpg" sizes="48x48">
-    
-    <!-- Scripts necesarios -->
-    <script src="../assets/js/hamburger_menu.js" type="text/javascript" defer></script>
-    <script src="../assets/js/boton_de_busqueda.js" type="text/javascript" defer></script>
-    <script src="../assets/js/productos.js" defer></script> 
-    <script src="../assets/js/carrito.js" defer></script>
+    <link rel="icon" href="../../assets/icons/favicons/icon-16x16.jpg" type="image/jpg" sizes="16x16">
+    <link rel="icon" href="../../assets/icons/favicons/icon-32x32.jpg" type="image/jpg" sizes="32x32">
+    <link rel="icon" href="../../assets/icons/favicons/icon-48x48.jpg" type="image/jpg" sizes="48x48">
   </head>
 
-
-
-
-<body id="ferreteria">
-
-     <!-- ===== HEADER GLOBAL ===== -->
-  <header>
-  <div class="header-container">
-    <!-- Botón hamburguesa solo en móvil -->
-    <button class="menu-btn">
-      <i class="bi bi-list"></i> 
-    </button>
-
-    <!-- Logo + título -->
-    <a href="../index.html" class="brand" aria-label="Ir a la página principal de Hipermercado Superior">
-      <img src="../assets/images/logo/logo.jpeg" alt="Logo de Hipermercado Superior">
-      <h1 class="whitespace-nowrap block ml-1">Hipermercado Superior</h1>
-    </a>
-
-    <!-- Menú de navegación -->
-    <nav class="nav-links" role="navigation" aria-label="Menú principal">
-
-     <ul>
-
-        <!-- Nivel 1 -->
-        <li><a href="../index.html">Inicio</a></li>
-
-        <!-- Nivel 1: Categorías <span class="dropdown-arrow">▼</span> -->
-        <!-- href="#" indica que es un enlace vacío, # significa no ir a ninguna página en particular -->
-        <!-- aria-haspopup="true" Sirve para lectores de pantalla (personas no videntes) para que sepan que ese enlace tiene un submenú desplegable. -->
-        <!-- aria-expanded="false" significa "Este menú actualmente está cerrado". -->
-        <li><a href="#" aria-haspopup="true" aria-expanded="false">Categorías <span class="dropdown-arrow">▼</span></a>
-
-            <ul>
-
-                <!-- Nivel 2: Alimentos -->
-                <li>
-                    <a href="../categorias/Alimentos.html">Alimentos <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../categorias/Alimentos.html#frutas_y_verduras">Frutas y Verduras</a></li>
-                        <li><a href="../categorias/Alimentos.html#despensa">Despensa</a></li>
-                        <li><a href="../categorias/Alimentos.html#carnes_pescados_mariscos">Carnes, Pescados y Mariscos</a></li>
-                        <li><a href="../categorias/Alimentos.html#lacteos_y_huevos">Lácteos y Huevos</a></li>
-                        <li><a href="../categorias/Alimentos.html#bebidas">Bebidas</a></li>
-                        <li><a href="../categorias/Alimentos.html#enlatados">Enlatados</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Electrodomésticos -->
-                <li>
-                    <a href="../categorias/Electrodomesticos.html">Electrodomésticos <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../categorias/Electrodomesticos.html#cocina">Cocina</a></li>
-                        <li><a href="../categorias/Electrodomesticos.html#lavado">Lavado</a></li>
-                        <li><a href="../categorias/Electrodomesticos.html#climatizacion">Climatización</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Tecnología -->
-                <li>
-                    <a href="../categorias/tecnologia.html">Tecnología <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../categorias/tecnologia.html#televisores">Televisores</a></li>
-                        <li><a href="../categorias/tecnologia.html#laptops">Laptops</a></li>
-                        <li><a href="../categorias/tecnologia.html#tablets">Tablets</a></li>
-                        <li><a href="../categorias/tecnologia.html#celulares">Celulares</a></li>
-                        <li><a href="../categorias/tecnologia.html#bocinas">Bocinas</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Ropa -->
-                <li>
-                    <a href="../categorias/Ropa.html">Ropa <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../categorias/Ropa.html#pantalones_para_hombres">Pantalones para Hombres</a></li>
-                        <li><a href="../categorias/Ropa.html#pantalones_para_mujeres">Pantalones para Mujeres</a></li>
-                        <li><a href="../categorias/Ropa.html#pantalones_para_niños">Pantalones para Niños</a></li>
-                        <li><a href="../categorias/Ropa.html#trajes_para_hombres">Trajes para Hombres</a></li>
-                        <li><a href="../categorias/Ropa.html#vestidos">Vestidos</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Muebles y Decoración -->
-                <li>
-                    <a href="../categorias/muebles_y_decoracion.html">Muebles y Decoración <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../categorias/muebles_y_decoracion.html#sofas">Sofás</a></li>
-                        <li><a href="../categorias/muebles_y_decoracion.html#sillones">Sillones</a></li>
-                        <li><a href="../categorias/muebles_y_decoracion.html#mesas">Mesas</a></li>
-                        <li><a href="../categorias/muebles_y_decoracion.html#floreros">Floreros</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Farmacia -->
-                <li>
-                    <a href="../categorias/Farmacia.html">Farmacia <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../categorias/Farmacia.html#analgesicos">Analgésicos</a></li>
-                        <li><a href="../categorias/Farmacia.html#dermocosmetica">Dermocosmética</a></li>
-                        <li><a href="../categorias/Farmacia.html#vitaminas_y_minerales">Vitaminas y Minerales</a></li>
-                        <li><a href="../categorias/Farmacia.html#antigripales_y_resfriado">Antigripales y Resfriado</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Ferretería -->
-                <li>
-                    <a href="../categorias/Ferreteria.html">Ferretería <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../categorias/Ferreteria.html#herramientas_manuales">Herramientas Manuales</a></li>
-                        <li><a href="../categorias/Ferreteria.html#pinturas_y_acabados">Pinturas y Acabados</a></li>
-                        <li><a href="../categorias/Ferreteria.html#electricidad">Electricidad</a></li>
-                        <li><a href="../categorias/Ferreteria.html#plomeria">Plomería</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Juguetes -->
-                <li>
-                    <a href="../categorias/juguetes.html">Juguetes <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../categorias/juguetes.html#juguetes_para_niños">Juguetes para Niños</a></li>
-                        <li><a href="../categorias/juguetes.html#juguetes_para_niñas">Juguetes para Niñas</a></li>
-                    </ul>
-                </li>
-
-            </ul>
-        </li>
-
-        <!-- Nivel 1 -->
-        <li><a href="../index.html#ofertas">Ofertas</a></li>
-        <li><a href="../contacto/">Contacto</a></li>
-
-        <!-- botón de búsqueda -->
-       <li class="buscador-header">
-         <input type="text" id="input-buscar" placeholder="Buscar productos..."  autocomplete="off" aria-label="Escribe tu búsqueda">
-            <button type="button" aria-label="Buscar productos" id="btn-buscar">
-              <i class="bi bi-search" id="icono-buscar"></i>
+<body id="ferreteria" class="category-page">
+    <!-- ===== HEADER GLOBAL ===== -->
+    <header class="header-global">
+        <div class="header-container">
+            <!-- Botón hamburguesa solo en móvil -->
+            <button class="menu-btn" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
             </button>
-         <ul id="resultados-busqueda" class="resultados-busqueda"></ul>  <!-- Coincidencias -->
-       </li>
 
-       <!-- botón del carrito -->
-     <li class="carrito-item">
-       <a href="../pages/cart/index.html" class="carrito-header" aria-label="Ver carrito">
-              <img 
-                 src="../assets/icons/shopping_cart_icon/shopping_car_icon.png" 
-                 alt="Carrito de compras"
-                 class="icono-carrito"
-               >
-                <span id="contador-carrito">0</span>
-       </a>
-     </li>
+            <!-- Logo + título -->
+            <a href="../../index.html" class="brand">
+                <img src="../../assets/images/logo/logo.jpeg" alt="Logo de Hipermercado Superior">
+                <h1 class="brand-name">Superior</h1>
+            </a>
 
-    </ul>
-    </nav>
-  </div>
+            <!-- Menú de navegación Desktop -->
+            <nav class="nav-links-desktop" role="navigation" aria-label="Menú principal">
+                <ul>
+                    <li><a href="../../index.html">Inicio</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="active">Categorías <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="alimentos.html">Alimentos</a>
+                            <a href="electrodomesticos.html">Electrodomésticos</a>
+                            <a href="tecnologia.html">Tecnología</a>
+                            <a href="ropa.html">Ropa</a>
+                            <a href="muebles_y_decoracion.html">Muebles y Decoración</a>
+                            <a href="farmacia.html">Farmacia</a>
+                            <a href="ferreteria.html" class="active">Ferretería</a>
+                            <a href="juguetes.html">Juguetes</a>
+                        </div>
+                    </li>
+                    <li><a href="../../index.html#ofertas">Ofertas</a></li>
+                    <li><a href="../contacto/index.html">Contacto</a></li>
+                </ul>
+            </nav>
 
-  
-  <!-- Menú móvil colapsable -->
-<nav class="nav-links-mobile">
-  <ul>
+            <!-- Acciones (Búsqueda, Carrito) -->
+            <div class="header-actions">
+                <div class="search-container">
+                    <input type="text" id="input-buscar" placeholder="Buscar..." aria-label="Buscar productos">
+                    <button type="button" id="btn-buscar" aria-label="Buscar">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <ul id="resultados-busqueda" class="search-results"></ul>
+                </div>
+                <a href="../cart/index.html" class="cart-btn" aria-label="Ver carrito">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="contador-carrito">0</span>
+                </a>
+            </div>
+        </div>
 
-     <!-- Nivel 1 -->
-        <li><a href="../index.html">Inicio</a></li>
-
-        <!-- Nivel 1: Categorías <span class="dropdown-arrow">▼</span> -->
-        <!-- href="#" indica que es un enlace vacío, # significa no ir a ninguna página en particular -->
-        <!-- aria-haspopup="true" Sirve para lectores de pantalla (personas no videntes) para que sepan que ese enlace tiene un submenú desplegable. -->
-        <!-- aria-expanded="false" significa "Este menú actualmente está cerrado". -->
-        <li><a href="#" aria-haspopup="true" aria-expanded="false">Categorías <span class="dropdown-arrow">▼</span></a>
-
+        <!-- Menú móvil colapsable -->
+        <nav class="nav-links-mobile">
             <ul>
-
-                <!-- Nivel 2: Alimentos -->
+                <li><a href="../../index.html">Inicio</a></li>
                 <li>
-                    <a href="../categorias/Alimentos.html">Alimentos <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../categorias/Alimentos.html#frutas_y_verduras">Frutas y Verduras</a></li>
-                        <li><a href="../categorias/Alimentos.html#despensa">Despensa</a></li>
-                        <li><a href="../categorias/Alimentos.html#carnes_pescados_mariscos">Carnes, Pescados y Mariscos</a></li>
-                        <li><a href="../categorias/Alimentos.html#lacteos_y_huevos">Lácteos y Huevos</a></li>
-                        <li><a href="../categorias/Alimentos.html#bebidas">Bebidas</a></li>
-                        <li><a href="../categorias/Alimentos.html#enlatados">Enlatados</a></li>
+                    <button class="mobile-dropdown-btn">Categorías <i class="fas fa-chevron-down"></i></button>
+                    <ul class="mobile-dropdown-content">
+                        <li><a href="alimentos.html">Alimentos</a></li>
+                        <li><a href="electrodomesticos.html">Electrodomésticos</a></li>
+                        <li><a href="tecnologia.html">Tecnología</a></li>
+                        <li><a href="ropa.html">Ropa</a></li>
+                        <li><a href="muebles_y_decoracion.html">Muebles y Decoración</a></li>
+                        <li><a href="farmacia.html">Farmacia</a></li>
+                        <li><a href="ferreteria.html" class="active">Ferretería</a></li>
+                        <li><a href="juguetes.html">Juguetes</a></li>
                     </ul>
                 </li>
-
-                <!-- Nivel 2: Electrodomésticos -->
-                <li>
-                    <a href="../categorias/Electrodomesticos.html">Electrodomésticos <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../categorias/Electrodomesticos.html#cocina">Cocina</a></li>
-                        <li><a href="../categorias/Electrodomesticos.html#lavado">Lavado</a></li>
-                        <li><a href="../categorias/Electrodomesticos.html#climatizacion">Climatización</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Tecnología -->
-                <li>
-                    <a href="../categorias/tecnologia.html">Tecnología <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../categorias/tecnologia.html#televisores">Televisores</a></li>
-                        <li><a href="../categorias/tecnologia.html#laptops">Laptops</a></li>
-                        <li><a href="../categorias/tecnologia.html#tablets">Tablets</a></li>
-                        <li><a href="../categorias/tecnologia.html#celulares">Celulares</a></li>
-                        <li><a href="../categorias/tecnologia.html#bocinas">Bocinas</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Ropa -->
-                <li>
-                    <a href="../categorias/Ropa.html">Ropa <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../categorias/Ropa.html#pantalones_para_hombres">Pantalones para Hombres</a></li>
-                        <li><a href="../categorias/Ropa.html#pantalones_para_mujeres">Pantalones para Mujeres</a></li>
-                        <li><a href="../categorias/Ropa.html#pantalones_para_niños">Pantalones para Niños</a></li>
-                        <li><a href="../categorias/Ropa.html#trajes_para_hombres">Trajes para Hombres</a></li>
-                        <li><a href="../categorias/Ropa.html#vestidos">Vestidos</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Muebles y Decoración -->
-                <li>
-                    <a href="../categorias/muebles_y_decoracion.html">Muebles y Decoración <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../categorias/muebles_y_decoracion.html#sofas">Sofás</a></li>
-                        <li><a href="../categorias/muebles_y_decoracion.html#sillones">Sillones</a></li>
-                        <li><a href="../categorias/muebles_y_decoracion.html#mesas">Mesas</a></li>
-                        <li><a href="../categorias/muebles_y_decoracion.html#floreros">Floreros</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Farmacia -->
-                <li>
-                    <a href="../categorias/Farmacia.html">Farmacia <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../categorias/Farmacia.html#analgesicos">Analgésicos</a></li>
-                        <li><a href="../categorias/Farmacia.html#dermocosmetica">Dermocosmética</a></li>
-                        <li><a href="../categorias/Farmacia.html#vitaminas_y_minerales">Vitaminas y Minerales</a></li>
-                        <li><a href="../categorias/Farmacia.html#antigripales_y_resfriado">Antigripales y Resfriado</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Ferretería -->
-                <li>
-                    <a href="../categorias/Ferreteria.html">Ferretería <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../categorias/Ferreteria.html#herramientas_manuales">Herramientas Manuales</a></li>
-                        <li><a href="../categorias/Ferreteria.html#pinturas_y_acabados">Pinturas y Acabados</a></li>
-                        <li><a href="../categorias/Ferreteria.html#electricidad">Electricidad</a></li>
-                        <li><a href="../categorias/Ferreteria.html#plomeria">Plomería</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Juguetes -->
-                <li>
-                    <a href="../categorias/juguetes.html">Juguetes <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../categorias/juguetes.html#juguetes_para_niños">Juguetes para Niños</a></li>
-                        <li><a href="../categorias/juguetes.html#juguetes_para_niñas">Juguetes para Niñas</a></li>
-                    </ul>
-                </li>
-
+                <li><a href="../../index.html#ofertas">Ofertas</a></li>
+                <li><a href="../contacto/index.html">Contacto</a></li>
             </ul>
-        </li>
+        </nav>
+    </header>
 
-        <!-- Nivel 1 -->
-        <li><a href="../index.html#ofertas">Ofertas</a></li>
-        <li><a href="../contacto/">Contacto</a></li>
-   
-  </ul>
-</nav>
-</header>
+    <main>
+        <!-- Banner de Categoría -->
+        <section class="category-banner" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../assets/images/productos/Ferreteria/ferreteria_banner.jpg');">
+            <div class="container mx-auto px-4 h-full flex flex-col justify-center items-center text-center text-white">
+                <h2 class="text-5xl font-bold mb-4">Ferretería</h2>
+                <p class="text-xl max-w-2xl">Todo lo que necesitas para tus proyectos de reparación, construcción y mantenimiento del hogar.</p>
+            </div>
+        </section>
 
-<!-- Breadcrumb o indicador de ubicación -->
-<nav class="breadcrumb">
-  <a href="../index.html">Inicio</a> ›
-  <span>Categorías</span> ›
-  <span class="actual">Ferretería</span>
-</nav>
+        <!-- Filtros Rápidos -->
+        <nav class="quick-filters py-6 bg-white border-b sticky top-[70px] z-40">
+            <div class="container mx-auto px-4 overflow-x-auto">
+                <div class="flex justify-center gap-4 min-w-max">
+                    <a href="#herramientas_manuales" class="filter-chip">Herramientas Manuales</a>
+                    <a href="#pinturas_y_acabados" class="filter-chip">Pinturas y Acabados</a>
+                    <a href="#electricidad" class="filter-chip">Electricidad</a>
+                    <a href="#plomeria" class="filter-chip">Plomería</a>
+                </div>
+            </div>
+        </nav>
        
      <main> <!--main-->
 
-          <!-- Sección: Herramientas Manuales-->
-          <section class="productos-destacados destino" id="herramientas_manuales">
-              <div class="container">
-                  <h2>Herramientas Manuales</h2>
+        <!-- Sección: Herramientas Manuales -->
+        <section id="herramientas_manuales" class="py-16 bg-white overflow-hidden">
+            <div class="container mx-auto px-4">
+                <div class="flex items-end justify-between mb-10">
+                    <div>
+                        <span class="text-amber-500 font-bold uppercase tracking-[0.3em] text-xs">Esenciales</span>
+                        <h2 class="text-3xl font-bold text-neutral-900 mt-2">Herramientas Manuales</h2>
+                    </div>
+                    <div class="flex gap-2">
+                        <button id="herramientas_manuales-prev" class="slider-nav-btn" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+                        <button id="herramientas_manuales-next" class="slider-nav-btn" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
 
-                  <div class="productos-container-wrapper">
-                      <!-- botón anterior del carrusel-->
-                      <button class="productos-control-prev" type="button" id="herramientas_manuales-prev">
-                          <i class="bi bi-chevron-left"></i>
-                          <span class="visually-hidden">Anterior</span>
-                      </button>
-                      
-                      <div class="productos-container">
-                      <!-- Producto 1 -->
-               <a href="../productos/ferreteria/herramientas_manuales/destornillador.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ferreteria/herramientas_manuales/destornillador.png" alt="Destornillador" loading="lazy">
-          <h3>Destornillador</h3>
-          <p>Precio: $2,000</p>
-          <button class="btn-agregar" id="destornillador">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 2 -->
-      <a href="../productos/ferreteria/herramientas_manuales/llave_de_tuerca.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ferreteria/herramientas_manuales/llave_de_tuerca.png" alt="Llave de tuerca" loading="lazy">
-          <h3>Llave de tuerca</h3>
-          <p>Precio: $2,500</p>
-          <button class="btn-agregar" id="llave_de_tuerca">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 3 -->
-      <a href="../productos/ferreteria/herramientas_manuales/martillo.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ferreteria/herramientas_manuales/martillo.png" alt="Martillo" loading="lazy">
-          <h3>Martillo</h3>
-          <p>Precio: $1,500</p>
-          <button class="btn-agregar" id="martillo">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 4 -->
-      <a href="../productos/ferreteria/herramientas_manuales/pinza.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ferreteria/herramientas_manuales/pinza.avif" alt="Pinza" loading="lazy">
-          <h3>Pinza</h3>
-          <p>Precio: $500</p>
-          <button class="btn-agregar" id="pinza">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 5 -->
-      <a href="../productos/ferreteria/herramientas_manuales/sierra_de_mano.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ferreteria/herramientas_manuales/sierra_de_mano.avif" alt="Sierra de mano" loading="lazy">
-          <h3>Sierra de mano</h3>
-          <p>Precio: $3,000</p>
-          <button class="btn-agregar" id="sierra_de_mano">Agregar</button>
-        </article>
-      </a>
+                <div class="slider-container">
+                    <div class="slider-track" id="herramientas_manuales-track">
+                        <!-- Producto 1 -->
+                        <div class="product-card" data-category="herramientas_manuales">
+                            <div class="product-image-container">
+                                <img src="../../assets/images/productos/Ferreteria/herramientas_manuales/destornillador.png" alt="Destornillador" class="product-image">
+                                <div class="product-actions">
+                                    <button class="action-btn btn-agregar" id="destornillador" title="Agregar al carrito">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Destornillador</h3>
+                                <div class="product-price-container">
+                                    <span class="product-price">$2,000</span>
+                                </div>
+                                <a href="../productos/ferreteria/herramientas_manuales/destornillador.html" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
 
+                        <!-- Producto 2 -->
+                        <div class="product-card" data-category="herramientas_manuales">
+                            <div class="product-image-container">
+                                <img src="../../assets/images/productos/Ferreteria/herramientas_manuales/llave_de_tuerca.png" alt="Llave de tuerca" class="product-image">
+                                <div class="product-actions">
+                                    <button class="action-btn btn-agregar" id="llave_de_tuerca" title="Agregar al carrito">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Llave de tuerca</h3>
+                                <div class="product-price-container">
+                                    <span class="product-price">$2,500</span>
+                                </div>
+                                <a href="../productos/ferreteria/herramientas_manuales/llave_de_tuerca.html" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
+
+                        <!-- Producto 3 -->
+                        <div class="product-card" data-category="herramientas_manuales">
+                            <div class="product-image-container">
+                                <img src="../../assets/images/productos/Ferreteria/herramientas_manuales/martillo.png" alt="Martillo" class="product-image">
+                                <div class="product-actions">
+                                    <button class="action-btn btn-agregar" id="martillo" title="Agregar al carrito">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Martillo</h3>
+                                <div class="product-price-container">
+                                    <span class="product-price">$1,500</span>
+                                </div>
+                                <a href="../productos/ferreteria/herramientas_manuales/martillo.html" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
+
+                        <!-- Producto 4 -->
+                        <div class="product-card" data-category="herramientas_manuales">
+                            <div class="product-image-container">
+                                <img src="../../assets/images/productos/Ferreteria/herramientas_manuales/pinza.avif" alt="Pinza" class="product-image">
+                                <div class="product-actions">
+                                    <button class="action-btn btn-agregar" id="pinza" title="Agregar al carrito">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Pinza</h3>
+                                <div class="product-price-container">
+                                    <span class="product-price">$500</span>
+                                </div>
+                                <a href="../productos/ferreteria/herramientas_manuales/pinza.html" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
+
+                        <!-- Producto 5 -->
+                        <div class="product-card" data-category="herramientas_manuales">
+                            <div class="product-image-container">
+                                <img src="../../assets/images/productos/Ferreteria/herramientas_manuales/sierra_de_mano.avif" alt="Sierra de mano" class="product-image">
+                                <div class="product-actions">
+                                    <button class="action-btn btn-agregar" id="sierra_de_mano" title="Agregar al carrito">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Sierra de mano</h3>
+                                <div class="product-price-container">
+                                    <span class="product-price">$3,000</span>
+                                </div>
+                                <a href="../productos/ferreteria/herramientas_manuales/sierra_de_mano.html" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-                <!-- botón siguiente del carrusel-->
-                <button class="productos-control-next" type="button" id="herramientas_manuales-next">
-                    <i class="bi bi-chevron-right"></i>
-                    <span class="visually-hidden">Siguiente</span>
-                </button>
+        </section>
+
+        <!-- Sección: Pinturas y Acabados -->
+        <section id="pinturas_y_acabados" class="py-16 bg-gray-50 overflow-hidden">
+            <div class="container mx-auto px-4">
+                <div class="flex items-end justify-between mb-10">
+                    <div>
+                        <span class="text-amber-500 font-bold uppercase tracking-[0.3em] text-xs">Renovación</span>
+                        <h2 class="text-3xl font-bold text-neutral-900 mt-2">Pinturas y Acabados</h2>
+                    </div>
+                    <div class="flex gap-2">
+                        <button id="pinturas_y_acabados-prev" class="slider-nav-btn" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+                        <button id="pinturas_y_acabados-next" class="slider-nav-btn" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="slider-container">
+                    <div class="slider-track" id="pinturas_y_acabados-track">
+                        <!-- Producto 1 -->
+                        <div class="product-card" data-category="pinturas_y_acabados">
+                            <div class="product-image-container">
+                                <img src="../../assets/images/productos/Ferreteria/pintura/brocha.avif" alt="Brocha" class="product-image">
+                                <div class="product-actions">
+                                    <button class="action-btn btn-agregar" id="brocha" title="Agregar al carrito">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Brocha</h3>
+                                <div class="product-price-container">
+                                    <span class="product-price">$500</span>
+                                </div>
+                                <a href="../productos/ferreteria/pinturas_y_acabados/brocha.html" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
+
+                        <!-- Producto 2 -->
+                        <div class="product-card" data-category="pinturas_y_acabados">
+                            <div class="product-image-container">
+                                <img src="../../assets/images/productos/Ferreteria/pintura/kit_de_pintura.avif" alt="Kit de pintura" class="product-image">
+                                <div class="product-actions">
+                                    <button class="action-btn btn-agregar" id="kit_de_pintura" title="Agregar al carrito">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Kit de pintura</h3>
+                                <div class="product-price-container">
+                                    <span class="product-price">$1,500</span>
+                                </div>
+                                <a href="../productos/ferreteria/pinturas_y_acabados/kit_de_pintura.html" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
+
+                        <!-- Producto 3 -->
+                        <div class="product-card" data-category="pinturas_y_acabados">
+                            <div class="product-image-container">
+                                <img src="../../assets/images/productos/Ferreteria/pintura/pinturas_tropical.avif" alt="Pinturas Tropical" class="product-image">
+                                <div class="product-actions">
+                                    <button class="action-btn btn-agregar" id="pinturas_tropical" title="Agregar al carrito">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Pinturas Tropical</h3>
+                                <div class="product-price-container">
+                                    <span class="product-price">$2,500</span>
+                                </div>
+                                <a href="../productos/ferreteria/pinturas_y_acabados/pinturas_tropical.html" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
+
+                        <!-- Producto 4 -->
+                        <div class="product-card" data-category="pinturas_y_acabados">
+                            <div class="product-image-container">
+                                <img src="../../assets/images/productos/Ferreteria/pintura/pinturas_tucan.avif" alt="Pinturas Tucán" class="product-image">
+                                <div class="product-actions">
+                                    <button class="action-btn btn-agregar" id="pinturas_tucan" title="Agregar al carrito">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Pinturas Tucán</h3>
+                                <div class="product-price-container">
+                                    <span class="product-price">$2,700</span>
+                                </div>
+                                <a href="../productos/ferreteria/pinturas_y_acabados/pinturas_tucan.html" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
+
+                        <!-- Producto 5 -->
+                        <div class="product-card" data-category="pinturas_y_acabados">
+                            <div class="product-image-container">
+                                <img src="../../assets/images/productos/Ferreteria/pintura/rodillo_de_pintura.avif" alt="Rodillo de pintura" class="product-image">
+                                <div class="product-actions">
+                                    <button class="action-btn btn-agregar" id="rodillo_de_pintura" title="Agregar al carrito">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Rodillo de pintura</h3>
+                                <div class="product-price-container">
+                                    <span class="product-price">$1,400</span>
+                                </div>
+                                <a href="../productos/ferreteria/pinturas_y_acabados/rodillo_de_pintura.html" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-              </div>
-          </section>
+        </section>
 
+        <!-- Sección: Electricidad -->
+        <section id="electricidad" class="py-16 bg-white overflow-hidden">
+            <div class="container mx-auto px-4">
+                <div class="flex items-end justify-between mb-10">
+                    <div>
+                        <span class="text-amber-500 font-bold uppercase tracking-[0.3em] text-xs">Energía</span>
+                        <h2 class="text-3xl font-bold text-neutral-900 mt-2">Electricidad</h2>
+                    </div>
+                    <div class="flex gap-2">
+                        <button id="electricidad-prev" class="slider-nav-btn" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+                        <button id="electricidad-next" class="slider-nav-btn" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
 
-       <!-- Sección: Pinturas y Acabados-->
-          <section class="productos-destacados destino reveal" id="pinturas_y_acabados">
-              <div class="container">
-                  <h2>Pinturas y Acabados</h2>
+                <div class="slider-container">
+                    <div class="slider-track" id="electricidad-track">
+                        <!-- Producto 1 -->
+                        <div class="product-card" data-category="electricidad">
+                            <div class="product-image-container">
+                                <img src="../../assets/images/productos/Ferreteria/Electricidad/bombillas.avif" alt="Bombillas" class="product-image">
+                                <div class="product-actions">
+                                    <button class="action-btn btn-agregar" id="bombillas" title="Agregar al carrito">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Bombillas</h3>
+                                <div class="product-price-container">
+                                    <span class="product-price">$1,500</span>
+                                </div>
+                                <a href="../productos/ferreteria/electricidad/bombillas.html" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
 
-                  <div class="productos-container-wrapper">
-                      <!-- botón anterior del carrusel-->
-                      <button class="productos-control-prev" type="button" id="pinturas_y_acabados-prev">
-                          <i class="bi bi-chevron-left"></i>
-                          <span class="visually-hidden">Anterior</span>
-                      </button>
-                      
-                      <div class="productos-container">
-                      <!-- Producto 1 -->
-               <a href="../productos/ferreteria/pinturas_y_acabados/brocha.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ferreteria/pintura/brocha.avif" alt="Brocha" loading="lazy">
-          <h3>Brocha</h3>
-          <p>Precio: $500</p>
-          <button class="btn-agregar" id="brocha">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 2 -->
-      <a href="../productos/ferreteria/pinturas_y_acabados/kit_de_pintura.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ferreteria/pintura/kit_de_pintura.avif" alt="Kit de pintura" loading="lazy">
-          <h3>Kit de pintura</h3>
-          <p>Precio: $1,500</p>
-          <button class="btn-agregar" id="kit_de_pintura">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 3 -->
-      <a href="../productos/ferreteria/pinturas_y_acabados/pinturas_tropical.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ferreteria/pintura/pinturas_tropical.avif" alt="Pinturas Tropical" loading="lazy">
-          <h3>Pinturas Tropical</h3>
-          <p>Precio: $2,500</p>
-          <button class="btn-agregar" id="pinturas_tropical">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 4 -->
-      <a href="../productos/ferreteria/pinturas_y_acabados/pinturas_tucan.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ferreteria/pintura/pinturas_tucan.avif" alt="Pinturas Tucán" loading="lazy">
-          <h3>Pinturas Tucán</h3>
-          <p>Precio: $2,700</p>
-          <button class="btn-agregar" id="pinturas_tucan">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 5 -->
-      <a href="../productos/ferreteria/pinturas_y_acabados/rodillo_de_pintura.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ferreteria/pintura/rodillo_de_pintura.avif" alt="Rodillo de pintura" loading="lazy">
-          <h3>Rodillo de pintura</h3>
-          <p>Precio: $1,400</p>
-          <button class="btn-agregar" id="rodillo_de_pintura">Agregar</button>
-        </article>
-      </a>
+                        <!-- Producto 2 -->
+                        <div class="product-card" data-category="electricidad">
+                            <div class="product-image-container">
+                                <img src="../../assets/images/productos/Ferreteria/Electricidad/bombillas_LED.avif" alt="Bombillas LED" class="product-image">
+                                <div class="product-actions">
+                                    <button class="action-btn btn-agregar" id="bombillas_led" title="Agregar al carrito">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Bombillas LED</h3>
+                                <div class="product-price-container">
+                                    <span class="product-price">$2,000</span>
+                                </div>
+                                <a href="../productos/ferreteria/electricidad/bombillas_led.html" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
 
+                        <!-- Producto 3 -->
+                        <div class="product-card" data-category="electricidad">
+                            <div class="product-image-container">
+                                <img src="../../assets/images/productos/Ferreteria/Electricidad/extension_electrica.avif" alt="Extensión eléctrica" class="product-image">
+                                <div class="product-actions">
+                                    <button class="action-btn btn-agregar" id="extension_electrica" title="Agregar al carrito">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Extensión eléctrica</h3>
+                                <div class="product-price-container">
+                                    <span class="product-price">$3,300</span>
+                                </div>
+                                <a href="../productos/ferreteria/electricidad/extension.html" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
+
+                        <!-- Producto 4 -->
+                        <div class="product-card" data-category="electricidad">
+                            <div class="product-image-container">
+                                <img src="../../assets/images/productos/Ferreteria/Electricidad/linterna.png" alt="Linterna" class="product-image">
+                                <div class="product-actions">
+                                    <button class="action-btn btn-agregar" id="linterna" title="Agregar al carrito">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Linterna</h3>
+                                <div class="product-price-container">
+                                    <span class="product-price">$4,000</span>
+                                </div>
+                                <a href="../productos/ferreteria/electricidad/linterna.html" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
+
+                        <!-- Producto 5 -->
+                        <div class="product-card" data-category="electricidad">
+                            <div class="product-image-container">
+                                <img src="../../assets/images/productos/Ferreteria/Electricidad/toma_corriente.png" alt="Toma corriente" class="product-image">
+                                <div class="product-actions">
+                                    <button class="action-btn btn-agregar" id="toma_corriente" title="Agregar al carrito">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Toma corriente</h3>
+                                <div class="product-price-container">
+                                    <span class="product-price">$5,500</span>
+                                </div>
+                                <a href="../productos/ferreteria/electricidad/toma_corriente.html" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-                <!-- botón siguiente del carrusel-->
-                <button class="productos-control-next" type="button" id="pinturas_y_acabados-next">
-                    <i class="bi bi-chevron-right"></i>
-                    <span class="visually-hidden">Siguiente</span>
-                </button>
+        </section>
+
+        <!-- Sección: Plomería -->
+        <section id="plomeria" class="py-16 bg-gray-50 overflow-hidden">
+            <div class="container mx-auto px-4">
+                <div class="flex items-end justify-between mb-10">
+                    <div>
+                        <span class="text-amber-500 font-bold uppercase tracking-[0.3em] text-xs">Instalaciones</span>
+                        <h2 class="text-3xl font-bold text-neutral-900 mt-2">Plomería</h2>
+                    </div>
+                    <div class="flex gap-2">
+                        <button id="plomeria-prev" class="slider-nav-btn" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+                        <button id="plomeria-next" class="slider-nav-btn" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="slider-container">
+                    <div class="slider-track" id="plomeria-track">
+                        <!-- Producto 1 -->
+                        <div class="product-card" data-category="plomeria">
+                            <div class="product-image-container">
+                                <img src="../../assets/images/productos/Ferreteria/Plomeria/Grifo.avif" alt="Grifo" class="product-image">
+                                <div class="product-actions">
+                                    <button class="action-btn btn-agregar" id="grifo" title="Agregar al carrito">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Grifo</h3>
+                                <div class="product-price-container">
+                                    <span class="product-price">$3,000</span>
+                                </div>
+                                <a href="../productos/ferreteria/plomeria/grifo.html" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
+
+                        <!-- Producto 2 -->
+                        <div class="product-card" data-category="plomeria">
+                            <div class="product-image-container">
+                                <img src="../../assets/images/productos/Ferreteria/Plomeria/grifo_moderno.avif" alt="Grifo moderno" class="product-image">
+                                <div class="product-actions">
+                                    <button class="action-btn btn-agregar" id="grifo_moderno" title="Agregar al carrito">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Grifo moderno</h3>
+                                <div class="product-price-container">
+                                    <span class="product-price">$2,000</span>
+                                </div>
+                                <a href="../productos/ferreteria/plomeria/grifo_moderno.html" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
+
+                        <!-- Producto 3 -->
+                        <div class="product-card" data-category="plomeria">
+                            <div class="product-image-container">
+                                <img src="../../assets/images/productos/Ferreteria/Plomeria/manguera.avif" alt="Manguera" class="product-image">
+                                <div class="product-actions">
+                                    <button class="action-btn btn-agregar" id="manguera" title="Agregar al carrito">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Manguera</h3>
+                                <div class="product-price-container">
+                                    <span class="product-price">$2,400</span>
+                                </div>
+                                <a href="../productos/ferreteria/plomeria/manguera.html" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
+
+                        <!-- Producto 4 -->
+                        <div class="product-card" data-category="plomeria">
+                            <div class="product-image-container">
+                                <img src="../../assets/images/productos/Ferreteria/Plomeria/manguera_de_jardin.jpeg" alt="Manguera de jardín" class="product-image">
+                                <div class="product-actions">
+                                    <button class="action-btn btn-agregar" id="manguera_de_jardin" title="Agregar al carrito">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Manguera de jardín</h3>
+                                <div class="product-price-container">
+                                    <span class="product-price">$3,100</span>
+                                </div>
+                                <a href="../productos/ferreteria/plomeria/manguera_de_jardin.html" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
+
+                        <!-- Producto 5 -->
+                        <div class="product-card" data-category="plomeria">
+                            <div class="product-image-container">
+                                <img src="../../assets/images/productos/Ferreteria/Plomeria/tubo_drenaje.avif" alt="Tubo de drenaje" class="product-image">
+                                <div class="product-actions">
+                                    <button class="action-btn btn-agregar" id="tubo_de_drenaje" title="Agregar al carrito">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Tubo de drenaje</h3>
+                                <div class="product-price-container">
+                                    <span class="product-price">$600</span>
+                                </div>
+                                <a href="../productos/ferreteria/plomeria/tubo.html" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-              </div>
-          </section>
-
-
-          <!-- Sección: Electricidad-->
-          <!-- Sección: Electricidad -->
-          <section class="productos-destacados destino reveal" id="electricidad">
-              <div class="container">
-                  <h2>Electricidad</h2>
-
-                  <div class="productos-container-wrapper">
-                      <!-- botón anterior del carrusel-->
-                      <button class="productos-control-prev" type="button" id="electricidad-prev">
-                          <i class="bi bi-chevron-left"></i>
-                          <span class="visually-hidden">Anterior</span>
-                      </button>
-                      
-                      <div class="productos-container">
-                      <!-- Producto 1 -->
-               <a href="../productos/ferreteria/electricidad/bombillas.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ferreteria/Electricidad/bombillas.avif" alt="Bombillas" loading="lazy">
-          <h3>Bombillas</h3>
-          <p>Precio: $1,500</p>
-          <button class="btn-agregar" id="bombillas">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 2 -->
-      <a href="../productos/ferreteria/electricidad/bombillas_led.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ferreteria/Electricidad/bombillas_LED.avif" alt="Bombillas LED" loading="lazy">
-          <h3>Bombillas LED</h3>
-          <p>Precio: $2,000</p>
-          <button class="btn-agregar" id="bombillas_led">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 3 -->
-      <a href="../productos/ferreteria/electricidad/extension.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ferreteria/Electricidad/extension_electrica.avif" alt="Extensión eléctrica" loading="lazy">
-          <h3>Extensión eléctrica</h3>
-          <p>Precio: $3,300</p>
-          <button class="btn-agregar" id="extension_electrica">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 4 -->
-      <a href="../productos/ferreteria/electricidad/linterna.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ferreteria/Electricidad/linterna.png" alt="Linterna" loading="lazy">
-          <h3>Linterna</h3>
-          <p>Precio: $4,000</p>
-          <button class="btn-agregar" id="linterna">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 5 -->
-      <a href="../productos/ferreteria/electricidad/toma_corriente.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ferreteria/Electricidad/toma_corriente.png" alt="Toma corriente" loading="lazy">
-          <h3>Toma corriente</h3>
-          <p>Precio: $5,500</p>
-          <button class="btn-agregar" id="toma_corriente">Agregar</button>
-        </article>
-      </a>
-
-            </div>
-            
-                <!-- botón siguiente del carrusel-->
-                <button class="productos-control-next" type="button" id="electricidad-next">
-                    <i class="bi bi-chevron-right"></i>
-                    <span class="visually-hidden">Siguiente</span>
-                </button>
-            </div>
-              </div>
-          </section>
-
-
-          <!-- Sección: Plomería -->
-          <section class="productos-destacados destino reveal" id="plomeria">
-              <div class="container">
-                  <h2>Plomería</h2>
-
-                  <div class="productos-container-wrapper">
-                      <!-- botón anterior del carrusel-->
-                      <button class="productos-control-prev" type="button" id="plomeria-prev">
-                          <i class="bi bi-chevron-left"></i>
-                          <span class="visually-hidden">Anterior</span>
-                      </button>
-                      
-                      <div class="productos-container">
-                      <!-- Producto 1 -->
-               <a href="../productos/ferreteria/plomeria/grifo.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ferreteria/Plomeria/Grifo.avif" alt="Grifo" loading="lazy">
-          <h3>Grifo</h3>
-          <p>Precio: $3,000</p>
-          <button class="btn-agregar" id="grifo">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 2 -->
-      <a href="../productos/ferreteria/plomeria/grifo_moderno.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ferreteria/Plomeria/grifo_moderno.avif" alt="Grifo moderno" loading="lazy">
-          <h3>Grifo moderno</h3>
-          <p>Precio: $2,000</p>
-          <button class="btn-agregar" id="grifo_moderno">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 3 -->
-      <a href="../productos/ferreteria/plomeria/manguera.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ferreteria/Plomeria/manguera.avif" alt="Manguera" loading="lazy">
-          <h3>Manguera</h3>
-          <p>Precio: $2,400</p>
-          <button class="btn-agregar" id="manguera">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 4 -->
-      <a href="../productos/ferreteria/plomeria/manguera_de_jardin.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ferreteria/Plomeria/manguera_de_jardin.jpeg" alt="Manguera de jardín" loading="lazy">
-          <h3>Manguera de jardín</h3>
-          <p>Precio: $3,100</p>
-          <button class="btn-agregar" id="manguera_de_jardin">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 5 -->
-      <a href="../productos/ferreteria/plomeria/tubo.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ferreteria/Plomeria/tubo_drenaje.avif" alt="Tubo de drenaje" loading="lazy">
-          <h3>Tubo de drenaje</h3>
-          <p>Precio: $600</p>
-          <button class="btn-agregar" id="tubo_de_drenaje">Agregar</button>
-        </article>
-      </a>
-
-            </div>
-            
-                <!-- botón siguiente del carrusel-->
-                <button class="productos-control-next" type="button" id="plomeria-next">
-                    <i class="bi bi-chevron-right"></i>
-                    <span class="visually-hidden">Siguiente</span>
-                </button>
-            </div>
-              </div>
-          </section>
-
+        </section>
     </main>
 
 
-    <!--footer Global-->
-    <footer> 
-        
-         <div class=" container_fluid footer-content">
-              <!-- Derechos reservados -->
-              <small>&copy; 2026 Hipermercado Superior. Todos los derechos reservados.</small>
+    <footer class="footer-global">
+      <div class="footer-content">
+        <!-- Derechos reservados -->
+        <small>&copy; 2026 Hipermercado Superior. Todos los derechos reservados.</small>
 
-              <!-- Íconos de redes sociales -->
-              <div class="social-icons">
-                   <a href="https://facebook.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Facebook">
-                    <i class="bi bi-facebook"></i>
-                   </a>
+        <!-- Íconos de redes sociales (sprite SVG) -->
+        <div class="social-icons">
+          <a href="https://facebook.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Facebook" class="social-link">
+            <svg aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-facebook"/></svg>
+          </a>
+          <a href="https://twitter.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en X (antes Twitter)" class="social-link">
+            <svg aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-x"/></svg>
+          </a>
+          <a href="https://instagram.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Instagram" class="social-link">
+            <svg aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-instagram"/></svg>
+          </a>
+        </div>
 
-                   <a href="https://twitter.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en X (antes Twitter)">
-                    <i class="bi bi-twitter-x"></i>
-                   </a>
-
-                   <a href="https://instagram.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Instagram">
-                    <i class="bi bi-instagram"></i>
-                   </a>
-              </div>
-
-                 <!-- Enlaces legales -->
-                <div class="footer-links">
-                  <a href="../legal/privacy.html" title="Política de Privacidad">Política de Privacidad</a> |
-                  <a href="../legal/terms.html" title="Términos de Uso">Términos de Uso</a>
-                </div>
-            </div>
+        <!-- Enlaces legales -->
+        <div class="footer-links">
+          <a href="../../legal/privacy.html" title="Política de Privacidad">Política de Privacidad</a>
+          <span class="separator">|</span>
+          <a href="../../legal/terms.html" title="Términos de Uso">Términos de Uso</a>
+        </div>
+      </div>
     </footer>
 
-    <!-- Scripts de navegación de productos -->
-    <script src="../assets/js/productos_navegacion.js" defer></script>
-    <script src="../assets/js/tablet_menu_click.js" defer></script>
-    <script src="../assets/js/ofertas_animation.js" defer></script>
-
+    <!-- Scripts -->
+    <script src="../../assets/js/productos.js"></script>
+    <script src="../../assets/js/boton_de_busqueda.js"></script>
+    <script src="../../assets/js/hamburger_menu.js"></script>
+    <script src="../../assets/js/tablet_menu_click.js"></script>
+    <script src="../../assets/js/productos_navegacion.js"></script>
+    <script src="../../assets/js/ofertas_animation.js"></script>
+    <script src="../../assets/js/scroll_animations.js"></script>
 </body>
-
-
-
 </html>
 
 

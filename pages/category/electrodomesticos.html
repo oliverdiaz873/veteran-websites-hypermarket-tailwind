@@ -2,8 +2,7 @@
 <html lang="es">
 
 <head>
-
-     <!--META ETIQUETAS-->
+    <!-- Meta etiquetas -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Descubre en Hipermercado Superior la mejor selección de electrodomésticos modernos y de mejor calidad.">
@@ -12,596 +11,686 @@
     <meta name="copyright" content="Oliver Antonio Díaz. Todos los derechos reservados.">
     <meta name="theme-color" content="#2196f3">
 
-    <!-- Etiquetas Open Graph -->
-    <meta property="og:title" content="Electrodomésticos - Hipermercado Superior">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.hipermercadosuperior.com/electrodomesticos"> <!-- URL de la sección -->
-    <meta property="og:image" content="imagenes/electrodomesticos-banner.jpg"> 
-    <meta property="og:description" content="Descubre en Hipermercado Superior la mejor selección de electrodomésticos modernos y de mejor calidad.">
-    <meta property="og:site_name" content="Hipermercado Superior">
-    <meta property="og:locale" content="es_ES"> 
+    <!-- Enlace Canónico -->
+    <link rel="canonical" href="https://www.hipermercadosuperior.com/electrodomesticos">
 
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Electrodomésticos - Hipermercado Superior">
-    <meta name="twitter:description" content="Descubre en Hipermercado Superior la mejor selección de electrodomésticos modernos y de mejor calidad.">
-    <meta name="twitter:image" content="https://www.hipermercadosuperior.com/imagenes/electrodomesticos-banner.jpg">
+    <!-- Preconectar a Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Título, CSS y Fuentes-->
-    <title>Hipermercado Superior | Sección de Electrodomésticos</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/categorias.css">
-    <link rel="stylesheet" href="../assets/css/fonts.css">
+    <!-- Estilos FontAwesome y Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- Estilos Personalizados (Tailwind + Custom CSS) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../assets/css/index.css">
 
-     <!-- Favicons -->
-    <link rel="icon" href="../assets/icons/favicons/icon-16x16.jpg" type="image/jpg" sizes="16x16">
-    <link rel="icon" href="../assets/icons/favicons/icon-32x32.jpg" type="image/jpg" sizes="32x32">
-    <link rel="icon" href="../assets/icons/favicons/icon-48x48.jpg" type="image/jpg" sizes="48x48">
-    
-    <!-- Scripts necesarios -->
-    <script src="../assets/js/hamburger_menu.js" type="text/javascript" defer></script>
-    <script src="../assets/js/boton_de_busqueda.js" type="text/javascript" defer></script>
-    <script src="../assets/js/productos.js" defer></script> 
-    <script src="../assets/js/carrito.js" defer></script>
-    <script src="../assets/js/ofertas_animation.js" defer></script>
-    <script src="../assets/js/productos_navegacion.js" defer></script>
-    <script src="../assets/js/tablet_menu_click.js" defer></script>
-  </head>
+    <!-- Script para FontAwesome Kit (si es necesario) -->
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+
+    <title>Electrodomésticos | Hipermercado Superior</title>
+</head>
 
 
 
-<body id="fondo_electrodomesticos">
+<body class="bg-gray-50 font-['Outfit']">
 
-     <!-- ===== HEADER GLOBAL ===== -->
-  <header>
-  <div class="header-container">
-    <!-- Botón hamburguesa solo en móvil -->
-    <button class="menu-btn">
-      <i class="bi bi-list"></i> 
-    </button>
+  <!-- Header Global -->
+  <header class="header-global sticky top-0 z-[1000] bg-black text-white shadow-lg">
+    <div class="container mx-auto px-4 h-[70px] flex items-center justify-between">
+      <!-- Menú Hamburguesa (Móvil) -->
+      <button id="hamburger-btn" class="mobile-menu-toggle lg:hidden flex flex-col gap-1.5 p-2" aria-label="Abrir menú">
+        <span class="w-6 h-0.5 bg-white transition-all"></span>
+        <span class="w-6 h-0.5 bg-white transition-all"></span>
+        <span class="w-6 h-0.5 bg-white transition-all"></span>
+      </button>
 
-    <!-- Logo + título -->
-    <a href="../index.html" class="brand" aria-label="Ir a la página principal de Hipermercado Superior">
-      <img src="../assets/images/logo/logo.jpeg" alt="Logo de Hipermercado Superior">
-      <h1 class="whitespace-nowrap block ml-1">Hipermercado Superior</h1>
-    </a>
-
-    <!-- Menú de navegación -->
-    <nav class="nav-links" role="navigation" aria-label="Menú principal">
-
-     <ul>
-
-        <!-- Nivel 1 -->
-        <li><a href="../index.html">Inicio</a></li>
-
-        <!-- Nivel 1: Categorías <span class="dropdown-arrow">▼</span> -->
-        <!-- href="#" indica que es un enlace vacío, # significa no ir a ninguna página en particular -->
-        <!-- aria-haspopup="true" Sirve para lectores de pantalla (personas no videntes) para que sepan que ese enlace tiene un submenú desplegable. -->
-        <!-- aria-expanded="false" significa "Este menú actualmente está cerrado". -->
-        <li><a href="#" aria-haspopup="true" aria-expanded="false">Categorías <span class="dropdown-arrow">▼</span></a>
-
-            <ul>
-
-                <!-- Nivel 2: Alimentos -->
-                <li>
-                    <a href="../categorias/Alimentos.html">Alimentos <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../categorias/Alimentos.html#frutas_y_verduras">Frutas y Verduras</a></li>
-                        <li><a href="../categorias/Alimentos.html#despensa">Despensa</a></li>
-                        <li><a href="../categorias/Alimentos.html#carnes_pescados_mariscos">Carnes, Pescados y Mariscos</a></li>
-                        <li><a href="../categorias/Alimentos.html#lacteos_y_huevos">Lácteos y Huevos</a></li>
-                        <li><a href="../categorias/Alimentos.html#bebidas">Bebidas</a></li>
-                        <li><a href="../categorias/Alimentos.html#enlatados">Enlatados</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Electrodomésticos -->
-                <li>
-                    <a href="../categorias/Electrodomesticos.html">Electrodomésticos <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../categorias/Electrodomesticos.html#cocina">Cocina</a></li>
-                        <li><a href="../categorias/Electrodomesticos.html#lavado">Lavado</a></li>
-                        <li><a href="../categorias/Electrodomesticos.html#climatizacion">Climatización</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Tecnología -->
-                <li>
-                    <a href="../categorias/tecnologia.html">Tecnología <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../categorias/tecnologia.html#televisores">Televisores</a></li>
-                        <li><a href="../categorias/tecnologia.html#laptops">Laptops</a></li>
-                        <li><a href="../categorias/tecnologia.html#tablets">Tablets</a></li>
-                        <li><a href="../categorias/tecnologia.html#celulares">Celulares</a></li>
-                        <li><a href="../categorias/tecnologia.html#bocinas">Bocinas</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Ropa -->
-                <li>
-                    <a href="../categorias/Ropa.html">Ropa <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../categorias/Ropa.html#pantalones_para_hombres">Pantalones para Hombres</a></li>
-                        <li><a href="../categorias/Ropa.html#pantalones_para_mujeres">Pantalones para Mujeres</a></li>
-                        <li><a href="../categorias/Ropa.html#pantalones_para_niños">Pantalones para Niños</a></li>
-                        <li><a href="../categorias/Ropa.html#trajes_para_hombres">Trajes para Hombres</a></li>
-                        <li><a href="../categorias/Ropa.html#vestidos">Vestidos</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Muebles y Decoración -->
-                <li>
-                    <a href="../categorias/muebles_y_decoracion.html">Muebles y Decoración <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../categorias/muebles_y_decoracion.html#sofas">Sofás</a></li>
-                        <li><a href="../categorias/muebles_y_decoracion.html#sillones">Sillones</a></li>
-                        <li><a href="../categorias/muebles_y_decoracion.html#mesas">Mesas</a></li>
-                        <li><a href="../categorias/muebles_y_decoracion.html#floreros">Floreros</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Farmacia -->
-                <li>
-                    <a href="../categorias/Farmacia.html">Farmacia <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../categorias/Farmacia.html#analgesicos">Analgésicos</a></li>
-                        <li><a href="../categorias/Farmacia.html#dermocosmetica">Dermocosmética</a></li>
-                        <li><a href="../categorias/Farmacia.html#vitaminas_y_minerales">Vitaminas y Minerales</a></li>
-                        <li><a href="../categorias/Farmacia.html#antigripales_y_resfriado">Antigripales y Resfriado</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Ferretería -->
-                <li>
-                    <a href="../categorias/Ferreteria.html">Ferretería <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../categorias/Ferreteria.html#herramientas_manuales">Herramientas Manuales</a></li>
-                        <li><a href="../categorias/Ferreteria.html#pinturas_y_acabados">Pinturas y Acabados</a></li>
-                        <li><a href="../categorias/Ferreteria.html#electricidad">Electricidad</a></li>
-                        <li><a href="../categorias/Ferreteria.html#plomeria">Plomería</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Juguetes -->
-                <li>
-                    <a href="../categorias/juguetes.html">Juguetes <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../categorias/juguetes.html#juguetes_para_niños">Juguetes para Niños</a></li>
-                        <li><a href="../categorias/juguetes.html#juguetes_para_niñas">Juguetes para Niñas</a></li>
-                    </ul>
-                </li>
-
-            </ul>
-        </li>
-
-        <!-- Nivel 1 -->
-        <li><a href="../index.html#ofertas">Ofertas</a></li>
-        <li><a href="../contacto/">Contacto</a></li>
-
-        <!-- botón de búsqueda -->
-       <li class="buscador-header">
-         <input type="text" id="input-buscar" placeholder="Buscar productos..."  autocomplete="off" aria-label="Escribe tu búsqueda">
-            <button type="button" aria-label="Buscar productos" id="btn-buscar">
-              <i class="bi bi-search" id="icono-buscar"></i>
-            </button>
-         <ul id="resultados-busqueda" class="resultados-busqueda"></ul>  <!-- Coincidencencias -->
-       </li>
-
-       <!-- botón del carrito -->
-     <li class="carrito-item">
-       <a href="../pages/cart/index.html" class="carrito-header" aria-label="Ver carrito">
-              <img 
-                 src="../assets/icons/shopping_cart_icon/shopping_car_icon.png" 
-                 alt="Carrito de compras"
-                 class="icono-carrito"
-               >
-                <span id="contador-carrito">0</span>
-       </a>
-     </li>
-
-    </ul>
-    </nav>
-  </div>
-
-  
-  <!-- Menú móvil colapsable -->
-<nav class="nav-links-mobile">
-  <ul>
-
-     <!-- Nivel 1 -->
-        <li><a href="../index.html">Inicio</a></li>
-
-        <!-- Nivel 1: Categorías <span class="dropdown-arrow">▼</span> -->
-        <!-- href="#" indica que es un enlace vacío, # significa no ir a ninguna página en particular -->
-        <!-- aria-haspopup="true" Sirve para lectores de pantalla (personas no videntes) para que sepan que ese enlace tiene un submenú desplegable. -->
-        <!-- aria-expanded="false" significa "Este menú actualmente está cerrado". -->
-        <li><a href="#" aria-haspopup="true" aria-expanded="false">Categorías <span class="dropdown-arrow">▼</span></a>
-
-            <ul>
-
-                <!-- Nivel 2: Alimentos -->
-                <li>
-                    <a href="../categorias/Alimentos.html">Alimentos <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../categorias/Alimentos.html#frutas_y_verduras">Frutas y Verduras</a></li>
-                        <li><a href="../categorias/Alimentos.html#despensa">Despensa</a></li>
-                        <li><a href="../categorias/Alimentos.html#carnes_pescados_mariscos">Carnes, Pescados y Mariscos</a></li>
-                        <li><a href="../categorias/Alimentos.html#lacteos_y_huevos">Lácteos y Huevos</a></li>
-                        <li><a href="../categorias/Alimentos.html#bebidas">Bebidas</a></li>
-                        <li><a href="../categorias/Alimentos.html#enlatados">Enlatados</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Electrodomésticos -->
-                <li>
-                    <a href="../categorias/Electrodomesticos.html">Electrodomésticos <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../categorias/Electrodomesticos.html#cocina">Cocina</a></li>
-                        <li><a href="../categorias/Electrodomesticos.html#lavado">Lavado</a></li>
-                        <li><a href="../categorias/Electrodomesticos.html#climatizacion">Climatización</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Tecnología -->
-                <li>
-                    <a href="../categorias/tecnologia.html">Tecnología <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../categorias/tecnologia.html#televisores">Televisores</a></li>
-                        <li><a href="../categorias/tecnologia.html#laptops">Laptops</a></li>
-                        <li><a href="../categorias/tecnologia.html#tablets">Tablets</a></li>
-                        <li><a href="../categorias/tecnologia.html#celulares">Celulares</a></li>
-                        <li><a href="../categorias/tecnologia.html#bocinas">Bocinas</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Ropa -->
-                <li>
-                    <a href="../categorias/Ropa.html">Ropa <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../categorias/Ropa.html#pantalones_para_hombres">Pantalones para Hombres</a></li>
-                        <li><a href="../categorias/Ropa.html#pantalones_para_mujeres">Pantalones para Mujeres</a></li>
-                        <li><a href="../categorias/Ropa.html#pantalones_para_niños">Pantalones para Niños</a></li>
-                        <li><a href="../categorias/Ropa.html#trajes_para_hombres">Trajes para Hombres</a></li>
-                        <li><a href="../categorias/Ropa.html#vestidos">Vestidos</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Muebles y Decoración -->
-                <li>
-                    <a href="../categorias/muebles_y_decoracion.html">Muebles y Decoración <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../categorias/muebles_y_decoracion.html#sofas">Sofás</a></li>
-                        <li><a href="../categorias/muebles_y_decoracion.html#sillones">Sillones</a></li>
-                        <li><a href="../categorias/muebles_y_decoracion.html#mesas">Mesas</a></li>
-                        <li><a href="../categorias/muebles_y_decoracion.html#floreros">Floreros</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Farmacia -->
-                <li>
-                    <a href="../categorias/Farmacia.html">Farmacia <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../categorias/Farmacia.html#analgesicos">Analgésicos</a></li>
-                        <li><a href="../categorias/Farmacia.html#dermocosmetica">Dermocosmética</a></li>
-                        <li><a href="../categorias/Farmacia.html#vitaminas_y_minerales">Vitaminas y Minerales</a></li>
-                        <li><a href="../categorias/Farmacia.html#antigripales_y_resfriado">Antigripales y Resfriado</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Ferretería -->
-                <li>
-                    <a href="../categorias/Ferreteria.html">Ferretería <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../categorias/Ferreteria.html#herramientas_manuales">Herramientas Manuales</a></li>
-                        <li><a href="../categorias/Ferreteria.html#pinturas_y_acabados">Pinturas y Acabados</a></li>
-                        <li><a href="../categorias/Ferreteria.html#electricidad">Electricidad</a></li>
-                        <li><a href="../categorias/Ferreteria.html#plomeria">Plomería</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Juguetes -->
-                <li>
-                    <a href="../categorias/juguetes.html">Juguetes <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../categorias/juguetes.html#juguetes_para_niños">Juguetes para Niños</a></li>
-                        <li><a href="../categorias/juguetes.html#juguetes_para_niñas">Juguetes para Niñas</a></li>
-                    </ul>
-                </li>
-
-            </ul>
-        </li>
-
-        <!-- Nivel 1 -->
-        <li><a href="../index.html#ofertas">Ofertas</a></li>
-        <li><a href="../contacto/">Contacto</a></li>
-   
-  </ul>
-</nav>
-</header>
-
-
-<!-- Breadcrumb o indicador de ubicación -->
-<nav class="breadcrumb">
-  <a href="../index.html">Inicio</a> ›
-  <span>Categorías</span> ›
-  <span class="actual">Electrodomésticos</span>
-</nav>
-       
-     <main> <!--main-->
-
-          <!-- Sección: Cocina -->
-          <section class="productos-destacados destino" id="cocina">
-              <div class="container">
-                  <h2>Cocina</h2>
-
-                  <div class="productos-container-wrapper">
-                      <!-- botón anterior del carrusel-->
-                      <button class="productos-control-prev" type="button" id="cocina-prev">
-                          <i class="bi bi-chevron-left"></i>
-                          <span class="visually-hidden">Anterior</span>
-                      </button>
-                      
-                      <div class="productos-container">
-                      <!-- Producto 1 -->
-               <a href="../productos/electrodomesticos/cocina/nevera_lg.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Electrodomesticos/cocina/Neveras/Nevera_LG.png" alt="Nevera LG" loading="lazy">
-          <h3>Nevera LG</h3>
-          <p>Precio: $80,000</p>
-          <button class="btn-agregar" id="nevera_lg_grande_moderna">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 2 -->
-      <a href="../productos/electrodomesticos/cocina/estufa_lg.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Electrodomesticos/cocina/Estufas/estufa_LG.avif" alt="Estufa LG" loading="lazy">
-          <h3>Estufa LG</h3>
-          <p>Precio: $66,000</p>
-          <button class="btn-agregar" id="estufa_lg">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 3 -->
-      <a href="../productos/electrodomesticos/cocina/extractor_drija.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Electrodomesticos/cocina/extractor_de_grasa/extractor_de_grasa_Drija.avif" alt="Extractor Drija" loading="lazy">
-          <h3>Extractor de grasa Drija</h3>
-          <p>Precio: $6,000</p>
-          <button class="btn-agregar" id="extractor_de_grasa_drija">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 4 -->
-      <a href="../productos/electrodomesticos/cocina/cilindro_duragas.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Electrodomesticos/cocina/Cilindros_de_gas/cilindro_de_gas_duragas.avif" alt="Cilindro Duragas" loading="lazy">
-          <h3>Cilindro de gas Duragas</h3>
-          <p>Precio: $5,200</p>
-          <button class="btn-agregar" id="cilindro_de_gas_duragas">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 5 -->
-      <a href="../productos/electrodomesticos/cocina/freezer_7_pies.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Electrodomesticos/cocina/freezer/freezer_7pies.png" alt="Freezer 7 Pies" loading="lazy">
-          <h3>Freezer 7 Pies</h3>
-          <p>Precio: $16,500</p>
-          <button class="btn-agregar" id="freezer_7_pies">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 6 -->
-      <a href="../productos/electrodomesticos/cocina/bebedero_tecnomaster.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Electrodomesticos/cocina/bebedero/bebedero_tecnomaster.avif" alt="Bebedero Tecnomaster" loading="lazy">
-          <h3>Bebedero Tecnomaster</h3>
-          <p>Precio: $5,000</p>
-          <button class="btn-agregar" id="bebedero_tecnomaster">Agregar</button>
-        </article>
+      <!-- Logo -->
+      <a href="../../index.html" class="logo-container flex items-center gap-2 group">
+        <div class="logo-icon w-10 h-10 bg-amber-400 rounded-lg flex items-center justify-center transform group-hover:rotate-12 transition-transform shadow-lg shadow-amber-400/20">
+          <i class="fas fa-shopping-basket text-black text-xl"></i>
+        </div>
+        <div class="logo-text leading-tight">
+          <span class="block text-xl font-bold tracking-tight text-white group-hover:text-amber-400 transition-colors">SUPERIOR</span>
+          <span class="block text-[0.65rem] font-medium tracking-[0.2em] opacity-60">HIPERMERCADO</span>
+        </div>
       </a>
 
-                      </div>
-                      
-                      <!-- botón siguiente del carrusel-->
-                      <button class="productos-control-next" type="button" id="cocina-next">
-                          <i class="bi bi-chevron-right"></i>
-                          <span class="visually-hidden">Siguiente</span>
-                      </button>
-                  </div>
-              </div>
-          </section>
-
-
-       <!-- Sección: Lavado-->
-          <section class="productos-destacados destino reveal" id="lavado">
-              <div class="container">
-                  <h2>Lavado</h2>
-
-                  <div class="productos-container-wrapper">
-                      <!-- botón anterior del carrusel-->
-                      <button class="productos-control-prev" type="button" id="lavado-prev">
-                          <i class="bi bi-chevron-left"></i>
-                          <span class="visually-hidden">Anterior</span>
-                      </button>
-                      
-                      <div class="productos-container">
-                      <!-- Producto 1 -->
-               <a href="../productos/electrodomesticos/lavado/lavadora_frigidaire.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Electrodomesticos/lavado/lavadora/lavadora_frigidaire.png" alt="Lavadora Frigidaire" loading="lazy">
-          <h3>Lavadora Frigidaire</h3>
-          <p>Precio: $35,000</p>
-          <button class="btn-agregar" id="lavadora_frigidaire">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 2 -->
-      <a href="../productos/electrodomesticos/lavado/lavadora_tecnomaster.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Electrodomesticos/lavado/Lavadora y Secadora/Lavadora_y_secadora_tecnomaster.png" alt="Lavadora y Secadora Tecnomaster" loading="lazy">
-          <h3>Lavadora y Secadora Tecnomaster</h3>
-          <p>Precio: $40,000</p>
-          <button class="btn-agregar" id="lavadora_y_secadora_tecnomaster">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 3 -->
-      <a href="../productos/electrodomesticos/lavado/lavadora_lg.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Electrodomesticos/lavado/lavadora/lavadora_LG.avif" alt="Lavadora LG" loading="lazy">
-          <h3>Lavadora LG</h3>
-          <p>Precio: $53,000</p>
-          <button class="btn-agregar" id="lavadora_lg">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 4 -->
-      <a href="../productos/electrodomesticos/lavado/lavadora_secadora_lg.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Electrodomesticos/lavado/Lavadora y Secadora/Lavadora_y_secadora_LG.avif" alt="Lavadora y Secadora LG" loading="lazy">
-          <h3>Lavadora y Secadora LG</h3>
-          <p>Precio: $55,000</p>
-          <button class="btn-agregar" id="lavadora_y_secadora_lg">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 5 -->
-      <a href="../productos/electrodomesticos/lavado/lavadora_dimensions.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Electrodomesticos/lavado/lavadora/lavadora_dimensions.png" alt="Lavadora Dimensions" loading="lazy">
-          <h3>Lavadora Dimensions</h3>
-          <p>Precio: $10,000</p>
-          <button class="btn-agregar" id="lavadora_dimensions">Agregar</button>
-        </article>
-      </a>
-
-                      </div>
-                      
-                      <!-- botón siguiente del carrusel-->
-                      <button class="productos-control-next" type="button" id="lavado-next">
-                          <i class="bi bi-chevron-right"></i>
-                          <span class="visually-hidden">Siguiente</span>
-                      </button>
-                  </div>
-              </div>
-          </section>
-
-
-       <!-- Climatización -->
-          <section class="productos-destacados destino reveal" id="climatizacion">
-              <div class="container">
-                  <h2>Climatización</h2>
-
-                  <div class="productos-container-wrapper">
-                      <!-- botón anterior del carrusel-->
-                      <button class="productos-control-prev" type="button" id="climatizacion-prev">
-                          <i class="bi bi-chevron-left"></i>
-                          <span class="visually-hidden">Anterior</span>
-                      </button>
-                      
-                      <div class="productos-container">
-                      <!-- Producto 1 -->
-               <a href="../productos/electrodomesticos/climatizacion/ventilador_daiwa.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Electrodomesticos/climatizacion/ventiladores/ventilador_Daiwa.png" alt="Ventilador Daiwa" loading="lazy">
-          <h3>Ventilador Daiwa</h3>
-          <p>Precio: $15,000</p>
-          <button class="btn-agregar" id="ventilador_daiwa">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 2 -->
-      <a href="../productos/electrodomesticos/climatizacion/aire_acondicionado_whirlpool.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Electrodomesticos/climatizacion/aire_acondicionado/aire_acondicionado_whirlpool.png" alt="Aire Acondicionado Whirlpool" loading="lazy">
-          <h3>Aire Acondicionado Whirlpool</h3>
-          <p>Precio: $40,000</p>
-          <button class="btn-agregar" id="aire_acondicionado_whirlpool">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 3 -->
-      <a href="../productos/electrodomesticos/climatizacion/aire_acondicionado_tecnomaster.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Electrodomesticos/climatizacion/aire_acondicionado/aire_acondicionado_tecnomaster.png" alt="Aire Acondicionado Tecnomaster" loading="lazy">
-          <h3>Aire Acondicionado Tecnomaster</h3>
-          <p>Precio: $33,000</p>
-          <button class="btn-agregar" id="aire_acondicionado_tecnomaster">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 4 -->
-      <a href="../productos/electrodomesticos/climatizacion/ventilador_kdk.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Electrodomesticos/climatizacion/ventiladores/ventilador_KDK.avif" alt="Ventilador KDK" loading="lazy">
-          <h3>Ventilador KDK</h3>
-          <p>Precio: $6,000</p>
-          <button class="btn-agregar" id="ventilador_kdk">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 5 -->
-      <a href="../productos/electrodomesticos/climatizacion/ventilador_techo_kdk.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Electrodomesticos/climatizacion/ventiladores_de_techo/ventilador_de_techo_KDK.avif" alt="Ventilador de Techo KDK" loading="lazy">
-          <h3>Ventilador de Techo KDK</h3>
-          <p>Precio: $20,000</p>
-          <button class="btn-agregar" id="ventilador_de_techo_kdk">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 6 -->
-      <a href="../productos/electrodomesticos/climatizacion/ventilador_pequeno.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Electrodomesticos/climatizacion/ventiladores/ventilador_pequeño.png" alt="Ventilador Pequeño" loading="lazy">
-          <h3>Ventilador Pequeño</h3>
-          <p>Precio: $8,000</p>
-          <button class="btn-agregar" id="ventilador_pequeno">Agregar</button>
-        </article>
-      </a>
-
-                      </div>
-                      
-                      <!-- botón siguiente del carrusel-->
-                      <button class="productos-control-next" type="button" id="climatizacion-next">
-                          <i class="bi bi-chevron-right"></i>
-                          <span class="visually-hidden">Siguiente</span>
-                      </button>
-                  </div>
-              </div>
-          </section>
-
-
-    </main>
-
-    </main>
-
-
-    <!--footer Global-->
-    <footer> 
+      <!-- Navegación Escritorio -->
+      <nav class="hidden lg:flex items-center gap-8">
+        <a href="../../index.html" class="nav-link-modern">Inicio</a>
         
-         <div class=" container_fluid footer-content">
-              <!-- Derechos reservados -->
-              <small>&copy; 2026 Hipermercado Superior. Todos los derechos reservados.</small>
-
-              <!-- Íconos de redes sociales -->
-              <div class="social-icons">
-                   <a href="https://facebook.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Facebook">
-                    <i class="bi bi-facebook"></i>
-                   </a>
-
-                   <a href="https://twitter.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en X (antes Twitter)">
-                    <i class="bi bi-twitter-x"></i>
-                   </a>
-
-                   <a href="https://instagram.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Instagram">
-                    <i class="bi bi-instagram"></i>
-                   </a>
+        <!-- Dropdown Categorías -->
+        <div class="relative group">
+          <button class="nav-link-modern flex items-center gap-1.5 focus:outline-none">
+            Categorías <i class="fas fa-chevron-down text-[0.7em] opacity-50 group-hover:rotate-180 transition-transform"></i>
+          </button>
+          
+          <div class="dropdown-modern invisible group-hover:visible opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0">
+            <div class="grid grid-cols-2 w-[550px] p-6 gap-6">
+              <!-- Columna 1 -->
+              <div>
+                <h4 class="text-amber-400 text-xs font-bold uppercase tracking-widest mb-4">Productos Base</h4>
+                <ul class="space-y-3">
+                  <li><a href="alimentos.html" class="drop-link"><i class="fas fa-apple-whole w-5"></i> Alimentos</a></li>
+                  <li><a href="electrodomesticos.html" class="drop-link active"><i class="fas fa-plug w-5"></i> Electrodomésticos</a></li>
+                  <li><a href="tecnologia.html" class="drop-link"><i class="fas fa-laptop w-5"></i> Tecnología</a></li>
+                  <li><a href="ropa.html" class="drop-link"><i class="fas fa-shirt w-5"></i> Ropa</a></li>
+                </ul>
               </div>
+              <!-- Columna 2 -->
+              <div>
+                <h4 class="text-amber-400 text-xs font-bold uppercase tracking-widest mb-4">Hogar y Otros</h4>
+                <ul class="space-y-3">
+                  <li><a href="muebles_y_decoracion.html" class="drop-link"><i class="fas fa-couch w-5"></i> Muebles</a></li>
+                  <li><a href="farmacia.html" class="drop-link"><i class="fas fa-pills w-5"></i> Farmacia</a></li>
+                  <li><a href="ferreteria.html" class="drop-link"><i class="fas fa-hammer w-5"></i> Ferretería</a></li>
+                  <li><a href="juguetes.html" class="drop-link"><i class="fas fa-gamepad w-5"></i> Juguetes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
 
-                 <!-- Enlaces legales -->
-                <div class="footer-links">
-                  <a href="../legal/privacy.html" title="Política de Privacidad">Política de Privacidad</a> |
-                  <a href="../legal/terms.html" title="Términos de Uso">Términos de Uso</a>
+        <a href="../../index.html#ofertas" class="nav-link-modern">Ofertas</a>
+        <a href="../contacto/index.html" class="nav-link-modern">Contacto</a>
+      </nav>
+
+      <!-- Acciones de Usuario -->
+      <div class="flex items-center gap-4">
+        <!-- Buscador -->
+        <div class="search-container-modern hidden md:flex items-center relative">
+          <input type="text" id="input-busqueda" placeholder="Buscar productos..." class="search-input-modern">
+          <button id="btn-busqueda" class="search-btn-modern" aria-label="Buscar">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+          </button>
+          <ul id="resultados-busqueda" class="search-results-list"></ul>
+        </div>
+
+        <!-- Carrito -->
+        <a href="../cart/index.html" class="util-btn" aria-label="Ver carrito">
+          <svg class="util-icon" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-cart"/></svg>
+          <span id="contador-carrito" class="cart-badge">0</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Menú móvil colapsable -->
+    <nav id="mobile-menu" class="fixed top-[49px] left-0 w-full bg-black/95 text-white hidden z-[999] max-h-[calc(100vh-49px)] overflow-y-auto py-5 shadow-xl">
+      <ul class="list-none p-0 m-0">
+        <li class="px-5 py-2.5 border-b border-white/10"><a href="../../index.html" class="block">Inicio</a></li>
+        <li class="px-5 py-2.5 border-b border-white/10">
+          <button class="mobile-dropdown-btn w-full text-left flex justify-between items-center">
+            Categorías <span class="text-[0.7em] opacity-70">▼</span>
+          </button>
+          <ul class="hidden pl-5 mt-2 transition-all duration-300 opacity-0 overflow-hidden">
+            <!-- Alimentos -->
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Alimentos <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="alimentos.html#frutas_y_verduras" class="block py-2">Frutas y Verduras</a></li>
+                <li><a href="alimentos.html#despensa" class="block py-2">Despensa</a></li>
+                <li><a href="alimentos.html#carnes_pescados_mariscos" class="block py-2">Carnes y Mariscos</a></li>
+                <li><a href="alimentos.html#lacteos_y_huevos" class="block py-2">Lácteos</a></li>
+                <li><a href="alimentos.html#bebidas" class="block py-2">Bebidas</a></li>
+                <li><a href="alimentos.html#enlatados" class="block py-2">Enlatados</a></li>
+              </ul>
+            </li>
+            <!-- Electrodomésticos -->
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Electrodomésticos <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="electrodomesticos.html#cocina" class="block py-2">Cocina</a></li>
+                <li><a href="electrodomesticos.html#lavado" class="block py-2">Lavado</a></li>
+                <li><a href="electrodomesticos.html#climatizacion" class="block py-2">Climatización</a></li>
+              </ul>
+            </li>
+            <!-- Tecnología -->
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Tecnología <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="tecnologia.html#televisores" class="block py-2">Televisores</a></li>
+                <li><a href="tecnologia.html#laptops" class="block py-2">Laptops</a></li>
+                <li><a href="tecnologia.html#tablets" class="block py-2">Tablets</a></li>
+                <li><a href="tecnologia.html#celulares" class="block py-2">Celulares</a></li>
+                <li><a href="tecnologia.html#bocinas" class="block py-2">Bocinas</a></li>
+              </ul>
+            </li>
+            <!-- Ropa -->
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Ropa <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="ropa.html#pantalones_para_hombres" class="block py-2">Hombres</a></li>
+                <li><a href="ropa.html#pantalones_para_mujeres" class="block py-2">Mujeres</a></li>
+                <li><a href="ropa.html#pantalones_para_niños" class="block py-2">Niños</a></li>
+                <li><a href="ropa.html#trajes_para_hombres" class="block py-2">Trajes</a></li>
+                <li><a href="ropa.html#vestidos" class="block py-2">Vestidos</a></li>
+              </ul>
+            </li>
+            <!-- Muebles -->
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Muebles <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="muebles_y_decoracion.html#sofas" class="block py-2">Sofás</a></li>
+                <li><a href="muebles_y_decoracion.html#sillones" class="block py-2">Sillones</a></li>
+                <li><a href="muebles_y_decoracion.html#mesas" class="block py-2">Mesas</a></li>
+                <li><a href="muebles_y_decoracion.html#floreros" class="block py-2">Floreros</a></li>
+              </ul>
+            </li>
+            <!-- Farmacia -->
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Farmacia <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="farmacia.html#analgesicos" class="block py-2">Analgésicos</a></li>
+                <li><a href="farmacia.html#dermocosmetica" class="block py-2">Dermocosmética</a></li>
+                <li><a href="farmacia.html#vitaminas" class="block py-2">Vitaminas</a></li>
+                <li><a href="farmacia.html#antigripales" class="block py-2">Antigripales</a></li>
+              </ul>
+            </li>
+            <!-- Ferretería -->
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Ferretería <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="ferreteria.html#herramientas" class="block py-2">Herramientas</a></li>
+                <li><a href="ferreteria.html#pinturas" class="block py-2">Pinturas</a></li>
+                <li><a href="ferreteria.html#electricidad" class="block py-2">Electricidad</a></li>
+                <li><a href="ferreteria.html#plomeria" class="block py-2">Plomería</a></li>
+              </ul>
+            </li>
+            <!-- Juguetes -->
+            <li class="border-b border-white/0">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Juguetes <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="juguetes.html#niños" class="block py-2">Niños</a></li>
+                <li><a href="juguetes.html#niñas" class="block py-2">Niñas</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="px-5 py-2.5 border-b border-white/10"><a href="../../index.html#ofertas" class="block">Ofertas</a></li>
+        <li class="px-5 py-2.5 border-b border-white/10"><a href="../contacto/index.html" class="block">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb-container" aria-label="Breadcrumb">
+    <div class="container">
+      <ul class="breadcrumb-list">
+        <li><a href="../../index.html">Inicio</a></li>
+        <li><a href="#">Categorías</a></li>
+        <li class="active">Electrodomésticos</li>
+      </ul>
+    </div>
+  </nav>
+
+       
+    <main>
+        <!-- Banner de Categoría -->
+        <section class="relative bg-neutral-900 py-16 px-4 overflow-hidden">
+            <div class="absolute inset-0 opacity-20">
+                <img src="../../assets/images/fondos/fondo.avif" alt="" class="w-full h-full object-cover">
+            </div>
+            <div class="container mx-auto relative z-10 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Electrodomésticos</h1>
+                <p class="text-gray-400 max-w-2xl mx-auto">Equipa tu hogar con la última tecnología en línea blanca y pequeños electrodomésticos de las mejores marcas.</p>
+            </div>
+        </section>
+
+        <!-- Filtros Rápidos -->
+        <section class="bg-white border-b sticky top-[70px] z-[90] shadow-sm">
+            <div class="container mx-auto px-4 overflow-x-auto">
+                <div class="flex items-center gap-6 py-4 whitespace-nowrap">
+                    <span class="text-sm font-bold text-gray-400 uppercase tracking-widest">Saltar a:</span>
+                    <a href="#cocina" class="text-sm font-medium hover:text-amber-500 transition-colors">Cocina</a>
+                    <a href="#lavado" class="text-sm font-medium hover:text-amber-500 transition-colors">Lavado</a>
+                    <a href="#climatizacion" class="text-sm font-medium hover:text-amber-500 transition-colors">Climatización</a>
                 </div>
             </div>
+        </section>
+
+        <!-- Sección: Cocina -->
+        <section id="cocina" class="py-16 bg-white overflow-hidden">
+            <div class="container mx-auto px-4">
+                <div class="flex items-end justify-between mb-10">
+                    <div>
+                        <span class="text-amber-500 font-bold uppercase tracking-[0.3em] text-xs">Para tu hogar</span>
+                        <h2 class="text-3xl font-bold text-neutral-900 mt-2">Cocina</h2>
+                    </div>
+                    <div class="flex gap-2">
+                        <button id="cocina-prev" class="slider-nav-btn" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+                        <button id="cocina-next" class="slider-nav-btn" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="slider-container">
+                    <div class="slider-track" id="cocina-track">
+                        <!-- Producto 1 -->
+                        <div class="product-card" data-category="cocina">
+                            <div class="product-image-container">
+                                <img src="../../assets/images/productos/Electrodomesticos/cocina/Neveras/Nevera_LG.png" alt="Nevera LG" class="product-image">
+                                <div class="product-actions">
+                                    <button class="action-btn btn-agregar" id="nevera_lg_grande_moderna" title="Agregar al carrito">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Nevera LG</h3>
+                                <div class="product-price-container">
+                                    <span class="product-price">$80,000</span>
+                                </div>
+                                <a href="../productos/electrodomesticos/cocina/nevera_lg.html" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
+
+                        <!-- Producto 2 -->
+                        <div class="product-card" data-category="cocina">
+                            <div class="product-image-container">
+                                <img src="../../assets/images/productos/Electrodomesticos/cocina/Estufas/estufa_LG.avif" alt="Estufa LG" class="product-image">
+                                <div class="product-actions">
+                                    <button class="action-btn btn-agregar" id="estufa_lg" title="Agregar al carrito">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Estufa LG</h3>
+                                <div class="product-price-container">
+                                    <span class="product-price">$66,000</span>
+                                </div>
+                                <a href="../productos/electrodomesticos/cocina/estufa_lg.html" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
+
+                        <!-- Producto 3 -->
+                        <div class="product-card" data-category="cocina">
+                            <div class="product-image-container">
+                                <img src="../../assets/images/productos/Electrodomesticos/cocina/extractor_de_grasa/extractor_de_grasa_Drija.avif" alt="Extractor Drija" class="product-image">
+                                <div class="product-actions">
+                                    <button class="action-btn btn-agregar" id="extractor_de_grasa_drija" title="Agregar al carrito">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Extractor Drija</h3>
+                                <div class="product-price-container">
+                                    <span class="product-price">$6,000</span>
+                                </div>
+                                <a href="../productos/electrodomesticos/cocina/extractor_drija.html" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
+
+                        <!-- Producto 4 -->
+                        <div class="product-card" data-category="cocina">
+                            <div class="product-image-container">
+                                <img src="../../assets/images/productos/Electrodomesticos/cocina/Cilindros_de_gas/cilindro_de_gas_duragas.avif" alt="Cilindro Duragas" class="product-image">
+                                <div class="product-actions">
+                                    <button class="action-btn btn-agregar" id="cilindro_de_gas_duragas" title="Agregar al carrito">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Cilindro Duragas</h3>
+                                <div class="product-price-container">
+                                    <span class="product-price">$5,200</span>
+                                </div>
+                                <a href="../productos/electrodomesticos/cocina/cilindro_duragas.html" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
+
+                        <!-- Producto 5 -->
+                        <div class="product-card" data-category="cocina">
+                            <div class="product-image-container">
+                                <img src="../../assets/images/productos/Electrodomesticos/cocina/freezer/freezer_7pies.png" alt="Freezer 7 Pies" class="product-image">
+                                <div class="product-actions">
+                                    <button class="action-btn btn-agregar" id="freezer_7_pies" title="Agregar al carrito">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Freezer 7 Pies</h3>
+                                <div class="product-price-container">
+                                    <span class="product-price">$16,500</span>
+                                </div>
+                                <a href="../productos/electrodomesticos/cocina/freezer_7_pies.html" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
+
+                        <!-- Producto 6 -->
+                        <div class="product-card" data-category="cocina">
+                            <div class="product-image-container">
+                                <img src="../../assets/images/productos/Electrodomesticos/cocina/bebedero/bebedero_tecnomaster.avif" alt="Bebedero Tecnomaster" class="product-image">
+                                <div class="product-actions">
+                                    <button class="action-btn btn-agregar" id="bebedero_tecnomaster" title="Agregar al carrito">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Bebedero Tecnomaster</h3>
+                                <div class="product-price-container">
+                                    <span class="product-price">$5,000</span>
+                                </div>
+                                <a href="../productos/electrodomesticos/cocina/bebedero_tecnomaster.html" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Sección: Lavado -->
+        <section id="lavado" class="py-16 bg-gray-50 overflow-hidden">
+            <div class="container mx-auto px-4">
+                <div class="flex items-end justify-between mb-10">
+                    <div>
+                        <span class="text-amber-500 font-bold uppercase tracking-[0.3em] text-xs">Cuidado de prendas</span>
+                        <h2 class="text-3xl font-bold text-neutral-900 mt-2">Lavado</h2>
+                    </div>
+                    <div class="flex gap-2">
+                        <button id="lavado-prev" class="slider-nav-btn" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+                        <button id="lavado-next" class="slider-nav-btn" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="slider-container">
+                    <div class="slider-track" id="lavado-track">
+                        <!-- Producto 1 -->
+                        <div class="product-card" data-category="lavado">
+                            <div class="product-image-container">
+                                <img src="../../assets/images/productos/Electrodomesticos/lavado/lavadora/lavadora_frigidaire.png" alt="Lavadora Frigidaire" class="product-image">
+                                <div class="product-actions">
+                                    <button class="action-btn btn-agregar" id="lavadora_frigidaire" title="Agregar al carrito">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Lavadora Frigidaire</h3>
+                                <div class="product-price-container">
+                                    <span class="product-price">$35,000</span>
+                                </div>
+                                <a href="../productos/electrodomesticos/lavado/lavadora_frigidaire.html" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
+
+                        <!-- Producto 2 -->
+                        <div class="product-card" data-category="lavado">
+                            <div class="product-image-container">
+                                <img src="../../assets/images/productos/Electrodomesticos/lavado/Lavadora y Secadora/Lavadora_y_secadora_tecnomaster.png" alt="Lavadora y Secadora Tecnomaster" class="product-image">
+                                <div class="product-actions">
+                                    <button class="action-btn btn-agregar" id="lavadora_y_secadora_tecnomaster" title="Agregar al carrito">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Torre Tecnomaster</h3>
+                                <div class="product-price-container">
+                                    <span class="product-price">$40,000</span>
+                                </div>
+                                <a href="../productos/electrodomesticos/lavado/lavadora_tecnomaster.html" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
+
+                        <!-- Producto 3 -->
+                        <div class="product-card" data-category="lavado">
+                            <div class="product-image-container">
+                                <img src="../../assets/images/productos/Electrodomesticos/lavado/lavadora/lavadora_LG.avif" alt="Lavadora LG" class="product-image">
+                                <div class="product-actions">
+                                    <button class="action-btn btn-agregar" id="lavadora_lg" title="Agregar al carrito">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Lavadora LG</h3>
+                                <div class="product-price-container">
+                                    <span class="product-price">$53,000</span>
+                                </div>
+                                <a href="../productos/electrodomesticos/lavado/lavadora_lg.html" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
+
+                        <!-- Producto 4 -->
+                        <div class="product-card" data-category="lavado">
+                            <div class="product-image-container">
+                                <img src="../../assets/images/productos/Electrodomesticos/lavado/Lavadora y Secadora/Lavadora_y_secadora_LG.avif" alt="Lavadora y Secadora LG" class="product-image">
+                                <div class="product-actions">
+                                    <button class="action-btn btn-agregar" id="lavadora_secadora_lg" title="Agregar al carrito">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Torre LG</h3>
+                                <div class="product-price-container">
+                                    <span class="product-price">$55,000</span>
+                                </div>
+                                <a href="../productos/electrodomesticos/lavado/lavadora_secadora_lg.html" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
+
+                        <!-- Producto 5 -->
+                        <div class="product-card" data-category="lavado">
+                            <div class="product-image-container">
+                                <img src="../../assets/images/productos/Electrodomesticos/lavado/lavadora/lavadora_dimensions.png" alt="Lavadora Dimensions" class="product-image">
+                                <div class="product-actions">
+                                    <button class="action-btn btn-agregar" id="lavadora_dimensions" title="Agregar al carrito">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Lavadora Dimensions</h3>
+                                <div class="product-price-container">
+                                    <span class="product-price">$10,000</span>
+                                </div>
+                                <a href="../productos/electrodomesticos/lavado/lavadora_dimensions.html" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Sección: Climatización -->
+        <section id="climatizacion" class="py-16 bg-white overflow-hidden">
+            <div class="container mx-auto px-4">
+                <div class="flex items-end justify-between mb-10">
+                    <div>
+                        <span class="text-amber-500 font-bold uppercase tracking-[0.3em] text-xs">Bienestar</span>
+                        <h2 class="text-3xl font-bold text-neutral-900 mt-2">Climatización</h2>
+                    </div>
+                    <div class="flex gap-2">
+                        <button id="climatizacion-prev" class="slider-nav-btn" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+                        <button id="climatizacion-next" class="slider-nav-btn" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="slider-container">
+                    <div class="slider-track" id="climatizacion-track">
+                        <!-- Producto 1 -->
+                        <div class="product-card" data-category="climatizacion">
+                            <div class="product-image-container">
+                                <img src="../../assets/images/productos/Electrodomesticos/climatizacion/ventiladores/ventilador_Daiwa.png" alt="Ventilador Daiwa" class="product-image">
+                                <div class="product-actions">
+                                    <button class="action-btn btn-agregar" id="ventilador_daiwa" title="Agregar al carrito">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Ventilador Daiwa</h3>
+                                <div class="product-price-container">
+                                    <span class="product-price">$15,000</span>
+                                </div>
+                                <a href="../productos/electrodomesticos/climatizacion/ventilador_daiwa.html" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
+
+                        <!-- Producto 2 -->
+                        <div class="product-card" data-category="climatizacion">
+                            <div class="product-image-container">
+                                <img src="../../assets/images/productos/Electrodomesticos/climatizacion/aire_acondicionado/aire_acondicionado_whirlpool.png" alt="Aire Whirlpool" class="product-image">
+                                <div class="product-actions">
+                                    <button class="action-btn btn-agregar" id="aire_acondicionado_whirlpool" title="Agregar al carrito">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Aire Whirlpool</h3>
+                                <div class="product-price-container">
+                                    <span class="product-price">$40,000</span>
+                                </div>
+                                <a href="../productos/electrodomesticos/climatizacion/aire_acondicionado_whirlpool.html" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
+
+                        <!-- Producto 3 -->
+                        <div class="product-card" data-category="climatizacion">
+                            <div class="product-image-container">
+                                <img src="../../assets/images/productos/Electrodomesticos/climatizacion/aire_acondicionado/aire_acondicionado_tecnomaster.png" alt="Aire Tecnomaster" class="product-image">
+                                <div class="product-actions">
+                                    <button class="action-btn btn-agregar" id="aire_acondicionado_tecnomaster" title="Agregar al carrito">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Aire Tecnomaster</h3>
+                                <div class="product-price-container">
+                                    <span class="product-price">$33,000</span>
+                                </div>
+                                <a href="../productos/electrodomesticos/climatizacion/aire_acondicionado_tecnomaster.html" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
+
+                        <!-- Producto 4 -->
+                        <div class="product-card" data-category="climatizacion">
+                            <div class="product-image-container">
+                                <img src="../../assets/images/productos/Electrodomesticos/climatizacion/ventiladores/ventilador_KDK.avif" alt="Ventilador KDK" class="product-image">
+                                <div class="product-actions">
+                                    <button class="action-btn btn-agregar" id="ventilador_kdk" title="Agregar al carrito">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Ventilador KDK</h3>
+                                <div class="product-price-container">
+                                    <span class="product-price">$6,000</span>
+                                </div>
+                                <a href="../productos/electrodomesticos/climatizacion/ventilador_kdk.html" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
+
+                        <!-- Producto 5 -->
+                        <div class="product-card" data-category="climatizacion">
+                            <div class="product-image-container">
+                                <img src="../../assets/images/productos/Electrodomesticos/climatizacion/ventiladores_de_techo/ventilador_de_techo_KDK.avif" alt="Ventilador de Techo KDK" class="product-image">
+                                <div class="product-actions">
+                                    <button class="action-btn btn-agregar" id="ventilador_de_techo_kdk" title="Agregar al carrito">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Ventilador de Techo</h3>
+                                <div class="product-price-container">
+                                    <span class="product-price">$20,000</span>
+                                </div>
+                                <a href="../productos/electrodomesticos/climatizacion/ventilador_techo_kdk.html" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
+
+                        <!-- Producto 6 -->
+                        <div class="product-card" data-category="climatizacion">
+                            <div class="product-image-container">
+                                <img src="../../assets/images/productos/Electrodomesticos/climatizacion/ventiladores/ventilador_pequeño.png" alt="Ventilador Pequeño" class="product-image">
+                                <div class="product-actions">
+                                    <button class="action-btn btn-agregar" id="ventilador_pequeno" title="Agregar al carrito">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Ventilador Pequeño</h3>
+                                <div class="product-price-container">
+                                    <span class="product-price">$8,000</span>
+                                </div>
+                                <a href="../productos/electrodomesticos/climatizacion/ventilador_pequeno.html" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="footer-global">
+      <div class="footer-content">
+        <!-- Derechos reservados -->
+        <small>&copy; 2026 Hipermercado Superior. Todos los derechos reservados.</small>
+
+        <!-- Íconos de redes sociales (sprite SVG) -->
+        <div class="social-icons">
+          <a href="https://facebook.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Facebook" class="social-link">
+            <svg aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-facebook"/></svg>
+          </a>
+          <a href="https://twitter.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en X (antes Twitter)" class="social-link">
+            <svg aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-x"/></svg>
+          </a>
+          <a href="https://instagram.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Instagram" class="social-link">
+            <svg aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-instagram"/></svg>
+          </a>
+        </div>
+
+        <!-- Enlaces legales -->
+        <div class="footer-links">
+          <a href="../../legal/privacy.html" title="Política de Privacidad">Política de Privacidad</a>
+          <span class="separator">|</span>
+          <a href="../../legal/terms.html" title="Términos de Uso">Términos de Uso</a>
+        </div>
+      </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <!-- Scripts -->
+    <script src="../../assets/js/productos.js"></script>
+    <script src="../../assets/js/boton_de_busqueda.js"></script>
+    <script src="../../assets/js/hamburger_menu.js"></script>
+    <script src="../../assets/js/tablet_menu_click.js"></script>
+    <script src="../../assets/js/productos_navegacion.js"></script>
+    <script src="../../assets/js/ofertas_animation.js"></script>
+    <script src="../../assets/js/scroll_animations.js"></script>
+</body>
+</html>
 
 </body>
 

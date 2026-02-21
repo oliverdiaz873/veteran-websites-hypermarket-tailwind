@@ -11,426 +11,426 @@ const productos = [
     {
         id: "coca_cola",
         nombre: "Coca Cola",
-        url: "productos/Alimentos/bebidas/coca_cola.html",
-        categoria: "Bebidas",
+        url: "productos/alimentos/bebidas/coca_cola.html",
+        categoria: "bebidas",
         precio: 80, // número para carrito
         precioTexto: "Precio: $80 / 2 Litros", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/Bebidas/refresco/coca_cola.avif"
+        imagen: "/assets/images/productos/alimentos/bebidas/refresco/coca_cola.avif"
     },
     {
         id: "coca_cola_zero",
         nombre: "Coca Cola Zero",
-        url: "productos/Alimentos/bebidas/coca_cola_zero.html",
-        categoria: "Bebidas",
+        url: "productos/alimentos/bebidas/coca_cola_zero.html",
+        categoria: "bebidas",
         precio: 80, // número para carrito
         precioTexto: "Precio: $80 / 2 Litros", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/Bebidas/refresco/coca_cola_zero.avif"
+        imagen: "/assets/images/productos/alimentos/bebidas/refresco/coca_cola_zero.avif"
     },
     {
         id: "country_club_frambuesa",
         nombre: "Country Club Frambuesa",
-        url: "productos/Alimentos/bebidas/country_club_frambuesa.html",
-        categoria: "Bebidas",
+        url: "productos/alimentos/bebidas/country_club_frambuesa.html",
+        categoria: "bebidas",
         precio: 70, // número para carrito
         precioTexto: "Precio: $70 / 2 Litros", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/Bebidas/refresco/country_club_frambuesa.avif"
+        imagen: "/assets/images/productos/alimentos/bebidas/refresco/country_club_frambuesa.avif"
     },
-      {
+    {
         id: "country_club_uva",
         nombre: "Country Club Uva",
-        url: "productos/Alimentos/bebidas/country_club_uva.html",
-        categoria: "Bebidas",
+        url: "productos/alimentos/bebidas/country_club_uva.html",
+        categoria: "bebidas",
         precio: 70, // número para carrito
         precioTexto: "Precio: $70 / 2 Litros", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/Bebidas/refresco/country_club_uva.avif"
+        imagen: "/assets/images/productos/alimentos/bebidas/refresco/country_club_uva.avif"
     },
-     {
+    {
         id: "gatorade_uva",
         nombre: "Gatorade Uva",
-        url: "productos/Alimentos/bebidas/gatorade_uva.html",
-        categoria: "Bebidas",
+        url: "productos/alimentos/bebidas/gatorade_uva.html",
+        categoria: "bebidas",
         precio: 75, // número para carrito
         precioTexto: "Precio: $75", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/Bebidas/energizantes/gatorade_uva.avif"
+        imagen: "/assets/images/productos/alimentos/bebidas/energizantes/gatorade_uva.avif"
     },
-     {
+    {
         id: "jugo_de_naranja_rica",
         nombre: "Jugo de Naranja Rica",
-        url: "productos/Alimentos/bebidas/jugo_naranja_rica.html",
-        categoria: "Bebidas",
+        url: "productos/alimentos/bebidas/jugo_naranja_rica.html",
+        categoria: "bebidas",
         precio: 55, // número para carrito
         precioTexto: "Precio: $55", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/Bebidas/jugo/jugo_naranja_rica.avif"
+        imagen: "/assets/images/productos/alimentos/bebidas/jugo/jugo_naranja_rica.avif"
     },
-      {
+    {
         id: "jugo_de_pera_santal",
         nombre: "Jugo de Pera Santal",
-        url: "productos/Alimentos/bebidas/jugo_pera_santal.html",
-        categoria: "Bebidas",
+        url: "productos/alimentos/bebidas/jugo_pera_santal.html",
+        categoria: "bebidas",
         precio: 30, // número para carrito
         precioTexto: "Precio: $30", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/Bebidas/jugo/jugo_pera_santal.avif"
+        imagen: "/assets/images/productos/alimentos/bebidas/jugo/jugo_pera_santal.avif"
     },
     {
         id: "red_bull",
         nombre: "Red Bull",
-        url: "productos/Alimentos/bebidas/red_bull.html",
-        categoria: "Bebidas",
+        url: "productos/alimentos/bebidas/red_bull.html",
+        categoria: "bebidas",
         precio: 90, // número para carrito
         precioTexto: "Precio: $90", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/Bebidas/energizantes/red_bull.avif"
+        imagen: "/assets/images/productos/alimentos/bebidas/energizantes/red_bull.avif"
     },
 
     //Carnes, pescados y mariscos
     {
         id: "camarones_crudos",
         nombre: "Camarones Crudos",
-        url: "productos/Alimentos/carnes_pescados_y_mariscos/camarones_crudos.html",
-        categoria: "carnes_pescados_y_mariscos",
+        url: "productos/alimentos/carnes_pescados_y_mariscos/camarones_crudos.html",
+        categoria: "carnes_pescados_mariscos",
         precio: 350, // número para carrito
         precioTexto: "$350.00 / 1 LB", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/carnes_pescados_mariscos/mariscos/camarones_crudos.avif"
+        imagen: "/assets/images/productos/alimentos/carnes_pescados_mariscos/mariscos/camarones_crudos.avif"
     },
     {
         id: "camarones_pre_cocidos",
         nombre: "Camarones Pre-cocidos",
-        url: "productos/Alimentos/carnes_pescados_y_mariscos/camarones_precocidos.html",
-        categoria: "carnes_pescados_y_mariscos",
+        url: "productos/alimentos/carnes_pescados_y_mariscos/camarones_precocidos.html",
+        categoria: "carnes_pescados_mariscos",
         precio: 400, // número para carrito
         precioTexto: "$400.00 / 1 LB", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/carnes_pescados_mariscos/mariscos/camarones_pre-cocidos.avif"
+        imagen: "/assets/images/productos/alimentos/carnes_pescados_mariscos/mariscos/camarones_pre-cocidos.avif"
     },
-     {
+    {
         id: "carne_de_res_para_hamburguesas",
         nombre: "Carne de Res para Hamburguesas",
-        url: "productos/Alimentos/carnes_pescados_y_mariscos/carne_de_res_para_hamburguesas.html",
-        categoria: "carnes_pescados_y_mariscos",
+        url: "productos/alimentos/carnes_pescados_y_mariscos/carne_de_res_para_hamburguesas.html",
+        categoria: "carnes_pescados_mariscos",
         precio: 370, // número para carrito
         precioTexto: "$370.00 / 1 LB", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/carnes_pescados_mariscos/res/carne_de_res.avif"
+        imagen: "/assets/images/productos/alimentos/carnes_pescados_mariscos/res/carne_de_res.avif"
     },
     {
         id: "chuleta_de_cerdo",
         nombre: "Chuleta de Cerdo",
-        url: "productos/Alimentos/carnes_pescados_y_mariscos/chuleta_de_cerdo.html",
-        categoria: "carnes_pescados_y_mariscos",
+        url: "productos/alimentos/carnes_pescados_y_mariscos/chuleta_de_cerdo.html",
+        categoria: "carnes_pescados_mariscos",
         precio: 300, // número para carrito
         precioTexto: "$300.00 / 1 LB", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/carnes_pescados_mariscos/cerdo/chuleta_de_cerdo.avif"
+        imagen: "/assets/images/productos/alimentos/carnes_pescados_mariscos/cerdo/chuleta_de_cerdo.avif"
     },
-     {
+    {
         id: "pollo_entero_don_pollo",
         nombre: "Pollo Entero Don Pollo",
-        url: "productos/Alimentos/carnes_pescados_y_mariscos/pollo_entero_don_pollo.html",
-        categoria: "carnes_pescados_y_mariscos",
+        url: "productos/alimentos/carnes_pescados_y_mariscos/pollo_entero_don_pollo.html",
+        categoria: "carnes_pescados_mariscos",
         precio: 300, // número para carrito
         precioTexto: "$300.00 / unidad", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/carnes_pescados_mariscos/pollo/pollo.avif"
+        imagen: "/assets/images/productos/alimentos/carnes_pescados_mariscos/pollo/pollo.avif"
     },
-     {
+    {
         id: "tilapia_roja",
         nombre: "Tilapia Roja",
-        url: "productos/Alimentos/carnes_pescados_y_mariscos/tilapia_roja.html",
-        categoria: "carnes_pescados_y_mariscos",
+        url: "productos/alimentos/carnes_pescados_y_mariscos/tilapia_roja.html",
+        categoria: "carnes_pescados_mariscos",
         precio: 250, // número para carrito
         precioTexto: "$250.00 / 1 LB", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/carnes_pescados_mariscos/pescado/tilapia_roja.avif"
+        imagen: "/assets/images/productos/alimentos/carnes_pescados_mariscos/pescado/tilapia_roja.avif"
     },
-    
+
     //Despensa
     {
         id: "aceite_crisol",
         nombre: "Aceite Crisol",
-        url: "productos/Alimentos/despensa/aceite_crisol.html",
+        url: "productos/alimentos/despensa/aceite_crisol.html",
         categoria: "despensa",
         precio: 95, // número para carrito
         precioTexto: "$95.00", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/Despensa/aceites/aceite_crisol.avif"
+        imagen: "/assets/images/productos/alimentos/despensa/aceites/aceite_crisol.avif"
     },
     {
         id: "aceite_de_oliva_extra_virgen",
         nombre: "Aceite de Oliva Extra Virgen",
-        url: "productos/Alimentos/despensa/aceite_oliva_extra_virgen.html",
+        url: "productos/alimentos/despensa/aceite_oliva_extra_virgen.html",
         categoria: "despensa",
         precio: 230, // número para carrito
         precioTexto: "$230.00", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/Despensa/aceites/aceite_de_oliva_extra_virgen.avif"
+        imagen: "/assets/images/productos/alimentos/despensa/aceites/aceite_de_oliva_extra_virgen.avif"
     },
     {
         id: "mayonesa_baldom",
         nombre: "Mayonesa Baldom",
-        url: "productos/Alimentos/despensa/mayonesa_baldom.html",
+        url: "productos/alimentos/despensa/mayonesa_baldom.html",
         categoria: "despensa",
         precio: 95, // número para carrito
         precioTexto: "$95", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/Despensa/aderezos_y_salsas/mayonesa_baldom.avif"
+        imagen: "/assets/images/productos/alimentos/despensa/aderezos_y_salsas/mayonesa_baldom.avif"
     },
     {
         id: "sal_marina_refisal",
         nombre: "Sal Marina Refisal",
-        url: "productos/Alimentos/despensa/sal_refisal.html",
+        url: "productos/alimentos/despensa/sal_refisal.html",
         categoria: "despensa",
         precio: 65, // número para carrito
         precioTexto: "$65.00", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/Despensa/condimentos/sal_marina_refisal.jpg"
+        imagen: "/assets/images/productos/alimentos/despensa/condimentos/sal_marina_refisal.jpg"
     },
-     {
+    {
         id: "sazon_completo_maggi",
         nombre: "Sazón Completo Maggi",
-        url: "productos/Alimentos/despensa/sazon_completo_maggi.html",
+        url: "productos/alimentos/despensa/sazon_completo_maggi.html",
         categoria: "despensa",
         precio: 80, // número para carrito
         precioTexto: "$80.00", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/Despensa/condimentos/sazon_completo_maggi.avif"
+        imagen: "/assets/images/productos/alimentos/despensa/condimentos/sazon_completo_maggi.avif"
     },
-     {
+    {
         id: "sopita_doña_gallina",
         nombre: "Sopita Doña Gallina",
-        url: "productos/Alimentos/despensa/sopita_dona_gallina.html",
+        url: "productos/alimentos/despensa/sopita_dona_gallina.html",
         categoria: "despensa",
         precio: 150, // número para carrito
         precioTexto: "$150 / la caja", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/Despensa/condimentos/sopita_doña_gallina.avif"
+        imagen: "/assets/images/productos/alimentos/despensa/condimentos/sopita_dona_gallina.avif"
     },
     {
         id: "vinagre_baldom",
         nombre: "Vinagre Baldom",
-        url: "productos/Alimentos/despensa/vinagre_baldom.html",
+        url: "productos/alimentos/despensa/vinagre_baldom.html",
         categoria: "despensa",
         precio: 87, // número para carrito
         precioTexto: "$87 / botella", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/Despensa/condimentos/vinagre_baldom.avif"
+        imagen: "/assets/images/productos/alimentos/despensa/condimentos/vinagre_baldom.avif"
     },
 
     //Enlatados
     {
         id: "atun_dimar",
         nombre: "Atún Dimar",
-        url: "productos/Alimentos/enlatados/atun_dimar.html",
+        url: "productos/alimentos/enlatados/atun_dimar.html",
         categoria: "enlatados",
         precio: 120, // número para carrito
         precioTexto: "Precio: $120 / 1 Lata", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/Enlatados/atun_dimar.avif"
+        imagen: "/assets/images/productos/alimentos/enlatados/atun_dimar.avif"
     },
     {
         id: "gandules_verdes_goya",
         nombre: "Gandules Verdes Goya",
-        url: "productos/Alimentos/enlatados/gandules_verdes_goya.html",
+        url: "productos/alimentos/enlatados/gandules_verdes_goya.html",
         categoria: "enlatados",
         precio: 180, // número para carrito
         precioTexto: "Precio: $80 / 1 Lata", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/Enlatados/gandules_verdes_goya.avif"
+        imagen: "/assets/images/productos/alimentos/enlatados/gandules_verdes_goya.avif"
     },
-     {
+    {
         id: "habichuelas_negras_goya",
         nombre: "Habichuelas Negras Goya",
-        url: "productos/Alimentos/enlatados/habichuelas_negras_goya.html",
+        url: "productos/alimentos/enlatados/habichuelas_negras_goya.html",
         categoria: "enlatados",
         precio: 50, // número para carrito
         precioTexto: "Precio: $50 / 1 Lata", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/Enlatados/habichuelas_negras_goya.avif"
+        imagen: "/assets/images/productos/alimentos/enlatados/habichuelas_negras_goya.avif"
     },
     {
         id: "maiz_la_famosa",
         nombre: "Maíz La Famosa",
-        url: "productos/Alimentos/enlatados/maiz_la_famosa.html",
+        url: "productos/alimentos/enlatados/maiz_la_famosa.html",
         categoria: "enlatados",
         precio: 45, // número para carrito
         precioTexto: "Precio: $45 / 1 Lata", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/Enlatados/maiz_la_famosa.avif"
+        imagen: "/assets/images/productos/alimentos/enlatados/maiz_la_famosa.avif"
     },
     {
         id: "salchichas_jaja",
         nombre: "Salchichas Jajá",
-        url: "productos/Alimentos/enlatados/salchichas_jaja.html",
+        url: "productos/alimentos/enlatados/salchichas_jaja.html",
         categoria: "enlatados",
         precio: 45, // número para carrito
         precioTexto: "Precio: $45 / 1 Lata", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/Enlatados/salchichas_jaja.avif"
+        imagen: "/assets/images/productos/alimentos/enlatados/salchichas_jaja.avif"
     },
     {
         id: "sardinas_gord",
         nombre: "Sardinas Gord",
-        url: "productos/Alimentos/enlatados/sardinas_gord.html",
+        url: "productos/alimentos/enlatados/sardinas_gord.html",
         categoria: "enlatados",
         precio: 85, // número para carrito
         precioTexto: "Precio: $85 / 1 Lata", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/Enlatados/sardinas_gord.avif"
+        imagen: "/assets/images/productos/alimentos/enlatados/sardinas_gord.avif"
     },
     {
         id: "tomates_pelados_la_famosa",
         nombre: "Tomates Pelados La Famosa",
-        url: "productos/Alimentos/enlatados/tomates_pelados_la_famosa.html",
+        url: "productos/alimentos/enlatados/tomates_pelados_la_famosa.html",
         categoria: "enlatados",
         precio: 60, // número para carrito
         precioTexto: "Precio: $60 / 1 Lata", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/Enlatados/tomates_pelados.avif"
+        imagen: "/assets/images/productos/alimentos/enlatados/tomates_pelados.avif"
     },
 
     //Frutas y Verduras
     {
         id: "ajies_morrones",
         nombre: "Ajíes Morrones",
-        url: "productos/Alimentos/Frutas_y_verduras/ajies_morrones.html",
+        url: "productos/alimentos/frutas_y_verduras/ajies_morrones.html",
         categoria: "frutas_y_verduras",
         precio: 80, // número para carrito
         precioTexto: "$80.00 / La unidad", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/frutas_y_verduras/Ajies_morron.avif"
+        imagen: "/assets/images/productos/alimentos/frutas_y_verduras/ajies_morron.avif"
     },
-     {
+    {
         id: "cebollas_rojas",
         nombre: "Cebollas Rojas",
-        url: "productos/Alimentos/Frutas_y_verduras/cebollas_rojas.html",
+        url: "productos/alimentos/frutas_y_verduras/cebollas_rojas.html",
         categoria: "frutas_y_verduras",
         precio: 170, // número para carrito
         precioTexto: "$170.00 / 1 kg", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/frutas_y_verduras/cebolla_roja.avif"
+        imagen: "/assets/images/productos/alimentos/frutas_y_verduras/cebolla_roja.avif"
     },
     {
         id: "limones_persa",
         nombre: "Limones Persa",
-        url: "productos/Alimentos/Frutas_y_verduras/limones_persa.html",
+        url: "productos/alimentos/frutas_y_verduras/limones_persa.html",
         categoria: "frutas_y_verduras",
         precio: 200, // número para carrito
         precioTexto: "$200 / 1 kg", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/frutas_y_verduras/limon_persa.avif"
+        imagen: "/assets/images/productos/alimentos/frutas_y_verduras/limon_persa.avif"
     },
     {
         id: "mandarinas",
         nombre: "Mandarinas",
-        url: "productos/Alimentos/Frutas_y_verduras/mandarinas.html",
+        url: "productos/alimentos/frutas_y_verduras/mandarinas.html",
         categoria: "frutas_y_verduras",
         precio: 100, // número para carrito
         precioTexto: "$100.00 / 1 kg", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/frutas_y_verduras/mandarinas.avif"
+        imagen: "/assets/images/productos/alimentos/frutas_y_verduras/mandarinas.avif"
     },
     {
         id: "manzanas_amarillas",
         nombre: "Manzanas Amarillas",
-        url: "productos/Alimentos/Frutas_y_verduras/manzanas_amarillas.html",
+        url: "productos/alimentos/frutas_y_verduras/manzanas_amarillas.html",
         categoria: "frutas_y_verduras",
         precio: 50, // número para carrito
         precioTexto: "$50.00 / 1 kg", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/frutas_y_verduras/manzana_amarilla.avif"
+        imagen: "/assets/images/productos/alimentos/frutas_y_verduras/manzana_amarilla.avif"
     },
-     {
+    {
         id: "manzanas_rojas",
         nombre: "Manzanas Rojas",
-        url: "productos/Alimentos/Frutas_y_verduras/manzanas_rojas.html",
+        url: "productos/alimentos/frutas_y_verduras/manzanas_rojas.html",
         categoria: "frutas_y_verduras",
         precio: 65, // número para carrito
         precioTexto: "$65.00 / 1 kg", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/frutas_y_verduras/manzana_roja.avif"
+        imagen: "/assets/images/productos/alimentos/frutas_y_verduras/manzana_roja.avif"
     },
     {
         id: "manzanas_verdes",
         nombre: "Manzanas Verdes",
-        url: "productos/Alimentos/Frutas_y_verduras/manzanas_verdes.html",
+        url: "productos/alimentos/frutas_y_verduras/manzanas_verdes.html",
         categoria: "frutas_y_verduras",
         precio: 45, // número para carrito
         precioTexto: "$45.00 / 1 kg", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/frutas_y_verduras/manzana_verde.avif"
+        imagen: "/assets/images/productos/alimentos/frutas_y_verduras/manzana_verde.avif"
     },
-     {
+    {
         id: "paquete_de_fresas",
         nombre: "Paquete de Fresas",
-        url: "productos/Alimentos/Frutas_y_verduras/paquete_de_fresas.html",
+        url: "productos/alimentos/frutas_y_verduras/paquete_de_fresas.html",
         categoria: "frutas_y_verduras",
         precio: 350, // número para carrito
         precioTexto: "$350.00 / 1 paquete", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/frutas_y_verduras/fresas.avif"
+        imagen: "/assets/images/productos/alimentos/frutas_y_verduras/fresas.avif"
     },
     {
         id: "pepinos",
         nombre: "Pepinos",
-        url: "productos/Alimentos/Frutas_y_verduras/pepinos.html",
+        url: "productos/alimentos/frutas_y_verduras/pepinos.html",
         categoria: "frutas_y_verduras",
         precio: 35, // número para carrito
         precioTexto: "$35.00 / 1 kg", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/frutas_y_verduras/pepino.avif"
+        imagen: "/assets/images/productos/alimentos/frutas_y_verduras/pepino.avif"
     },
     {
         id: "tomates_de_ensalada",
         nombre: "Tomates de Ensalada",
-        url: "productos/Alimentos/Frutas_y_verduras/tomates_de_ensalada.html",
+        url: "productos/alimentos/frutas_y_verduras/tomates_de_ensalada.html",
         categoria: "frutas_y_verduras",
         precio: 80, // número para carrito
         precioTexto: "$80.00 / 1 kg", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/frutas_y_verduras/tomate_de_ensalada.avif"
+        imagen: "/assets/images/productos/alimentos/frutas_y_verduras/tomate_de_ensalada.avif"
     },
     {
         id: "uvas_moradas",
         nombre: "Uvas Moradas",
-        url: "productos/Alimentos/Frutas_y_verduras/uvas_moradas.html",
+        url: "productos/alimentos/frutas_y_verduras/uvas_moradas.html",
         categoria: "frutas_y_verduras",
         precio: 150, // número para carrito
         precioTexto: "$150.00 / 1 kg", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/frutas_y_verduras/uva_morada.avif"
+        imagen: "/assets/images/productos/alimentos/frutas_y_verduras/uva_morada.avif"
     },
     {
         id: "zanahorias",
         nombre: "Zanahorias",
-        url: "productos/Alimentos/Frutas_y_verduras/zanahorias.html",
+        url: "productos/alimentos/frutas_y_verduras/zanahorias.html",
         categoria: "frutas_y_verduras",
         precio: 80, // número para carrito
         precioTexto: "$80.00 / 1 kg", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/frutas_y_verduras/zanahoria.avif"
+        imagen: "/assets/images/productos/alimentos/frutas_y_verduras/zanahoria.avif"
     },
 
     //Lácteos y huevos
     {
         id: "huevos_don_pancho",
         nombre: "Huevos Don Pancho",
-        url: "productos/Alimentos/lacteos_y_huevos/huevos.html",
+        url: "productos/alimentos/lacteos_y_huevos/huevos.html",
         categoria: "lacteos_y_huevos",
         precio: 200, // número para carrito
         precioTexto: "Precio: $200 / 30 unidades", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/lacteos_y_huevos/huevos/huevos_30unidades.avif"
+        imagen: "/assets/images/productos/alimentos/lacteos_y_huevos/huevos/huevos_30unidades.avif"
     },
     {
         id: "leche_entera_rica",
         nombre: "Leche Entera Rica",
-        url: "productos/Alimentos/lacteos_y_huevos/leche_entera_rica.html",
+        url: "productos/alimentos/lacteos_y_huevos/leche_entera_rica.html",
         categoria: "lacteos_y_huevos",
         precio: 65, // número para carrito
         precioTexto: "$65.00", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/lacteos_y_huevos/leche/leche_entera_rica.avif"
+        imagen: "/assets/images/productos/alimentos/lacteos_y_huevos/leche/leche_entera_rica.avif"
     },
-     {
+    {
         id: "queso_gorgonzola",
         nombre: "Queso Gorgonzola",
-        url: "productos/Alimentos/lacteos_y_huevos/queso_gorgonzola.html",
+        url: "productos/alimentos/lacteos_y_huevos/queso_gorgonzola.html",
         categoria: "lacteos_y_huevos",
         precio: 350, // número para carrito
         precioTexto: "Precio: $350 / 1 LB", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/lacteos_y_huevos/queso/queso_gorgonzola.avif"
+        imagen: "/assets/images/productos/alimentos/lacteos_y_huevos/queso/queso_gorgonzola.avif"
     },
-     {
+    {
         id: "queso_gouda",
         nombre: "Queso Gouda",
-        url: "productos/Alimentos/lacteos_y_huevos/queso_gouda.html",
+        url: "productos/alimentos/lacteos_y_huevos/queso_gouda.html",
         categoria: "lacteos_y_huevos",
         precio: 280, // número para carrito
         precioTexto: "Precio: $280 / 1 LB", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/lacteos_y_huevos/queso/queso_gouda.avif"
+        imagen: "/assets/images/productos/alimentos/lacteos_y_huevos/queso/queso_gouda.avif"
     },
-     {
+    {
         id: "yogurt_de_fresa_yoka",
         nombre: "Yogurt de Fresa Yoka",
-        url: "productos/Alimentos/lacteos_y_huevos/yogurt_fresa_yoka.html",
+        url: "productos/alimentos/lacteos_y_huevos/yogurt_fresa_yoka.html",
         categoria: "lacteos_y_huevos",
         precio: 150, // número para carrito
         precioTexto: "Precio: $150", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/lacteos_y_huevos/yogurt/yogurt_de_fresa.avif"
+        imagen: "/assets/images/productos/alimentos/lacteos_y_huevos/yogurt/yogurt_de_fresa.avif"
     },
     {
         id: "yogurt_natural_rica",
         nombre: "Yogurt Natural Rica",
-        url: "productos/Alimentos/lacteos_y_huevos/yogurt_natural_rica.html",
+        url: "productos/alimentos/lacteos_y_huevos/yogurt_natural_rica.html",
         categoria: "lacteos_y_huevos",
         precio: 210, // número para carrito
         precioTexto: "Precio: $210 / 2 Litros", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Alimentos/lacteos_y_huevos/yogurt/yogurt_natural.avif"
+        imagen: "/assets/images/productos/alimentos/lacteos_y_huevos/yogurt/yogurt_natural.avif"
     },
 
     //--Electrodomésticos--//
@@ -438,21 +438,21 @@ const productos = [
     //Climatización
     {
         id: "aire_acondicionado_tecnomaster",
-        nombre: "Aire Acondicionado Tecnomaster",
+        nombre: "Aire Acondicionado tecnomaster",
         url: "productos/electrodomesticos/climatizacion/aire_acondicionado_tecnomaster.html",
         categoria: "climatizacion",
         precio: 33000, // número para carrito
         precioTexto: "Precio: $33,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Electrodomesticos/climatizacion/aire_acondicionado/aire_acondicionado_tecnomaster.png"
+        imagen: "/assets/images/productos/electrodomesticos/climatizacion/aire_acondicionado/aire_acondicionado_tecnomaster.png"
     },
-     {
+    {
         id: "aire_acondicionado_whirlpool",
-        nombre: "Aire Acondicionado Whirlpool",
+        nombre: "Aire Acondicionado whirlpool",
         url: "productos/electrodomesticos/climatizacion/aire_acondicionado_whirlpool.html",
         categoria: "climatizacion",
         precio: 40000, // número para carrito
         precioTexto: "Precio: $40,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Electrodomesticos/climatizacion/aire_acondicionado/aire_acondicionado_whirlpool.png"
+        imagen: "/assets/images/productos/electrodomesticos/climatizacion/aire_acondicionado/aire_acondicionado_whirlpool.png"
     },
     {
         id: "ventilador_daiwa",
@@ -461,25 +461,25 @@ const productos = [
         categoria: "climatizacion",
         precio: 15000, // número para carrito
         precioTexto: "Precio: $15,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Electrodomesticos/climatizacion/ventiladores/ventilador_Daiwa.png"
+        imagen: "/assets/images/productos/electrodomesticos/climatizacion/ventiladores/ventilador_daiwa.png"
     },
-     {
+    {
         id: "ventilador_kdk",
         nombre: "Ventilador KDK",
         url: "productos/electrodomesticos/climatizacion/ventilador_kdk.html",
         categoria: "climatizacion",
         precio: 6000, // número para carrito
         precioTexto: "Precio: $6,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Electrodomesticos/climatizacion/ventiladores/ventilador_KDK.avif"
+        imagen: "/assets/images/productos/electrodomesticos/climatizacion/ventiladores/ventilador_kdk.avif"
     },
-     {
+    {
         id: "ventilador_pequeno",
         nombre: "Ventilador Pequeño",
         url: "productos/electrodomesticos/climatizacion/ventilador_pequeno.html",
         categoria: "climatizacion",
         precio: 2500, // número para carrito
         precioTexto: "Precio: $2,500", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Electrodomesticos/climatizacion/ventiladores/ventilador_pequeño.png"
+        imagen: "/assets/images/productos/electrodomesticos/climatizacion/ventiladores/ventilador_pequeño.png"
     },
     {
         id: "ventilador_de_techo_kdk",
@@ -488,27 +488,27 @@ const productos = [
         categoria: "climatizacion",
         precio: 20000, // número para carrito
         precioTexto: "Precio: $20,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Electrodomesticos/climatizacion/ventiladores_de_techo/ventilador_de_techo_KDK.avif"
+        imagen: "/assets/images/productos/electrodomesticos/climatizacion/ventiladores_de_techo/ventilador_de_techo_kdk.avif"
     },
 
     //Cocina
     {
         id: "bebedero_tecnomaster",
-        nombre: "Bebedero Tecnomaster",
+        nombre: "Bebedero tecnomaster",
         url: "productos/electrodomesticos/cocina/bebedero_tecnomaster.html",
         categoria: "cocina",
         precio: 5000, // número para carrito
         precioTexto: "Precio: $5,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Electrodomesticos/cocina/bebedero/bebedero_tecnomaster.avif"
+        imagen: "/assets/images/productos/electrodomesticos/cocina/bebedero/bebedero_tecnomaster.avif"
     },
-     {
+    {
         id: "cilindro_de_gas_duragas",
         nombre: "Cilindro de gas Duragas",
         url: "productos/electrodomesticos/cocina/cilindro_duragas.html",
         categoria: "cocina",
         precio: 5200, // número para carrito
         precioTexto: "Precio: $5,200", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Electrodomesticos/cocina/Cilindros_de_gas/cilindro_de_gas_duragas.avif"
+        imagen: "/assets/images/productos/electrodomesticos/cocina/cilindros_de_gas/cilindro_de_gas_duragas.avif"
     },
     {
         id: "estufa_lg",
@@ -517,16 +517,16 @@ const productos = [
         categoria: "cocina",
         precio: 66000, // número para carrito
         precioTexto: "Precio: $66,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Electrodomesticos/cocina/Estufas/estufa_LG.avif"
+        imagen: "/assets/images/productos/electrodomesticos/cocina/estufas/estufa_lg.avif"
     },
-     {
+    {
         id: "extractor_de_grasa_drija",
-        nombre: "Extractor de grasa Drija",
+        nombre: "Extractor de grasa drija",
         url: "productos/electrodomesticos/cocina/extractor_drija.html",
         categoria: "cocina",
         precio: 6000, // número para carrito
         precioTexto: "Precio: $6,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Electrodomesticos/cocina/extractor_de_grasa/extractor_de_grasa_Drija.avif"
+        imagen: "/assets/images/productos/electrodomesticos/cocina/extractor_de_grasa/extractor_de_grasa_drija.avif"
     },
     {
         id: "freezer_7_pies",
@@ -535,7 +535,7 @@ const productos = [
         categoria: "cocina",
         precio: 16500, // número para carrito
         precioTexto: "Precio: $16,500", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Electrodomesticos/cocina/freezer/freezer_7pies.png"
+        imagen: "/assets/images/productos/electrodomesticos/cocina/freezer/freezer_7pies.png"
     },
     {
         id: "nevera_lg_grande_moderna",
@@ -544,7 +544,7 @@ const productos = [
         categoria: "cocina",
         precio: 80000, // número para carrito
         precioTexto: "Precio: $80,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Electrodomesticos/cocina/Neveras/Nevera_LG.png"
+        imagen: "/assets/images/productos/electrodomesticos/cocina/neveras/nevera_lg.png"
     },
 
     //Lavado
@@ -555,7 +555,7 @@ const productos = [
         categoria: "lavado",
         precio: 10000, // número para carrito
         precioTexto: "Precio: $10,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Electrodomesticos/lavado/lavadora/lavadora_dimensions.png"
+        imagen: "/assets/images/productos/electrodomesticos/lavado/lavadora/lavadora_dimensions.png"
     },
     {
         id: "lavadora_frigidaire",
@@ -564,7 +564,7 @@ const productos = [
         categoria: "lavado",
         precio: 35000, // número para carrito
         precioTexto: "Precio: $35,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Electrodomesticos/lavado/lavadora/lavadora_frigidaire.png"
+        imagen: "/assets/images/productos/electrodomesticos/lavado/lavadora/lavadora_frigidaire.png"
     },
     {
         id: "lavadora_lg",
@@ -573,30 +573,30 @@ const productos = [
         categoria: "lavado",
         precio: 53000, // número para carrito
         precioTexto: "Precio: $53,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Electrodomesticos/lavado/lavadora/lavadora_LG.avif"
+        imagen: "/assets/images/productos/electrodomesticos/lavado/lavadora/lavadora_lg.avif"
     },
-     {
+    {
         id: "lavadora_y_secadora_lg",
         nombre: "Lavadora y Secadora LG",
         url: "productos/electrodomesticos/lavado/lavadora_secadora_lg.html",
         categoria: "lavado",
         precio: 55000, // número para carrito
         precioTexto: "Precio: $55,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Electrodomesticos/lavado/Lavadora y Secadora/Lavadora_y_secadora_LG.avif"
+        imagen: "/assets/images/productos/electrodomesticos/lavado/lavadora_y_secadora/lavadora_y_secadora_lg.avif"
     },
     {
         id: "lavadora_y_secadora_tecnomaster",
-        nombre: "Lavadora y Secadora Tecnomaster",
+        nombre: "Lavadora y Secadora tecnomaster",
         url: "productos/electrodomesticos/lavado/lavadora_tecnomaster.html",
         categoria: "lavado",
         precio: 40000, // número para carrito
         precioTexto: "Precio: $40,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Electrodomesticos/lavado/Lavadora y Secadora/Lavadora_y_secadora_tecnomaster.png"
+        imagen: "/assets/images/productos/electrodomesticos/lavado/lavadora_y_secadora/lavadora_y_secadora_tecnomaster.png"
     },
-     //--Farmacia--//
+    //--Farmacia--//
 
-     //Analgésicos
-     {
+    //Analgésicos
+    {
         id: "equate_analgesico",
         nombre: "Equate Analgésico",
         url: "productos/farmacia/analgesicos/equate_analgesico.html",
@@ -623,7 +623,7 @@ const productos = [
         precioTexto: "Precio: $3000", // texto para mostrar en resultados
         imagen: "/assets/images/productos/farmacia/analgesicos/thera-gesic.avif"
     },
-     {
+    {
         id: "tylenol_analgesico",
         nombre: "Tylenol Analgésico",
         url: "productos/farmacia/analgesicos/tylenol.html",
@@ -632,7 +632,7 @@ const productos = [
         precioTexto: "Precio: $5000", // texto para mostrar en resultados
         imagen: "/assets/images/productos/farmacia/analgesicos/tylenol.avif"
     },
-     {
+    {
         id: "vaporizing_analgesico",
         nombre: "Vaporizing Analgésico",
         url: "productos/farmacia/analgesicos/vaporizing.html",
@@ -650,7 +650,7 @@ const productos = [
         categoria: "antigripales_y_resfriado",
         precio: 1000, // número para carrito
         precioTexto: "Precio: $1,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/farmacia/antigripales/antiflu-des.avif"
+        imagen: "/assets/images/productos/farmacia/antigripales/antiflu-Des.avif"
     },
     {
         id: "coldyflu",
@@ -697,16 +697,16 @@ const productos = [
         categoria: "dermocosmetica",
         precio: 2500, // número para carrito
         precioTexto: "Precio: $2,500", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/farmacia/Dermocosmetica/cerave_acido_hyaluronico.avif"
+        imagen: "/assets/images/productos/farmacia/dermocosmetica/cerave_acido_hyaluronico.avif"
     },
-     {
+    {
         id: "hidratante_cerave",
         nombre: "Hidratante Cerave",
         url: "productos/farmacia/dermocosmetica/hidratante_cerave.html",
         categoria: "dermocosmetica",
         precio: 1500, // número para carrito
         precioTexto: "Precio: $1,500", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/farmacia/Dermocosmetica/hidratante_cerave.jpg"
+        imagen: "/assets/images/productos/farmacia/dermocosmetica/hidratante_cerave.jpg"
     },
     {
         id: "hidratante_eucerin",
@@ -735,7 +735,7 @@ const productos = [
         precioTexto: "Precio: $1,100", // texto para mostrar en resultados
         imagen: "/assets/images/productos/farmacia/dermocosmetica/retinol.avif"
     },
-     {
+    {
         id: "serum_vitamina_c",
         nombre: "Serum Vitamina C",
         url: "productos/farmacia/dermocosmetica/serum_vitaminac.html",
@@ -746,7 +746,7 @@ const productos = [
     },
 
     //Vitaminas y Minerales
-     {
+    {
         id: "flintstones",
         nombre: "Flintstones Multivitamínico para Niños",
         url: "productos/farmacia/vitaminas_y_minerales/flintstones.html",
@@ -755,7 +755,7 @@ const productos = [
         precioTexto: "Precio: $2,500", // texto para mostrar en resultados
         imagen: "/assets/images/productos/farmacia/Vitaminas_y_Minerales/flintstones.avif"
     },
-     {
+    {
         id: "Multivitaminico",
         nombre: "Multivitamínico",
         url: "productos/farmacia/vitaminas_y_minerales/Multivitaminico.html",
@@ -764,7 +764,7 @@ const productos = [
         precioTexto: "Precio: $3,000", // texto para mostrar en resultados
         imagen: "/assets/images/productos/farmacia/Vitaminas_y_Minerales/multivitaminico.avif"
     },
-     {
+    {
         id: "omega3",
         nombre: "Omega 3",
         url: "productos/farmacia/vitaminas_y_minerales/omega3.html",
@@ -773,7 +773,7 @@ const productos = [
         precioTexto: "Precio: $4,000", // texto para mostrar en resultados
         imagen: "/assets/images/productos/farmacia/Vitaminas_y_Minerales/omega3.avif"
     },
-     {
+    {
         id: "Vitafusion",
         nombre: "Vitafusion",
         url: "productos/farmacia/vitaminas_y_minerales/vitafusion.html",
@@ -782,7 +782,7 @@ const productos = [
         precioTexto: "Precio: $1,300", // texto para mostrar en resultados
         imagen: "/assets/images/productos/farmacia/Vitaminas_y_Minerales/vitafusion.avif"
     },
-     {
+    {
         id: "vitamina_c",
         nombre: "Vitamina C",
         url: "productos/farmacia/vitaminas_y_minerales/vitaminac.html",
@@ -792,10 +792,10 @@ const productos = [
         imagen: "/assets/images/productos/farmacia/Vitaminas_y_Minerales/vitaminaC.avif"
     },
 
-     //--Ferretería--//
+    //--Ferretería--//
 
-     //electricidad
-     {
+    //electricidad
+    {
         id: "bombillas_led",
         nombre: "Bombillas LED",
         url: "productos/ferreteria/electricidad/bombillas_led.html",
@@ -822,7 +822,7 @@ const productos = [
         precioTexto: "Precio: $3,300", // texto para mostrar en resultados
         imagen: "/assets/images/productos/ferreteria/electricidad/extension_electrica.avif"
     },
-     {
+    {
         id: "linterna",
         nombre: "Linterna",
         url: "productos/ferreteria/electricidad/linterna.html",
@@ -831,7 +831,7 @@ const productos = [
         precioTexto: "Precio: $4,000", // texto para mostrar en resultados
         imagen: "/assets/images/productos/ferreteria/electricidad/linterna.png"
     },
-     {
+    {
         id: "toma_corriente",
         nombre: "Toma Corriente",
         url: "productos/ferreteria/electricidad/toma_corriente.html",
@@ -851,7 +851,7 @@ const productos = [
         precioTexto: "Precio: $2000", // texto para mostrar en resultados
         imagen: "/assets/images/productos/ferreteria/herramientas_manuales/destornillador.png"
     },
-     {
+    {
         id: "llave_de_tuerca",
         nombre: "Llave de Tuerca",
         url: "productos/ferreteria/herramientas_manuales/llave_de_tuerca.html",
@@ -889,7 +889,7 @@ const productos = [
     },
 
     //Pinturas y Acabados
-     {
+    {
         id: "brocha",
         nombre: "Brocha",
         url: "productos/ferreteria/pinturas_y_acabados/brocha.html",
@@ -898,7 +898,7 @@ const productos = [
         precioTexto: "Precio: $500", // texto para mostrar en resultados
         imagen: "/assets/images/productos/ferreteria/pintura/brocha.avif"
     },
-     {
+    {
         id: "kit_de_pintura",
         nombre: "Kit de Pintura",
         url: "productos/ferreteria/pinturas_y_acabados/kit_de_pintura.html",
@@ -925,7 +925,7 @@ const productos = [
         precioTexto: "Precio: $2,700", // texto para mostrar en resultados
         imagen: "/assets/images/productos/ferreteria/pintura/pinturas_tucan.avif"
     },
-     {
+    {
         id: "rodillo_de_pintura",
         nombre: "Rodillo de Pintura",
         url: "productos/ferreteria/pinturas_y_acabados/rodillo_de_pintura.html",
@@ -985,11 +985,11 @@ const productos = [
     //--Juguetes--//
 
     //juguetes para niñas
-     {
+    {
         id: "muñeca_baby_doll",
         nombre: "Muñeca Baby Doll",
         url: "productos/juguetes/juguetes_para_niñas/baby_doll.html",
-        categoria: "juguetes_para_niñas",
+        categoria: "juguetes_para_ninas",
         precio: 500, // número para carrito
         precioTexto: "Precio: $500", // texto para mostrar en resultados
         imagen: "/assets/images/productos/juguetes/juguetes_para_ninas/baby_doll.avif"
@@ -998,7 +998,7 @@ const productos = [
         id: "muñeca_barbie",
         nombre: "Muñeca Barbie",
         url: "productos/juguetes/juguetes_para_niñas/barbie.html",
-        categoria: "juguetes_para_niñas",
+        categoria: "juguetes_para_ninas",
         precio: 1000, // número para carrito
         precioTexto: "Precio: $1,000", // texto para mostrar en resultados
         imagen: "/assets/images/productos/juguetes/juguetes_para_ninas/barbie.avif"
@@ -1007,7 +1007,7 @@ const productos = [
         id: "juguetes_de_peluqueria",
         nombre: "Juguetes de Peluquería",
         url: "productos/juguetes/juguetes_para_niñas/juguetes_peluqueria.html",
-        categoria: "juguetes_para_niñas",
+        categoria: "juguetes_para_ninas",
         precio: 2500, // número para carrito
         precioTexto: "Precio: $2,500", // texto para mostrar en resultados
         imagen: "/assets/images/productos/juguetes/juguetes_para_ninas/juguetes_de_peluqueria.avif"
@@ -1016,7 +1016,7 @@ const productos = [
         id: "kit_de_maquillaje",
         nombre: "Kit de Maquillaje",
         url: "productos/juguetes/juguetes_para_niñas/kit_de_maquillaje.html",
-        categoria: "juguetes_para_niñas",
+        categoria: "juguetes_para_ninas",
         precio: 2000, // número para carrito
         precioTexto: "Precio: $2,000", // texto para mostrar en resultados
         imagen: "/assets/images/productos/juguetes/juguetes_para_ninas/kit_de_maquillaje.avif"
@@ -1025,18 +1025,18 @@ const productos = [
         id: "pinta_uñas",
         nombre: "Pinta Uñas",
         url: "productos/juguetes/juguetes_para_niñas/pinta_unas.html",
-        categoria: "juguetes_para_niñas",
+        categoria: "juguetes_para_ninas",
         precio: 1400, // número para carrito
         precioTexto: "Precio: $1,400", // texto para mostrar en resultados
         imagen: "/assets/images/productos/juguetes/juguetes_para_ninas/pinta_unas.avif"
     },
 
-     //juguetes para niños
-     {
+    //juguetes para niños
+    {
         id: "auto_azul",
         nombre: "Auto Azul",
         url: "productos/juguetes/juguetes_para_niños/auto_azul.html",
-        categoria: "juguetes_para_niños",
+        categoria: "juguetes_para_ninos",
         precio: 1800, // número para carrito
         precioTexto: "Precio: $1,800", // texto para mostrar en resultados
         imagen: "/assets/images/productos/juguetes/juguetes_para_ninos/auto_azul.avif"
@@ -1045,16 +1045,16 @@ const productos = [
         id: "avion_de_juguete",
         nombre: "Avión de Juguete",
         url: "productos/juguetes/juguetes_para_niños/avion_juguete.html",
-        categoria: "juguetes_para_niños",
+        categoria: "juguetes_para_ninos",
         precio: 2500, // número para carrito
         precioTexto: "Precio: $2,500", // texto para mostrar en resultados
         imagen: "/assets/images/productos/juguetes/juguetes_para_ninos/avion.avif"
     },
-     {
+    {
         id: "autos_hot_wheels",
         nombre: "Autos Hot Wheels",
         url: "productos/juguetes/juguetes_para_niños/hot_wheels.html",
-        categoria: "juguetes_para_niños",
+        categoria: "juguetes_para_ninos",
         precio: 3500, // número para carrito
         precioTexto: "Precio: $3,500", // texto para mostrar en resultados
         imagen: "/assets/images/productos/juguetes/juguetes_para_ninos/autos_hot_wheels.avif"
@@ -1063,7 +1063,7 @@ const productos = [
         id: "legos_de_creeper",
         nombre: "Legos de Creeper",
         url: "productos/juguetes/juguetes_para_niños/legos_creeper.html",
-        categoria: "juguetes_para_niños",
+        categoria: "juguetes_para_ninos",
         precio: 4000, // número para carrito
         precioTexto: "Precio: $4,000", // texto para mostrar en resultados
         imagen: "/assets/images/productos/juguetes/juguetes_para_ninos/lego_creeper.avif"
@@ -1072,7 +1072,7 @@ const productos = [
         id: "legos_de_minecraft",
         nombre: "Legos de Minecraft",
         url: "productos/juguetes/juguetes_para_niños/legos_minecraft.html",
-        categoria: "juguetes_para_niños",
+        categoria: "juguetes_para_ninos",
         precio: 6000, // número para carrito
         precioTexto: "Precio: $6,000", // texto para mostrar en resultados
         imagen: "/assets/images/productos/juguetes/juguetes_para_ninos/lego_minecraft.avif"
@@ -1090,7 +1090,7 @@ const productos = [
         precioTexto: "Precio: $2,000", // texto para mostrar en resultados
         imagen: "/assets/images/productos/muebles_y_decoracion/floreros/florero_de_plantas.avif"
     },
-     {
+    {
         id: "florero_de_vidrio",
         nombre: "Florero de Vidrio",
         url: "productos/muebles_y_decoracion/floreros/florero_de_vidrio.html",
@@ -1099,7 +1099,7 @@ const productos = [
         precioTexto: "Precio: $4,000", // texto para mostrar en resultados
         imagen: "/assets/images/productos/muebles_y_decoracion/floreros/florero_de_vidrio.avif"
     },
-     {
+    {
         id: "jarron",
         nombre: "Jarrón",
         url: "productos/muebles_y_decoracion/floreros/jarron.html",
@@ -1108,7 +1108,7 @@ const productos = [
         precioTexto: "Precio: $3,000", // texto para mostrar en resultados
         imagen: "/assets/images/productos/muebles_y_decoracion/floreros/jarron.avif"
     },
-     {
+    {
         id: "jarrones",
         nombre: "Jarrones",
         url: "productos/muebles_y_decoracion/floreros/jarrones.html",
@@ -1137,7 +1137,7 @@ const productos = [
         precioTexto: "Precio: $4,000", // texto para mostrar en resultados
         imagen: "/assets/images/productos/muebles_y_decoracion/mesas/mesa_madera.avif"
     },
-     {
+    {
         id: "mesa_de_noche",
         nombre: "Mesa de Noche",
         url: "productos/muebles_y_decoracion/mesas/mesa_de_noche.html",
@@ -1146,7 +1146,7 @@ const productos = [
         precioTexto: "Precio: $3,000", // texto para mostrar en resultados
         imagen: "/assets/images/productos/muebles_y_decoracion/mesas/mesa_de_noche.avif"
     },
-     {
+    {
         id: "mesa_moderna",
         nombre: "Mesa Moderna",
         url: "productos/muebles_y_decoracion/mesas/mesa_moderna.html",
@@ -1175,7 +1175,7 @@ const productos = [
     },
 
     //Sillones
-     {
+    {
         id: "sillon_amarillo",
         nombre: "Sillón Amarillo",
         url: "productos/muebles_y_decoracion/sillones/sillon_amarillo.html",
@@ -1193,7 +1193,7 @@ const productos = [
         precioTexto: "Precio: $5,500", // texto para mostrar en resultados
         imagen: "/assets/images/productos/muebles_y_decoracion/sillon/sillon_azul.avif"
     },
-     {
+    {
         id: "sillon_blanco",
         nombre: "Sillón Blanco",
         url: "productos/muebles_y_decoracion/sillones/sillon_blanco.html",
@@ -1202,7 +1202,7 @@ const productos = [
         precioTexto: "Precio: $4,000", // texto para mostrar en resultados
         imagen: "/assets/images/productos/muebles_y_decoracion/sillon/sillon_blanco.avif"
     },
-     {
+    {
         id: "sillon_gris",
         nombre: "Sillón Gris",
         url: "productos/muebles_y_decoracion/sillones/sillon_gris.html",
@@ -1211,7 +1211,7 @@ const productos = [
         precioTexto: "Precio: $5,000", // texto para mostrar en resultados
         imagen: "/assets/images/productos/muebles_y_decoracion/sillon/sillon_gris.avif"
     },
-     {
+    {
         id: "sillon_verde",
         nombre: "Sillón Verde",
         url: "productos/muebles_y_decoracion/sillones/sillon_verde.html",
@@ -1220,7 +1220,7 @@ const productos = [
         precioTexto: "Precio: $7,000", // texto para mostrar en resultados
         imagen: "/assets/images/productos/muebles_y_decoracion/sillon/sillon_verde.avif"
     },
- 
+
     //Sofás
     {
         id: "sofa_cama_blanco",
@@ -1229,7 +1229,7 @@ const productos = [
         categoria: "sofas",
         precio: 9000, // número para carrito
         precioTexto: "Precio: $9,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Muebles_y_decoracion/sofa/sofa_cama_blanco.png"
+        imagen: "/assets/images/productos/muebles_y_decoracion/sofa/sofa_cama_blanco.png"
     },
     {
         id: "Sofa_gris",
@@ -1238,7 +1238,7 @@ const productos = [
         categoria: "sofas",
         precio: 8000, // número para carrito
         precioTexto: "Precio: $8,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Muebles_y_decoracion/sofa/sofa_gris.avif"
+        imagen: "/assets/images/productos/muebles_y_decoracion/sofa/sofa_gris.avif"
     },
     {
         id: "Sofa_media_luna",
@@ -1247,7 +1247,7 @@ const productos = [
         categoria: "sofas",
         precio: 3000, // número para carrito
         precioTexto: "Precio: $3,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Muebles_y_decoracion/sofa/sofa_media_luna.avif"
+        imagen: "/assets/images/productos/muebles_y_decoracion/sofa/sofa_media_luna.avif"
     },
     {
         id: "Sofa_negro",
@@ -1256,7 +1256,7 @@ const productos = [
         categoria: "sofas",
         precio: 5000, // número para carrito
         precioTexto: "Precio: $5,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Muebles_y_decoracion/sofa/sofa_negro.avif"
+        imagen: "/assets/images/productos/muebles_y_decoracion/sofa/sofa_negro.avif"
     },
     {
         id: "Sofa_verde",
@@ -1265,9 +1265,9 @@ const productos = [
         categoria: "sofas",
         precio: 14000, // número para carrito
         precioTexto: "Precio: $14,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Muebles_y_decoracion/sofa/sofa_verde.avif"
+        imagen: "/assets/images/productos/muebles_y_decoracion/sofa/sofa_verde.avif"
     },
- 
+
     //--Ropa--//
 
     //Pantalones para Hombres
@@ -1278,16 +1278,16 @@ const productos = [
         categoria: "pantalones_para_hombres",
         precio: 4000, // número para carrito
         precioTexto: "Precio: $4,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Ropa/pantalones_para_hombres/pantalon_negro.avif"
+        imagen: "/assets/images/productos/ropa/pantalones_para_hombres/pantalon_negro.avif"
     },
-     {
+    {
         id: "pantalones_de_golf",
         nombre: "Pantalones de Golf",
         url: "productos/ropa/pantalones_para_hombres/pantalones_de_golf.html",
         categoria: "pantalones_para_hombres",
         precio: 2000, // número para carrito
         precioTexto: "Precio: $2,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Ropa/pantalones_para_hombres/pantalones_de_golf.avif"
+        imagen: "/assets/images/productos/ropa/pantalones_para_hombres/pantalones_de_golf.avif"
     },
     {
         id: "pantalones_deportivos_joggers",
@@ -1296,7 +1296,7 @@ const productos = [
         categoria: "pantalones_para_hombres",
         precio: 3000, // número para carrito
         precioTexto: "Precio: $3,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Ropa/pantalones_para_hombres/pantalones_deportivos_joggers.avif"
+        imagen: "/assets/images/productos/ropa/pantalones_para_hombres/pantalones_deportivos_joggers.avif"
     },
     {
         id: "pantalones_jeans",
@@ -1305,7 +1305,7 @@ const productos = [
         categoria: "pantalones_para_hombres",
         precio: 5000, // número para carrito
         precioTexto: "Precio: $5,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Ropa/pantalones_para_hombres/pantalones_jeans.avif"
+        imagen: "/assets/images/productos/ropa/pantalones_para_hombres/pantalones_jeans.avif"
     },
     {
         id: "pantalones_joggers",
@@ -1314,9 +1314,9 @@ const productos = [
         categoria: "pantalones_para_hombres",
         precio: 4000, // número para carrito
         precioTexto: "Precio: $4,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Ropa/pantalones_para_hombres/pantalones_joggers.avif"
+        imagen: "/assets/images/productos/ropa/pantalones_para_hombres/pantalones_joggers.avif"
     },
- 
+
     // Pantalones para Mujeres
 
     {
@@ -1326,16 +1326,16 @@ const productos = [
         categoria: "pantalones_para_mujeres",
         precio: 1500, // número para carrito
         precioTexto: "Precio: $1,500", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Ropa/pantalones_para_mujeres/licra.avif"
+        imagen: "/assets/images/productos/ropa/pantalones_para_mujeres/licra.avif"
     },
-     {
+    {
         id: "pantalon_acampanado",
         nombre: "Pantalón Acampanado",
         url: "productos/ropa/pantalones_para_mujeres/pantalon_acampanado.html",
         categoria: "pantalones_para_mujeres",
         precio: 2500, // número para carrito
         precioTexto: "Precio: $2,500", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Ropa/pantalones_para_mujeres/pantalon_acampanado.avif"
+        imagen: "/assets/images/productos/ropa/pantalones_para_mujeres/pantalon_acampanado.avif"
     },
     {
         id: "pantalon_casual",
@@ -1344,7 +1344,7 @@ const productos = [
         categoria: "pantalones_para_mujeres",
         precio: 4000, // número para carrito
         precioTexto: "Precio: $4,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Ropa/pantalones_para_mujeres/pantalon_casual.avif"
+        imagen: "/assets/images/productos/ropa/pantalones_para_mujeres/pantalon_casual.avif"
     },
     {
         id: "pantalon_jean",
@@ -1353,7 +1353,7 @@ const productos = [
         categoria: "pantalones_para_mujeres",
         precio: 5000, // número para carrito
         precioTexto: "Precio: $5,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Ropa/pantalones_para_mujeres/pantalon_jean_mujer.avif"
+        imagen: "/assets/images/productos/ropa/pantalones_para_mujeres/pantalon_jean_mujer.avif"
     },
     {
         id: "pantalon_liso_mujer",
@@ -1362,7 +1362,7 @@ const productos = [
         categoria: "pantalones_para_mujeres",
         precio: 4000, // número para carrito
         precioTexto: "Precio: $4,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Ropa/pantalones_para_mujeres/pantalon_liso_mujer.avif"
+        imagen: "/assets/images/productos/ropa/pantalones_para_mujeres/pantalon_liso_mujer.avif"
     },
 
     // Pantalones para Niños
@@ -1373,7 +1373,7 @@ const productos = [
         categoria: "pantalones_para_ninos",
         precio: 1000, // número para carrito
         precioTexto: "Precio: $1,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Ropa/pantalones_para_ninos/jean_ninos.avif"
+        imagen: "/assets/images/productos/ropa/pantalones_para_ninos/jean_ninos.avif"
     },
     {
         id: "licra_para_ninos",
@@ -1382,7 +1382,7 @@ const productos = [
         categoria: "pantalones_para_ninos",
         precio: 1500, // número para carrito
         precioTexto: "Precio: $1,500", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Ropa/pantalones_para_ninos/licra.avif"
+        imagen: "/assets/images/productos/ropa/pantalones_para_ninos/licra.avif"
     },
     {
         id: "pantalon_deportivo",
@@ -1391,7 +1391,7 @@ const productos = [
         categoria: "pantalones_para_ninos",
         precio: 2300, // número para carrito
         precioTexto: "Precio: $2,300", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Ropa/pantalones_para_ninos/pantalon_deportivo.avif"
+        imagen: "/assets/images/productos/ropa/pantalones_para_ninos/pantalon_deportivo.avif"
     },
     {
         id: "pantalon_liso",
@@ -1400,7 +1400,7 @@ const productos = [
         categoria: "pantalones_para_ninos",
         precio: 2000, // número para carrito
         precioTexto: "Precio: $2,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Ropa/pantalones_para_ninos/pantalon_liso.avif"
+        imagen: "/assets/images/productos/ropa/pantalones_para_ninos/pantalon_liso.avif"
     },
     {
         id: "pantalones_lisos_para_ninos",
@@ -1409,9 +1409,9 @@ const productos = [
         categoria: "pantalones_para_ninos",
         precio: 2500, // número para carrito
         precioTexto: "Precio: $2,500", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Ropa/pantalones_para_ninos/pantalon_para_ninos.avif"
+        imagen: "/assets/images/productos/ropa/pantalones_para_ninos/pantalon_para_ninos.avif"
     },
-   
+
     // Trajes para Hombres
     {
         id: "traje_2_piezas",
@@ -1420,7 +1420,7 @@ const productos = [
         categoria: "trajes_para_hombres",
         precio: 5000, // número para carrito
         precioTexto: "Precio: $5,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Ropa/trajes_para_hombre/traje_2piezas.avif"
+        imagen: "/assets/images/productos/ropa/trajes_para_hombre/traje_2piezas.avif"
     },
     {
         id: "traje_azul",
@@ -1429,7 +1429,7 @@ const productos = [
         categoria: "trajes_para_hombres",
         precio: 4000, // número para carrito
         precioTexto: "Precio: $4,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Ropa/trajes_para_hombre/traje_azul.avif"
+        imagen: "/assets/images/productos/ropa/trajes_para_hombre/traje_azul.avif"
     },
     {
         id: "traje_completo",
@@ -1438,25 +1438,25 @@ const productos = [
         categoria: "trajes_para_hombres",
         precio: 3000, // número para carrito
         precioTexto: "Precio: $3,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Ropa/trajes_para_hombre/traje_completo.avif"
+        imagen: "/assets/images/productos/ropa/trajes_para_hombre/traje_completo.avif"
     },
-     {
+    {
         id: "traje_elegante",
         nombre: "Traje Elegante",
         url: "productos/ropa/trajes_para_hombres/traje_elegante.html",
         categoria: "trajes_para_hombres",
         precio: 3500, // número para carrito
         precioTexto: "Precio: $3,500", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Ropa/trajes_para_hombre/traje_elegante.avif"
+        imagen: "/assets/images/productos/ropa/trajes_para_hombre/traje_elegante.avif"
     },
-     {
+    {
         id: "traje_negro",
         nombre: "Traje Negro",
         url: "productos/ropa/trajes_para_hombres/traje_negro.html",
         categoria: "trajes_para_hombres",
         precio: 4200, // número para carrito
         precioTexto: "Precio: $4,200", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Ropa/trajes_para_hombre/traje_negro.avif"
+        imagen: "/assets/images/productos/ropa/trajes_para_hombre/traje_negro.avif"
     },
 
     //Vestidos
@@ -1467,7 +1467,7 @@ const productos = [
         categoria: "vestidos",
         precio: 5000, // número para carrito
         precioTexto: "Precio: $5,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Ropa/vestido_de_mujer/vestido_ajustado.avif"
+        imagen: "/assets/images/productos/ropa/vestido_de_mujer/vestido_ajustado.avif"
     },
     {
         id: "vestido_cuello_cuadrado",
@@ -1476,25 +1476,25 @@ const productos = [
         categoria: "vestidos",
         precio: 4500, // número para carrito
         precioTexto: "Precio: $4,500", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Ropa/vestido_de_mujer/vestido_cuello_cuadrado.avif"
+        imagen: "/assets/images/productos/ropa/vestido_de_mujer/vestido_cuello_cuadrado.avif"
     },
-     {
+    {
         id: "vestido_de_invierno",
         nombre: "Vestido de Invierno",
         url: "productos/ropa/vestidos/vestido_de_invierno.html",
         categoria: "vestidos",
         precio: 6000, // número para carrito
         precioTexto: "Precio: $6,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Ropa/vestido_de_mujer/vestido_de_invierno.avif"
+        imagen: "/assets/images/productos/ropa/vestido_de_mujer/vestido_de_invierno.avif"
     },
-     {
+    {
         id: "vestido_elegante",
         nombre: "Vestido Elegante",
         url: "productos/ropa/vestidos/vestido_elegante.html",
         categoria: "vestidos",
         precio: 3500, // número para carrito
         precioTexto: "Precio: $3,500", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Ropa/vestido_de_mujer/vestido_elegante.avif"
+        imagen: "/assets/images/productos/ropa/vestido_de_mujer/vestido_elegante.avif"
     },
     {
         id: "vestido_negro",
@@ -1503,7 +1503,7 @@ const productos = [
         categoria: "vestidos",
         precio: 4200, // número para carrito
         precioTexto: "Precio: $4,200", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Ropa/vestido_de_mujer/vestido_negro.avif"
+        imagen: "/assets/images/productos/ropa/vestido_de_mujer/vestido_negro.avif"
     },
 
     //--Tecnología--//
@@ -1516,43 +1516,43 @@ const productos = [
         categoria: "bocinas",
         precio: 5000, // número para carrito
         precioTexto: "Precio: $5000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Tecnologia/Bocina/bocina_aiwa.png"
+        imagen: "/assets/images/productos/tecnologia/bocina/bocina_aiwa.png"
     },
-     {
+    {
         id: "bocina_lg",
         nombre: "Bocina LG",
         url: "productos/tecnologia/bocinas/bocina_lg.html",
         categoria: "bocinas",
         precio: 4500, // número para carrito
         precioTexto: "Precio: $4,500", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Tecnologia/Bocina/bocina_lg.png"
+        imagen: "/assets/images/productos/tecnologia/bocina/bocina_lg.png"
     },
-     {
+    {
         id: "bocina_samsung",
         nombre: "Bocina Samsung",
         url: "productos/tecnologia/bocinas/bocina_samsung.html",
         categoria: "bocinas",
         precio: 6000, // número para carrito
         precioTexto: "Precio: $6,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Tecnologia/Bocina/bocina_samsung.avif"
+        imagen: "/assets/images/productos/tecnologia/bocina/bocina_samsung.avif"
     },
-     {
+    {
         id: "bocina_stage",
         nombre: "Bocina Stage",
         url: "productos/tecnologia/bocinas/bocina_stage.html",
         categoria: "bocinas",
         precio: 5500, // número para carrito
         precioTexto: "Precio: $5,500", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Tecnologia/Bocina/bocina_stage.png"
+        imagen: "/assets/images/productos/tecnologia/bocina/bocina_stage.png"
     },
     {
         id: "bocina_tecnomaster",
-        nombre: "Bocina Tecnomaster",
+        nombre: "Bocina tecnomaster",
         url: "productos/tecnologia/bocinas/bocina_tecnomaster.html",
         categoria: "bocinas",
         precio: 9000, // número para carrito
         precioTexto: "Precio: $9,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Tecnologia/Bocina/bocina_tecnomaster.avif"
+        imagen: "/assets/images/productos/tecnologia/bocina/bocina_tecnomaster.avif"
     },
 
     //Celulares
@@ -1563,7 +1563,7 @@ const productos = [
         categoria: "celulares",
         precio: 40000, // número para carrito
         precioTexto: "Precio: $40,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Tecnologia/Celulares/celular_samsung_A26.png"
+        imagen: "/assets/images/productos/tecnologia/celulares/celular_samsung_A26.png"
     },
     {
         id: "celular_samsung_a35",
@@ -1572,7 +1572,7 @@ const productos = [
         categoria: "celulares",
         precio: 23000, // número para carrito
         precioTexto: "Precio: $23,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Tecnologia/Celulares/celular_samsung_A35.png"
+        imagen: "/assets/images/productos/tecnologia/celulares/celular_samsung_A35.png"
     },
     {
         id: "celular_s24_ultra",
@@ -1581,7 +1581,7 @@ const productos = [
         categoria: "celulares",
         precio: 55000, // número para carrito
         precioTexto: "Precio: $55,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Tecnologia/Celulares/celular_s24ultra.png"
+        imagen: "/assets/images/productos/tecnologia/celulares/celular_s24ultra.png"
     },
     {
         id: "iphone_14",
@@ -1590,7 +1590,7 @@ const productos = [
         categoria: "celulares",
         precio: 35000, // número para carrito
         precioTexto: "Precio: $35,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Tecnologia/Celulares/iphone14.avif"
+        imagen: "/assets/images/productos/tecnologia/celulares/iphone14.avif"
     },
     {
         id: "iphone_14_pro",
@@ -1599,7 +1599,7 @@ const productos = [
         categoria: "celulares",
         precio: 42000, // número para carrito
         precioTexto: "Precio: $42,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Tecnologia/Celulares/iphone14pro.webp"
+        imagen: "/assets/images/productos/tecnologia/celulares/iphone14pro.webp"
     },
 
     //Laptops
@@ -1610,7 +1610,7 @@ const productos = [
         categoria: "laptops",
         precio: 45000, // número para carrito
         precioTexto: "Precio: $45,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Tecnologia/Laptops/laptop_asus.png"
+        imagen: "/assets/images/productos/tecnologia/laptops/laptop_asus.png"
     },
     {
         id: "laptop_dell",
@@ -1619,7 +1619,7 @@ const productos = [
         categoria: "laptops",
         precio: 48000, // número para carrito
         precioTexto: "Precio: $48,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Tecnologia/Laptops/laptop_dell.png"
+        imagen: "/assets/images/productos/tecnologia/laptops/laptop_dell.png"
     },
     {
         id: "laptop_dragonx",
@@ -1628,7 +1628,7 @@ const productos = [
         categoria: "laptops",
         precio: 54000, // número para carrito
         precioTexto: "Precio: $54,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Tecnologia/Laptops/laptop_dragonx.png"
+        imagen: "/assets/images/productos/tecnologia/laptops/laptop_dragonX.png"
     },
     {
         id: "laptop_hp",
@@ -1637,63 +1637,63 @@ const productos = [
         categoria: "laptops",
         precio: 56000, // número para carrito
         precioTexto: "Precio: $56,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Tecnologia/Laptops/laptop_hp.png"
+        imagen: "/assets/images/productos/tecnologia/laptops/laptop_hp.png"
     },
-     {
+    {
         id: "laptop_lenovo",
         nombre: "Laptop Lenovo",
         url: "productos/tecnologia/laptops/laptop_lenovo.html",
         categoria: "laptops",
         precio: 70000, // número para carrito
         precioTexto: "Precio: $70,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Tecnologia/Laptops/laptop_lenovo.png"
+        imagen: "/assets/images/productos/tecnologia/laptops/laptop_lenovo.png"
     },
 
     //Tablets
-     {
+    {
         id: "tablet_apple",
         nombre: "Tablet Apple",
         url: "productos/tecnologia/tablets/tablet_apple.html",
         categoria: "tablets",
         precio: 30000, // número para carrito
         precioTexto: "Precio: $30,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Tecnologia/Tablets/tablet_apple.avif"
+        imagen: "/assets/images/productos/tecnologia/tablets/tablet_apple.avif"
     },
-     {
+    {
         id: "tablet_rted",
         nombre: "Tablet RTED",
         url: "productos/tecnologia/tablets/tablet_rted.html",
         categoria: "tablets",
         precio: 23000, // número para carrito
         precioTexto: "Precio: $23,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Tecnologia/Tablets/tablet_RTED.avif"
+        imagen: "/assets/images/productos/tecnologia/tablets/tablet_RTED.avif"
     },
-     {
+    {
         id: "tablet_samsung",
         nombre: "Tablet Samsung",
         url: "productos/tecnologia/tablets/tablet_samsung.html",
         categoria: "tablets",
         precio: 26000, // número para carrito
         precioTexto: "Precio: $26,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Tecnologia/Tablets/tablet_Samsung.avif"
+        imagen: "/assets/images/productos/tecnologia/tablets/tablet_samsung.avif"
     },
-      {
+    {
         id: "tablet_tcl",
         nombre: "Tablet TCL",
         url: "productos/tecnologia/tablets/tablet_tcl.html",
         categoria: "tablets",
         precio: 15000, // número para carrito
         precioTexto: "Precio: $15,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Tecnologia/Tablets/tablet-tcl.png"
+        imagen: "/assets/images/productos/tecnologia/tablets/tablet-tcl.png"
     },
-     {
+    {
         id: "tablet_tecnomaster",
-        nombre: "Tablet Tecnomaster",
+        nombre: "Tablet tecnomaster",
         url: "productos/tecnologia/tablets/tablet_tecnomaster.html",
         categoria: "tablets",
         precio: 22000, // número para carrito
         precioTexto: "Precio: $22,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Tecnologia/Tablets/tablet_tecnomaster.avif"
+        imagen: "/assets/images/productos/tecnologia/tablets/tablet_tecnomaster.avif"
     },
 
     //Televisores
@@ -1704,34 +1704,34 @@ const productos = [
         categoria: "televisores",
         precio: 36500, // número para carrito
         precioTexto: "Precio: $36,500", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Tecnologia/Televisores/TV_led_50pulgadas.png"
+        imagen: "/assets/images/productos/tecnologia/televisores/tv_led_50pulgadas.png"
     },
-     {
+    {
         id: "televisor_led_lg",
         nombre: "Televisor LED LG",
         url: "productos/tecnologia/televisores/televisor_lg.html",
         categoria: "televisores",
         precio: 57000, // número para carrito
         precioTexto: "Precio: $57,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Tecnologia/televisores/TV_led_LG.png"
+        imagen: "/assets/images/productos/tecnologia/televisores/tv_led_lg.png"
     },
-     {
+    {
         id: "televisor_led_samsung",
         nombre: "Televisor LED Samsung",
         url: "productos/tecnologia/televisores/televisor_samsung_led.html",
         categoria: "televisores",
         precio: 56000, // número para carrito
         precioTexto: "Precio: $56,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Tecnologia/Televisores/TV_led_samsung.avif"
+        imagen: "/assets/images/productos/tecnologia/televisores/tv_led_samsung.avif"
     },
-     {
+    {
         id: "televisor_led_tecnomaster",
-        nombre: "Televisor LED Tecnomaster",
+        nombre: "Televisor LED tecnomaster",
         url: "productos/tecnologia/televisores/televisor_tecnomaster.html",
         categoria: "televisores",
         precio: 55200, // número para carrito
         precioTexto: "Precio: $55,200", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Tecnologia/televisores/TV_led_tecnomaster.png"
+        imagen: "/assets/images/productos/tecnologia/televisores/tv_led_tecnomaster.png"
     },
     {
         id: "televisor_samsung_75_pulgadas",
@@ -1740,7 +1740,7 @@ const productos = [
         categoria: "televisores",
         precio: 44000, // número para carrito
         precioTexto: "Precio: $44,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/Tecnologia/televisores/TV_samsung.png"
+        imagen: "/assets/images/productos/tecnologia/televisores/tv_samsung.png"
     },
 
 ];

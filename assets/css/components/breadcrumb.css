@@ -1,0 +1,154 @@
+/* assets/css/components/breadcrumb.css - Componente de navegación breadcrumb */
+
+/* CSS Variables para breadcrumb (hacer componente autocontenido) */
+:root {
+    --breadcrumb-top-base: 65px;
+    --breadcrumb-top-desktop: 75px;
+    --bg-overlay: rgba(0, 0, 0, 0.85);
+    --color-primary: #ffcc00;
+}
+
+/* breadcrumb - Mobile First con estructura semántica -------------------------
+   Estructura: <nav aria-label="Breadcrumb"><ol><li><a></a></li><li aria-current="page"></li></ol></nav>
+   Componente reutilizable para todas las páginas del sitio
+--------------------------------------------------------------------------- */
+.breadcrumb {
+    background: var(--bg-overlay) !important;
+    padding: 8px 15px !important;
+    border-radius: 10px !important;
+    max-width: 90% !important;
+    margin: 0 auto !important;
+    font-size: 14px !important;
+    color: #ffffff !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    list-style: none !important;
+    padding-left: 15px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+
+    /* Centrado perfecto bajo el header fijo */
+    position: fixed;
+    top: var(--breadcrumb-top-base);
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 100;
+}
+
+/* Estilo para la lista */
+.breadcrumb ol {
+    display: flex !important;
+    align-items: center !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Elementos de la lista */
+.breadcrumb li {
+    display: flex !important;
+    align-items: center !important;
+    margin: 0 5px !important;
+}
+
+/* Separadores automáticos */
+.breadcrumb li:not(:last-child)::after {
+    content: "›" !important;
+    color: #ffffff !important;
+    margin-left: 5px !important;
+}
+
+/* Enlaces y elementos dentro del breadcrumb */
+.breadcrumb a,
+.breadcrumb span {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Página actual */
+.breadcrumb li[aria-current="page"] {
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+/* Mobile truncation - ocultar elementos intermedios en pantallas pequeñas */
+@media (max-width: 767px) {
+    .breadcrumb li:nth-child(2),
+    .breadcrumb li:nth-child(4) {
+        display: none !important;
+    }
+    
+    .breadcrumb li:nth-child(3)::after {
+        content: " › ..." !important;
+        color: #ffffff !important;
+        margin-left: 5px !important;
+    }
+}
+
+/* ========================== MEDIA QUERIES ========================== */
+
+/* Tablet (768px en adelante) */
+@media (min-width: 768px) {
+    .breadcrumb {
+        font-size: 15px !important;
+        padding: 10px 20px !important;
+        max-width: 95% !important;
+        overflow: visible !important;
+        text-overflow: unset !important;
+        white-space: normal !important;
+    }
+    
+    /* Restaurar elementos intermedios en tablet/desktop */
+    .breadcrumb li:nth-child(2),
+    .breadcrumb li:nth-child(4) {
+        display: flex !important;
+    }
+    
+    /* Quitar "..." en tablet/desktop */
+    .breadcrumb li:nth-child(3)::after {
+        content: none !important;
+    }
+}
+
+/* Desktop (1024px en adelante) */
+@media (min-width: 1024px) {
+    .breadcrumb {
+        font-size: 14px !important;
+        padding: 8px 20px;
+        max-width: 70% !important;
+        border-radius: 10px !important;
+        top: var(--breadcrumb-top-desktop) !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
+        overflow: visible !important;
+        text-overflow: unset !important;
+        white-space: normal !important;
+    }
+    
+    /* Mantener elementos intermedios visibles en desktop */
+    .breadcrumb li:nth-child(2),
+    .breadcrumb li:nth-child(4) {
+        display: flex !important;
+    }
+    
+    /* Sin "..." en desktop */
+    .breadcrumb li:nth-child(3)::after {
+        content: none !important;
+    }
+}
+
+/* Tablet (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .breadcrumb {
+        top: var(--breadcrumb-top-base) !important;
+    }
+}
