@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -6,7 +6,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Descubre en Hipermercado Superior las mejores prendas de vestir para toda la familia: moda para hombres, mujeres y niños con la mejor calidad y precio.">
-    <meta name="keywords" content="ropa, moda, prendas, vestir, hombres, mujeres, niños, Hipermercado Superior, camisetas, pantalones, vestidos, calzado">
     <meta name="author" content="Oliver Antonio Díaz">
     <meta name="robots" content="index, follow">
     <meta name="copyright" content="Oliver Antonio Díaz. Todos los derechos reservados.">
@@ -16,7 +15,7 @@
     <meta property="og:title" content="Ropa - Hipermercado Superior">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.hipermercadosuperior.com/ropa">
-    <meta property="og:image" content="https://www.hipermercadosuperior.com/imagenes/ropa-banner.jpg">
+    <meta property="og:image" content="../../assets/images/fondos/fondo.avif">
     <meta property="og:description" content="Descubre en Hipermercado Superior las mejores prendas de vestir para toda la familia: moda para hombres, mujeres y niños con la mejor calidad y precio.">
     <meta property="og:site_name" content="Hipermercado Superior">
     <meta property="og:locale" content="es_ES">
@@ -25,527 +24,730 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Ropa - Hipermercado Superior">
     <meta name="twitter:description" content="Descubre en Hipermercado Superior las mejores prendas de vestir para toda la familia: moda para hombres, mujeres y niños con la mejor calidad y precio.">
-    <meta name="twitter:image" content="https://www.hipermercadosuperior.com/imagenes/ropa-banner.jpg">
+    <meta name="twitter:image" content="../../assets/images/fondos/fondo.avif">
 
-    <!-- TÍTULO, CSS Y FUENTES -->
-    <title>Ropa | Hipermercado Superior</title>
+    <!-- Título específico de la página -->
+    <title>Ropa - Hipermercado Superior</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+   
+    <!-- CSS y Fonts -->
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../assets/css/components/header.css">
+    <link rel="stylesheet" href="../../assets/css/components/navigation.css">
+    <link rel="stylesheet" href="../../assets/css/components/product-card.css">
+    <link rel="stylesheet" href="../../assets/css/components/offer-card.css">
+    <link rel="stylesheet" href="../../assets/css/components/featured-products.css">
+    <link rel="stylesheet" href="../../assets/css/components/about-us-section.css">
+    <link rel="stylesheet" href="../../assets/css/components/footer.css">
+    <link rel="stylesheet" href="../../assets/css/pages/category.css">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/components/breadcrumb.css">
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="../../assets/css/categorias.css">
-    <link rel="stylesheet" href="../../assets/css/components/footer.css">
-    <link rel="stylesheet" href="../../assets/css/fonts.css">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Scripts -->
+    <script src="../../assets/js/productos.js" defer></script>
+    <script src="../../assets/js/boton_de_busqueda.js" defer></script>
+    <script src="../../assets/js/hamburger_menu.js" defer></script>
+    <script src="../../assets/js/tablet_menu_click.js" defer></script>
+    <script src="../../assets/js/productos_navegacion.js" defer></script>
+    <script src="../../assets/js/ofertas_animation.js" defer></script>
+    <script src="../../assets/js/scroll_animations.js" defer></script>
 
-     <!-- Favicons -->
-    <link rel="icon" href="../../assets/icons/favicons/icon-16x16.jpg" type="image/jpg" sizes="16x16">
-    <link rel="icon" href="../../assets/icons/favicons/icon-32x32.jpg" type="image/jpg" sizes="32x32">
-    <link rel="icon" href="../../assets/icons/favicons/icon-48x48.jpg" type="image/jpg" sizes="48x48">
   </head>
 
 
-<body id="ropa" class="category-page">
-    <!-- ===== HEADER GLOBAL ===== -->
-    <header class="header-global">
-        <div class="header-container">
-            <!-- Botón hamburguesa solo en móvil -->
-            <button class="menu-btn" aria-label="Abrir menú">
-                <i class="fas fa-bars"></i>
-            </button>
+<body class="text-gray-900" id="fondo_ropa">
 
-            <!-- Logo + título -->
-            <a href="../../index.html" class="brand">
-                <img src="../../assets/images/logo/logo.jpeg" alt="Logo de Hipermercado Superior">
-                <h1 class="brand-name">Superior</h1>
+
+  <!-- ===== HEADER GLOBAL ===== -->
+  <header class="fixed top-0 left-0 w-full rounded-none xl:top-[10px] xl:left-1/2 xl:-translate-x-1/2 xl:rounded-[15px] xl:w-max xl:max-w-[calc(100vw-40px)] bg-black/80 px-2.5 py-1.5 z-[1000] flex justify-center text-white">
+    <div class="flex items-center gap-2.5 justify-between md:justify-center w-full px-0 md:px-3.5">
+
+      <!-- Botón hamburguesa solo en móvil -->
+      <button class="menu-btn text-[22px] bg-transparent border-none text-white cursor-pointer transition-colors duration-300 rounded hover:bg-white/15 p-1 md:hidden">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-menu"/></svg>
+      </button>
+
+      <!-- Logo -->
+      <a href="../../index.html" class="brand flex items-center gap-1 text-white no-underline" aria-label="Ir a la página principal de Hipermercado Superior">
+        <img src="../../assets/images/logo/logo.png" alt="Logo de Hipermercado Superior">
+        <h1 class="whitespace-nowrap block ml-1">Hipermercado Superior</h1>
+      </a>
+
+      <!-- Menú de navegación Desktop (Solo enlaces) - Visible en Tablets y Desktop -->
+      <nav class="nav-links hidden md:flex justify-center" role="navigation" aria-label="Menú principal">
+        <ul class="flex gap-5 items-center list-none p-0 m-0">
+          <li><a href="../../index.html" class="text-white no-underline text-base px-2.5 py-2 block text-left transition-colors duration-300 rounded-[10px] hover:bg-white/15">Inicio</a></li>
+
+          <!-- Categorías Dropdown -->
+          <li class="relative group">
+            <a href="#" class="text-white no-underline text-base px-2.5 py-2 block text-left transition-colors duration-300 rounded-[10px] hover:bg-white/15" aria-haspopup="true" aria-expanded="false">
+              Categorías <span class="text-[0.7em] ml-0.75 opacity-80">▼</span>
             </a>
-
-            <!-- Menú de navegación Desktop -->
-            <nav class="nav-links-desktop" role="navigation" aria-label="Menú principal">
-                <ul>
-                    <li><a href="../../index.html">Inicio</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="active">Categorías <i class="fas fa-chevron-down"></i></a>
-                        <div class="dropdown-content">
-                            <a href="alimentos.html">Alimentos</a>
-                            <a href="electrodomesticos.html">Electrodomésticos</a>
-                            <a href="tecnologia.html">Tecnología</a>
-                            <a href="ropa.html" class="active">Ropa</a>
-                            <a href="muebles_y_decoracion.html">Muebles y Decoración</a>
-                            <a href="farmacia.html">Farmacia</a>
-                            <a href="ferreteria.html">Ferretería</a>
-                            <a href="juguetes.html">Juguetes</a>
-                        </div>
-                    </li>
-                    <li><a href="../../index.html#ofertas">Ofertas</a></li>
-                    <li><a href="../contacto/index.html">Contacto</a></li>
-                </ul>
-            </nav>
-
-            <!-- Acciones (Búsqueda, Carrito) -->
-            <div class="header-actions">
-                <div class="search-container">
-                    <input type="text" id="input-buscar" placeholder="Buscar..." aria-label="Buscar productos">
-                    <button type="button" id="btn-buscar" aria-label="Buscar">
-                        <i class="fas fa-search"></i>
-                    </button>
-                    <ul id="resultados-busqueda" class="search-results"></ul>
-                </div>
-                <a href="../cart/index.html" class="cart-btn" aria-label="Ver carrito">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span id="contador-carrito">0</span>
+            <ul class="absolute top-full left-0 bg-black/90 rounded-lg min-w-[220px] hidden group-hover:flex flex-col z-[1000] text-left list-none p-0 m-0">
+              <!-- Alimentos -->
+              <li class="relative group/sub">
+                <a href="alimentos.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Alimentos <span class="right-arrow">▸</span>
                 </a>
-            </div>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="alimentos.html#frutas_y_verduras" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Frutas y Verduras</a></li>
+                  <li><a href="alimentos.html#despensa" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Despensa</a></li>
+                  <li><a href="alimentos.html#carnes_pescados_mariscos" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Carnes, Pescados y Mariscos</a></li>
+                  <li><a href="alimentos.html#lacteos_y_huevos" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Lácteos y Huevos</a></li>
+                  <li><a href="alimentos.html#bebidas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Bebidas</a></li>
+                  <li><a href="alimentos.html#enlatados" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Enlatados</a></li>
+                </ul>
+              </li>
+              <!-- Electrodomésticos -->
+              <li class="relative group/sub">
+                <a href="electrodomesticos.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Electrodomésticos <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="electrodomesticos.html#cocina" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Cocina</a></li>
+                  <li><a href="electrodomesticos.html#lavado" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Lavado</a></li>
+                  <li><a href="electrodomesticos.html#climatizacion" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Climatización</a></li>
+                </ul>
+              </li>
+              <!-- Tecnología -->
+              <li class="relative group/sub">
+                <a href="tecnologia.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Tecnología <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="tecnologia.html#televisores" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Televisores</a></li>
+                  <li><a href="tecnologia.html#laptops" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Laptops</a></li>
+                  <li><a href="tecnologia.html#tablets" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Tablets</a></li>
+                  <li><a href="tecnologia.html#celulares" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Celulares</a></li>
+                  <li><a href="tecnologia.html#bocinas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Bocinas</a></li>
+                </ul>
+              </li>
+              <!-- Ropa -->
+              <li class="relative group/sub">
+                <a href="ropa.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Ropa <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="ropa.html#pantalones_para_hombres" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Pantalones para Hombres</a></li>
+                  <li><a href="ropa.html#pantalones_para_mujeres" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Pantalones para Mujeres</a></li>
+                  <li><a href="ropa.html#pantalones_para_niños" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Pantalones para Niños</a></li>
+                  <li><a href="ropa.html#trajes_para_hombres" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Trajes para Hombres</a></li>
+                  <li><a href="ropa.html#vestidos" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Vestidos</a></li>
+                </ul>
+              </li>
+              <!-- Muebles -->
+              <li class="relative group/sub">
+                <a href="muebles_y_decoracion.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Muebles y Decoración <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="muebles_y_decoracion.html#sofas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Sofás</a></li>
+                  <li><a href="muebles_y_decoracion.html#sillones" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Sillones</a></li>
+                  <li><a href="muebles_y_decoracion.html#mesas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Mesas</a></li>
+                  <li><a href="muebles_y_decoracion.html#floreros" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Floreros</a></li>
+                </ul>
+              </li>
+              <!-- Farmacia -->
+              <li class="relative group/sub">
+                <a href="farmacia.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Farmacia <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="farmacia.html#analgesicos" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Analgésicos</a></li>
+                  <li><a href="farmacia.html#dermocosmetica" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Dermocosmética</a></li>
+                  <li><a href="farmacia.html#vitaminas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Vitaminas</a></li>
+                  <li><a href="farmacia.html#antigripales" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Antigripales</a></li>
+                </ul>
+              </li>
+              <!-- Ferretería -->
+              <li class="relative group/sub">
+                <a href="ferreteria.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Ferretería <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="ferreteria.html#herramientas_manuales" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Herramientas Manuales</a></li>
+                  <li><a href="ferreteria.html#pinturas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Pinturas</a></li>
+                  <li><a href="ferreteria.html#electricidad" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Electricidad</a></li>
+                  <li><a href="ferreteria.html#plomeria" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Plomería</a></li>
+                </ul>
+              </li>
+              <!-- Juguetes -->
+              <li class="relative group/sub">
+                <a href="juguetes.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Juguetes <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="juguetes.html#juguetes_para_ninos" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Juguetes para Niños</a></li>
+                  <li><a href="juguetes.html#juguetes_para_ninas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Juguetes para Niñas</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li><a href="../../index.html#ofertas" class="text-white no-underline text-base px-2.5 py-2 block transition-colors duration-300 rounded-[10px] hover:bg-white/15">Ofertas</a></li>
+          <li><a href="../contacto/index.html" class="text-white no-underline text-base px-2.5 py-2 block transition-colors duration-300 rounded-[10px] hover:bg-white/15">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Utilidades (Buscador y Carrito) - Visibles en todos los dispositivos -->
+      <div class="header-utils">
+        <!-- Buscador -->
+        <div class="relative flex items-center">
+          <input type="text" id="input-buscar" placeholder="Buscar productos..." class="search-input-modern" autocomplete="off">
+          <button type="button" id="btn-buscar" class="util-btn">
+            <!-- Icono Lupa / Cerrar (sprite) -->
+            <svg id="icono-buscar" class="util-icon" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-search"/></svg>
+            <svg id="icono-cerrar" class="util-icon hidden" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-close"/></svg>
+          </button>
+          <ul id="resultados-busqueda" class="search-results-list"></ul>
         </div>
 
-        <!-- Menú móvil colapsable -->
-        <nav class="nav-links-mobile">
-            <ul>
-                <li><a href="../../index.html">Inicio</a></li>
-                <li>
-                    <button class="mobile-dropdown-btn">Categorías <i class="fas fa-chevron-down"></i></button>
-                    <ul class="mobile-dropdown-content">
-                        <li><a href="alimentos.html">Alimentos</a></li>
-                        <li><a href="electrodomesticos.html">Electrodomésticos</a></li>
-                        <li><a href="tecnologia.html">Tecnología</a></li>
-                        <li><a href="ropa.html" class="active">Ropa</a></li>
-                        <li><a href="muebles_y_decoracion.html">Muebles y Decoración</a></li>
-                        <li><a href="farmacia.html">Farmacia</a></li>
-                        <li><a href="ferreteria.html">Ferretería</a></li>
-                        <li><a href="juguetes.html">Juguetes</a></li>
-                    </ul>
-                </li>
-                <li><a href="../../index.html#ofertas">Ofertas</a></li>
-                <li><a href="../contacto/index.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+        <!-- Carrito -->
+        <a href="../cart/index.html" class="util-btn" aria-label="Ver carrito">
+          <svg class="util-icon" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-cart"/></svg>
+          <span id="contador-carrito" class="cart-badge">0</span>
+        </a>
+      </div>
+    </div>
 
-    <main>
-        <!-- Banner de Categoría -->
-        <section class="category-banner" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../assets/images/productos/Ropa/ropa_banner.jpg');">
-            <div class="container mx-auto px-4 h-full flex flex-col justify-center items-center text-center text-white">
-                <h2 class="text-5xl font-bold mb-4">Moda que Inspira</h2>
-                <p class="text-xl max-w-2xl">Encuentra las mejores tendencias para hombres, mujeres y niños. Estilo, comodidad y calidad en cada prenda.</p>
-            </div>
-        </section>
+    <!-- Menú móvil colapsable -->
+    <nav id="mobile-menu" class="fixed top-[49px] left-0 w-full bg-black/95 text-white hidden z-[999] max-h-[calc(100vh-49px)] overflow-y-auto py-5 shadow-xl">
+      <ul class="list-none p-0 m-0">
+        <li class="px-5 py-2.5 border-b border-white/10"><a href="../../index.html" class="block">Inicio</a></li>
+        <li class="px-5 py-2.5 border-b border-white/10">
+          <button class="mobile-dropdown-btn w-full text-left flex justify-between items-center">
+            Categorías <span class="text-[0.7em] opacity-70">▼</span>
+          </button>
+          <ul class="hidden pl-5 mt-2 transition-all duration-300 opacity-0 overflow-hidden">
+            <!-- Alimentos -->
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Alimentos <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="alimentos.html#frutas_y_verduras" class="block py-2">Frutas y Verduras</a></li>
+                <li><a href="alimentos.html#despensa" class="block py-2">Despensa</a></li>
+                <li><a href="alimentos.html#carnes_pescados_mariscos" class="block py-2">Carnes y Mariscos</a></li>
+                <li><a href="alimentos.html#lacteos_y_huevos" class="block py-2">Lácteos</a></li>
+                <li><a href="alimentos.html#bebidas" class="block py-2">Bebidas</a></li>
+                <li><a href="alimentos.html#enlatados" class="block py-2">Enlatados</a></li>
+              </ul>
+            </li>
+            <!-- Electrodomésticos -->
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Electrodomésticos <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="electrodomesticos.html#cocina" class="block py-2">Cocina</a></li>
+                <li><a href="electrodomesticos.html#lavado" class="block py-2">Lavado</a></li>
+                <li><a href="electrodomesticos.html#climatizacion" class="block py-2">Climatización</a></li>
+              </ul>
+            </li>
+            <!-- Tecnología -->
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Tecnología <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="tecnologia.html#televisores" class="block py-2">Televisores</a></li>
+                <li><a href="tecnologia.html#laptops" class="block py-2">Laptops</a></li>
+                <li><a href="tecnologia.html#tablets" class="block py-2">Tablets</a></li>
+                <li><a href="tecnologia.html#celulares" class="block py-2">Celulares</a></li>
+                <li><a href="tecnologia.html#bocinas" class="block py-2">Bocinas</a></li>
+              </ul>
+            </li>
+            <!-- Ropa -->
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Ropa <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="ropa.html#pantalones_para_hombres" class="block py-2">Hombres</a></li>
+                <li><a href="ropa.html#pantalones_para_mujeres" class="block py-2">Mujeres</a></li>
+                <li><a href="ropa.html#pantalones_para_niños" class="block py-2">Niños</a></li>
+                <li><a href="ropa.html#trajes_para_hombres" class="block py-2">Trajes para Hombres</a></li>
+                <li><a href="ropa.html#vestidos" class="block py-2">Vestidos</a></li>
+              </ul>
+            </li>
+            <!-- Muebles -->
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Muebles y Decoración <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="muebles_y_decoracion.html#sofas" class="block py-2">Sofás</a></li>
+                <li><a href="muebles_y_decoracion.html#sillones" class="block py-2">Sillones</a></li>
+                <li><a href="muebles_y_decoracion.html#mesas" class="block py-2">Mesas</a></li>
+                <li><a href="muebles_y_decoracion.html#floreros" class="block py-2">Floreros</a></li>
+              </ul>
+            </li>
+            <!-- Farmacia -->
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Farmacia <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="farmacia.html#analgesicos" class="block py-2">Analgésicos</a></li>
+                <li><a href="farmacia.html#dermocosmetica" class="block py-2">Dermocosmética</a></li>
+                <li><a href="farmacia.html#vitaminas" class="block py-2">Vitaminas</a></li>
+                <li><a href="farmacia.html#antigripales" class="block py-2">Antigripales</a></li>
+              </ul>
+            </li>
+            <!-- Ferretería -->
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Ferretería <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="ferreteria.html#herramientas_manuales" class="block py-2">Herramientas</a></li>
+                <li><a href="ferreteria.html#pinturas" class="block py-2">Pinturas</a></li>
+                <li><a href="ferreteria.html#electricidad" class="block py-2">Electricidad</a></li>
+                <li><a href="ferreteria.html#plomeria" class="block py-2">Plomería</a></li>
+              </ul>
+            </li>
+            <!-- Juguetes -->
+            <li class="">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Juguetes <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="juguetes.html#juguetes_para_ninos" class="block py-2">Niños</a></li>
+                <li><a href="juguetes.html#juguetes_para_ninas" class="block py-2">Niñas</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="px-5 py-2.5 border-b border-white/10"><a href="../../index.html#ofertas" class="block">Ofertas</a></li>
+        <li class="px-5 py-2.5 border-b border-white/10"><a href="../contacto/index.html" class="block">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <!-- Filtros Rápidos -->
-        <nav class="quick-filters py-6 bg-white border-b sticky top-[70px] z-40">
-            <div class="container mx-auto px-4 overflow-x-auto">
-                <div class="flex justify-center gap-4 min-w-max">
-                    <a href="#pantalones_para_hombres" class="filter-chip">Hombres</a>
-                    <a href="#pantalones_para_mujeres" class="filter-chip">Mujeres</a>
-                    <a href="#pantalones_para_niños" class="filter-chip">Niños</a>
-                    <a href="#trajes_para_hombres" class="filter-chip">Trajes</a>
-                    <a href="#vestidos" class="filter-chip">Vestidos</a>
-                </div>
-            </div>
-        </nav>
+<!-- Breadcrumb -->
+<nav aria-label="Breadcrumb">
+  <ol class="breadcrumb breadcrumb-category">
+    <li><a href="../../index.html">Inicio</a></li>
+    <li><span>Categorías</span></li>
+    <li aria-current="page">Ropa</li>
+  </ol>
+</nav>
        
      <main> <!--main-->
 
-          <!-- Sección: Pantalones para Hombres -->
-          <section class="productos-destacados destino" id="pantalones_para_hombres">
-              <div class="container">
-                  <h2>Pantalones para Hombres</h2>
+        <!-- Pantalones para Hombres -->
+        <section class="productos-destacados bg-black/80 rounded-[20px] p-5 md:py-7.5 md:px-[56px] mx-auto mb-10 max-w-[1280px] xl:max-w-[calc(100vw-100px)] lg:max-w-[calc(100vw-86px)]" id="pantalones_para_hombres">
+            <div class="container mx-auto">
+                <h2 class="text-xl md:text-2xl text-white bg-black/70 px-4 py-2 rounded-xl mb-5 w-fit mx-auto text-center">Pantalones para Hombres</h2>
+                
+                <div class="productos-container-wrapper relative flex items-center justify-center">
+                    <button class="productos-control-prev absolute left-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="pantalones_para_hombres-prev">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-left"/></svg>
+                        <span class="sr-only">Anterior</span>
+                    </button>
 
-                  <div class="productos-container-wrapper">
-                      <!-- botón anterior del carrusel-->
-                      <button class="productos-control-prev" type="button" id="pantalones_para_hombres-prev">
-                          <i class="bi bi-chevron-left"></i>
-                          <span class="visually-hidden">Anterior</span>
-                      </button>
-                      
-                      <div class="productos-container">
-                      <!-- Producto 1 -->
-               <a href="../productos/ropa/pantalones_para_hombres/pantalon_negro.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ropa/pantalones_para_hombres/pantalon_negro.avif" alt="Pantalón Negro" loading="lazy">
-          <h3>Pantalón Negro</h3>
-          <p>Precio: $4,000</p>
-          <button class="btn-agregar" id="pantalon_negro">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 2 -->
-      <a href="../productos/ropa/pantalones_para_hombres/pantalones_de_golf.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ropa/pantalones_para_hombres/pantalones_de_golf.avif" alt="Pantalones de Golf" loading="lazy">
-          <h3>Pantalones de Golf</h3>
-          <p>Precio: $2,000</p>
-          <button class="btn-agregar" id="pantalones_de_golf">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 3 -->
-      <a href="../productos/ropa/pantalones_para_hombres/pantalones_deportivos_joggers.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ropa/pantalones_para_hombres/pantalones_deportivos_joggers.avif" alt="Pantalones Deportivos Joggers" loading="lazy">
-          <h3>Pantalones Deportivos Joggers</h3>
-          <p>Precio: $3,000</p>
-          <button class="btn-agregar" id="pantalones_deportivos_joggers">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 4 -->
-      <a href="../productos/ropa/pantalones_para_hombres/pantalones_jeans.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ropa/pantalones_para_hombres/pantalones_jeans.avif" alt="Pantalones Jeans" loading="lazy">
-          <h3>Pantalones Jeans</h3>
-          <p>Precio: $5,000</p>
-          <button class="btn-agregar" id="pantalones_jeans">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 5 -->
-      <a href="../productos/ropa/pantalones_para_hombres/pantalones_joggers.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ropa/pantalones_para_hombres/pantalones_joggers.avif" alt="Pantalones Joggers" loading="lazy">
-          <h3>Pantalones Joggers</h3>
-          <p>Precio: $4,000</p>
-          <button class="btn-agregar" id="pantalones_joggers">Agregar</button>
-        </article>
-      </a>
+                    <div class="productos-container flex w-full gap-4 md:gap-5 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory">
+                        <!-- Pantalón Negro -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../../product/ropa/pantalones_para_hombres/pantalon_negro.html" class="product-card__overlay-link" aria-label="Ver detalles de Pantalón Negro"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/ropa/pantalones_para_hombres/pantalon_negro.avif" alt="Pantalón Negro" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Pantalón Negro</h3>
+                            <p class="producto-price">Precio: $4,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="pantalon_negro">Agregar</button>
+                        </article>
 
+                        <!-- Pantalones de Golf -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../../product/ropa/pantalones_para_hombres/pantalones_de_golf.html" class="product-card__overlay-link" aria-label="Ver detalles de Pantalones de Golf"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/ropa/pantalones_para_hombres/pantalones_de_golf.avif" alt="Pantalones de Golf" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Pantalones de Golf</h3>
+                            <p class="producto-price">Precio: $2,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="pantalones_de_golf">Agregar</button>
+                        </article>
+
+                        <!-- Pantalones Deportivos Joggers -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../../product/ropa/pantalones_para_hombres/pantalones_deportivos_joggers.html" class="product-card__overlay-link" aria-label="Ver detalles de Pantalones Deportivos Joggers"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/ropa/pantalones_para_hombres/pantalones_deportivos_joggers.avif" alt="Pantalones Deportivos Joggers" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Pantalones Deportivos Joggers</h3>
+                            <p class="producto-price">Precio: $3,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="pantalones_deportivos_joggers">Agregar</button>
+                        </article>
+
+                        <!-- Pantalones Jeans -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../../product/ropa/pantalones_para_hombres/pantalones_jeans.html" class="product-card__overlay-link" aria-label="Ver detalles de Pantalones Jeans"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/ropa/pantalones_para_hombres/pantalones_jeans.avif" alt="Pantalones Jeans" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Pantalones Jeans</h3>
+                            <p class="producto-price">Precio: $5,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="pantalones_jeans">Agregar</button>
+                        </article>
+
+                        <!-- Pantalones Joggers -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../../product/ropa/pantalones_para_hombres/pantalones_joggers.html" class="product-card__overlay-link" aria-label="Ver detalles de Pantalones Joggers"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/ropa/pantalones_para_hombres/pantalones_joggers.avif" alt="Pantalones Joggers" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Pantalones Joggers</h3>
+                            <p class="producto-price">Precio: $4,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="pantalones_joggers">Agregar</button>
+                        </article>
+                    </div>
+
+                    <button class="productos-control-next absolute right-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="pantalones_para_hombres-next">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-right"/></svg>
+                        <span class="sr-only">Siguiente</span>
+                    </button>
+                </div>
             </div>
-            
-                <!-- botón siguiente del carrusel-->
-                <button class="productos-control-next" type="button" id="pantalones_para_hombres-next">
-                    <i class="bi bi-chevron-right"></i>
-                    <span class="visually-hidden">Siguiente</span>
-                </button>
+        </section>
+
+        <!-- Pantalones para Mujeres -->
+        <section class="productos-destacados bg-black/80 rounded-[20px] p-5 md:py-7.5 md:px-[56px] mx-auto mb-10 max-w-[1280px] xl:max-w-[calc(100vw-100px)] lg:max-w-[calc(100vw-86px)]" id="pantalones_para_mujeres">
+            <div class="container mx-auto">
+                <h2 class="text-xl md:text-2xl text-white bg-black/70 px-4 py-2 rounded-xl mb-5 w-fit mx-auto text-center">Pantalones para Mujeres</h2>
+                
+                <div class="productos-container-wrapper relative flex items-center justify-center">
+                    <button class="productos-control-prev absolute left-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="pantalones_para_mujeres-prev">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-left"/></svg>
+                        <span class="sr-only">Anterior</span>
+                    </button>
+
+                    <div class="productos-container flex w-full gap-4 md:gap-5 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory">
+                        <!-- Leggings -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../../product/ropa/pantalones_para_mujeres/leggings.html" class="product-card__overlay-link" aria-label="Ver detalles de Leggings de Licra"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/ropa/pantalones_para_mujeres/licra.avif" alt="Leggings de Licra" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Leggings de Licra</h3>
+                            <p class="producto-price">Precio: $1,500</p>
+                            <button class="btn-agregar product-card__add-btn" id="leggings_de_licra">Agregar</button>
+                        </article>
+
+                        <!-- Pantalón Acampanado -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../../product/ropa/pantalones_para_mujeres/pantalon_acampanado.html" class="product-card__overlay-link" aria-label="Ver detalles de Pantalón Acampanado"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/ropa/pantalones_para_mujeres/pantalon_acampanado.avif" alt="Pantalón Acampanado" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Pantalón Acampanado</h3>
+                            <p class="producto-price">Precio: $2,500</p>
+                            <button class="btn-agregar product-card__add-btn" id="pantalon_acampanado">Agregar</button>
+                        </article>
+
+                        <!-- Pantalón Casual -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../../product/ropa/pantalones_para_mujeres/pantalon_casual.html" class="product-card__overlay-link" aria-label="Ver detalles de Pantalón Casual"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/ropa/pantalones_para_mujeres/pantalon_casual.avif" alt="Pantalón Casual" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Pantalón Casual</h3>
+                            <p class="producto-price">Precio: $4,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="pantalon_casual">Agregar</button>
+                        </article>
+
+                        <!-- Pantalón Jean -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../../product/ropa/pantalones_para_mujeres/pantalon_jean.html" class="product-card__overlay-link" aria-label="Ver detalles de Pantalón Jean"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/ropa/pantalones_para_mujeres/pantalon_jean_mujer.avif" alt="Pantalón Jean" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Pantalón Jean</h3>
+                            <p class="producto-price">Precio: $5,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="pantalon_jean">Agregar</button>
+                        </article>
+
+                        <!-- Pantalón Liso -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../../product/ropa/pantalones_para_mujeres/pantalon_liso.html" class="product-card__overlay-link" aria-label="Ver detalles de Pantalón Liso Mujer"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/ropa/pantalones_para_mujeres/pantalon_liso_mujer.avif" alt="Pantalón Liso Mujer" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Pantalón Liso Mujer</h3>
+                            <p class="producto-price">Precio: $4,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="pantalon_liso_mujer">Agregar</button>
+                        </article>
+                    </div>
+
+                    <button class="productos-control-next absolute right-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="pantalones_para_mujeres-next">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-right"/></svg>
+                        <span class="sr-only">Siguiente</span>
+                    </button>
+                </div>
             </div>
-              </div>
-          </section>
+        </section>
 
+        <!-- Pantalones para Niños -->
+        <section class="productos-destacados bg-black/80 rounded-[20px] p-5 md:py-7.5 md:px-[56px] mx-auto mb-10 max-w-[1280px] xl:max-w-[calc(100vw-100px)] lg:max-w-[calc(100vw-86px)]" id="pantalones_para_niños">
+            <div class="container mx-auto">
+                <h2 class="text-xl md:text-2xl text-white bg-black/70 px-4 py-2 rounded-xl mb-5 w-fit mx-auto text-center">Pantalones para Niños</h2>
+                
+                <div class="productos-container-wrapper relative flex items-center justify-center">
+                    <button class="productos-control-prev absolute left-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="pantalones_para_niños-prev">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-left"/></svg>
+                        <span class="sr-only">Anterior</span>
+                    </button>
 
-       <!-- Sección: Pantalones para Mujeres-->
-          <section class="productos-destacados destino reveal" id="pantalones_para_mujeres">
-              <div class="container">
-                  <h2>Pantalones para Mujeres</h2>
+                    <div class="productos-container flex w-full gap-4 md:gap-5 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory">
+                        <!-- Jean para Niños -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../../product/ropa/pantalones_para_ninos/jean_para_ninos.html" class="product-card__overlay-link" aria-label="Ver detalles de Jean para Niños"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/ropa/pantalones_para_ninos/jean_ninos.avif" alt="Jean Niños" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Jean para Niños</h3>
+                            <p class="producto-price">Precio: $1,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="jean_para_ninos">Agregar</button>
+                        </article>
 
-                  <div class="productos-container-wrapper">
-                      <!-- botón anterior del carrusel-->
-                      <button class="productos-control-prev" type="button" id="pantalones_para_mujeres-prev">
-                          <i class="bi bi-chevron-left"></i>
-                          <span class="visually-hidden">Anterior</span>
-                      </button>
-                      
-                      <div class="productos-container">
-                      <!-- Producto 1 -->
-               <a href="../productos/ropa/pantalones_para_mujeres/leggings.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ropa/pantalones_para_mujeres/licra.avif" alt="Leggings de Licra" loading="lazy">
-          <h3>Leggings de Licra</h3>
-          <p>Precio: $1,500</p>
-          <button class="btn-agregar" id="leggings_de_licra">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 2 -->
-      <a href="../productos/ropa/pantalones_para_mujeres/pantalon_acampanado.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ropa/pantalones_para_mujeres/pantalon_acampanado.avif" alt="Pantalón Acampanado" loading="lazy">
-          <h3>Pantalón Acampanado</h3>
-          <p>Precio: $2,500</p>
-          <button class="btn-agregar" id="pantalon_acampanado">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 3 -->
-      <a href="../productos/ropa/pantalones_para_mujeres/pantalon_casual.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ropa/pantalones_para_mujeres/pantalon_casual.avif" alt="Pantalón Casual" loading="lazy">
-          <h3>Pantalón Casual</h3>
-          <p>Precio: $4,000</p>
-          <button class="btn-agregar" id="pantalon_casual">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 4 -->
-      <a href="../productos/ropa/pantalones_para_mujeres/pantalon_jean.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ropa/pantalones_para_mujeres/pantalon_jean_mujer.avif" alt="Pantalón Jean" loading="lazy">
-          <h3>Pantalón Jean</h3>
-          <p>Precio: $5,000</p>
-          <button class="btn-agregar" id="pantalon_jean">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 5 -->
-      <a href="../productos/ropa/pantalones_para_mujeres/pantalon_liso.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ropa/pantalones_para_mujeres/pantalon_liso_mujer.avif" alt="Pantalón Liso Mujer" loading="lazy">
-          <h3>Pantalón Liso Mujer</h3>
-          <p>Precio: $4,000</p>
-          <button class="btn-agregar" id="pantalon_liso_mujer">Agregar</button>
-        </article>
-      </a>
+                        <!-- Licra para Niños -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../../product/ropa/pantalones_para_ninos/licra_para_ninos.html" class="product-card__overlay-link" aria-label="Ver detalles de Licra para Niños"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/ropa/pantalones_para_ninos/licra.avif" alt="Licra Niños" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Licra para Niños</h3>
+                            <p class="producto-price">Precio: $1,500</p>
+                            <button class="btn-agregar product-card__add-btn" id="licra_para_ninos">Agregar</button>
+                        </article>
 
+                        <!-- Pantalón Deportivo -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../../product/ropa/pantalones_para_ninos/pantalon_deportivo.html" class="product-card__overlay-link" aria-label="Ver detalles de Pantalón Deportivo"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/ropa/pantalones_para_ninos/pantalon_deportivo.avif" alt="Pantalón Deportivo" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Pantalón Deportivo</h3>
+                            <p class="producto-price">Precio: $2,300</p>
+                            <button class="btn-agregar product-card__add-btn" id="pantalon_deportivo">Agregar</button>
+                        </article>
+
+                        <!-- Pantalón Liso -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../../product/ropa/pantalones_para_ninos/pantalon_liso.html" class="product-card__overlay-link" aria-label="Ver detalles de Pantalón Liso"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/ropa/pantalones_para_ninos/pantalon_liso.avif" alt="Pantalón Liso" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Pantalón Liso</h3>
+                            <p class="producto-price">Precio: $2,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="pantalon_liso">Agregar</button>
+                        </article>
+
+                        <!-- Pantalones Lisos -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../../product/ropa/pantalones_para_ninos/pantalones_lisos.html" class="product-card__overlay-link" aria-label="Ver detalles de Pantalones para Niños lisos"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/ropa/pantalones_para_ninos/pantalon_para_ninos.avif" alt="pantalones para niños" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Pantalones para Niños lisos</h3>
+                            <p class="producto-price">Precio: $2,500</p>
+                            <button class="btn-agregar product-card__add-btn" id="pantalones_lisos_para_ninos">Agregar</button>
+                        </article>
+                    </div>
+
+                    <button class="productos-control-next absolute right-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="pantalones_para_niños-next">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-right"/></svg>
+                        <span class="sr-only">Siguiente</span>
+                    </button>
+                </div>
             </div>
-            
-                <!-- botón siguiente del carrusel-->
-                <button class="productos-control-next" type="button" id="pantalones_para_mujeres-next">
-                    <i class="bi bi-chevron-right"></i>
-                    <span class="visually-hidden">Siguiente</span>
-                </button>
+        </section>
+
+        <!-- Trajes para Hombres -->
+        <section class="productos-destacados bg-black/80 rounded-[20px] p-5 md:py-7.5 md:px-[56px] mx-auto mb-10 max-w-[1280px] xl:max-w-[calc(100vw-100px)] lg:max-w-[calc(100vw-86px)] reveal" id="trajes_para_hombres">
+            <div class="container mx-auto">
+                <h2 class="text-xl md:text-2xl text-white bg-black/70 px-4 py-2 rounded-xl mb-5 w-fit mx-auto text-center">Trajes para Hombres</h2>
+                
+                <div class="productos-container-wrapper relative flex items-center justify-center">
+                    <button class="productos-control-prev absolute left-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="trajes_para_hombres-prev">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-left"/></svg>
+                        <span class="sr-only">Anterior</span>
+                    </button>
+
+                    <div class="productos-container flex w-full gap-4 md:gap-5 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory">
+                        <!-- Traje 2 Piezas -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../../product/ropa/trajes_para_hombres/traje_2piezas.html" class="product-card__overlay-link" aria-label="Ver detalles de Traje 2 Piezas"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/ropa/trajes_para_hombre/traje_2piezas.avif" alt="Traje 2 Piezas" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Traje 2 Piezas</h3>
+                            <p class="producto-price">Precio: $5,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="traje_2_piezas">Agregar</button>
+                        </article>
+
+                        <!-- Traje Azul -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../../product/ropa/trajes_para_hombres/traje_azul.html" class="product-card__overlay-link" aria-label="Ver detalles de Traje Azul"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/ropa/trajes_para_hombre/traje_azul.avif" alt="Traje Azul" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Traje Azul</h3>
+                            <p class="producto-price">Precio: $4,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="traje_azul">Agregar</button>
+                        </article>
+
+                        <!-- Traje Completo -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../../product/ropa/trajes_para_hombres/traje_completo.html" class="product-card__overlay-link" aria-label="Ver detalles de Traje Completo"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/ropa/trajes_para_hombre/traje_completo.avif" alt="Traje Completo" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Traje Completo</h3>
+                            <p class="producto-price">Precio: $3,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="traje_completo">Agregar</button>
+                        </article>
+
+                        <!-- Traje Elegante -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../../product/ropa/trajes_para_hombres/traje_elegante.html" class="product-card__overlay-link" aria-label="Ver detalles de Traje Elegante"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/ropa/trajes_para_hombre/traje_elegante.avif" alt="Traje Elegante" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Traje Elegante</h3>
+                            <p class="producto-price">Precio: $3,500</p>
+                            <button class="btn-agregar product-card__add-btn" id="traje_elegante">Agregar</button>
+                        </article>
+
+                        <!-- Traje Negro -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../../product/ropa/trajes_para_hombres/traje_negro.html" class="product-card__overlay-link" aria-label="Ver detalles de Traje Negro"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/ropa/trajes_para_hombre/traje_negro.avif" alt="Traje Negro" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Traje Negro</h3>
+                            <p class="producto-price">Precio: $4,200</p>
+                            <button class="btn-agregar product-card__add-btn" id="traje_negro">Agregar</button>
+                        </article>
+                    </div>
+
+                    <button class="productos-control-next absolute right-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="trajes_para_hombres-next">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-right"/></svg>
+                        <span class="sr-only">Siguiente</span>
+                    </button>
+                </div>
             </div>
-              </div>
-          </section>
+        </section>
 
+        <!-- Vestidos -->
+        <section class="productos-destacados bg-black/80 rounded-[20px] p-5 md:py-7.5 md:px-[56px] mx-auto mb-20 max-w-[1280px] xl:max-w-[calc(100vw-100px)] lg:max-w-[calc(100vw-86px)] reveal" id="vestidos">
+            <div class="container mx-auto">
+                <h2 class="text-xl md:text-2xl text-white bg-black/70 px-4 py-2 rounded-xl mb-5 w-fit mx-auto text-center">Vestidos</h2>
+                
+                <div class="productos-container-wrapper relative flex items-center justify-center">
+                    <button class="productos-control-prev absolute left-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="vestidos-prev">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-left"/></svg>
+                        <span class="sr-only">Anterior</span>
+                    </button>
 
-       <!-- seccion: Pantalones para Niños-->
-          <section class="productos-destacados destino reveal" id="pantalones_para_niños">
-              <div class="container">
-                  <h2>Pantalones para Niños</h2>
+                    <div class="productos-container flex w-full gap-4 md:gap-5 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory">
+                        <!-- Vestido Ajustado -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../../product/ropa/vestidos/vestido_ajustado.html" class="product-card__overlay-link" aria-label="Ver detalles de Vestido Ajustado"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/ropa/vestido_de_mujer/vestido_ajustado.avif" alt="Vestido Ajustado" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Vestido Ajustado</h3>
+                            <p class="producto-price">Precio: $5,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="vestido_ajustado">Agregar</button>
+                        </article>
 
-                  <div class="productos-container-wrapper">
-                      <!-- botón anterior del carrusel-->
-                      <button class="productos-control-prev" type="button" id="pantalones_para_niños-prev">
-                          <i class="bi bi-chevron-left"></i>
-                          <span class="visually-hidden">Anterior</span>
-                      </button>
-                      
-                      <div class="productos-container">
-                      <!-- Producto 1 -->
-               <a href="../productos/ropa/pantalones_para_ninos/jean_para_ninos.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ropa/pantalones_para_ninos/jean_ninos.avif" alt="Jean Niños" loading="lazy">
-          <h3>Jean para Niños</h3>
-          <p>Precio: $1,000</p>
-          <button class="btn-agregar" id="jean_para_ninos">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 2 -->
-      <a href="../productos/ropa/pantalones_para_ninos/licra_para_ninos.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ropa/pantalones_para_ninos/licra.avif" alt="Licra Niños" loading="lazy">
-          <h3>Licra para Niños</h3>
-          <p>Precio: $1,500</p>
-          <button class="btn-agregar" id="licra_para_ninos">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 3 -->
-      <a href="../productos/ropa/pantalones_para_ninos/pantalon_deportivo.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ropa/pantalones_para_ninos/pantalon_deportivo.avif" alt="Pantalón Deportivo" loading="lazy">
-          <h3>Pantalón Deportivo</h3>
-          <p>Precio: $2,300</p>
-          <button class="btn-agregar" id="pantalon_deportivo">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 4 -->
-      <a href="../productos/ropa/pantalones_para_ninos/pantalon_liso.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ropa/pantalones_para_ninos/pantalon_liso.avif" alt="Pantalón Liso" loading="lazy">
-          <h3>Pantalón Liso</h3>
-          <p>Precio: $2,000</p>
-          <button class="btn-agregar" id="pantalon_liso">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 5 -->
-      <a href="../productos/ropa/pantalones_para_ninos/pantalones_lisos.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ropa/pantalones_para_ninos/pantalon_para_ninos.avif" alt="pantalones para niños" loading="lazy">
-          <h3>Pantalones para Niños lisos</h3>
-          <p>Precio: $2,500</p>
-          <button class="btn-agregar" id="pantalones_lisos_para_ninos">Agregar</button>
-        </article>
-      </a>
+                        <!-- Vestido de Cuello Cuadrado -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../../product/ropa/vestidos/vestido_de_cuello_cuadrado.html" class="product-card__overlay-link" aria-label="Ver detalles de Vestido de Cuello Cuadrado"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/ropa/vestido_de_mujer/vestido_cuello_cuadrado.avif" alt="vestido de cuello cuadrado" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Vestido de Cuello Cuadrado</h3>
+                            <p class="producto-price">Precio: $4,500</p>
+                            <button class="btn-agregar product-card__add-btn" id="vestido_cuello_cuadrado">Agregar</button>
+                        </article>
 
+                        <!-- Vestido de Invierno -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../../product/ropa/vestidos/vestido_de_invierno.html" class="product-card__overlay-link" aria-label="Ver detalles de Vestido de Invierno"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/ropa/vestido_de_mujer/vestido_de_invierno.avif" alt="Vestido de Invierno" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Vestido de Invierno</h3>
+                            <p class="producto-price">Precio: $6,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="vestido_de_invierno">Agregar</button>
+                        </article>
+
+                        <!-- Vestido Elegante -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../../product/ropa/vestidos/vestido_elegante.html" class="product-card__overlay-link" aria-label="Ver detalles de Vestido Elegante"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/ropa/vestido_de_mujer/vestido_elegante.avif" alt="Vestido Elegante" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Vestido Elegante</h3>
+                            <p class="producto-price">Precio: $3,500</p>
+                            <button class="btn-agregar product-card__add-btn" id="vestido_elegante">Agregar</button>
+                        </article>
+
+                        <!-- Vestido Negro -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../../product/ropa/vestidos/vestido_negro.html" class="product-card__overlay-link" aria-label="Ver detalles de Vestido Negro"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/ropa/vestido_de_mujer/vestido_negro.avif" alt="Vestido Negro" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Vestido Negro</h3>
+                            <p class="producto-price">Precio: $4,200</p>
+                            <button class="btn-agregar product-card__add-btn" id="vestido_negro">Agregar</button>
+                        </article>
+                    </div>
+
+                    <button class="productos-control-next absolute right-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="vestidos-next">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-right"/></svg>
+                        <span class="sr-only">Siguiente</span>
+                    </button>
+                </div>
             </div>
-            
-                <!-- botón siguiente del carrusel-->
-                <button class="productos-control-next" type="button" id="pantalones_para_niños-next">
-                    <i class="bi bi-chevron-right"></i>
-                    <span class="visually-hidden">Siguiente</span>
-                </button>
-            </div>
-              </div>
-          </section>
-
-
-
-          <!-- Trajes para Hombres -->
-          <section class="productos-destacados destino reveal" id="trajes_para_hombres">
-              <div class="container">
-                  <h2>Trajes para Hombres</h2>
-
-                  <div class="productos-container-wrapper">
-                      <!-- botón anterior del carrusel-->
-                      <button class="productos-control-prev" type="button" id="trajes_para_hombres-prev">
-                          <i class="bi bi-chevron-left"></i>
-                          <span class="visually-hidden">Anterior</span>
-                      </button>
-                      
-                      <div class="productos-container">
-                      <!-- Producto 1 -->
-               <a href="../productos/ropa/trajes_para_hombres/traje_2piezas.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ropa/trajes_para_hombre/traje_2piezas.avif" alt="Traje 2 Piezas" loading="lazy">
-          <h3>Traje 2 Piezas</h3>
-          <p>Precio: $5,000</p>
-          <button class="btn-agregar" id="traje_2_piezas">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 2 -->
-      <a href="../productos/ropa/trajes_para_hombres/traje_azul.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ropa/trajes_para_hombre/traje_azul.avif" alt="Traje Azul" loading="lazy">
-          <h3>Traje Azul</h3>
-          <p>Precio: $4,000</p>
-          <button class="btn-agregar" id="traje_azul">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 3 -->
-      <a href="../productos/ropa/trajes_para_hombres/traje_completo.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ropa/trajes_para_hombre/traje_completo.avif" alt="Traje Completo" loading="lazy">
-          <h3>Traje Completo</h3>
-          <p>Precio: $3,000</p>
-          <button class="btn-agregar" id="traje_completo">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 4 -->
-      <a href="../productos/ropa/trajes_para_hombres/traje_elegante.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ropa/trajes_para_hombre/traje_elegante.avif" alt="Traje Elegante" loading="lazy">
-          <h3>Traje Elegante</h3>
-          <p>Precio: $3,500</p>
-          <button class="btn-agregar" id="traje_elegante">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 5 -->
-      <a href="../productos/ropa/trajes_para_hombres/traje_negro.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ropa/trajes_para_hombre/traje_negro.avif" alt="Traje Negro" loading="lazy">
-          <h3>Traje Negro</h3>
-          <p>Precio: $4,200</p>
-          <button class="btn-agregar" id="traje_negro">Agregar</button>
-        </article>
-      </a>
-
-            </div>
-            
-                <!-- botón siguiente del carrusel-->
-                <button class="productos-control-next" type="button" id="trajes_para_hombres-next">
-                    <i class="bi bi-chevron-right"></i>
-                    <span class="visually-hidden">Siguiente</span>
-                </button>
-            </div>
-              </div>
-          </section>
-
-
-          <!-- Vestidos -->
-          <section class="productos-destacados destino reveal" id="vestidos">
-              <div class="container">
-                  <h2>Vestidos</h2>
-
-                  <div class="productos-container-wrapper">
-                      <!-- botón anterior del carrusel-->
-                      <button class="productos-control-prev" type="button" id="vestidos-prev">
-                          <i class="bi bi-chevron-left"></i>
-                          <span class="visually-hidden">Anterior</span>
-                      </button>
-                      
-                      <div class="productos-container">
-                      <!-- Producto 1 -->
-               <a href="../productos/ropa/vestidos/vestido_ajustado.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ropa/vestido_de_mujer/vestido_ajustado.avif" alt="Vestido Ajustado" loading="lazy">
-          <h3>Vestido Ajustado</h3>
-          <p>Precio: $5,000</p>
-          <button class="btn-agregar" id="vestido_ajustado">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 2 -->
-      <a href="../productos/ropa/vestidos/vestido_de_cuello_cuadrado.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ropa/vestido_de_mujer/vestido_cuello_cuadrado.avif" alt="vestido de cuello cuadrado" loading="lazy">
-          <h3>Vestido de Cuello Cuadrado</h3>
-          <p>Precio: $4,500</p>
-          <button class="btn-agregar" id="vestido_cuello_cuadrado">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 3 -->
-      <a href="../productos/ropa/vestidos/vestido_de_invierno.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ropa/vestido_de_mujer/vestido_de_invierno.avif" alt="Vestido de Invierno" loading="lazy">
-          <h3>Vestido de Invierno</h3>
-          <p>Precio: $6,000</p>
-          <button class="btn-agregar" id="vestido_de_invierno">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 4 -->
-      <a href="../productos/ropa/vestidos/vestido_elegante.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ropa/vestido_de_mujer/vestido_elegante.avif" alt="Vestido Elegante" loading="lazy">
-          <h3>Vestido Elegante</h3>
-          <p>Precio: $3,500</p>
-          <button class="btn-agregar" id="vestido_elegante">Agregar</button>
-        </article>
-      </a>
-                      <!-- Producto 5 -->
-      <a href="../productos/ropa/vestidos/vestido_negro.html">
-        <article class="producto">
-          <img src="../assets/images/productos/Ropa/vestido_de_mujer/vestido_negro.avif" alt="Vestido Negro" loading="lazy">
-          <h3>Vestido Negro</h3>
-          <p>Precio: $4,200</p>
-          <button class="btn-agregar" id="vestido_negro">Agregar</button>
-        </article>
-      </a>
-
-            </div>
-            
-                <!-- botón siguiente del carrusel-->
-                <button class="productos-control-next" type="button" id="vestidos-next">
-                    <i class="bi bi-chevron-right"></i>
-                    <span class="visually-hidden">Siguiente</span>
-                </button>
-            </div>
-              </div>
-          </section>
-
+        </section>
 
     </main>
 
+    <!-- Footer global -->
+    <footer class="footer-global">
+      <div class="footer-content">
+        <!-- Derechos reservados -->
+        <small>&copy; 2026 Hipermercado Superior. Todos los derechos reservados.</small>
 
-    <!--footer Global-->
-    <footer> 
-        
-         <div class=" container_fluid footer-content">
-              <!-- Derechos reservados -->
-              <small>&copy; 2026 Hipermercado Superior. Todos los derechos reservados.</small>
+        <!-- Íconos de redes sociales (sprite SVG) -->
+        <div class="social-icons">
+          <a href="https://facebook.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Facebook" class="social-link">
+            <svg aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-facebook"/></svg>
+          </a>
+          <a href="https://twitter.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en X (antes Twitter)" class="social-link">
+            <svg aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-x"/></svg>
+          </a>
+          <a href="https://instagram.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Instagram" class="social-link">
+            <svg aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-instagram"/></svg>
+          </a>
+        </div>
 
-              <!-- Íconos de redes sociales -->
-              <div class="social-icons">
-                   <a href="https://facebook.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Facebook">
-                    <i class="bi bi-facebook"></i>
-                   </a>
-
-                   <a href="https://twitter.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en X (antes Twitter)">
-                    <i class="bi bi-twitter-x"></i>
-                   </a>
-
-                   <a href="https://instagram.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Instagram">
-                    <i class="bi bi-instagram"></i>
-                   </a>
-              </div>
-
-                 <!-- Enlaces legales -->
-                <div class="footer-links">
-                  <a href="../legal/privacy.html" title="Política de Privacidad">Política de Privacidad</a> |
-                  <a href="../legal/terms.html" title="Términos de Uso">Términos de Uso</a>
-                </div>
-            </div>
+        <!-- Enlaces legales -->
+        <div class="footer-links">
+          <a href="../../legal/privacy.html" title="Política de Privacidad">Política de Privacidad</a>
+          <span class="separator">|</span>
+          <a href="../../legal/terms.html" title="Términos de Uso">Términos de Uso</a>
+        </div>
+      </div>
     </footer>
 
-    <!-- Scripts de navegación de productos -->
-    <script src="../assets/js/productos_navegacion.js" defer></script>
-    <script src="../assets/js/tablet_menu_click.js" defer></script>
-    <script src="../assets/js/ofertas_animation.js" defer></script>
-
 </body>
-
-
-
 </html>
-
-

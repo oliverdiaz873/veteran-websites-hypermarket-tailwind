@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -26,21 +26,29 @@
     <meta name="twitter:description" content="Pepinos frescos de la mejor calidad.">
     <meta name="twitter:image" content="https://www.hipermercadosuperior.com/assets/images/productos/Alimentos/frutas_y_verduras/pepino.avif">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-
-    <!-- Título y CSS -->
-    <title>Pepinos | Hipermercado Superior</title>
-    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+   
+    <!-- CSS y Fonts -->
     <link rel="stylesheet" href="../../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../../assets/css/components/header.css">
+    <link rel="stylesheet" href="../../../assets/css/components/navigation.css">
+    <link rel="stylesheet" href="../../../assets/css/components/product-card.css">
+    <link rel="stylesheet" href="../../../assets/css/components/offer-card.css">
+    <link rel="stylesheet" href="../../../assets/css/components/featured-products.css">
+    <link rel="stylesheet" href="../../../assets/css/components/about-us-section.css">
+    <link rel="stylesheet" href="../../../assets/css/components/footer.css">
+    <link rel="stylesheet" href="../../../assets/css/pages/category.css">
+    <link rel="stylesheet" href="../../../assets/css/global.css">
+    <link rel="stylesheet" href="../../../assets/css/components/breadcrumb.css">
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="stylesheet" href="../../../assets/css/categorias.css">
     <link rel="stylesheet" href="../../../assets/css/productos.css">
 
     <!-- Favicons -->
-    <link rel="icon" href="../../../assets/images/iconos/favicon/icon-16x16.jpg" type="image/jpg" sizes="16x16">
-    <link rel="icon" href="../../../assets/images/iconos/favicon/icon-32x32.jpg" type="image/jpg" sizes="32x32">
-    <link rel="icon" href="../../../assets/images/iconos/favicon/icon-48x48.jpg" type="image/jpg" sizes="48x48">
+    <link rel="icon" href="../../../assets/icons/favicons/icon-16x16.jpg" type="image/jpg" sizes="16x16">
+    <link rel="icon" href="../../../assets/icons/favicons/icon-32x32.jpg" type="image/jpg" sizes="32x32">
+    <link rel="icon" href="../../../assets/icons/favicons/icon-48x48.jpg" type="image/jpg" sizes="48x48">
 
     <!-- Scripts -->
     <script src="../../../assets/js/productos.js" defer></script> 
@@ -428,34 +436,32 @@
     </section>
 </main>
 
- <!--footer Global-->
-    <footer> 
-        
-         <div class=" container_fluid footer-content">
-              <!-- Derechos reservados -->
-              <small>&copy; 2026 Hipermercado Superior. Todos los derechos reservados.</small>
+    <!-- Footer global -->
+    <footer class="footer-global">
+      <div class="footer-content">
+        <!-- Derechos reservados -->
+        <small>&copy; 2026 Hipermercado Superior. Todos los derechos reservados.</small>
 
-              <!-- Íconos de redes sociales -->
-              <div class="social-icons">
-                   <a href="https://facebook.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Facebook">
-                    <i class="bi bi-facebook"></i>
-                   </a>
+        <!-- Íconos de redes sociales (sprite SVG) -->
+        <div class="social-icons">
+          <a href="https://facebook.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Facebook" class="social-link">
+            <svg aria-hidden="true"><use href="../../../assets/icons/sprite.svg#icon-facebook"/></svg>
+          </a>
+          <a href="https://twitter.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en X (antes Twitter)" class="social-link">
+            <svg aria-hidden="true"><use href="../../../assets/icons/sprite.svg#icon-x"/></svg>
+          </a>
+          <a href="https://instagram.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Instagram" class="social-link">
+            <svg aria-hidden="true"><use href="../../../assets/icons/sprite.svg#icon-instagram"/></svg>
+          </a>
+        </div>
 
-                   <a href="https://twitter.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en X (antes Twitter)">
-                    <i class="bi bi-twitter-x"></i>
-                   </a>
-
-                   <a href="https://instagram.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Instagram">
-                    <i class="bi bi-instagram"></i>
-                   </a>
-              </div>
-
-                 <!-- Enlaces legales -->
-                <div class="footer-links">
-                  <a href="../../../legal/privacy.html" title="Política de Privacidad">Política de Privacidad</a> |
-                  <a href="../../../legal/terms.html" title="Términos de Uso">Términos de Uso</a>
-                </div>
-            </div>
+        <!-- Enlaces legales -->
+        <div class="footer-links">
+          <a href="../../../legal/privacy.html" title="Política de Privacidad">Política de Privacidad</a>
+          <span class="separator">|</span>
+          <a href="../../../legal/terms.html" title="Términos de Uso">Términos de Uso</a>
+        </div>
+      </div>
     </footer>
 
      <!-- Bootstrap JS -->

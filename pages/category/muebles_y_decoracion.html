@@ -1,550 +1,669 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
-    <!-- META ETIQUETAS -->
+    <!-- Meta etiquetas -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Embellece tu hogar con la sección de Muebles y Decoración de Hipermercado Superior. Encuentra sofás, mesas, sillas, lámparas y artículos decorativos con estilo y calidad.">
-    <meta name="keywords" content="muebles, decoración, hogar, sofás, mesas, sillas, lámparas, cuadros, estanterías, Hipermercado Superior, interiorismo, diseño">
-    <meta name="author" content="Oliver Antonio Díaz">
-    <meta name="robots" content="index, follow">
+    <meta name="author" content="Oliver Antonio Díaz"/>
+    <meta name="robots" content="index, follow">  
     <meta name="copyright" content="Oliver Antonio Díaz. Todos los derechos reservados.">
-    <meta name="theme-color" content="#795548">
+    <meta name="theme-color" content="#ef4444">
 
-    <!-- OPEN GRAPH -->
+    <!-- Enlace Canónico -->
+    <link rel="canonical" href="https://www.hipermercadosuperior.com/muebles-decoracion">
+
+    <!-- Open Graph -->
     <meta property="og:title" content="Muebles y Decoración - Hipermercado Superior">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.hipermercadosuperior.com/muebles-decoracion">
-    <meta property="og:image" content="https://www.hipermercadosuperior.com/imagenes/muebles-decoracion-banner.jpg">
+    <meta property="og:image" content="../../assets/images/fondos/fondo.avif">
     <meta property="og:description" content="Embellece tu hogar con la sección de Muebles y Decoración de Hipermercado Superior. Encuentra sofás, mesas, sillas, lámparas y artículos decorativos con estilo y calidad.">
     <meta property="og:site_name" content="Hipermercado Superior">
     <meta property="og:locale" content="es_ES">
 
-    <!-- TWITTER CARDS -->
+    <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Muebles y Decoración - Hipermercado Superior">
     <meta name="twitter:description" content="Embellece tu hogar con la sección de Muebles y Decoración de Hipermercado Superior. Encuentra sofás, mesas, sillas, lámparas y artículos decorativos con estilo y calidad.">
-    <meta name="twitter:image" content="https://www.hipermercadosuperior.com/imagenes/muebles-decoracion-banner.jpg">
+    <meta name="twitter:image" content="../../assets/images/fondos/fondo.avif">
 
-    <!-- TÍTULO, CSS Y FUENTES -->
-    <title>Muebles y Decoración | Hipermercado Superior</title>
+    <!-- Título específico de la página -->
+    <title>Muebles y Decoración - Hipermercado Superior</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+   
+    <!-- CSS y Fonts -->
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../assets/css/components/header.css">
+    <link rel="stylesheet" href="../../assets/css/components/navigation.css">
+    <link rel="stylesheet" href="../../assets/css/components/product-card.css">
+    <link rel="stylesheet" href="../../assets/css/components/offer-card.css">
+    <link rel="stylesheet" href="../../assets/css/components/featured-products.css">
+    <link rel="stylesheet" href="../../assets/css/components/about-us-section.css">
+    <link rel="stylesheet" href="../../assets/css/components/footer.css">
+    <link rel="stylesheet" href="../../assets/css/pages/category.css">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/components/breadcrumb.css">
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="../../assets/css/categorias.css">
-    <link rel="stylesheet" href="../../assets/css/components/footer.css">
-    <link rel="stylesheet" href="../../assets/css/fonts.css">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-     <!-- Favicons -->
-    <link rel="icon" href="../../assets/icons/favicons/icon-16x16.jpg" type="image/jpg" sizes="16x16">
-    <link rel="icon" href="../../assets/icons/favicons/icon-32x32.jpg" type="image/jpg" sizes="32x32">
-    <link rel="icon" href="../../assets/icons/favicons/icon-48x48.jpg" type="image/jpg" sizes="48x48">
-  </head>
-
-
-<body id="muebles_y_decoracion" class="category-page">
-    <!-- ===== HEADER GLOBAL ===== -->
-    <header class="header-global">
-        <div class="header-container">
-            <!-- Botón hamburguesa solo en móvil -->
-            <button class="menu-btn" aria-label="Abrir menú">
-                <i class="fas fa-bars"></i>
-            </button>
-
-            <!-- Logo + título -->
-            <a href="../../index.html" class="brand">
-                <img src="../../assets/images/logo/logo.jpeg" alt="Logo de Hipermercado Superior">
-                <h1 class="brand-name">Superior</h1>
-            </a>
-
-            <!-- Menú de navegación Desktop -->
-            <nav class="nav-links-desktop" role="navigation" aria-label="Menú principal">
-                <ul>
-                    <li><a href="../../index.html">Inicio</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="active">Categorías <i class="fas fa-chevron-down"></i></a>
-                        <div class="dropdown-content">
-                            <a href="alimentos.html">Alimentos</a>
-                            <a href="electrodomesticos.html">Electrodomésticos</a>
-                            <a href="tecnologia.html">Tecnología</a>
-                            <a href="ropa.html">Ropa</a>
-                            <a href="muebles_y_decoracion.html" class="active">Muebles y Decoración</a>
-                            <a href="farmacia.html">Farmacia</a>
-                            <a href="ferreteria.html">Ferretería</a>
-                            <a href="juguetes.html">Juguetes</a>
-                        </div>
-                    </li>
-                    <li><a href="../../index.html#ofertas">Ofertas</a></li>
-                    <li><a href="../contacto/index.html">Contacto</a></li>
-                </ul>
-            </nav>
-
-            <!-- Acciones (Búsqueda, Carrito) -->
-            <div class="header-actions">
-                <div class="search-container">
-                    <input type="text" id="input-buscar" placeholder="Buscar..." aria-label="Buscar productos">
-                    <button type="button" id="btn-buscar" aria-label="Buscar">
-                        <i class="fas fa-search"></i>
-                    </button>
-                    <ul id="resultados-busqueda" class="search-results"></ul>
-                </div>
-                <a href="../cart/index.html" class="cart-btn" aria-label="Ver carrito">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span id="contador-carrito">0</span>
-                </a>
-            </div>
-        </div>
-
-        <!-- Menú móvil colapsable -->
-        <nav class="nav-links-mobile">
-            <ul>
-                <li><a href="../../index.html">Inicio</a></li>
-                <li>
-                    <button class="mobile-dropdown-btn">Categorías <i class="fas fa-chevron-down"></i></button>
-                    <ul class="mobile-dropdown-content">
-                        <li><a href="alimentos.html">Alimentos</a></li>
-                        <li><a href="electrodomesticos.html">Electrodomésticos</a></li>
-                        <li><a href="tecnologia.html">Tecnología</a></li>
-                        <li><a href="ropa.html">Ropa</a></li>
-                        <li><a href="muebles_y_decoracion.html" class="active">Muebles y Decoración</a></li>
-                        <li><a href="farmacia.html">Farmacia</a></li>
-                        <li><a href="ferreteria.html">Ferretería</a></li>
-                        <li><a href="juguetes.html">Juguetes</a></li>
-                    </ul>
-                </li>
-                <li><a href="../../index.html#ofertas">Ofertas</a></li>
-                <li><a href="../contacto/index.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <!-- Banner de Categoría -->
-        <section class="category-banner" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../assets/images/productos/Muebles_y_decoracion/muebles_banner.jpg');">
-            <div class="container mx-auto px-4 h-full flex flex-col justify-center items-center text-center text-white">
-                <h2 class="text-5xl font-bold mb-4">Hogar con Estilo</h2>
-                <p class="text-xl max-w-2xl">Descubre piezas únicas para transformar cada rincón de tu casa: muebles modernos, decoración elegante e iluminación acogedora.</p>
-            </div>
-        </section>
-
-        <!-- Filtros Rápidos -->
-        <nav class="quick-filters py-6 bg-white border-b sticky top-[70px] z-40">
-            <div class="container mx-auto px-4 overflow-x-auto">
-                <div class="flex justify-center gap-4 min-w-max">
-                    <a href="#muebles-sala" class="filter-chip">Muebles de Sala</a>
-                    <a href="#muebles-comedor" class="filter-chip">Comedor</a>
-                    <a href="#dormitorio" class="filter-chip">Dormitorio</a>
-                    <a href="#decoracion" class="filter-chip">Decoración</a>
-                    <a href="#iluminacion" class="filter-chip">Iluminación</a>
-                </div>
-            </div>
-        </nav>              <img 
-                 src="../assets/icons/shopping_cart_icon/shopping_car_icon.png" 
-                 alt="Carrito de compras"
-                 class="icono-carrito"
-               >
-        <!-- Sección: Muebles de Sala -->
-        <section id="muebles-sala" class="product-section">
-            <div class="container mx-auto px-4">
-                <div class="section-header flex justify-between items-center mb-8">
-                    <h3 class="text-3xl font-bold text-gray-800">Muebles de Sala</h3>
-                    <div class="slider-controls flex gap-2">
-                        <button class="slider-prev bg-white border w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
-                        <button class="slider-next bg-white border w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
-                    </div>
-                </div>
-                <div class="slider-container overflow-hidden">
-                    <div class="slider-track flex gap-6 transition-transform duration-300">
-                        <!-- Producto 1 -->
-                        <div class="product-card min-w-[280px] bg-white rounded-xl shadow-sm border overflow-hidden hover:shadow-md transition-shadow">
-                            <a href="../productos/muebles_y_decoracion/sofas/sofa_verde.html" class="block">
-                                <div class="relative h-64 overflow-hidden">
-                                    <img src="../../assets/images/productos/Muebles_y_decoracion/sofa/sofa_verde.avif" alt="Sofá Verde" class="w-full h-full object-cover">
-                                    <span class="absolute top-4 left-4 bg-amber-400 text-black text-xs font-bold px-2 py-1 rounded">Nuevo</span>
-                                </div>
-                                <div class="p-6">
-                                    <h4 class="font-bold text-lg mb-2">Sofá Verde</h4>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-xl font-bold text-gray-900">$14,000</span>
-                                        <button class="btn-agregar w-10 h-10 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors" id="Sofa_verde"><i class="fas fa-plus"></i></button>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- Producto 2 -->
-                        <div class="product-card min-w-[280px] bg-white rounded-xl shadow-sm border overflow-hidden hover:shadow-md transition-shadow">
-                            <a href="../productos/muebles_y_decoracion/sofas/sofa_gris.html" class="block">
-                                <div class="relative h-64 overflow-hidden">
-                                    <img src="../../assets/images/productos/Muebles_y_decoracion/sofa/sofa_gris.avif" alt="Sofá Gris" class="w-full h-full object-cover">
-                                </div>
-                                <div class="p-6">
-                                    <h4 class="font-bold text-lg mb-2">Sofá Gris</h4>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-xl font-bold text-gray-900">$8,000</span>
-                                        <button class="btn-agregar w-10 h-10 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors" id="Sofa_gris"><i class="fas fa-plus"></i></button>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- Producto 3 -->
-                        <div class="product-card min-w-[280px] bg-white rounded-xl shadow-sm border overflow-hidden hover:shadow-md transition-shadow">
-                            <a href="../productos/muebles_y_decoracion/sofas/sofa_media_luna.html" class="block">
-                                <div class="relative h-64 overflow-hidden">
-                                    <img src="../../assets/images/productos/Muebles_y_decoracion/sofa/sofa_media_luna.avif" alt="Sofá Media Luna" class="w-full h-full object-cover">
-                                </div>
-                                <div class="p-6">
-                                    <h4 class="font-bold text-lg mb-2">Sofá Media Luna</h4>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-xl font-bold text-gray-900">$3,000</span>
-                                        <button class="btn-agregar w-10 h-10 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors" id="Sofa_media_luna"><i class="fas fa-plus"></i></button>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- Producto 4 -->
-                        <div class="product-card min-w-[280px] bg-white rounded-xl shadow-sm border overflow-hidden hover:shadow-md transition-shadow">
-                            <a href="../productos/muebles_y_decoracion/sofas/sofa_negro.html" class="block">
-                                <div class="relative h-64 overflow-hidden">
-                                    <img src="../../assets/images/productos/Muebles_y_decoracion/sofa/sofa_negro.avif" alt="Sofá Negro" class="w-full h-full object-cover">
-                                </div>
-                                <div class="p-6">
-                                    <h4 class="font-bold text-lg mb-2">Sofá Negro</h4>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-xl font-bold text-gray-900">$5,000</span>
-                                        <button class="btn-agregar w-10 h-10 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors" id="Sofa_negro"><i class="fas fa-plus"></i></button>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- Producto 5 -->
-                        <div class="product-card min-w-[280px] bg-white rounded-xl shadow-sm border overflow-hidden hover:shadow-md transition-shadow">
-                            <a href="../productos/muebles_y_decoracion/sofas/sofa_cama_blanco.html" class="block">
-                                <div class="relative h-64 overflow-hidden">
-                                    <img src="../../assets/images/productos/Muebles_y_decoracion/sofa/sofa_cama_blanco.png" alt="Sofá Cama Blanco" class="w-full h-full object-cover">
-                                </div>
-                                <div class="p-6">
-                                    <h4 class="font-bold text-lg mb-2">Sofá Cama Blanco</h4>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-xl font-bold text-gray-900">$9,000</span>
-                                        <button class="btn-agregar w-10 h-10 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors" id="sofa_cama_blanco"><i class="fas fa-plus"></i></button>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sección: Sillones (Muebles de Sala) -->
-        <section id="sillones" class="product-section bg-gray-50">
-            <div class="container mx-auto px-4">
-                <div class="section-header flex justify-between items-center mb-8">
-                    <h3 class="text-3xl font-bold text-gray-800">Sillones</h3>
-                    <div class="slider-controls flex gap-2">
-                        <button class="slider-prev bg-white border w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
-                        <button class="slider-next bg-white border w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
-                    </div>
-                </div>
-                <div class="slider-container overflow-hidden">
-                    <div class="slider-track flex gap-6 transition-transform duration-300">
-                        <!-- Producto 1 -->
-                        <div class="product-card min-w-[280px] bg-white rounded-xl shadow-sm border overflow-hidden hover:shadow-md transition-shadow">
-                            <a href="../productos/muebles_y_decoracion/sillones/sillon_amarillo.html" class="block">
-                                <div class="relative h-64 overflow-hidden">
-                                    <img src="../../assets/images/productos/Muebles_y_decoracion/sillon/sillon_amarillo.avif" alt="Sillón Amarillo" class="w-full h-full object-cover">
-                                </div>
-                                <div class="p-6">
-                                    <h4 class="font-bold text-lg mb-2">Sillón Amarillo</h4>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-xl font-bold text-gray-900">$4,500</span>
-                                        <button class="btn-agregar w-10 h-10 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors" id="sillon_amarillo"><i class="fas fa-plus"></i></button>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- Producto 2 -->
-                        <div class="product-card min-w-[280px] bg-white rounded-xl shadow-sm border overflow-hidden hover:shadow-md transition-shadow">
-                            <a href="../productos/muebles_y_decoracion/sillones/sillon_azul.html" class="block">
-                                <div class="relative h-64 overflow-hidden">
-                                    <img src="../../assets/images/productos/Muebles_y_decoracion/sillon/sillon_azul.avif" alt="Sillón Azul" class="w-full h-full object-cover">
-                                </div>
-                                <div class="p-6">
-                                    <h4 class="font-bold text-lg mb-2">Sillón Azul</h4>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-xl font-bold text-gray-900">$5,500</span>
-                                        <button class="btn-agregar w-10 h-10 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors" id="sillon_azul"><i class="fas fa-plus"></i></button>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- Producto 3 -->
-                        <div class="product-card min-w-[280px] bg-white rounded-xl shadow-sm border overflow-hidden hover:shadow-md transition-shadow">
-                            <a href="../productos/muebles_y_decoracion/sillones/sillon_blanco.html" class="block">
-                                <div class="relative h-64 overflow-hidden">
-                                    <img src="../../assets/images/productos/Muebles_y_decoracion/sillon/sillon_blanco.avif" alt="Sillón Blanco" class="w-full h-full object-cover">
-                                </div>
-                                <div class="p-6">
-                                    <h4 class="font-bold text-lg mb-2">Sillón Blanco</h4>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-xl font-bold text-gray-900">$4,000</span>
-                                        <button class="btn-agregar w-10 h-10 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors" id="sillon_blanco"><i class="fas fa-plus"></i></button>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- Producto 4 -->
-                        <div class="product-card min-w-[280px] bg-white rounded-xl shadow-sm border overflow-hidden hover:shadow-md transition-shadow">
-                            <a href="../productos/muebles_y_decoracion/sillones/sillon_gris.html" class="block">
-                                <div class="relative h-64 overflow-hidden">
-                                    <img src="../../assets/images/productos/Muebles_y_decoracion/sillon/sillon_gris.avif" alt="Sillón Gris" class="w-full h-full object-cover">
-                                </div>
-                                <div class="p-6">
-                                    <h4 class="font-bold text-lg mb-2">Sillón Gris</h4>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-xl font-bold text-gray-900">$5,000</span>
-                                        <button class="btn-agregar w-10 h-10 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors" id="sillon_gris"><i class="fas fa-plus"></i></button>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- Producto 5 -->
-                        <div class="product-card min-w-[280px] bg-white rounded-xl shadow-sm border overflow-hidden hover:shadow-md transition-shadow">
-                            <a href="../productos/muebles_y_decoracion/sillones/sillon_verde.html" class="block">
-                                <div class="relative h-64 overflow-hidden">
-                                    <img src="../../assets/images/productos/Muebles_y_decoracion/sillon/sillon_verde.avif" alt="Sillón Verde" class="w-full h-full object-cover">
-                                </div>
-                                <div class="p-6">
-                                    <h4 class="font-bold text-lg mb-2">Sillón Verde</h4>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-xl font-bold text-gray-900">$7,000</span>
-                                        <button class="btn-agregar w-10 h-10 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors" id="sillon_verde"><i class="fas fa-plus"></i></button>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sección: Mesas -->
-        <section id="muebles-comedor" class="product-section">
-            <div class="container mx-auto px-4">
-                <div class="section-header flex justify-between items-center mb-8">
-                    <h3 class="text-3xl font-bold text-gray-800">Mesas y Comedor</h3>
-                    <div class="slider-controls flex gap-2">
-                        <button class="slider-prev bg-white border w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
-                        <button class="slider-next bg-white border w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
-                    </div>
-                </div>
-                <div class="slider-container overflow-hidden">
-                    <div class="slider-track flex gap-6 transition-transform duration-300">
-                        <!-- Producto 1 -->
-                        <div class="product-card min-w-[280px] bg-white rounded-xl shadow-sm border overflow-hidden hover:shadow-md transition-shadow">
-                            <a href="../productos/muebles_y_decoracion/mesas/mesa_de_noche.html" class="block">
-                                <div class="relative h-64 overflow-hidden">
-                                    <img src="../../assets/images/productos/Muebles_y_decoracion/mesas/mesa_de_noche.avif" alt="Mesa de Noche" class="w-full h-full object-cover">
-                                </div>
-                                <div class="p-6">
-                                    <h4 class="font-bold text-lg mb-2">Mesa de Noche</h4>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-xl font-bold text-gray-900">$3,000</span>
-                                        <button class="btn-agregar w-10 h-10 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors" id="mesa_de_noche"><i class="fas fa-plus"></i></button>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- Producto 2 -->
-                        <div class="product-card min-w-[280px] bg-white rounded-xl shadow-sm border overflow-hidden hover:shadow-md transition-shadow">
-                            <a href="../productos/muebles_y_decoracion/mesas/mesa_de_madera.html" class="block">
-                                <div class="relative h-64 overflow-hidden">
-                                    <img src="../../assets/images/productos/Muebles_y_decoracion/mesas/mesa_madera.avif" alt="Mesa de Madera" class="w-full h-full object-cover">
-                                </div>
-                                <div class="p-6">
-                                    <h4 class="font-bold text-lg mb-2">Mesa de Madera</h4>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-xl font-bold text-gray-900">$4,000</span>
-                                        <button class="btn-agregar w-10 h-10 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors" id="Mesa_de_Madera"><i class="fas fa-plus"></i></button>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- Producto 3 -->
-                        <div class="product-card min-w-[280px] bg-white rounded-xl shadow-sm border overflow-hidden hover:shadow-md transition-shadow">
-                            <a href="../productos/muebles_y_decoracion/mesas/mesa_moderna.html" class="block">
-                                <div class="relative h-64 overflow-hidden">
-                                    <img src="../../assets/images/productos/Muebles_y_decoracion/mesas/mesa_moderna.avif" alt="Mesa Moderna" class="w-full h-full object-cover">
-                                </div>
-                                <div class="p-6">
-                                    <h4 class="font-bold text-lg mb-2">Mesa Moderna</h4>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-xl font-bold text-gray-900">$6,300</span>
-                                        <button class="btn-agregar w-10 h-10 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors" id="mesa_moderna"><i class="fas fa-plus"></i></button>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- Producto 4 -->
-                        <div class="product-card min-w-[280px] bg-white rounded-xl shadow-sm border overflow-hidden hover:shadow-md transition-shadow">
-                            <a href="../productos/muebles_y_decoracion/mesas/mesa_oscura.html" class="block">
-                                <div class="relative h-64 overflow-hidden">
-                                    <img src="../../assets/images/productos/Muebles_y_decoracion/mesas/mesa_oscura.avif" alt="Mesa Oscura" class="w-full h-full object-cover">
-                                </div>
-                                <div class="p-6">
-                                    <h4 class="font-bold text-lg mb-2">Mesa Oscura</h4>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-xl font-bold text-gray-900">$8,000</span>
-                                        <button class="btn-agregar w-10 h-10 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors" id="mesa_oscura"><i class="fas fa-plus"></i></button>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- Producto 5 -->
-                        <div class="product-card min-w-[280px] bg-white rounded-xl shadow-sm border overflow-hidden hover:shadow-md transition-shadow">
-                            <a href="../productos/muebles_y_decoracion/mesas/mesa_pequena.html" class="block">
-                                <div class="relative h-64 overflow-hidden">
-                                    <img src="../../assets/images/productos/Muebles_y_decoracion/mesas/mesa_pequena.avif" alt="Mesa Pequeña" class="w-full h-full object-cover">
-                                </div>
-                                <div class="p-6">
-                                    <h4 class="font-bold text-lg mb-2">Mesa Pequeña</h4>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-xl font-bold text-gray-900">$12,500</span>
-                                        <button class="btn-agregar w-10 h-10 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors" id="mesa_pequena"><i class="fas fa-plus"></i></button>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sección: Decoración (Floreros) -->
-        <section id="decoracion" class="product-section bg-gray-50">
-            <div class="container mx-auto px-4">
-                <div class="section-header flex justify-between items-center mb-8">
-                    <h3 class="text-3xl font-bold text-gray-800">Decoración</h3>
-                    <div class="slider-controls flex gap-2">
-                        <button class="slider-prev bg-white border w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
-                        <button class="slider-next bg-white border w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
-                    </div>
-                </div>
-                <div class="slider-container overflow-hidden">
-                    <div class="slider-track flex gap-6 transition-transform duration-300">
-                        <!-- Producto 1 -->
-                        <div class="product-card min-w-[280px] bg-white rounded-xl shadow-sm border overflow-hidden hover:shadow-md transition-shadow">
-                            <a href="../productos/muebles_y_decoracion/floreros/florero_de_plantas.html" class="block">
-                                <div class="relative h-64 overflow-hidden">
-                                    <img src="../../assets/images/productos/Muebles_y_decoracion/floreros/florero_de_plantas.avif" alt="Florero de Plantas" class="w-full h-full object-cover">
-                                </div>
-                                <div class="p-6">
-                                    <h4 class="font-bold text-lg mb-2">Florero de Plantas</h4>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-xl font-bold text-gray-900">$2,000</span>
-                                        <button class="btn-agregar w-10 h-10 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors" id="florero_de_plantas"><i class="fas fa-plus"></i></button>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- Producto 2 -->
-                        <div class="product-card min-w-[280px] bg-white rounded-xl shadow-sm border overflow-hidden hover:shadow-md transition-shadow">
-                            <a href="../productos/muebles_y_decoracion/floreros/florero_de_vidrio.html" class="block">
-                                <div class="relative h-64 overflow-hidden">
-                                    <img src="../../assets/images/productos/Muebles_y_decoracion/floreros/florero_de_vidrio.avif" alt="Florero de Vidrio" class="w-full h-full object-cover">
-                                </div>
-                                <div class="p-6">
-                                    <h4 class="font-bold text-lg mb-2">Florero de Vidrio</h4>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-xl font-bold text-gray-900">$4,000</span>
-                                        <button class="btn-agregar w-10 h-10 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors" id="florero_de_vidrio"><i class="fas fa-plus"></i></button>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- Producto 3 -->
-                        <div class="product-card min-w-[280px] bg-white rounded-xl shadow-sm border overflow-hidden hover:shadow-md transition-shadow">
-                            <a href="../productos/muebles_y_decoracion/floreros/jarron.html" class="block">
-                                <div class="relative h-64 overflow-hidden">
-                                    <img src="../../assets/images/productos/Muebles_y_decoracion/floreros/jarron.avif" alt="Jarrón" class="w-full h-full object-cover">
-                                </div>
-                                <div class="p-6">
-                                    <h4 class="font-bold text-lg mb-2">Jarrón</h4>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-xl font-bold text-gray-900">$3,000</span>
-                                        <button class="btn-agregar w-10 h-10 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors" id="jarron"><i class="fas fa-plus"></i></button>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- Producto 4 -->
-                        <div class="product-card min-w-[280px] bg-white rounded-xl shadow-sm border overflow-hidden hover:shadow-md transition-shadow">
-                            <a href="../productos/muebles_y_decoracion/floreros/jarrones.html" class="block">
-                                <div class="relative h-64 overflow-hidden">
-                                    <img src="../../assets/images/productos/Muebles_y_decoracion/floreros/jarrones.avif" alt="Jarrones" class="w-full h-full object-cover">
-                                </div>
-                                <div class="p-6">
-                                    <h4 class="font-bold text-lg mb-2">Jarrones</h4>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-xl font-bold text-gray-900">$3,500</span>
-                                        <button class="btn-agregar w-10 h-10 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors" id="jarrones"><i class="fas fa-plus"></i></button>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- Producto 5 -->
-                        <div class="product-card min-w-[280px] bg-white rounded-xl shadow-sm border overflow-hidden hover:shadow-md transition-shadow">
-                            <a href="../productos/muebles_y_decoracion/floreros/tulipanes.html" class="block">
-                                <div class="relative h-64 overflow-hidden">
-                                    <img src="../../assets/images/productos/Muebles_y_decoracion/floreros/tulipanes.avif" alt="Tulipanes" class="w-full h-full object-cover">
-                                </div>
-                                <div class="p-6">
-                                    <h4 class="font-bold text-lg mb-2">Tulipanes</h4>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-xl font-bold text-gray-900">$4,200</span>
-                                        <button class="btn-agregar w-10 h-10 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors" id="tulipanes"><i class="fas fa-plus"></i></button>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-
-    <footer class="footer-global">
-        <div class="footer-container">
-            <div class="footer-info">
-                <p>&copy; 2026 Hipermercado Superior. Todos los derechos reservados.</p>
-            </div>
-            <div class="footer-social">
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            </div>
-            <div class="footer-links">
-                <a href="../../legal/privacy.html">Privacidad</a>
-                <a href="../../legal/terms.html">Términos</a>
-            </div>
-        </div>
-    </footer>
 
     <!-- Scripts -->
-    <script src="../../assets/js/productos.js"></script>
-    <script src="../../assets/js/boton_de_busqueda.js"></script>
-    <script src="../../assets/js/hamburger_menu.js"></script>
-    <script src="../../assets/js/productos_navegacion.js"></script>
-    <script src="../../assets/js/carrito.js"></script>
+    <script src="../../assets/js/productos.js" defer></script>
+    <script src="../../assets/js/boton_de_busqueda.js" defer></script>
+    <script src="../../assets/js/hamburger_menu.js" defer></script>
+    <script src="../../assets/js/tablet_menu_click.js" defer></script>
+    <script src="../../assets/js/productos_navegacion.js" defer></script>
+    <script src="../../assets/js/ofertas_animation.js" defer></script>
+    <script src="../../assets/js/scroll_animations.js" defer></script>
+
+  </head>
+
+  <body class="text-gray-900" id="fondo_muebles_y_decoracion">
+
+
+  <!-- ===== HEADER GLOBAL ===== -->
+  <header class="fixed top-0 left-0 w-full rounded-none xl:top-[10px] xl:left-1/2 xl:-translate-x-1/2 xl:rounded-[15px] xl:w-max xl:max-w-[calc(100vw-40px)] bg-black/80 px-2.5 py-1.5 z-[1000] flex justify-center text-white">
+    <div class="flex items-center gap-2.5 justify-between md:justify-center w-full px-0 md:px-3.5">
+
+      <!-- Botón hamburguesa solo en móvil -->
+      <button class="menu-btn text-[22px] bg-transparent border-none text-white cursor-pointer transition-colors duration-300 rounded hover:bg-white/15 p-1 md:hidden">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-menu"/></svg>
+      </button>
+
+      <!-- Logo -->
+      <a href="../../index.html" class="brand flex items-center gap-1 text-white no-underline" aria-label="Ir a la página principal de Hipermercado Superior">
+        <img src="../../assets/images/logo/logo.png" alt="Logo de Hipermercado Superior">
+        <h1 class="whitespace-nowrap block ml-1">Hipermercado Superior</h1>
+      </a>
+
+      <!-- Menú de navegación Desktop -->
+      <nav class="nav-links hidden md:flex justify-center" role="navigation" aria-label="Menú principal">
+        <ul class="flex gap-5 items-center list-none p-0 m-0">
+          <li><a href="../../index.html" class="text-white no-underline text-base px-2.5 py-2 block text-left transition-colors duration-300 rounded-[10px] hover:bg-white/15">Inicio</a></li>
+
+          <!-- Categorías Dropdown -->
+          <li class="relative group">
+            <a href="#" class="text-white no-underline text-base px-2.5 py-2 block text-left transition-colors duration-300 rounded-[10px] hover:bg-white/15" aria-haspopup="true" aria-expanded="false">
+              Categorías <span class="text-[0.7em] ml-0.75 opacity-80">▼</span>
+            </a>
+            <ul class="absolute top-full left-0 bg-black/90 rounded-lg min-w-[220px] hidden group-hover:flex flex-col z-[1000] text-left list-none p-0 m-0">
+              <!-- Alimentos -->
+              <li class="relative group/sub">
+                <a href="alimentos.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Alimentos <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="alimentos.html#frutas_y_verduras" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Frutas y Verduras</a></li>
+                  <li><a href="alimentos.html#despensa" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Despensa</a></li>
+                  <li><a href="alimentos.html#carnes_pescados_mariscos" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Carnes, Pescados y Mariscos</a></li>
+                  <li><a href="alimentos.html#lacteos_y_huevos" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Lácteos y Huevos</a></li>
+                  <li><a href="alimentos.html#bebidas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Bebidas</a></li>
+                  <li><a href="alimentos.html#enlatados" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Enlatados</a></li>
+                </ul>
+              </li>
+              <!-- Electrodomésticos -->
+              <li class="relative group/sub">
+                <a href="electrodomesticos.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Electrodomésticos <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="electrodomesticos.html#cocina" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Cocina</a></li>
+                  <li><a href="electrodomesticos.html#lavado" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Lavado</a></li>
+                  <li><a href="electrodomesticos.html#climatizacion" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Climatización</a></li>
+                </ul>
+              </li>
+              <!-- Tecnología -->
+              <li class="relative group/sub">
+                <a href="tecnologia.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Tecnología <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="tecnologia.html#televisores" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Televisores</a></li>
+                  <li><a href="tecnologia.html#laptops" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Laptops</a></li>
+                  <li><a href="tecnologia.html#tablets" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Tablets</a></li>
+                  <li><a href="tecnologia.html#celulares" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Celulares</a></li>
+                  <li><a href="tecnologia.html#bocinas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Bocinas</a></li>
+                </ul>
+              </li>
+              <!-- Ropa -->
+              <li class="relative group/sub">
+                <a href="ropa.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Ropa <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="ropa.html#pantalones_para_hombres" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Pantalones para Hombres</a></li>
+                  <li><a href="ropa.html#pantalones_para_mujeres" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Pantalones para Mujeres</a></li>
+                  <li><a href="ropa.html#pantalones_para_niños" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Pantalones para Niños</a></li>
+                  <li><a href="ropa.html#trajes_para_hombres" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Trajes para Hombres</a></li>
+                  <li><a href="ropa.html#vestidos" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Vestidos</a></li>
+                </ul>
+              </li>
+              <!-- Muebles -->
+              <li class="relative group/sub">
+                <a href="muebles_y_decoracion.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Muebles y Decoración <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="muebles_y_decoracion.html#sofas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Sofás</a></li>
+                  <li><a href="muebles_y_decoracion.html#sillones" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Sillones</a></li>
+                  <li><a href="muebles_y_decoracion.html#mesas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Mesas</a></li>
+                  <li><a href="muebles_y_decoracion.html#floreros" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Floreros</a></li>
+                </ul>
+              </li>
+              <!-- Farmacia -->
+              <li class="relative group/sub">
+                <a href="farmacia.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Farmacia <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="farmacia.html#analgesicos" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Analgésicos</a></li>
+                  <li><a href="farmacia.html#dermocosmetica" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Dermocosmética</a></li>
+                  <li><a href="farmacia.html#vitaminas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Vitaminas</a></li>
+                  <li><a href="farmacia.html#antigripales" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Antigripales</a></li>
+                </ul>
+              </li>
+              <!-- Ferretería -->
+              <li class="relative group/sub">
+                <a href="ferreteria.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Ferretería <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="ferreteria.html#herramientas_manuales" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Herramientas Manuales</a></li>
+                  <li><a href="ferreteria.html#pinturas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Pinturas</a></li>
+                  <li><a href="ferreteria.html#electricidad" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Electricidad</a></li>
+                  <li><a href="ferreteria.html#plomeria" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Plomería</a></li>
+                </ul>
+              </li>
+              <!-- Juguetes -->
+              <li class="relative group/sub">
+                <a href="juguetes.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Juguetes <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="juguetes.html#juguetes_para_ninos" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Juguetes para Niños</a></li>
+                  <li><a href="juguetes.html#juguetes_para_ninas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Juguetes para Niñas</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li><a href="../../index.html#ofertas" class="text-white no-underline text-base px-2.5 py-2 block transition-colors duration-300 rounded-[10px] hover:bg-white/15">Ofertas</a></li>
+          <li><a href="../contacto/index.html" class="text-white no-underline text-base px-2.5 py-2 block transition-colors duration-300 rounded-[10px] hover:bg-white/15">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Utilidades (Buscador y Carrito) -->
+      <div class="header-utils">
+        <!-- Buscador -->
+        <div class="relative flex items-center">
+          <input type="text" id="input-buscar" placeholder="Buscar productos..." class="search-input-modern" autocomplete="off">
+          <button type="button" id="btn-buscar" class="util-btn">
+            <svg id="icono-buscar" class="util-icon" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-search"/></svg>
+            <svg id="icono-cerrar" class="util-icon hidden" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-close"/></svg>
+          </button>
+          <ul id="resultados-busqueda" class="search-results-list"></ul>
+        </div>
+
+        <!-- Carrito -->
+        <a href="../cart/index.html" class="util-btn" aria-label="Ver carrito">
+          <svg class="util-icon" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-cart"/></svg>
+          <span id="contador-carrito" class="cart-badge">0</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Menú móvil colapsable -->
+    <nav id="mobile-menu" class="fixed top-[49px] left-0 w-full bg-black/95 text-white hidden z-[999] max-h-[calc(100vh-49px)] overflow-y-auto py-5 shadow-xl">
+      <ul class="list-none p-0 m-0">
+        <li class="px-5 py-2.5 border-b border-white/10"><a href="../../index.html" class="block">Inicio</a></li>
+        <li class="px-5 py-2.5 border-b border-white/10">
+          <button class="mobile-dropdown-btn w-full text-left flex justify-between items-center">
+            Categorías <span class="text-[0.7em] opacity-70">▼</span>
+          </button>
+          <ul class="hidden pl-5 mt-2 transition-all duration-300 opacity-0 overflow-hidden">
+            <!-- Categorías en móvil -->
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Alimentos <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="alimentos.html#frutas_y_verduras" class="block py-2">Frutas y Verduras</a></li>
+                <li><a href="alimentos.html#despensa" class="block py-2">Despensa</a></li>
+                <li><a href="alimentos.html#carnes_pescados_mariscos" class="block py-2">Carnes y Mariscos</a></li>
+                <li><a href="alimentos.html#lacteos_y_huevos" class="block py-2">Lácteos</a></li>
+                <li><a href="alimentos.html#bebidas" class="block py-2">Bebidas</a></li>
+                <li><a href="alimentos.html#enlatados" class="block py-2">Enlatados</a></li>
+              </ul>
+            </li>
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Electrodomésticos <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="electrodomesticos.html#cocina" class="block py-2">Cocina</a></li>
+                <li><a href="electrodomesticos.html#lavado" class="block py-2">Lavado</a></li>
+                <li><a href="electrodomesticos.html#climatizacion" class="block py-2">Climatización</a></li>
+              </ul>
+            </li>
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Tecnología <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="tecnologia.html#televisores" class="block py-2">Televisores</a></li>
+                <li><a href="tecnologia.html#laptops" class="block py-2">Laptops</a></li>
+                <li><a href="tecnologia.html#tablets" class="block py-2">Tablets</a></li>
+                <li><a href="tecnologia.html#celulares" class="block py-2">Celulares</a></li>
+                <li><a href="tecnologia.html#bocinas" class="block py-2">Bocinas</a></li>
+              </ul>
+            </li>
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Ropa <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="ropa.html#pantalones_para_hombres" class="block py-2">Hombres</a></li>
+                <li><a href="ropa.html#pantalones_para_mujeres" class="block py-2">Mujeres</a></li>
+                <li><a href="ropa.html#pantalones_para_niños" class="block py-2">Niños</a></li>
+                <li><a href="ropa.html#trajes_para_hombres" class="block py-2">Trajes para Hombres</a></li>
+                <li><a href="ropa.html#vestidos" class="block py-2">Vestidos</a></li>
+              </ul>
+            </li>
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Muebles y Decoración <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="muebles_y_decoracion.html#sofas" class="block py-2">Sofás</a></li>
+                <li><a href="muebles_y_decoracion.html#sillones" class="block py-2">Sillones</a></li>
+                <li><a href="muebles_y_decoracion.html#mesas" class="block py-2">Mesas</a></li>
+                <li><a href="muebles_y_decoracion.html#floreros" class="block py-2">Floreros</a></li>
+              </ul>
+            </li>
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Farmacia <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="farmacia.html#analgesicos" class="block py-2">Analgésicos</a></li>
+                <li><a href="farmacia.html#dermocosmetica" class="block py-2">Dermocosmética</a></li>
+                <li><a href="farmacia.html#vitaminas" class="block py-2">Vitaminas</a></li>
+                <li><a href="farmacia.html#antigripales" class="block py-2">Antigripales</a></li>
+              </ul>
+            </li>
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Ferretería <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="ferreteria.html#herramientas_manuales" class="block py-2">Herramientas</a></li>
+                <li><a href="ferreteria.html#pinturas" class="block py-2">Pinturas</a></li>
+                <li><a href="ferreteria.html#electricidad" class="block py-2">Electricidad</a></li>
+                <li><a href="ferreteria.html#plomeria" class="block py-2">Plomería</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Juguetes <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="juguetes.html#juguetes_para_ninos" class="block py-2">Niños</a></li>
+                <li><a href="juguetes.html#juguetes_para_ninas" class="block py-2">Niñas</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="px-5 py-2.5 border-b border-white/10"><a href="../../index.html#ofertas" class="block">Ofertas</a></li>
+        <li class="px-5 py-2.5 border-b border-white/10"><a href="../contacto/index.html" class="block">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<!-- Breadcrumb -->
+<nav aria-label="Breadcrumb">
+  <ol class="breadcrumb breadcrumb-category">
+    <li><a href="../../index.html">Inicio</a></li>
+    <li><span>Categorías</span></li>
+    <li aria-current="page">Muebles y Decoración</li>
+  </ol>
+</nav>
+
+    <main>
+        <!-- Sofás -->
+        <section class="productos-destacados bg-black/80 rounded-[20px] p-5 md:py-7.5 md:px-[56px] mx-auto mb-10 max-w-[1280px] xl:max-w-[calc(100vw-100px)] lg:max-w-[calc(100vw-86px)] reveal" id="sofas">
+            <div class="container mx-auto">
+                <h2 class="text-xl md:text-2xl text-white bg-black/70 px-4 py-2 rounded-xl mb-5 w-fit mx-auto text-center">Sofás</h2>
+                
+                <div class="productos-container-wrapper relative flex items-center justify-center">
+                    <button class="productos-control-prev absolute left-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="sofas-prev">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-left"/></svg>
+                        <span class="sr-only">Anterior</span>
+                    </button>
+
+                    <div class="productos-container flex w-full gap-4 md:gap-5 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory">
+                        <!-- Sofá Verde -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/muebles_y_decoracion/sofas/sofa_verde.html" class="product-card__overlay-link" aria-label="Ver detalles de Sofá Verde"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/muebles_y_decoracion/sofa/sofa_verde.avif" alt="Sofá Verde" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Sofá Verde</h3>
+                            <p class="producto-price">Precio: $14,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="Sofa_verde">Agregar</button>
+                        </article>
+
+                        <!-- Sofá Gris -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/muebles_y_decoracion/sofas/sofa_gris.html" class="product-card__overlay-link" aria-label="Ver detalles de Sofá Gris"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/muebles_y_decoracion/sofa/sofa_gris.avif" alt="Sofá Gris" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Sofá Gris</h3>
+                            <p class="producto-price">Precio: $8,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="Sofa_gris">Agregar</button>
+                        </article>
+
+                        <!-- Sofá Media Luna -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/muebles_y_decoracion/sofas/sofa_media_luna.html" class="product-card__overlay-link" aria-label="Ver detalles de Sofá Media Luna"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/muebles_y_decoracion/sofa/sofa_media_luna.avif" alt="Sofá Media Luna" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Sofá Media Luna</h3>
+                            <p class="producto-price">Precio: $3,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="Sofa_media_luna">Agregar</button>
+                        </article>
+
+                        <!-- Sofá Negro -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/muebles_y_decoracion/sofas/sofa_negro.html" class="product-card__overlay-link" aria-label="Ver detalles de Sofá Negro"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/muebles_y_decoracion/sofa/sofa_negro.avif" alt="Sofá Negro" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Sofá Negro</h3>
+                            <p class="producto-price">Precio: $5,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="Sofa_negro">Agregar</button>
+                        </article>
+
+                        <!-- Sofá Cama Blanco -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/muebles_y_decoracion/sofas/sofa_cama_blanco.html" class="product-card__overlay-link" aria-label="Ver detalles de Sofá Cama Blanco"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/muebles_y_decoracion/sofa/sofa_cama_blanco.png" alt="Sofá Cama Blanco" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Sofá Cama Blanco</h3>
+                            <p class="producto-price">Precio: $9,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="sofa_cama_blanco">Agregar</button>
+                        </article>
+                    </div>
+
+                    <button class="productos-control-next absolute right-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="sofas-next">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-right"/></svg>
+                        <span class="sr-only">Siguiente</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sillones -->
+        <section class="productos-destacados bg-black/80 rounded-[20px] p-5 md:py-7.5 md:px-[56px] mx-auto mb-10 max-w-[1280px] xl:max-w-[calc(100vw-100px)] lg:max-w-[calc(100vw-86px)] reveal" id="sillones">
+            <div class="container mx-auto">
+                <h2 class="text-xl md:text-2xl text-white bg-black/70 px-4 py-2 rounded-xl mb-5 w-fit mx-auto text-center">Sillones</h2>
+                
+                <div class="productos-container-wrapper relative flex items-center justify-center">
+                    <button class="productos-control-prev absolute left-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="sillones-prev">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-left"/></svg>
+                        <span class="sr-only">Anterior</span>
+                    </button>
+
+                    <div class="productos-container flex w-full gap-4 md:gap-5 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory">
+                        <!-- Sillón Amarillo -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/muebles_y_decoracion/sillones/sillon_amarillo.html" class="product-card__overlay-link" aria-label="Ver detalles de Sillón Amarillo"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/muebles_y_decoracion/sillon/sillon_amarillo.avif" alt="Sillón Amarillo" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Sillón Amarillo</h3>
+                            <p class="producto-price">Precio: $4,500</p>
+                            <button class="btn-agregar product-card__add-btn" id="sillon_amarillo">Agregar</button>
+                        </article>
+
+                        <!-- Sillón Azul -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/muebles_y_decoracion/sillones/sillon_azul.html" class="product-card__overlay-link" aria-label="Ver detalles de Sillón Azul"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/muebles_y_decoracion/sillon/sillon_azul.avif" alt="Sillón Azul" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Sillón Azul</h3>
+                            <p class="producto-price">Precio: $5,500</p>
+                            <button class="btn-agregar product-card__add-btn" id="sillon_azul">Agregar</button>
+                        </article>
+
+                        <!-- Sillón Blanco -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/muebles_y_decoracion/sillones/sillon_blanco.html" class="product-card__overlay-link" aria-label="Ver detalles de Sillón Blanco"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/muebles_y_decoracion/sillon/sillon_blanco.avif" alt="Sillón Blanco" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Sillón Blanco</h3>
+                            <p class="producto-price">Precio: $4,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="sillon_blanco">Agregar</button>
+                        </article>
+
+                        <!-- Sillón Gris -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/muebles_y_decoracion/sillones/sillon_gris.html" class="product-card__overlay-link" aria-label="Ver detalles de Sillón Gris"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/muebles_y_decoracion/sillon/sillon_gris.avif" alt="Sillón Gris" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Sillón Gris</h3>
+                            <p class="producto-price">Precio: $5,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="sillon_gris">Agregar</button>
+                        </article>
+
+                        <!-- Sillón Verde -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/muebles_y_decoracion/sillones/sillon_verde.html" class="product-card__overlay-link" aria-label="Ver detalles de Sillón Verde"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/muebles_y_decoracion/sillon/sillon_verde.avif" alt="Sillón Verde" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Sillón Verde</h3>
+                            <p class="producto-price">Precio: $7,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="sillon_verde">Agregar</button>
+                        </article>
+                    </div>
+
+                    <button class="productos-control-next absolute right-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="sillones-next">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-right"/></svg>
+                        <span class="sr-only">Siguiente</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mesas -->
+        <section class="productos-destacados bg-black/80 rounded-[20px] p-5 md:py-7.5 md:px-[56px] mx-auto mb-10 max-w-[1280px] xl:max-w-[calc(100vw-100px)] lg:max-w-[calc(100vw-86px)] reveal" id="mesas">
+            <div class="container mx-auto">
+                <h2 class="text-xl md:text-2xl text-white bg-black/70 px-4 py-2 rounded-xl mb-5 w-fit mx-auto text-center">Mesas y Comedor</h2>
+                
+                <div class="productos-container-wrapper relative flex items-center justify-center">
+                    <button class="productos-control-prev absolute left-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="mesas-prev">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-left"/></svg>
+                        <span class="sr-only">Anterior</span>
+                    </button>
+
+                    <div class="productos-container flex w-full gap-4 md:gap-5 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory">
+                        <!-- Mesa de Noche -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/muebles_y_decoracion/mesas/mesa_de_noche.html" class="product-card__overlay-link" aria-label="Ver detalles de Mesa de Noche"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/Muebles_y_decoracion/mesas/mesa_de_noche.avif" alt="Mesa de Noche" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Mesa de Noche</h3>
+                            <p class="producto-price">Precio: $3,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="mesa_de_noche">Agregar</button>
+                        </article>
+
+                        <!-- Mesa de Madera -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/muebles_y_decoracion/mesas/mesa_de_madera.html" class="product-card__overlay-link" aria-label="Ver detalles de Mesa de Madera"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/Muebles_y_decoracion/mesas/mesa_madera.avif" alt="Mesa de Madera" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Mesa de Madera</h3>
+                            <p class="producto-price">Precio: $4,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="Mesa_de_Madera">Agregar</button>
+                        </article>
+
+                        <!-- Mesa Moderna -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/muebles_y_decoracion/mesas/mesa_moderna.html" class="product-card__overlay-link" aria-label="Ver detalles de Mesa Moderna"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/Muebles_y_decoracion/mesas/mesa_moderna.avif" alt="Mesa Moderna" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Mesa Moderna</h3>
+                            <p class="producto-price">Precio: $6,300</p>
+                            <button class="btn-agregar product-card__add-btn" id="mesa_moderna">Agregar</button>
+                        </article>
+
+                        <!-- Mesa Oscura -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/muebles_y_decoracion/mesas/mesa_oscura.html" class="product-card__overlay-link" aria-label="Ver detalles de Mesa Oscura"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/Muebles_y_decoracion/mesas/mesa_oscura.avif" alt="Mesa Oscura" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Mesa Oscura</h3>
+                            <p class="producto-price">Precio: $8,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="mesa_oscura">Agregar</button>
+                        </article>
+
+                        <!-- Mesa Pequeña -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/muebles_y_decoracion/mesas/mesa_pequena.html" class="product-card__overlay-link" aria-label="Ver detalles de Mesa Pequeña"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/Muebles_y_decoracion/mesas/mesa_pequena.avif" alt="Mesa Pequeña" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Mesa Pequeña</h3>
+                            <p class="producto-price">Precio: $12,500</p>
+                            <button class="btn-agregar product-card__add-btn" id="mesa_pequena">Agregar</button>
+                        </article>
+                    </div>
+
+                    <button class="productos-control-next absolute right-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="mesas-next">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-right"/></svg>
+                        <span class="sr-only">Siguiente</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Decoración -->
+        <section class="productos-destacados bg-black/80 rounded-[20px] p-5 md:py-7.5 md:px-[56px] mx-auto mb-10 max-w-[1280px] xl:max-w-[calc(100vw-100px)] lg:max-w-[calc(100vw-86px)] reveal" id="decoracion">
+            <div class="container mx-auto">
+                <h2 class="text-xl md:text-2xl text-white bg-black/70 px-4 py-2 rounded-xl mb-5 w-fit mx-auto text-center">Decoración</h2>
+                
+                <div class="productos-container-wrapper relative flex items-center justify-center">
+                    <button class="productos-control-prev absolute left-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="decoracion-prev">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-left"/></svg>
+                        <span class="sr-only">Anterior</span>
+                    </button>
+
+                    <div class="productos-container flex w-full gap-4 md:gap-5 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory">
+                        <!-- Florero de Plantas -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/muebles_y_decoracion/floreros/florero_de_plantas.html" class="product-card__overlay-link" aria-label="Ver detalles de Florero de Plantas"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/Muebles_y_decoracion/floreros/florero_de_plantas.avif" alt="Florero de Plantas" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Florero de Plantas</h3>
+                            <p class="producto-price">Precio: $2,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="florero_de_plantas">Agregar</button>
+                        </article>
+
+                        <!-- Florero de Vidrio -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/muebles_y_decoracion/floreros/florero_de_vidrio.html" class="product-card__overlay-link" aria-label="Ver detalles de Florero de Vidrio"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/Muebles_y_decoracion/floreros/florero_de_vidrio.avif" alt="Florero de Vidrio" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Florero de Vidrio</h3>
+                            <p class="producto-price">Precio: $4,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="florero_de_vidrio">Agregar</button>
+                        </article>
+
+                        <!-- Jarrón -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/muebles_y_decoracion/floreros/jarron.html" class="product-card__overlay-link" aria-label="Ver detalles de Jarrón"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/Muebles_y_decoracion/floreros/jarron.avif" alt="Jarrón" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Jarrón</h3>
+                            <p class="producto-price">Precio: $3,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="jarron">Agregar</button>
+                        </article>
+
+                        <!-- Jarrones -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/muebles_y_decoracion/floreros/jarrones.html" class="product-card__overlay-link" aria-label="Ver detalles de Jarrones"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/Muebles_y_decoracion/floreros/jarrones.avif" alt="Jarrones" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Jarrones</h3>
+                            <p class="producto-price">Precio: $3,500</p>
+                            <button class="btn-agregar product-card__add-btn" id="jarrones">Agregar</button>
+                        </article>
+
+                        <!-- Tulipanes -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/muebles_y_decoracion/floreros/tulipanes.html" class="product-card__overlay-link" aria-label="Ver detalles de Tulipanes"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/Muebles_y_decoracion/floreros/tulipanes.avif" alt="Tulipanes" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Tulipanes</h3>
+                            <p class="producto-price">Precio: $4,200</p>
+                            <button class="btn-agregar product-card__add-btn" id="tulipanes">Agregar</button>
+                        </article>
+                    </div>
+
+                    <button class="productos-control-next absolute right-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="decoracion-next">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-right"/></svg>
+                        <span class="sr-only">Siguiente</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer global -->
+    <footer class="footer-global">
+      <div class="footer-content">
+        <!-- Derechos reservados -->
+        <small>&copy; 2026 Hipermercado Superior. Todos los derechos reservados.</small>
+
+        <!-- Íconos de redes sociales (sprite SVG) -->
+        <div class="social-icons">
+          <a href="https://facebook.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Facebook" class="social-link">
+            <svg aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-facebook"/></svg>
+          </a>
+          <a href="https://twitter.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en X (antes Twitter)" class="social-link">
+            <svg aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-x"/></svg>
+          </a>
+          <a href="https://instagram.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Instagram" class="social-link">
+            <svg aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-instagram"/></svg>
+          </a>
+        </div>
+
+        <!-- Enlaces legales -->
+        <div class="footer-links">
+          <a href="../../legal/privacy.html" title="Política de Privacidad">Política de Privacidad</a>
+          <span class="separator">|</span>
+          <a href="../../legal/terms.html" title="Términos de Uso">Términos de Uso</a>
+        </div>
+      </div>
+    </footer>
+
 </body>
 </html>
-
-

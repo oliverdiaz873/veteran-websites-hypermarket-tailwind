@@ -1563,7 +1563,7 @@ const productos = [
         categoria: "celulares",
         precio: 40000, // número para carrito
         precioTexto: "Precio: $40,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/tecnologia/celulares/celular_samsung_A26.png"
+        imagen: "/assets/images/productos/tecnologia/celulares/celular_samsung_a26.png"
     },
     {
         id: "celular_samsung_a35",
@@ -1572,7 +1572,7 @@ const productos = [
         categoria: "celulares",
         precio: 23000, // número para carrito
         precioTexto: "Precio: $23,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/tecnologia/celulares/celular_samsung_A35.png"
+        imagen: "/assets/images/productos/tecnologia/celulares/celular_samsung_a35.png"
     },
     {
         id: "celular_s24_ultra",
@@ -1628,7 +1628,7 @@ const productos = [
         categoria: "laptops",
         precio: 54000, // número para carrito
         precioTexto: "Precio: $54,000", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/tecnologia/laptops/laptop_dragonX.png"
+        imagen: "/assets/images/productos/tecnologia/laptops/laptop_dragonx.png"
     },
     {
         id: "laptop_hp",

@@ -77,21 +77,31 @@
 
 /* Página actual */
 .breadcrumb li[aria-current="page"] {
-    font-weight: bold;
     color: var(--color-primary);
+    font-weight: 600;
 }
 
 /* Mobile truncation - ocultar elementos intermedios en pantallas pequeñas */
 @media (max-width: 767px) {
-    .breadcrumb li:nth-child(2),
-    .breadcrumb li:nth-child(4) {
+    /* Para breadcrumbs de productos (5 niveles) - truncar */
+    .breadcrumb.breadcrumb-product li:nth-child(2),
+    .breadcrumb.breadcrumb-product li:nth-child(4) {
         display: none !important;
     }
     
-    .breadcrumb li:nth-child(3)::after {
+    .breadcrumb.breadcrumb-product li:nth-child(3)::after {
         content: " › ..." !important;
         color: #ffffff !important;
         margin-left: 5px !important;
+    }
+    
+    /* Para breadcrumbs de categorías (3 niveles) - mostrar todo */
+    .breadcrumb.breadcrumb-category li {
+        display: flex !important;
+    }
+    
+    .breadcrumb.breadcrumb-category li:nth-child(3)::after {
+        content: none !important;
     }
 }
 

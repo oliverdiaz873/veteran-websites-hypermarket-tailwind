@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -32,583 +32,725 @@
     <!-- Título específico de la página -->
     <title>Tecnología - Hipermercado Superior</title>
 
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+   
+    <!-- CSS y Fonts -->
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../assets/css/components/header.css">
+    <link rel="stylesheet" href="../../assets/css/components/navigation.css">
+    <link rel="stylesheet" href="../../assets/css/components/product-card.css">
+    <link rel="stylesheet" href="../../assets/css/components/offer-card.css">
+    <link rel="stylesheet" href="../../assets/css/components/featured-products.css">
+    <link rel="stylesheet" href="../../assets/css/components/about-us-section.css">
+    <link rel="stylesheet" href="../../assets/css/components/footer.css">
+    <link rel="stylesheet" href="../../assets/css/pages/category.css">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/components/breadcrumb.css">
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="../../assets/css/categorias.css">
-    <link rel="stylesheet" href="../../assets/css/components/footer.css">
-    <link rel="stylesheet" href="../../assets/css/fonts.css">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Scripts -->
+    <script src="../../assets/js/productos.js" defer></script>
+    <script src="../../assets/js/boton_de_busqueda.js" defer></script>
+    <script src="../../assets/js/hamburger_menu.js" defer></script>
+    <script src="../../assets/js/tablet_menu_click.js" defer></script>
+    <script src="../../assets/js/productos_navegacion.js" defer></script>
+    <script src="../../assets/js/ofertas_animation.js" defer></script>
+    <script src="../../assets/js/scroll_animations.js" defer></script>
 
-     <!-- Favicons -->
-    <link rel="icon" href="../../assets/icons/favicons/icon-16x16.jpg" type="image/jpg" sizes="16x16">
-    <link rel="icon" href="../../assets/icons/favicons/icon-32x32.jpg" type="image/jpg" sizes="32x32">
-    <link rel="icon" href="../../assets/icons/favicons/icon-48x48.jpg" type="image/jpg" sizes="48x48">
   </head>
 
 
-<body id="tecnologia" class="category-page">
-    <!-- ===== HEADER GLOBAL ===== -->
-    <header class="header-global">
-        <div class="header-container">
-            <!-- Botón hamburguesa solo en móvil -->
-            <button class="menu-btn" aria-label="Abrir menú">
-                <i class="fas fa-bars"></i>
-            </button>
+  <body class="text-gray-900" id="fondo_tecnologia">
 
-            <!-- Logo + título -->
-            <a href="../../index.html" class="brand">
-                <img src="../../assets/images/logo/logo.jpeg" alt="Logo de Hipermercado Superior">
-                <h1 class="brand-name">Superior</h1>
+
+  <!-- ===== HEADER GLOBAL ===== -->
+  <header class="fixed top-0 left-0 w-full rounded-none xl:top-[10px] xl:left-1/2 xl:-translate-x-1/2 xl:rounded-[15px] xl:w-max xl:max-w-[calc(100vw-40px)] bg-black/80 px-2.5 py-1.5 z-[1000] flex justify-center text-white">
+    <div class="flex items-center gap-2.5 justify-between md:justify-center w-full px-0 md:px-3.5">
+
+      <!-- Botón hamburguesa solo en móvil -->
+      <button class="menu-btn text-[22px] bg-transparent border-none text-white cursor-pointer transition-colors duration-300 rounded hover:bg-white/15 p-1 md:hidden">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-menu"/></svg>
+      </button>
+
+      <!-- Logo -->
+      <a href="../../index.html" class="brand flex items-center gap-1 text-white no-underline" aria-label="Ir a la página principal de Hipermercado Superior">
+        <img src="../../assets/images/logo/logo.png" alt="Logo de Hipermercado Superior">
+        <h1 class="whitespace-nowrap block ml-1">Hipermercado Superior</h1>
+      </a>
+
+      <!-- Menú de navegación Desktop (Solo enlaces) - Visible en Tablets y Desktop -->
+      <nav class="nav-links hidden md:flex justify-center" role="navigation" aria-label="Menú principal">
+        <ul class="flex gap-5 items-center list-none p-0 m-0">
+          <li><a href="../../index.html" class="text-white no-underline text-base px-2.5 py-2 block text-left transition-colors duration-300 rounded-[10px] hover:bg-white/15">Inicio</a></li>
+
+          <!-- Categorías Dropdown -->
+          <li class="relative group">
+            <a href="#" class="text-white no-underline text-base px-2.5 py-2 block text-left transition-colors duration-300 rounded-[10px] hover:bg-white/15" aria-haspopup="true" aria-expanded="false">
+              Categorías <span class="text-[0.7em] ml-0.75 opacity-80">▼</span>
             </a>
-
-            <!-- Menú de navegación Desktop -->
-            <nav class="nav-links-desktop" role="navigation" aria-label="Menú principal">
-                <ul>
-                    <li><a href="../../index.html">Inicio</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="active">Categorías <i class="fas fa-chevron-down"></i></a>
-                        <div class="dropdown-content">
-                            <a href="alimentos.html">Alimentos</a>
-                            <a href="electrodomesticos.html">Electrodomésticos</a>
-                            <a href="tecnologia.html" class="active">Tecnología</a>
-                            <a href="ropa.html">Ropa</a>
-                            <a href="muebles_y_decoracion.html">Muebles y Decoración</a>
-                            <a href="farmacia.html">Farmacia</a>
-                            <a href="ferreteria.html">Ferretería</a>
-                            <a href="juguetes.html">Juguetes</a>
-                        </div>
-                    </li>
-                    <li><a href="../../index.html#ofertas">Ofertas</a></li>
-                    <li><a href="../contacto/index.html">Contacto</a></li>
-                </ul>
-            </nav>
-
-            <!-- Acciones (Búsqueda, Carrito) -->
-            <div class="header-actions">
-                <div class="search-container">
-                    <input type="text" id="input-buscar" placeholder="Buscar..." aria-label="Buscar productos">
-                    <button type="button" id="btn-buscar" aria-label="Buscar">
-                        <i class="fas fa-search"></i>
-                    </button>
-                    <ul id="resultados-busqueda" class="search-results"></ul>
-                </div>
-                <a href="../cart/index.html" class="cart-btn" aria-label="Ver carrito">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span id="contador-carrito">0</span>
+            <ul class="absolute top-full left-0 bg-black/90 rounded-lg min-w-[220px] hidden group-hover:flex flex-col z-[1000] text-left list-none p-0 m-0">
+              <!-- Alimentos -->
+              <li class="relative group/sub">
+                <a href="alimentos.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Alimentos <span class="right-arrow">▸</span>
                 </a>
-            </div>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="alimentos.html#frutas_y_verduras" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Frutas y Verduras</a></li>
+                  <li><a href="alimentos.html#despensa" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Despensa</a></li>
+                  <li><a href="alimentos.html#carnes_pescados_mariscos" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Carnes, Pescados y Mariscos</a></li>
+                  <li><a href="alimentos.html#lacteos_y_huevos" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Lácteos y Huevos</a></li>
+                  <li><a href="alimentos.html#bebidas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Bebidas</a></li>
+                  <li><a href="alimentos.html#enlatados" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Enlatados</a></li>
+                </ul>
+              </li>
+              <!-- Electrodomésticos -->
+              <li class="relative group/sub">
+                <a href="electrodomesticos.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Electrodomésticos <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="electrodomesticos.html#cocina" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Cocina</a></li>
+                  <li><a href="electrodomesticos.html#lavado" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Lavado</a></li>
+                  <li><a href="electrodomesticos.html#climatizacion" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Climatización</a></li>
+                </ul>
+              </li>
+              <!-- Tecnología -->
+              <li class="relative group/sub">
+                <a href="tecnologia.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Tecnología <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="tecnologia.html#televisores" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Televisores</a></li>
+                  <li><a href="tecnologia.html#laptops" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Laptops</a></li>
+                  <li><a href="tecnologia.html#tablets" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Tablets</a></li>
+                  <li><a href="tecnologia.html#celulares" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Celulares</a></li>
+                  <li><a href="tecnologia.html#bocinas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Bocinas</a></li>
+                </ul>
+              </li>
+              <!-- Ropa -->
+              <li class="relative group/sub">
+                <a href="ropa.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Ropa <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="ropa.html#pantalones_para_hombres" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Pantalones para Hombres</a></li>
+                  <li><a href="ropa.html#pantalones_para_mujeres" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Pantalones para Mujeres</a></li>
+                  <li><a href="ropa.html#pantalones_para_niños" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Pantalones para Niños</a></li>
+                  <li><a href="ropa.html#trajes_para_hombres" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Trajes para Hombres</a></li>
+                  <li><a href="ropa.html#vestidos" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Vestidos</a></li>
+                </ul>
+              </li>
+              <!-- Muebles -->
+              <li class="relative group/sub">
+                <a href="muebles_y_decoracion.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Muebles y Decoración <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="muebles_y_decoracion.html#sofas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Sofás</a></li>
+                  <li><a href="muebles_y_decoracion.html#sillones" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Sillones</a></li>
+                  <li><a href="muebles_y_decoracion.html#mesas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Mesas</a></li>
+                  <li><a href="muebles_y_decoracion.html#floreros" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Floreros</a></li>
+                </ul>
+              </li>
+              <!-- Farmacia -->
+              <li class="relative group/sub">
+                <a href="farmacia.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Farmacia <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="farmacia.html#analgesicos" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Analgésicos</a></li>
+                  <li><a href="farmacia.html#dermocosmetica" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Dermocosmética</a></li>
+                  <li><a href="farmacia.html#vitaminas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Vitaminas</a></li>
+                  <li><a href="farmacia.html#antigripales" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Antigripales</a></li>
+                </ul>
+              </li>
+              <!-- Ferretería -->
+              <li class="relative group/sub">
+                <a href="ferreteria.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Ferretería <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="ferreteria.html#herramientas_manuales" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Herramientas Manuales</a></li>
+                  <li><a href="ferreteria.html#pinturas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Pinturas</a></li>
+                  <li><a href="ferreteria.html#electricidad" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Electricidad</a></li>
+                  <li><a href="ferreteria.html#plomeria" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Plomería</a></li>
+                </ul>
+              </li>
+              <!-- Juguetes -->
+              <li class="relative group/sub">
+                <a href="juguetes.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Juguetes <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="juguetes.html#juguetes_para_ninos" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Juguetes para Niños</a></li>
+                  <li><a href="juguetes.html#juguetes_para_ninas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Juguetes para Niñas</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li><a href="../../index.html#ofertas" class="text-white no-underline text-base px-2.5 py-2 block transition-colors duration-300 rounded-[10px] hover:bg-white/15">Ofertas</a></li>
+          <li><a href="../contacto/index.html" class="text-white no-underline text-base px-2.5 py-2 block transition-colors duration-300 rounded-[10px] hover:bg-white/15">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Utilidades (Buscador y Carrito) - Visibles en todos los dispositivos -->
+      <div class="header-utils">
+        <!-- Buscador -->
+        <div class="relative flex items-center">
+          <input type="text" id="input-buscar" placeholder="Buscar productos..." class="search-input-modern" autocomplete="off">
+          <button type="button" id="btn-buscar" class="util-btn">
+            <!-- Icono Lupa / Cerrar (sprite) -->
+            <svg id="icono-buscar" class="util-icon" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-search"/></svg>
+            <svg id="icono-cerrar" class="util-icon hidden" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-close"/></svg>
+          </button>
+          <ul id="resultados-busqueda" class="search-results-list"></ul>
         </div>
 
-        <!-- Menú móvil colapsable -->
-        <nav class="nav-links-mobile">
-            <ul>
-                <li><a href="../../index.html">Inicio</a></li>
-                <li>
-                    <button class="mobile-dropdown-btn">Categorías <i class="fas fa-chevron-down"></i></button>
-                    <ul class="mobile-dropdown-content">
-                        <li><a href="alimentos.html">Alimentos</a></li>
-                        <li><a href="electrodomesticos.html">Electrodomésticos</a></li>
-                        <li><a href="tecnologia.html" class="active">Tecnología</a></li>
-                        <li><a href="ropa.html">Ropa</a></li>
-                        <li><a href="muebles_y_decoracion.html">Muebles y Decoración</a></li>
-                        <li><a href="farmacia.html">Farmacia</a></li>
-                        <li><a href="ferreteria.html">Ferretería</a></li>
-                        <li><a href="juguetes.html">Juguetes</a></li>
-                    </ul>
-                </li>
-                <li><a href="../../index.html#ofertas">Ofertas</a></li>
-                <li><a href="../contacto/index.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+        <!-- Carrito -->
+        <a href="../cart/index.html" class="util-btn" aria-label="Ver carrito">
+          <svg class="util-icon" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-cart"/></svg>
+          <span id="contador-carrito" class="cart-badge">0</span>
+        </a>
+      </div>
+    </div>
 
-    <main>
-        <!-- Banner de Categoría -->
-        <section class="category-banner" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../assets/images/productos/Tecnologia/tecnologia_banner.jpg');">
-            <div class="container mx-auto px-4 h-full flex flex-col justify-center items-center text-center text-white">
-                <h2 class="text-5xl font-bold mb-4">Innovación al Alcance</h2>
-                <p class="text-xl max-w-2xl">Descubre lo último en tecnología: celulares, laptops, televisores y accesorios inteligentes para potenciar tu vida digital.</p>
-            </div>
-        </section>
+    <!-- Menú móvil colapsable -->
+    <nav id="mobile-menu" class="fixed top-[49px] left-0 w-full bg-black/95 text-white hidden z-[999] max-h-[calc(100vh-49px)] overflow-y-auto py-5 shadow-xl">
+      <ul class="list-none p-0 m-0">
+        <li class="px-5 py-2.5 border-b border-white/10"><a href="../../index.html" class="block">Inicio</a></li>
+        <li class="px-5 py-2.5 border-b border-white/10">
+          <button class="mobile-dropdown-btn w-full text-left flex justify-between items-center">
+            Categorías <span class="text-[0.7em] opacity-70">▼</span>
+          </button>
+          <ul class="hidden pl-5 mt-2 transition-all duration-300 opacity-0 overflow-hidden">
+            <!-- Alimentos -->
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Alimentos <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="alimentos.html#frutas_y_verduras" class="block py-2">Frutas y Verduras</a></li>
+                <li><a href="alimentos.html#despensa" class="block py-2">Despensa</a></li>
+                <li><a href="alimentos.html#carnes_pescados_mariscos" class="block py-2">Carnes y Mariscos</a></li>
+                <li><a href="alimentos.html#lacteos_y_huevos" class="block py-2">Lácteos</a></li>
+                <li><a href="alimentos.html#bebidas" class="block py-2">Bebidas</a></li>
+                <li><a href="alimentos.html#enlatados" class="block py-2">Enlatados</a></li>
+              </ul>
+            </li>
+            <!-- Electrodomésticos -->
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Electrodomésticos <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="electrodomesticos.html#cocina" class="block py-2">Cocina</a></li>
+                <li><a href="electrodomesticos.html#lavado" class="block py-2">Lavado</a></li>
+                <li><a href="electrodomesticos.html#climatizacion" class="block py-2">Climatización</a></li>
+              </ul>
+            </li>
+            <!-- Tecnología -->
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Tecnología <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="tecnologia.html#televisores" class="block py-2">Televisores</a></li>
+                <li><a href="tecnologia.html#laptops" class="block py-2">Laptops</a></li>
+                <li><a href="tecnologia.html#tablets" class="block py-2">Tablets</a></li>
+                <li><a href="tecnologia.html#celulares" class="block py-2">Celulares</a></li>
+                <li><a href="tecnologia.html#bocinas" class="block py-2">Bocinas</a></li>
+              </ul>
+            </li>
+            <!-- Ropa -->
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Ropa <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="ropa.html#pantalones_para_hombres" class="block py-2">Hombres</a></li>
+                <li><a href="ropa.html#pantalones_para_mujeres" class="block py-2">Mujeres</a></li>
+                <li><a href="ropa.html#pantalones_para_niños" class="block py-2">Niños</a></li>
+                <li><a href="ropa.html#trajes_para_hombres" class="block py-2">Trajes para Hombres</a></li>
+                <li><a href="ropa.html#vestidos" class="block py-2">Vestidos</a></li>
+              </ul>
+            </li>
+            <!-- Muebles -->
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Muebles y Decoración <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="muebles_y_decoracion.html#sofas" class="block py-2">Sofás</a></li>
+                <li><a href="muebles_y_decoracion.html#sillones" class="block py-2">Sillones</a></li>
+                <li><a href="muebles_y_decoracion.html#mesas" class="block py-2">Mesas</a></li>
+                <li><a href="muebles_y_decoracion.html#floreros" class="block py-2">Floreros</a></li>
+              </ul>
+            </li>
+            <!-- Farmacia -->
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Farmacia <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="farmacia.html#analgesicos" class="block py-2">Analgésicos</a></li>
+                <li><a href="farmacia.html#dermocosmetica" class="block py-2">Dermocosmética</a></li>
+                <li><a href="farmacia.html#vitaminas" class="block py-2">Vitaminas</a></li>
+                <li><a href="farmacia.html#antigripales" class="block py-2">Antigripales</a></li>
+              </ul>
+            </li>
+            <!-- Ferretería -->
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Ferretería <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="ferreteria.html#herramientas_manuales" class="block py-2">Herramientas</a></li>
+                <li><a href="ferreteria.html#pinturas" class="block py-2">Pinturas</a></li>
+                <li><a href="ferreteria.html#electricidad" class="block py-2">Electricidad</a></li>
+                <li><a href="ferreteria.html#plomeria" class="block py-2">Plomería</a></li>
+              </ul>
+            </li>
+            <!-- Juguetes -->
+            <li class="">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Juguetes <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="juguetes.html#juguetes_para_ninos" class="block py-2">Niños</a></li>
+                <li><a href="juguetes.html#juguetes_para_ninas" class="block py-2">Niñas</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="px-5 py-2.5 border-b border-white/10"><a href="../../index.html#ofertas" class="block">Ofertas</a></li>
+        <li class="px-5 py-2.5 border-b border-white/10"><a href="../contacto/index.html" class="block">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <!-- Filtros Rápidos -->
-        <nav class="quick-filters py-6 bg-white border-b sticky top-[70px] z-40">
-            <div class="container mx-auto px-4 overflow-x-auto">
-                <div class="flex justify-center gap-4 min-w-max">
-                    <a href="#televisores" class="filter-chip">Televisores</a>
-                    <a href="#laptops" class="filter-chip">Laptops</a>
-                    <a href="#tablets" class="filter-chip">Tablets</a>
-                    <a href="#celulares" class="filter-chip">Celulares</a>
-                    <a href="#bocinas" class="filter-chip">Bocinas</a>
-                </div>
-            </div>
-        </nav>
+<!-- Breadcrumb -->
+<nav aria-label="Breadcrumb">
+  <ol class="breadcrumb breadcrumb-category">
+    <li><a href="../../index.html">Inicio</a></li>
+    <li><span>Categorías</span></li>
+    <li aria-current="page">Tecnología</li>
+  </ol>
+</nav>
        
+     <main> <!--main-->
+
         <!-- Televisores -->
-        <section class="category-section" id="televisores">
-            <div class="container mx-auto px-4">
-                <div class="flex justify-between items-center mb-8">
-                    <h3 class="text-3xl font-bold text-gray-800">Televisores</h3>
-                    <div class="flex gap-2">
-                        <button class="slider-btn prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
-                        <button class="slider-btn next" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
-                    </div>
-                </div>
-                <div class="slider-container">
-                    <div class="slider-track">
-                        <!-- Producto 1 -->
-                        <article class="product-card">
-                            <div class="product-image">
-                                <img src="../../assets/images/productos/Tecnologia/Televisores/TV_samsung.png" alt="Televisor Samsung 75 pulgadas">
+        <section class="productos-destacados bg-black/80 rounded-[20px] p-5 md:py-7.5 md:px-[56px] mx-auto mb-10 max-w-[1280px] xl:max-w-[calc(100vw-100px)] lg:max-w-[calc(100vw-86px)]" id="televisores">
+            <div class="container mx-auto">
+                <h2 class="text-xl md:text-2xl text-white bg-black/70 px-4 py-2 rounded-xl mb-5 w-fit mx-auto text-center">Televisores</h2>
+                
+                <div class="productos-container-wrapper relative flex items-center justify-center">
+                    <button class="productos-control-prev absolute left-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="televisores-prev">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-left"/></svg>
+                        <span class="sr-only">Anterior</span>
+                    </button>
+
+                    <div class="productos-container flex w-full gap-4 md:gap-5 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory">
+                        <!-- TV Samsung 75 -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/tecnologia/televisores/tv_samsung_75.html" class="product-card__overlay-link" aria-label="Ver detalles de Televisor Samsung 75 pulgadas"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/Tecnologia/televisores/tv_samsung.png" alt="Televisor Samsung 75 pulgadas" loading="lazy">
                             </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Televisor Samsung 75 pulgadas</h3>
-                                <p class="product-price">$44,000</p>
-                                <div class="product-actions">
-                                    <button class="btn-agregar" id="televisor_samsung_75_pulgadas">Agregar</button>
-                                    <a href="../cart/index.html" class="btn-details">Detalles</a>
-                                </div>
-                            </div>
+                            <h3 class="producto-title">Televisor Samsung 75 pulgadas</h3>
+                            <p class="producto-price">Precio: $44,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="televisor_samsung_75_pulgadas">Agregar</button>
                         </article>
-                        <!-- Producto 2 -->
-                        <article class="product-card">
-                            <div class="product-image">
-                                <img src="../../assets/images/productos/Tecnologia/Televisores/TV_led_samsung.avif" alt="Televisor LED Samsung">
+
+                        <!-- TV LED Samsung -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/tecnologia/televisores/televisor_samsung_led.html" class="product-card__overlay-link" aria-label="Ver detalles de Televisor LED Samsung"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/tecnologia/televisores/tv_led_samsung.avif" alt="Televisor LED Samsung" loading="lazy">
                             </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Televisor LED Samsung</h3>
-                                <p class="product-price">$56,000</p>
-                                <div class="product-actions">
-                                    <button class="btn-agregar" id="televisor_led_samsung">Agregar</button>
-                                    <a href="../cart/index.html" class="btn-details">Detalles</a>
-                                </div>
-                            </div>
+                            <h3 class="producto-title">Televisor LED Samsung</h3>
+                            <p class="producto-price">Precio: $56,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="televisor_led_samsung">Agregar</button>
                         </article>
-                        <!-- Producto 3 -->
-                        <article class="product-card">
-                            <div class="product-image">
-                                <img src="../../assets/images/productos/Tecnologia/Televisores/TV_led_LG.png" alt="Televisor LED LG">
+
+                        <!-- TV LED LG -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/tecnologia/televisores/televisor_lg.html" class="product-card__overlay-link" aria-label="Ver detalles de Televisor LED LG"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/tecnologia/televisores/tv_led_lg.png" alt="Televisor LED LG" loading="lazy">
                             </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Televisor LED LG</h3>
-                                <p class="product-price">$57,000</p>
-                                <div class="product-actions">
-                                    <button class="btn-agregar" id="televisor_led_lg">Agregar</button>
-                                    <a href="../cart/index.html" class="btn-details">Detalles</a>
-                                </div>
-                            </div>
+                            <h3 class="producto-title">Televisor LED LG</h3>
+                            <p class="producto-price">Precio: $57,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="televisor_led_lg">Agregar</button>
                         </article>
-                        <!-- Producto 4 -->
-                        <article class="product-card">
-                            <div class="product-image">
-                                <img src="../../assets/images/productos/Tecnologia/Televisores/TV_led_tecnomaster.png" alt="Televisor LED Tecnomaster">
+
+                        <!-- TV LED Tecnomaster -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/tecnologia/televisores/televisor_tecnomaster.html" class="product-card__overlay-link" aria-label="Ver detalles de Televisor LED Tecnomaster"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/tecnologia/televisores/tv_led_tecnomaster.png" alt="Televisor LED Tecnomaster" loading="lazy">
                             </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Televisor LED Tecnomaster</h3>
-                                <p class="product-price">$55,200</p>
-                                <div class="product-actions">
-                                    <button class="btn-agregar" id="televisor_led_tecnomaster">Agregar</button>
-                                    <a href="../cart/index.html" class="btn-details">Detalles</a>
-                                </div>
-                            </div>
+                            <h3 class="producto-title">Televisor LED Tecnomaster</h3>
+                            <p class="producto-price">Precio: $55,200</p>
+                            <button class="btn-agregar product-card__add-btn" id="televisor_led_tecnomaster">Agregar</button>
                         </article>
-                        <!-- Producto 5 -->
-                        <article class="product-card">
-                            <div class="product-image">
-                                <img src="../../assets/images/productos/Tecnologia/Televisores/TV_led_50pulgadas.png" alt="Televisor LED 50 Pulgadas">
+
+                        <!-- TV LED 50 -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/tecnologia/televisores/televisor_led_50.html" class="product-card__overlay-link" aria-label="Ver detalles de Televisor LED 50 Pulgadas"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/tecnologia/televisores/tv_led_50pulgadas.png" alt="Televisor LED 50 Pulgadas" loading="lazy">
                             </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Televisor LED 50 Pulgadas</h3>
-                                <p class="product-price">$36,500</p>
-                                <div class="product-actions">
-                                    <button class="btn-agregar" id="televisor_led_50">Agregar</button>
-                                    <a href="../cart/index.html" class="btn-details">Detalles</a>
-                                </div>
-                            </div>
+                            <h3 class="producto-title">Televisor LED 50 Pulgadas</h3>
+                            <p class="producto-price">Precio: $36,500</p>
+                            <button class="btn-agregar product-card__add-btn" id="televisor_led_50">Agregar</button>
                         </article>
                     </div>
+
+                    <button class="productos-control-next absolute right-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="televisores-next">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-right"/></svg>
+                        <span class="sr-only">Siguiente</span>
+                    </button>
                 </div>
             </div>
         </section>
 
         <!-- Laptops -->
-        <section class="category-section bg-gray-50" id="laptops">
-            <div class="container mx-auto px-4">
-                <div class="flex justify-between items-center mb-8">
-                    <h3 class="text-3xl font-bold text-gray-800">Laptops</h3>
-                    <div class="flex gap-2">
-                        <button class="slider-btn prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
-                        <button class="slider-btn next" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
-                    </div>
-                </div>
-                <div class="slider-container">
-                    <div class="slider-track">
-                        <!-- Laptop 1 -->
-                        <article class="product-card">
-                            <div class="product-image">
-                                <img src="../../assets/images/productos/Tecnologia/laptops/laptop_asus.png" alt="Laptop Asus">
+        <section class="productos-destacados bg-black/80 rounded-[20px] p-5 md:py-7.5 md:px-[56px] mx-auto mb-10 max-w-[1280px] xl:max-w-[calc(100vw-100px)] lg:max-w-[calc(100vw-86px)]" id="laptops">
+            <div class="container mx-auto">
+                <h2 class="text-xl md:text-2xl text-white bg-black/70 px-4 py-2 rounded-xl mb-5 w-fit mx-auto text-center">Laptops</h2>
+                
+                <div class="productos-container-wrapper relative flex items-center justify-center">
+                    <button class="productos-control-prev absolute left-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="laptops-prev">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-left"/></svg>
+                        <span class="sr-only">Anterior</span>
+                    </button>
+
+                    <div class="productos-container flex w-full gap-4 md:gap-5 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory">
+                        <!-- Laptop Asus -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/tecnologia/laptops/laptop_asus.html" class="product-card__overlay-link" aria-label="Ver detalles de Laptop Asus"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/tecnologia/laptops/laptop_asus.png" alt="Laptop Asus" loading="lazy">
                             </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Laptop Asus</h3>
-                                <p class="product-price">$45,000</p>
-                                <div class="product-actions">
-                                    <button class="btn-agregar" id="laptop_asus">Agregar</button>
-                                    <a href="../cart/index.html" class="btn-details">Detalles</a>
-                                </div>
-                            </div>
+                            <h3 class="producto-title">Laptop Asus</h3>
+                            <p class="producto-price">Precio: $45,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="laptop_asus">Agregar</button>
                         </article>
-                        <!-- Laptop 2 -->
-                        <article class="product-card">
-                            <div class="product-image">
-                                <img src="../../assets/images/productos/Tecnologia/laptops/laptop_dell.png" alt="Laptop Dell">
+
+                        <!-- Laptop Dell -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/tecnologia/laptops/laptop_dell.html" class="product-card__overlay-link" aria-label="Ver detalles de Laptop Dell"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/tecnologia/laptops/laptop_dell.png" alt="Laptop Dell" loading="lazy">
                             </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Laptop Dell</h3>
-                                <p class="product-price">$48,000</p>
-                                <div class="product-actions">
-                                    <button class="btn-agregar" id="laptop_dell">Agregar</button>
-                                    <a href="../cart/index.html" class="btn-details">Detalles</a>
-                                </div>
-                            </div>
+                            <h3 class="producto-title">Laptop Dell</h3>
+                            <p class="producto-price">Precio: $48,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="laptop_dell">Agregar</button>
                         </article>
-                        <!-- Laptop 3 -->
-                        <article class="product-card">
-                            <div class="product-image">
-                                <img src="../../assets/images/productos/Tecnologia/laptops/laptop_dragonX.png" alt="Laptop DragonX">
+
+                        <!-- Laptop DragonX -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/tecnologia/laptops/laptop_dragonx.html" class="product-card__overlay-link" aria-label="Ver detalles de Laptop DragonX"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/tecnologia/laptops/laptop_dragonX.png" alt="Laptop DragonX" loading="lazy">
                             </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Laptop DragonX</h3>
-                                <p class="product-price">$54,000</p>
-                                <div class="product-actions">
-                                    <button class="btn-agregar" id="laptop_dragonx">Agregar</button>
-                                    <a href="../cart/index.html" class="btn-details">Detalles</a>
-                                </div>
-                            </div>
+                            <h3 class="producto-title">Laptop DragonX</h3>
+                            <p class="producto-price">Precio: $54,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="laptop_dragonx">Agregar</button>
                         </article>
-                        <!-- Laptop 4 -->
-                        <article class="product-card">
-                            <div class="product-image">
-                                <img src="../../assets/images/productos/Tecnologia/laptops/laptop_hp.png" alt="Laptop HP">
+
+                        <!-- Laptop HP -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/tecnologia/laptops/laptop_hp.html" class="product-card__overlay-link" aria-label="Ver detalles de Laptop HP"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/tecnologia/laptops/laptop_hp.png" alt="Laptop HP" loading="lazy">
                             </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Laptop HP</h3>
-                                <p class="product-price">$56,000</p>
-                                <div class="product-actions">
-                                    <button class="btn-agregar" id="laptop_hp">Agregar</button>
-                                    <a href="../cart/index.html" class="btn-details">Detalles</a>
-                                </div>
-                            </div>
+                            <h3 class="producto-title">Laptop HP</h3>
+                            <p class="producto-price">Precio: $56,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="laptop_hp">Agregar</button>
                         </article>
-                        <!-- Laptop 5 -->
-                        <article class="product-card">
-                            <div class="product-image">
-                                <img src="../../assets/images/productos/Tecnologia/laptops/laptop_lenovo.png" alt="Laptop Lenovo">
+
+                        <!-- Laptop Lenovo -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/tecnologia/laptops/laptop_lenovo.html" class="product-card__overlay-link" aria-label="Ver detalles de Laptop Lenovo"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/tecnologia/laptops/laptop_lenovo.png" alt="Laptop Lenovo" loading="lazy">
                             </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Laptop Lenovo</h3>
-                                <p class="product-price">$70,000</p>
-                                <div class="product-actions">
-                                    <button class="btn-agregar" id="laptop_lenovo">Agregar</button>
-                                    <a href="../cart/index.html" class="btn-details">Detalles</a>
-                                </div>
-                            </div>
+                            <h3 class="producto-title">Laptop Lenovo</h3>
+                            <p class="producto-price">Precio: $70,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="laptop_lenovo">Agregar</button>
                         </article>
                     </div>
+
+                    <button class="productos-control-next absolute right-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="laptops-next">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-right"/></svg>
+                        <span class="sr-only">Siguiente</span>
+                    </button>
                 </div>
             </div>
         </section>
 
         <!-- Tablets -->
-        <section class="category-section" id="tablets">
-            <div class="container mx-auto px-4">
-                <div class="flex justify-between items-center mb-8">
-                    <h3 class="text-3xl font-bold text-gray-800">Tablets</h3>
-                    <div class="flex gap-2">
-                        <button class="slider-btn prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
-                        <button class="slider-btn next" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
-                    </div>
-                </div>
-                <div class="slider-container">
-                    <div class="slider-track">
-                        <!-- Tablet 1 -->
-                        <article class="product-card">
-                            <div class="product-image">
-                                <img src="../../assets/images/productos/Tecnologia/tablets/tablet-tcl.png" alt="Tablet TCL">
+        <section class="productos-destacados bg-black/80 rounded-[20px] p-5 md:py-7.5 md:px-[56px] mx-auto mb-10 max-w-[1280px] xl:max-w-[calc(100vw-100px)] lg:max-w-[calc(100vw-86px)]" id="tablets">
+            <div class="container mx-auto">
+                <h2 class="text-xl md:text-2xl text-white bg-black/70 px-4 py-2 rounded-xl mb-5 w-fit mx-auto text-center">Tablets</h2>
+                
+                <div class="productos-container-wrapper relative flex items-center justify-center">
+                    <button class="productos-control-prev absolute left-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="tablets-prev">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-left"/></svg>
+                        <span class="sr-only">Anterior</span>
+                    </button>
+
+                    <div class="productos-container flex w-full gap-4 md:gap-5 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory">
+                        <!-- Tablet TCL -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/tecnologia/tablets/tablet_tcl.html" class="product-card__overlay-link" aria-label="Ver detalles de Tablet TCL"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/Tecnologia/tablets/tablet-tcl.png" alt="Tablet TCL" loading="lazy">
                             </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Tablet TCL</h3>
-                                <p class="product-price">$15,000</p>
-                                <div class="product-actions">
-                                    <button class="btn-agregar" id="tablet_tcl">Agregar</button>
-                                    <a href="../cart/index.html" class="btn-details">Detalles</a>
-                                </div>
-                            </div>
+                            <h3 class="producto-title">Tablet TCL</h3>
+                            <p class="producto-price">Precio: $15,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="tablet_tcl">Agregar</button>
                         </article>
-                        <!-- Tablet 2 -->
-                        <article class="product-card">
-                            <div class="product-image">
-                                <img src="../../assets/images/productos/Tecnologia/tablets/tablet_apple.avif" alt="Tablet Apple">
+
+                        <!-- Tablet Apple -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/tecnologia/tablets/tablet_apple.html" class="product-card__overlay-link" aria-label="Ver detalles de Tablet Apple"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/tecnologia/tablets/tablet_apple.avif" alt="Tablet Apple" loading="lazy">
                             </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Tablet Apple</h3>
-                                <p class="product-price">$30,000</p>
-                                <div class="product-actions">
-                                    <button class="btn-agregar" id="tablet_apple">Agregar</button>
-                                    <a href="../cart/index.html" class="btn-details">Detalles</a>
-                                </div>
-                            </div>
+                            <h3 class="producto-title">Tablet Apple</h3>
+                            <p class="producto-price">Precio: $30,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="tablet_apple">Agregar</button>
                         </article>
-                        <!-- Tablet 3 -->
-                        <article class="product-card">
-                            <div class="product-image">
-                                <img src="../../assets/images/productos/Tecnologia/tablets/tablet_RTED.avif" alt="Tablet RTED">
+
+                        <!-- Tablet RTED -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/tecnologia/tablets/tablet_rted.html" class="product-card__overlay-link" aria-label="Ver detalles de Tablet RTED"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/tecnologia/tablets/tablet_rted.avif" alt="Tablet RTED" loading="lazy">
                             </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Tablet RTED</h3>
-                                <p class="product-price">$23,000</p>
-                                <div class="product-actions">
-                                    <button class="btn-agregar" id="tablet_rted">Agregar</button>
-                                    <a href="../cart/index.html" class="btn-details">Detalles</a>
-                                </div>
-                            </div>
+                            <h3 class="producto-title">Tablet RTED</h3>
+                            <p class="producto-price">Precio: $23,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="tablet_rted">Agregar</button>
                         </article>
-                        <!-- Tablet 4 -->
-                        <article class="product-card">
-                            <div class="product-image">
-                                <img src="../../assets/images/productos/Tecnologia/tablets/tablet_samsung.avif" alt="Tablet Samsung">
+
+                        <!-- Tablet Samsung -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/tecnologia/tablets/tablet_samsung.html" class="product-card__overlay-link" aria-label="Ver detalles de Tablet Samsung"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/tecnologia/tablets/tablet_samsung.avif" alt="Tablet Samsung" loading="lazy">
                             </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Tablet Samsung</h3>
-                                <p class="product-price">$26,000</p>
-                                <div class="product-actions">
-                                    <button class="btn-agregar" id="tablet_samsung">Agregar</button>
-                                    <a href="../cart/index.html" class="btn-details">Detalles</a>
-                                </div>
-                            </div>
+                            <h3 class="producto-title">Tablet Samsung</h3>
+                            <p class="producto-price">Precio: $26,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="tablet_samsung">Agregar</button>
                         </article>
-                        <!-- Tablet 5 -->
-                        <article class="product-card">
-                            <div class="product-image">
-                                <img src="../../assets/images/productos/Tecnologia/tablets/tablet_tecnomaster.avif" alt="Tablet Tecnomaster">
+
+                        <!-- Tablet Tecnomaster -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/tecnologia/tablets/tablet_tecnomaster.html" class="product-card__overlay-link" aria-label="Ver detalles de Tablet Tecnomaster"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/tecnologia/tablets/tablet_tecnomaster.avif" alt="Tablet Tecnomaster" loading="lazy">
                             </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Tablet Tecnomaster</h3>
-                                <p class="product-price">$22,000</p>
-                                <div class="product-actions">
-                                    <button class="btn-agregar" id="tablet_tecnomaster">Agregar</button>
-                                    <a href="../cart/index.html" class="btn-details">Detalles</a>
-                                </div>
-                            </div>
+                            <h3 class="producto-title">Tablet Tecnomaster</h3>
+                            <p class="producto-price">Precio: $22,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="tablet_tecnomaster">Agregar</button>
                         </article>
                     </div>
+
+                    <button class="productos-control-next absolute right-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="tablets-next">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-right"/></svg>
+                        <span class="sr-only">Siguiente</span>
+                    </button>
                 </div>
             </div>
         </section>
 
         <!-- Celulares -->
-        <section class="category-section bg-gray-50" id="celulares">
-            <div class="container mx-auto px-4">
-                <div class="flex justify-between items-center mb-8">
-                    <h3 class="text-3xl font-bold text-gray-800">Celulares</h3>
-                    <div class="flex gap-2">
-                        <button class="slider-btn prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
-                        <button class="slider-btn next" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
-                    </div>
-                </div>
-                <div class="slider-container">
-                    <div class="slider-track">
-                        <!-- Celular 1 -->
-                        <article class="product-card">
-                            <div class="product-image">
-                                <img src="../../assets/images/productos/Tecnologia/Celulares/celular_s24ultra.png" alt="Celular S24 Ultra">
+        <section class="productos-destacados bg-black/80 rounded-[20px] p-5 md:py-7.5 md:px-[56px] mx-auto mb-10 max-w-[1280px] xl:max-w-[calc(100vw-100px)] lg:max-w-[calc(100vw-86px)]" id="celulares">
+            <div class="container mx-auto">
+                <h2 class="text-xl md:text-2xl text-white bg-black/70 px-4 py-2 rounded-xl mb-5 w-fit mx-auto text-center">Celulares</h2>
+                
+                <div class="productos-container-wrapper relative flex items-center justify-center">
+                    <button class="productos-control-prev absolute left-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="celulares-prev">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-left"/></svg>
+                        <span class="sr-only">Anterior</span>
+                    </button>
+
+                    <div class="productos-container flex w-full gap-4 md:gap-5 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory">
+                        <!-- Celular S24 Ultra -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/tecnologia/celulares/celular_s24.html" class="product-card__overlay-link" aria-label="Ver detalles de Celular S24 Ultra"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/tecnologia/celulares/celular_s24ultra.png" alt="Celular S24 Ultra" loading="lazy">
                             </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Celular S24 Ultra</h3>
-                                <p class="product-price">$55,000</p>
-                                <div class="product-actions">
-                                    <button class="btn-agregar" id="celular_s24_ultra">Agregar</button>
-                                    <a href="../cart/index.html" class="btn-details">Detalles</a>
-                                </div>
-                            </div>
+                            <h3 class="producto-title">Celular S24 Ultra</h3>
+                            <p class="producto-price">Precio: $55,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="celular_s24_ultra">Agregar</button>
                         </article>
-                        <!-- Celular 2 -->
-                        <article class="product-card">
-                            <div class="product-image">
-                                <img src="../../assets/images/productos/Tecnologia/Celulares/celular_samsung_A26.png" alt="Celular Samsung A26">
+
+                        <!-- Celular Samsung A26 -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/tecnologia/celulares/celular_a26.html" class="product-card__overlay-link" aria-label="Ver detalles de Celular Samsung A26"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/tecnologia/celulares/celular_samsung_a26.png" alt="Celular Samsung A26" loading="lazy">
                             </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Celular Samsung A26</h3>
-                                <p class="product-price">$40,000</p>
-                                <div class="product-actions">
-                                    <button class="btn-agregar" id="celular_samsung_a26">Agregar</button>
-                                    <a href="../cart/index.html" class="btn-details">Detalles</a>
-                                </div>
-                            </div>
+                            <h3 class="producto-title">Celular Samsung A26</h3>
+                            <p class="producto-price">Precio: $40,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="celular_samsung_a26">Agregar</button>
                         </article>
-                        <!-- Celular 3 -->
-                        <article class="product-card">
-                            <div class="product-image">
-                                <img src="../../assets/images/productos/Tecnologia/Celulares/celular_samsung_A35.png" alt="Celular Samsung A35">
+
+                        <!-- Celular Samsung A35 -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/tecnologia/celulares/celular_a35.html" class="product-card__overlay-link" aria-label="Ver detalles de Celular Samsung A35"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/tecnologia/celulares/celular_samsung_a35.png" alt="Celular Samsung A35" loading="lazy">
                             </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Celular Samsung A35</h3>
-                                <p class="product-price">$23,000</p>
-                                <div class="product-actions">
-                                    <button class="btn-agregar" id="celular_samsung_a35">Agregar</button>
-                                    <a href="../cart/index.html" class="btn-details">Detalles</a>
-                                </div>
-                            </div>
+                            <h3 class="producto-title">Celular Samsung A35</h3>
+                            <p class="producto-price">Precio: $23,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="celular_samsung_a35">Agregar</button>
                         </article>
-                        <!-- Celular 4 -->
-                        <article class="product-card">
-                            <div class="product-image">
-                                <img src="../../assets/images/productos/Tecnologia/Celulares/iphone14.avif" alt="iPhone 14">
+
+                        <!-- iPhone 14 -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/tecnologia/celulares/iphone_14.html" class="product-card__overlay-link" aria-label="Ver detalles de iPhone 14"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/tecnologia/celulares/iphone14.avif" alt="iPhone 14" loading="lazy">
                             </div>
-                            <div class="product-info">
-                                <h3 class="product-title">iPhone 14</h3>
-                                <p class="product-price">$35,000</p>
-                                <div class="product-actions">
-                                    <button class="btn-agregar" id="iphone_14">Agregar</button>
-                                    <a href="../cart/index.html" class="btn-details">Detalles</a>
-                                </div>
-                            </div>
+                            <h3 class="producto-title">iPhone 14</h3>
+                            <p class="producto-price">Precio: $35,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="iphone_14">Agregar</button>
                         </article>
-                        <!-- Celular 5 -->
-                        <article class="product-card">
-                            <div class="product-image">
-                                <img src="../../assets/images/productos/Tecnologia/Celulares/iphone14pro.webp" alt="iPhone 14 Pro">
+
+                        <!-- iPhone 14 Pro -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/tecnologia/celulares/iphone_14pro.html" class="product-card__overlay-link" aria-label="Ver detalles de iPhone 14 Pro"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/tecnologia/celulares/iphone14pro.webp" alt="iPhone 14 Pro" loading="lazy">
                             </div>
-                            <div class="product-info">
-                                <h3 class="product-title">iPhone 14 Pro</h3>
-                                <p class="product-price">$42,000</p>
-                                <div class="product-actions">
-                                    <button class="btn-agregar" id="iphone_14_pro">Agregar</button>
-                                    <a href="../cart/index.html" class="btn-details">Detalles</a>
-                                </div>
-                            </div>
+                            <h3 class="producto-title">iPhone 14 Pro</h3>
+                            <p class="producto-price">Precio: $42,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="iphone_14_pro">Agregar</button>
                         </article>
                     </div>
+
+                    <button class="productos-control-next absolute right-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="celulares-next">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-right"/></svg>
+                        <span class="sr-only">Siguiente</span>
+                    </button>
                 </div>
             </div>
         </section>
 
         <!-- Bocinas -->
-        <section class="category-section" id="bocinas">
-            <div class="container mx-auto px-4">
-                <div class="flex justify-between items-center mb-8">
-                    <h3 class="text-3xl font-bold text-gray-800">Bocinas</h3>
-                    <div class="flex gap-2">
-                        <button class="slider-btn prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
-                        <button class="slider-btn next" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
-                    </div>
-                </div>
-                <div class="slider-container">
-                    <div class="slider-track">
-                        <!-- Bocina 1 -->
-                        <article class="product-card">
-                            <div class="product-image">
-                                <img src="../../assets/images/productos/Tecnologia/Bocina/bocina_aiwa.png" alt="Bocina Aiwa">
+        <section class="productos-destacados bg-black/80 rounded-[20px] p-5 md:py-7.5 md:px-[56px] mx-auto mb-20 max-w-[1280px] xl:max-w-[calc(100vw-100px)] lg:max-w-[calc(100vw-86px)]" id="bocinas">
+            <div class="container mx-auto">
+                <h2 class="text-xl md:text-2xl text-white bg-black/70 px-4 py-2 rounded-xl mb-5 w-fit mx-auto text-center">Bocinas</h2>
+                
+                <div class="productos-container-wrapper relative flex items-center justify-center">
+                    <button class="productos-control-prev absolute left-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="bocinas-prev">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-left"/></svg>
+                        <span class="sr-only">Anterior</span>
+                    </button>
+
+                    <div class="productos-container flex w-full gap-4 md:gap-5 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory">
+                        <!-- Bocina Aiwa -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/tecnologia/bocinas/bocina_Aiwa.html" class="product-card__overlay-link" aria-label="Ver detalles de Bocina Aiwa"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/tecnologia/bocina/bocina_aiwa.png" alt="Bocina Aiwa" loading="lazy">
                             </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Bocina Aiwa</h3>
-                                <p class="product-price">$5,000</p>
-                                <div class="product-actions">
-                                    <button class="btn-agregar" id="bocina_aiwa">Agregar</button>
-                                    <a href="../cart/index.html" class="btn-details">Detalles</a>
-                                </div>
-                            </div>
+                            <h3 class="producto-title">Bocina Aiwa</h3>
+                            <p class="producto-price">Precio: $5,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="bocina_aiwa">Agregar</button>
                         </article>
-                        <!-- Bocina 2 -->
-                        <article class="product-card">
-                            <div class="product-image">
-                                <img src="../../assets/images/productos/Tecnologia/Bocina/bocina_LG.png" alt="Bocina LG">
+
+                        <!-- Bocina LG -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/tecnologia/bocinas/bocina_lg.html" class="product-card__overlay-link" aria-label="Ver detalles de Bocina LG"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/tecnologia/bocina/bocina_lg.png" alt="Bocina LG" loading="lazy">
                             </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Bocina LG</h3>
-                                <p class="product-price">$4,500</p>
-                                <div class="product-actions">
-                                    <button class="btn-agregar" id="bocina_lg">Agregar</button>
-                                    <a href="../cart/index.html" class="btn-details">Detalles</a>
-                                </div>
-                            </div>
+                            <h3 class="producto-title">Bocina LG</h3>
+                            <p class="producto-price">Precio: $4,500</p>
+                            <button class="btn-agregar product-card__add-btn" id="bocina_lg">Agregar</button>
                         </article>
-                        <!-- Bocina 3 -->
-                        <article class="product-card">
-                            <div class="product-image">
-                                <img src="../../assets/images/productos/Tecnologia/Bocina/bocina_samsung.avif" alt="Bocina Samsung">
+
+                        <!-- Bocina Samsung -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/tecnologia/bocinas/bocina_samsung.html" class="product-card__overlay-link" aria-label="Ver detalles de Bocina Samsung"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/tecnologia/bocina/bocina_samsung.avif" alt="Bocina Samsung" loading="lazy">
                             </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Bocina Samsung</h3>
-                                <p class="product-price">$6,000</p>
-                                <div class="product-actions">
-                                    <button class="btn-agregar" id="bocina_samsung">Agregar</button>
-                                    <a href="../cart/index.html" class="btn-details">Detalles</a>
-                                </div>
-                            </div>
+                            <h3 class="producto-title">Bocina Samsung</h3>
+                            <p class="producto-price">Precio: $6,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="bocina_samsung">Agregar</button>
                         </article>
-                        <!-- Bocina 4 -->
-                        <article class="product-card">
-                            <div class="product-image">
-                                <img src="../../assets/images/productos/Tecnologia/Bocina/bocina_stage.png" alt="Bocina Stage">
+
+                        <!-- Bocina Stage -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/tecnologia/bocinas/bocina_stage.html" class="product-card__overlay-link" aria-label="Ver detalles de Bocina Stage"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/tecnologia/bocina/bocina_stage.png" alt="Bocina Stage" loading="lazy">
                             </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Bocina Stage</h3>
-                                <p class="product-price">$5,500</p>
-                                <div class="product-actions">
-                                    <button class="btn-agregar" id="bocina_stage">Agregar</button>
-                                    <a href="../cart/index.html" class="btn-details">Detalles</a>
-                                </div>
-                            </div>
+                            <h3 class="producto-title">Bocina Stage</h3>
+                            <p class="producto-price">Precio: $5,500</p>
+                            <button class="btn-agregar product-card__add-btn" id="bocina_stage">Agregar</button>
                         </article>
-                        <!-- Bocina 5 -->
-                        <article class="product-card">
-                            <div class="product-image">
-                                <img src="../../assets/images/productos/Tecnologia/Bocina/bocina_tecnomaster.avif" alt="Bocina Tecnomaster">
+
+                        <!-- Bocina Tecnomaster -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/tecnologia/bocinas/bocina_tecnomaster.html" class="product-card__overlay-link" aria-label="Ver detalles de Bocina Tecnomaster"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/tecnologia/bocina/bocina_tecnomaster.avif" alt="Bocina Tecnomaster" loading="lazy">
                             </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Bocina Tecnomaster</h3>
-                                <p class="product-price">$9,000</p>
-                                <div class="product-actions">
-                                    <button class="btn-agregar" id="bocina_tecnomaster">Agregar</button>
-                                    <a href="../cart/index.html" class="btn-details">Detalles</a>
-                                </div>
-                            </div>
+                            <h3 class="producto-title">Bocina Tecnomaster</h3>
+                            <p class="producto-price">Precio: $9,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="bocina_tecnomaster">Agregar</button>
                         </article>
                     </div>
+
+                    <button class="productos-control-next absolute right-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="bocinas-next">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-right"/></svg>
+                        <span class="sr-only">Siguiente</span>
+                    </button>
                 </div>
             </div>
         </section>
+
     </main>
 
+    <!-- Footer global -->
     <footer class="footer-global">
-        <div class="footer-container">
-            <div class="footer-info">
-                <p>&copy; 2026 Hipermercado Superior. Todos los derechos reservados.</p>
-            </div>
-            <div class="footer-social">
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            </div>
-            <div class="footer-links">
-                <a href="../../legal/privacy.html">Privacidad</a>
-                <a href="../../legal/terms.html">Términos</a>
-            </div>
+      <div class="footer-content">
+        <!-- Derechos reservados -->
+        <small>&copy; 2026 Hipermercado Superior. Todos los derechos reservados.</small>
+
+        <!-- Íconos de redes sociales (sprite SVG) -->
+        <div class="social-icons">
+          <a href="https://facebook.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Facebook" class="social-link">
+            <svg aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-facebook"/></svg>
+          </a>
+          <a href="https://twitter.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en X (antes Twitter)" class="social-link">
+            <svg aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-x"/></svg>
+          </a>
+          <a href="https://instagram.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Instagram" class="social-link">
+            <svg aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-instagram"/></svg>
+          </a>
         </div>
+
+        <!-- Enlaces legales -->
+        <div class="footer-links">
+          <a href="../../legal/privacy.html" title="Política de Privacidad">Política de Privacidad</a>
+          <span class="separator">|</span>
+          <a href="../../legal/terms.html" title="Términos de Uso">Términos de Uso</a>
+        </div>
+      </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="../../assets/js/productos.js"></script>
-    <script src="../../assets/js/boton_de_busqueda.js"></script>
-    <script src="../../assets/js/hamburger_menu.js"></script>
-    <script src="../../assets/js/productos_navegacion.js"></script>
-    <script src="../../assets/js/carrito.js"></script>
 </body>
 </html>
-
-

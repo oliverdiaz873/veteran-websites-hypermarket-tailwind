@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -6,7 +6,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Cuida tu salud y bienestar con la sección de Farmacia de Hipermercado Superior. Encuentra medicamentos, vitaminas, productos de higiene, cuidado personal y más.">
-    <meta name="keywords" content="farmacia, salud, medicamentos, vitaminas, cuidado personal, higiene, bienestar, productos farmacéuticos, Hipermercado Superior, botiquín, primeros auxilios">
     <meta name="author" content="Oliver Antonio Díaz">
     <meta name="robots" content="index, follow">
     <meta name="copyright" content="Oliver Antonio Díaz. Todos los derechos reservados.">
@@ -16,7 +15,7 @@
     <meta property="og:title" content="Farmacia - Hipermercado Superior">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.hipermercadosuperior.com/farmacia">
-    <meta property="og:image" content="https://www.hipermercadosuperior.com/imagenes/farmacia-banner.jpg">
+    <meta property="og:image" content="../../assets/images/fondos/fondo.avif">
     <meta property="og:description" content="Cuida tu salud y bienestar con la sección de Farmacia de Hipermercado Superior. Encuentra medicamentos, vitaminas, productos de higiene, cuidado personal y más.">
     <meta property="og:site_name" content="Hipermercado Superior">
     <meta property="og:locale" content="es_ES">
@@ -25,609 +24,629 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Farmacia - Hipermercado Superior">
     <meta name="twitter:description" content="Cuida tu salud y bienestar con la sección de Farmacia de Hipermercado Superior. Encuentra medicamentos, vitaminas, productos de higiene, cuidado personal y más.">
-    <meta name="twitter:image" content="https://www.hipermercadosuperior.com/imagenes/farmacia-banner.jpg">
+    <meta name="twitter:image" content="../../assets/images/fondos/fondo.avif">
 
-    <!-- TÍTULO, CSS Y FUENTES -->
-    <title>Farmacia | Hipermercado Superior</title>
+    <!-- Título específico de la página -->
+    <title>Farmacia - Hipermercado Superior</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+   
+    <!-- CSS y Fonts -->
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../assets/css/components/header.css">
+    <link rel="stylesheet" href="../../assets/css/components/navigation.css">
+    <link rel="stylesheet" href="../../assets/css/components/product-card.css">
+    <link rel="stylesheet" href="../../assets/css/components/offer-card.css">
+    <link rel="stylesheet" href="../../assets/css/components/featured-products.css">
+    <link rel="stylesheet" href="../../assets/css/components/about-us-section.css">
+    <link rel="stylesheet" href="../../assets/css/components/footer.css">
+    <link rel="stylesheet" href="../../assets/css/pages/category.css">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/components/breadcrumb.css">
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="../../assets/css/categorias.css">
-    <link rel="stylesheet" href="../../assets/css/components/footer.css">
-    <link rel="stylesheet" href="../../assets/css/fonts.css">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-     <!-- Favicons -->
-    <link rel="icon" href="../../assets/icons/favicons/icon-16x16.jpg" type="image/jpg" sizes="16x16">
-    <link rel="icon" href="../../assets/icons/favicons/icon-32x32.jpg" type="image/jpg" sizes="32x32">
-    <link rel="icon" href="../../assets/icons/favicons/icon-48x48.jpg" type="image/jpg" sizes="48x48">
   </head>
 
-<body id="farmacia" class="category-page">
-    <!-- ===== HEADER GLOBAL ===== -->
-    <header class="header-global">
-        <div class="header-container">
-            <!-- Botón hamburguesa solo en móvil -->
-            <button class="menu-btn" aria-label="Abrir menú">
-                <i class="fas fa-bars"></i>
-            </button>
 
-            <!-- Logo + título -->
-            <a href="../../index.html" class="brand">
-                <img src="../../assets/images/logo/logo.jpeg" alt="Logo de Hipermercado Superior">
-                <h1 class="brand-name">Superior</h1>
+<body class="text-gray-900" id="fondo_farmacia">
+
+
+  <!-- ===== HEADER GLOBAL ===== -->
+  <header class="fixed top-0 left-0 w-full rounded-none xl:top-[10px] xl:left-1/2 xl:-translate-x-1/2 xl:rounded-[15px] xl:w-max xl:max-w-[calc(100vw-40px)] bg-black/80 px-2.5 py-1.5 z-[1000] flex justify-center text-white">
+    <div class="flex items-center gap-2.5 justify-between md:justify-center w-full px-0 md:px-3.5">
+
+      <!-- Botón hamburguesa solo en móvil -->
+      <button class="menu-btn text-[22px] bg-transparent border-none text-white cursor-pointer transition-colors duration-300 rounded hover:bg-white/15 p-1 md:hidden">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-menu"/></svg>
+      </button>
+
+      <!-- Logo -->
+      <a href="../../index.html" class="brand flex items-center gap-1 text-white no-underline" aria-label="Ir a la página principal de Hipermercado Superior">
+        <img src="../../assets/images/logo/logo.png" alt="Logo de Hipermercado Superior">
+        <h1 class="whitespace-nowrap block ml-1">Hipermercado Superior</h1>
+      </a>
+
+      <!-- Menú de navegación Desktop (Solo enlaces) - Visible en Tablets y Desktop -->
+      <nav class="nav-links hidden md:flex justify-center" role="navigation" aria-label="Menú principal">
+        <ul class="flex gap-5 items-center list-none p-0 m-0">
+          <li><a href="../../index.html" class="text-white no-underline text-base px-2.5 py-2 block text-left transition-colors duration-300 rounded-[10px] hover:bg-white/15">Inicio</a></li>
+
+          <!-- Categorías Dropdown -->
+          <li class="relative group">
+            <a href="#" class="text-white no-underline text-base px-2.5 py-2 block text-left transition-colors duration-300 rounded-[10px] hover:bg-white/15" aria-haspopup="true" aria-expanded="false">
+              Categorías <span class="text-[0.7em] ml-0.75 opacity-80">▼</span>
             </a>
-
-            <!-- Menú de navegación Desktop -->
-            <nav class="nav-links-desktop" role="navigation" aria-label="Menú principal">
-                <ul>
-                    <li><a href="../../index.html">Inicio</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="active">Categorías <i class="fas fa-chevron-down"></i></a>
-                        <div class="dropdown-content">
-                            <a href="alimentos.html">Alimentos</a>
-                            <a href="electrodomesticos.html">Electrodomésticos</a>
-                            <a href="tecnologia.html">Tecnología</a>
-                            <a href="ropa.html">Ropa</a>
-                            <a href="muebles_y_decoracion.html">Muebles y Decoración</a>
-                            <a href="farmacia.html" class="active">Farmacia</a>
-                            <a href="ferreteria.html">Ferretería</a>
-                            <a href="juguetes.html">Juguetes</a>
-                        </div>
-                    </li>
-                    <li><a href="../../index.html#ofertas">Ofertas</a></li>
-                    <li><a href="../contacto/index.html">Contacto</a></li>
-                </ul>
-            </nav>
-
-            <!-- Acciones (Búsqueda, Carrito) -->
-            <div class="header-actions">
-                <div class="search-container">
-                    <input type="text" id="input-buscar" placeholder="Buscar..." aria-label="Buscar productos">
-                    <button type="button" id="btn-buscar" aria-label="Buscar">
-                        <i class="fas fa-search"></i>
-                    </button>
-                    <ul id="resultados-busqueda" class="search-results"></ul>
-                </div>
-                <a href="../cart/index.html" class="cart-btn" aria-label="Ver carrito">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span id="contador-carrito">0</span>
+            <ul class="absolute top-full left-0 bg-black/90 rounded-lg min-w-[220px] hidden group-hover:flex flex-col z-[1000] text-left list-none p-0 m-0">
+              <!-- Alimentos -->
+              <li class="relative group/sub">
+                <a href="alimentos.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Alimentos <span class="right-arrow">▸</span>
                 </a>
-            </div>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="alimentos.html#frutas_y_verduras" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Frutas y Verduras</a></li>
+                  <li><a href="alimentos.html#despensa" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Despensa</a></li>
+                  <li><a href="alimentos.html#carnes_pescados_mariscos" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Carnes, Pescados y Mariscos</a></li>
+                  <li><a href="alimentos.html#lacteos_y_huevos" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Lácteos y Huevos</a></li>
+                  <li><a href="alimentos.html#bebidas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Bebidas</a></li>
+                  <li><a href="alimentos.html#enlatados" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Enlatados</a></li>
+                </ul>
+              </li>
+              <!-- Electrodomésticos -->
+              <li class="relative group/sub">
+                <a href="electrodomesticos.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Electrodomésticos <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="electrodomesticos.html#cocina" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Cocina</a></li>
+                  <li><a href="electrodomesticos.html#lavado" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Lavado</a></li>
+                  <li><a href="electrodomesticos.html#climatizacion" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Climatización</a></li>
+                </ul>
+              </li>
+              <!-- Tecnología -->
+              <li class="relative group/sub">
+                <a href="tecnologia.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Tecnología <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="tecnologia.html#televisores" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Televisores</a></li>
+                  <li><a href="tecnologia.html#laptops" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Laptops</a></li>
+                  <li><a href="tecnologia.html#tablets" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Tablets</a></li>
+                  <li><a href="tecnologia.html#celulares" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Celulares</a></li>
+                  <li><a href="tecnologia.html#bocinas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Bocinas</a></li>
+                </ul>
+              </li>
+              <!-- Ropa -->
+              <li class="relative group/sub">
+                <a href="ropa.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Ropa <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="ropa.html#pantalones_para_hombres" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Pantalones para Hombres</a></li>
+                  <li><a href="ropa.html#pantalones_para_mujeres" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Pantalones para Mujeres</a></li>
+                  <li><a href="ropa.html#pantalones_para_niños" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Pantalones para Niños</a></li>
+                  <li><a href="ropa.html#trajes_para_hombres" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Trajes para Hombres</a></li>
+                  <li><a href="ropa.html#vestidos" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Vestidos</a></li>
+                </ul>
+              </li>
+              <!-- Muebles -->
+              <li class="relative group/sub">
+                <a href="muebles_y_decoracion.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Muebles y Decoración <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="muebles_y_decoracion.html#sofas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Sofás</a></li>
+                  <li><a href="muebles_y_decoracion.html#sillones" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Sillones</a></li>
+                  <li><a href="muebles_y_decoracion.html#mesas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Mesas</a></li>
+                  <li><a href="muebles_y_decoracion.html#floreros" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Floreros</a></li>
+                </ul>
+              </li>
+              <!-- Farmacia -->
+              <li class="relative group/sub">
+                <a href="farmacia.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Farmacia <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="farmacia.html#analgesicos" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Analgésicos</a></li>
+                  <li><a href="farmacia.html#dermocosmetica" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Dermocosmética</a></li>
+                  <li><a href="farmacia.html#vitaminas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Vitaminas</a></li>
+                  <li><a href="farmacia.html#antigripales" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Antigripales</a></li>
+                </ul>
+              </li>
+              <!-- Ferretería -->
+              <li class="relative group/sub">
+                <a href="ferreteria.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Ferretería <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="ferreteria.html#herramientas_manuales" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Herramientas Manuales</a></li>
+                  <li><a href="ferreteria.html#pinturas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Pinturas</a></li>
+                  <li><a href="ferreteria.html#electricidad" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Electricidad</a></li>
+                  <li><a href="ferreteria.html#plomeria" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Plomería</a></li>
+                </ul>
+              </li>
+              <!-- Juguetes -->
+              <li class="relative group/sub">
+                <a href="juguetes.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Juguetes <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="juguetes.html#juguetes_para_ninos" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Juguetes para Niños</a></li>
+                  <li><a href="juguetes.html#juguetes_para_ninas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Juguetes para Niñas</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li><a href="../../index.html#ofertas" class="text-white no-underline text-base px-2.5 py-2 block transition-colors duration-300 rounded-[10px] hover:bg-white/15">Ofertas</a></li>
+          <li><a href="../contacto/index.html" class="text-white no-underline text-base px-2.5 py-2 block transition-colors duration-300 rounded-[10px] hover:bg-white/15">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Utilidades (Buscador y Carrito) - Visibles en todos los dispositivos -->
+      <div class="header-utils">
+        <!-- Buscador -->
+        <div class="relative flex items-center">
+          <input type="text" id="input-buscar" placeholder="Buscar productos..." class="search-input-modern" autocomplete="off">
+          <button type="button" id="btn-buscar" class="util-btn">
+            <!-- Icono Lupa / Cerrar (sprite) -->
+            <svg id="icono-buscar" class="util-icon" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-search"/></svg>
+            <svg id="icono-cerrar" class="util-icon hidden" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-close"/></svg>
+          </button>
+          <ul id="resultados-busqueda" class="search-results-list"></ul>
         </div>
 
-        <!-- Menú móvil colapsable -->
-        <nav class="nav-links-mobile">
-            <ul>
-                <li><a href="../../index.html">Inicio</a></li>
-                <li>
-                    <button class="mobile-dropdown-btn">Categorías <i class="fas fa-chevron-down"></i></button>
-                    <ul class="mobile-dropdown-content">
-                        <li><a href="alimentos.html">Alimentos</a></li>
-                        <li><a href="electrodomesticos.html">Electrodomésticos</a></li>
-                        <li><a href="tecnologia.html">Tecnología</a></li>
-                        <li><a href="ropa.html">Ropa</a></li>
-                        <li><a href="muebles_y_decoracion.html">Muebles y Decoración</a></li>
-                        <li><a href="farmacia.html" class="active">Farmacia</a></li>
-                        <li><a href="ferreteria.html">Ferretería</a></li>
-                        <li><a href="juguetes.html">Juguetes</a></li>
-                    </ul>
-                </li>
-                <li><a href="../../index.html#ofertas">Ofertas</a></li>
-                <li><a href="../contacto/index.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+        <!-- Carrito -->
+        <a href="../cart/index.html" class="util-btn" aria-label="Ver carrito">
+          <svg class="util-icon" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-cart"/></svg>
+          <span id="contador-carrito" class="cart-badge">0</span>
+        </a>
+      </div>
+    </div>
 
-    <main>
-        <!-- Banner de Categoría -->
-        <section class="category-banner" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../assets/images/productos/Farmacia/farmacia_banner.jpg');">
-            <div class="container mx-auto px-4 h-full flex flex-col justify-center items-center text-center text-white">
-                <h2 class="text-5xl font-bold mb-4">Farmacia</h2>
-                <p class="text-xl max-w-2xl">Salud y bienestar para toda la familia. Medicamentos, cuidado personal y suplementos con la mejor calidad.</p>
-            </div>
-        </section>
+    <!-- Menú móvil colapsable -->
+    <nav id="mobile-menu" class="fixed top-[49px] left-0 w-full bg-black/95 text-white hidden z-[999] max-h-[calc(100vh-49px)] overflow-y-auto py-5 shadow-xl">
+      <ul class="list-none p-0 m-0">
+        <li class="px-5 py-2.5 border-b border-white/10"><a href="../../index.html" class="block">Inicio</a></li>
+        <li class="px-5 py-2.5 border-b border-white/10">
+          <button class="mobile-dropdown-btn w-full text-left flex justify-between items-center">
+            Categorías <span class="text-[0.7em] opacity-70">▼</span>
+          </button>
+          <ul class="hidden pl-5 mt-2 transition-all duration-300 opacity-0 overflow-hidden">
+            <!-- Alimentos -->
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Alimentos <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="alimentos.html#frutas_y_verduras" class="block py-2">Frutas y Verduras</a></li>
+                <li><a href="alimentos.html#despensa" class="block py-2">Despensa</a></li>
+                <li><a href="alimentos.html#carnes_pescados_mariscos" class="block py-2">Carnes y Mariscos</a></li>
+                <li><a href="alimentos.html#lacteos_y_huevos" class="block py-2">Lácteos</a></li>
+                <li><a href="alimentos.html#bebidas" class="block py-2">Bebidas</a></li>
+                <li><a href="alimentos.html#enlatados" class="block py-2">Enlatados</a></li>
+              </ul>
+            </li>
+            <!-- Electrodomésticos -->
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Electrodomésticos <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="electrodomesticos.html#cocina" class="block py-2">Cocina</a></li>
+                <li><a href="electrodomesticos.html#lavado" class="block py-2">Lavado</a></li>
+                <li><a href="electrodomesticos.html#climatizacion" class="block py-2">Climatización</a></li>
+              </ul>
+            </li>
+            <!-- Tecnología -->
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Tecnología <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="tecnologia.html#televisores" class="block py-2">Televisores</a></li>
+                <li><a href="tecnologia.html#laptops" class="block py-2">Laptops</a></li>
+                <li><a href="tecnologia.html#tablets" class="block py-2">Tablets</a></li>
+                <li><a href="tecnologia.html#celulares" class="block py-2">Celulares</a></li>
+                <li><a href="tecnologia.html#bocinas" class="block py-2">Bocinas</a></li>
+              </ul>
+            </li>
+            <!-- Ropa -->
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Ropa <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="ropa.html#pantalones_para_hombres" class="block py-2">Hombres</a></li>
+                <li><a href="ropa.html#pantalones_para_mujeres" class="block py-2">Mujeres</a></li>
+                <li><a href="ropa.html#pantalones_para_niños" class="block py-2">Niños</a></li>
+                <li><a href="ropa.html#trajes_para_hombres" class="block py-2">Trajes para Hombres</a></li>
+                <li><a href="ropa.html#vestidos" class="block py-2">Vestidos</a></li>
+              </ul>
+            </li>
+            <!-- Muebles -->
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Muebles y Decoración <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="muebles_y_decoracion.html#sofas" class="block py-2">Sofás</a></li>
+                <li><a href="muebles_y_decoracion.html#sillones" class="block py-2">Sillones</a></li>
+                <li><a href="muebles_y_decoracion.html#mesas" class="block py-2">Mesas</a></li>
+                <li><a href="muebles_y_decoracion.html#floreros" class="block py-2">Floreros</a></li>
+              </ul>
+            </li>
+            <!-- Farmacia -->
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Farmacia <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="farmacia.html#analgesicos" class="block py-2">Analgésicos</a></li>
+                <li><a href="farmacia.html#dermocosmetica" class="block py-2">Dermocosmética</a></li>
+                <li><a href="farmacia.html#vitaminas" class="block py-2">Vitaminas</a></li>
+                <li><a href="farmacia.html#antigripales" class="block py-2">Antigripales</a></li>
+              </ul>
+            </li>
+            <!-- Ferretería -->
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Ferretería <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="ferreteria.html#herramientas_manuales" class="block py-2">Herramientas</a></li>
+                <li><a href="ferreteria.html#pinturas" class="block py-2">Pinturas</a></li>
+                <li><a href="ferreteria.html#electricidad" class="block py-2">Electricidad</a></li>
+                <li><a href="farmacia.html#plomeria" class="block py-2">Plomería</a></li>
+              </ul>
+            </li>
+            <!-- Juguetes -->
+            <li class="">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Juguetes <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="juguetes.html#juguetes_para_ninos" class="block py-2">Niños</a></li>
+                <li><a href="juguetes.html#juguetes_para_ninas" class="block py-2">Niñas</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="px-5 py-2.5 border-b border-white/10"><a href="../../index.html#ofertas" class="block">Ofertas</a></li>
+        <li class="px-5 py-2.5 border-b border-white/10"><a href="../contacto/index.html" class="block">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <!-- Filtros Rápidos -->
-        <nav class="quick-filters py-6 bg-white border-b sticky top-[70px] z-40">
-            <div class="container mx-auto px-4 overflow-x-auto">
-                <div class="flex justify-center gap-4 min-w-max">
-                    <a href="#analgesicos" class="filter-chip">Analgésicos</a>
-                    <a href="#dermocosmetica" class="filter-chip">Dermocosmética</a>
-                    <a href="#vitaminas_y_minerales" class="filter-chip">Vitaminas y Minerales</a>
-                    <a href="#antigripales_y_resfriado" class="filter-chip">Antigripales</a>
-                </div>
-            </div>
-        </nav>
+<!-- Breadcrumb -->
+<nav aria-label="Breadcrumb">
+  <ol class="breadcrumb breadcrumb-category">
+    <li><a href="../../index.html">Inicio</a></li>
+    <li><span>Categorías</span></li>
+    <li aria-current="page">Farmacia</li>
+  </ol>
+</nav>
        
-        <!-- Sección: Analgésicos -->
-        <section id="analgesicos" class="py-16 bg-white overflow-hidden">
-            <div class="container mx-auto px-4">
-                <div class="flex items-end justify-between mb-10">
-                    <div>
-                        <span class="text-emerald-600 font-bold uppercase tracking-[0.3em] text-xs">Cuidado de la Salud</span>
-                        <h2 class="text-3xl font-bold text-neutral-900 mt-2">Analgésicos</h2>
+     <main> <!--main-->
+
+        <!-- Analgésicos -->
+        <section class="productos-destacados bg-black/80 rounded-[20px] p-5 md:py-7.5 md:px-[56px] mx-auto mb-10 reveal" id="analgesicos">
+            <div class="container mx-auto">
+                <h2 class="text-xl md:text-2xl text-white bg-black/70 px-4 py-2 rounded-xl mb-5 w-fit mx-auto text-center">Analgésicos</h2>
+                
+                <div class="productos-container-wrapper relative flex items-center justify-center">
+                    <button class="productos-control-prev absolute left-[-20px] md:left-[-45px] top-1/2 -translate-y-1/2 w-10 h-10 md:w-[50px] md:h-[50px] bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center transition-all z-10" id="analgesicos-prev">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-left"/></svg>
+                        <span class="sr-only">Anterior</span>
+                    </button>
+
+                    <div class="productos-container flex w-full gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 px-2" id="analgesicos-lista">
+                        <!-- Equate -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/farmacia/analgesicos/equate_analgesico.html" class="product-card__overlay-link"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/Farmacia/analgesicos/equate.avif" alt="Equate Analgésico" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Equate Analgésico</h3>
+                            <p class="producto-price">Precio: $1,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="equate_analgesico">Agregar</button>
+                        </article>
+
+                        <!-- Flanax -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/farmacia/analgesicos/flanax.html" class="product-card__overlay-link"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/Farmacia/analgesicos/flanax.png" alt="Flanax Analgésico" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Flanax Analgésico</h3>
+                            <p class="producto-price">Precio: $2,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="flanax_analgesico">Agregar</button>
+                        </article>
+
+                        <!-- Thera-Gesic -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/farmacia/analgesicos/thera_gesic.html" class="product-card__overlay-link"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/Farmacia/analgesicos/thera-gesic.avif" alt="Thera-Gesic Analgésico" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Thera-Gesic Analgésico</h3>
+                            <p class="producto-price">Precio: $3,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="thera_gesic_analgesico">Agregar</button>
+                        </article>
+
+                        <!-- Tylenol -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/farmacia/analgesicos/tylenol.html" class="product-card__overlay-link"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/Farmacia/analgesicos/tylenol.avif" alt="Tylenol Analgésico" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Tylenol Analgésico</h3>
+                            <p class="producto-price">Precio: $5,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="tylenol_analgesico">Agregar</button>
+                        </article>
+
+                        <!-- Vaporizing -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/farmacia/analgesicos/vaporizing.html" class="product-card__overlay-link"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/Farmacia/analgesicos/vaporizing.avif" alt="Vaporizing Analgésico" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Vaporizing Analgésico</h3>
+                            <p class="producto-price">Precio: $3,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="vaporizing_analgesico">Agregar</button>
+                        </article>
                     </div>
-                    <div class="flex gap-2">
-                        <button id="analgesicos-prev" class="slider-nav-btn" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
-                        <button id="analgesicos-next" class="slider-nav-btn" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
-                    </div>
-                </div>
 
-                <div class="slider-container">
-                    <div class="slider-track" id="analgesicos-track">
-                        <!-- Producto 1 -->
-                        <div class="product-card" data-category="analgesicos">
-                            <div class="product-image-container">
-                                <img src="../../assets/images/productos/Farmacia/analgesicos/equate.avif" alt="Equate Analgésico" class="product-image">
-                                <div class="product-actions">
-                                    <button class="action-btn btn-agregar" id="equate_analgesico" title="Agregar al carrito">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Equate Analgésico</h3>
-                                <div class="product-price-container">
-                                    <span class="product-price">$1,000</span>
-                                </div>
-                                <a href="../productos/farmacia/analgesicos/equate_analgesico.html" class="view-details-btn">Ver Detalles</a>
-                            </div>
-                        </div>
-
-                        <!-- Producto 2 -->
-                        <div class="product-card" data-category="analgesicos">
-                            <div class="product-image-container">
-                                <img src="../../assets/images/productos/Farmacia/analgesicos/flanax.png" alt="Flanax Analgésico" class="product-image">
-                                <div class="product-actions">
-                                    <button class="action-btn btn-agregar" id="flanax_analgesico" title="Agregar al carrito">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Flanax Analgésico</h3>
-                                <div class="product-price-container">
-                                    <span class="product-price">$2,000</span>
-                                </div>
-                                <a href="../productos/farmacia/analgesicos/flanax.html" class="view-details-btn">Ver Detalles</a>
-                            </div>
-                        </div>
-
-                        <!-- Producto 3 -->
-                        <div class="product-card" data-category="analgesicos">
-                            <div class="product-image-container">
-                                <img src="../../assets/images/productos/Farmacia/analgesicos/thera-gesic.avif" alt="Thera-Gesic Analgésico" class="product-image">
-                                <div class="product-actions">
-                                    <button class="action-btn btn-agregar" id="thera_gesic_analgesico" title="Agregar al carrito">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Thera-Gesic Analgésico</h3>
-                                <div class="product-price-container">
-                                    <span class="product-price">$3,000</span>
-                                </div>
-                                <a href="../productos/farmacia/analgesicos/thera_gesic.html" class="view-details-btn">Ver Detalles</a>
-                            </div>
-                        </div>
-
-                        <!-- Producto 4 -->
-                        <div class="product-card" data-category="analgesicos">
-                            <div class="product-image-container">
-                                <img src="../../assets/images/productos/Farmacia/analgesicos/tylenol.avif" alt="Tylenol Analgésico" class="product-image">
-                                <div class="product-actions">
-                                    <button class="action-btn btn-agregar" id="tylenol_analgesico" title="Agregar al carrito">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Tylenol Analgésico</h3>
-                                <div class="product-price-container">
-                                    <span class="product-price">$5,000</span>
-                                </div>
-                                <a href="../productos/farmacia/analgesicos/tylenol.html" class="view-details-btn">Ver Detalles</a>
-                            </div>
-                        </div>
-
-                        <!-- Producto 5 -->
-                        <div class="product-card" data-category="analgesicos">
-                            <div class="product-image-container">
-                                <img src="../../assets/images/productos/Farmacia/analgesicos/vaporizing.avif" alt="Vaporizing Analgésico" class="product-image">
-                                <div class="product-actions">
-                                    <button class="action-btn btn-agregar" id="vaporizing_analgesico" title="Agregar al carrito">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Vaporizing Analgésico</h3>
-                                <div class="product-price-container">
-                                    <span class="product-price">$3,000</span>
-                                </div>
-                                <a href="../productos/farmacia/analgesicos/vaporizing.html" class="view-details-btn">Ver Detalles</a>
-                            </div>
-                        </div>
-                    </div>
+                    <button class="productos-control-next absolute right-[-20px] md:right-[-45px] top-1/2 -translate-y-1/2 w-10 h-10 md:w-[50px] md:h-[50px] bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center transition-all z-10" id="analgesicos-next">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-right"/></svg>
+                        <span class="sr-only">Siguiente</span>
+                    </button>
                 </div>
             </div>
         </section>
 
+        <!-- Dermocosmética -->
+        <section class="productos-destacados bg-black/80 rounded-[20px] p-5 md:py-7.5 md:px-[56px] mx-auto mb-10 reveal" id="dermocosmetica">
+            <div class="container mx-auto">
+                <h2 class="text-xl md:text-2xl text-white bg-black/70 px-4 py-2 rounded-xl mb-5 w-fit mx-auto text-center">Dermocosmética</h2>
+                
+                <div class="productos-container-wrapper relative flex items-center justify-center">
+                    <button class="productos-control-prev absolute left-[-20px] md:left-[-45px] top-1/2 -translate-y-1/2 w-10 h-10 md:w-[50px] md:h-[50px] bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center transition-all z-10" id="dermocosmetica-prev">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-left"/></svg>
+                        <span class="sr-only">Anterior</span>
+                    </button>
 
-        <!-- Sección: Dermocosmética -->
-        <section id="dermocosmetica" class="py-16 bg-gray-50 overflow-hidden">
-            <div class="container mx-auto px-4">
-                <div class="flex items-end justify-between mb-10">
-                    <div>
-                        <span class="text-emerald-600 font-bold uppercase tracking-[0.3em] text-xs">Piel Radiante</span>
-                        <h2 class="text-3xl font-bold text-neutral-900 mt-2">Dermocosmética</h2>
+                    <div class="productos-container flex w-full gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 px-2" id="dermocosmetica-lista">
+                        <!-- CeraVe Ácido Hialurónico -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/farmacia/dermocosmetica/acido_hialuronico.html" class="product-card__overlay-link"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/Farmacia/Dermocosmetica/cerave_acido_hyaluronico.avif" alt="CeraVe Ácido Hialurónico" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">CeraVe Ácido Hialurónico</h3>
+                            <p class="producto-price">Precio: $2,500</p>
+                            <button class="btn-agregar product-card__add-btn" id="cerave_acido_hialuronico">Agregar</button>
+                        </article>
+
+                        <!-- Hidratante CeraVe -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/farmacia/dermocosmetica/hidratante_cerave.html" class="product-card__overlay-link"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/Farmacia/Dermocosmetica/hidratante_cerave.jpg" alt="Hidratante CeraVe" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Hidratante CeraVe</h3>
+                            <p class="producto-price">Precio: $1,500</p>
+                            <button class="btn-agregar product-card__add-btn" id="hidratante_cerave">Agregar</button>
+                        </article>
+
+                        <!-- Hidratante CeraVe Grande -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/farmacia/dermocosmetica/hidratante_grande.html" class="product-card__overlay-link"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/Farmacia/Dermocosmetica/hidratante_cerave_grande.avif" alt="Hidratante CeraVe Grande" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Hidratante CeraVe Grande</h3>
+                            <p class="producto-price">Precio: $2,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="hidratante_cerave_grande">Agregar</button>
+                        </article>
+
+                        <!-- Hidratante Eucerin -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/farmacia/dermocosmetica/hidratante_eucerin.html" class="product-card__overlay-link"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/Farmacia/Dermocosmetica/hidratante_eucerin.avif" alt="Hidratante Eucerin" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Hidratante Eucerin</h3>
+                            <p class="producto-price">Precio: $2,200</p>
+                            <button class="btn-agregar product-card__add-btn" id="hidratante_eucerin">Agregar</button>
+                        </article>
+
+                        <!-- Retinol -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/farmacia/dermocosmetica/retinol.html" class="product-card__overlay-link"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/Farmacia/dermocosmetica/retinol.avif" alt="Retinol" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Retinol</h3>
+                            <p class="producto-price">Precio: $1,100</p>
+                            <button class="btn-agregar product-card__add-btn" id="retinol">Agregar</button>
+                        </article>
+
+                        <!-- Serum Vitamina C -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/farmacia/dermocosmetica/serum_vitaminac.html" class="product-card__overlay-link"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/Farmacia/dermocosmetica/serum_vitaminc.avif" alt="Serum Vitamina C" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Serum Vitamina C</h3>
+                            <p class="producto-price">Precio: $1,400</p>
+                            <button class="btn-agregar product-card__add-btn" id="serum_vitamina_c">Agregar</button>
+                        </article>
                     </div>
-                    <div class="flex gap-2">
-                        <button id="dermocosmetica-prev" class="slider-nav-btn" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
-                        <button id="dermocosmetica-next" class="slider-nav-btn" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
-                    </div>
-                </div>
 
-                <div class="slider-container">
-                    <div class="slider-track" id="dermocosmetica-track">
-                        <!-- Producto 1 -->
-                        <div class="product-card" data-category="dermocosmetica">
-                            <div class="product-image-container">
-                                <img src="../../assets/images/productos/Farmacia/Dermocosmetica/cerave_acido_hyaluronico.avif" alt="CeraVe Ácido Hialurónico" class="product-image">
-                                <div class="product-actions">
-                                    <button class="action-btn btn-agregar" id="cerave_acido_hialuronico" title="Agregar al carrito">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <h3 class="product-title">CeraVe Ácido Hialurónico</h3>
-                                <div class="product-price-container">
-                                    <span class="product-price">$2,500</span>
-                                </div>
-                                <a href="../productos/farmacia/dermocosmetica/acido_hialuronico.html" class="view-details-btn">Ver Detalles</a>
-                            </div>
-                        </div>
-
-                        <!-- Producto 2 -->
-                        <div class="product-card" data-category="dermocosmetica">
-                            <div class="product-image-container">
-                                <img src="../../assets/images/productos/Farmacia/Dermocosmetica/hidratante_cerave.jpg" alt="Hidratante CeraVe" class="product-image">
-                                <div class="product-actions">
-                                    <button class="action-btn btn-agregar" id="hidratante_cerave" title="Agregar al carrito">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Hidratante CeraVe</h3>
-                                <div class="product-price-container">
-                                    <span class="product-price">$1,500</span>
-                                </div>
-                                <a href="../productos/farmacia/dermocosmetica/hidratante_cerave.html" class="view-details-btn">Ver Detalles</a>
-                            </div>
-                        </div>
-
-                        <!-- Producto 3 -->
-                        <div class="product-card" data-category="dermocosmetica">
-                            <div class="product-image-container">
-                                <img src="../../assets/images/productos/Farmacia/Dermocosmetica/hidratante_cerave_grande.avif" alt="Hidratante CeraVe Grande" class="product-image">
-                                <div class="product-actions">
-                                    <button class="action-btn btn-agregar" id="hidratante_cerave_grande" title="Agregar al carrito">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Hidratante CeraVe Grande</h3>
-                                <div class="product-price-container">
-                                    <span class="product-price">$2,000</span>
-                                </div>
-                                <a href="../productos/farmacia/dermocosmetica/hidratante_grande.html" class="view-details-btn">Ver Detalles</a>
-                            </div>
-                        </div>
-
-                        <!-- Producto 4 -->
-                        <div class="product-card" data-category="dermocosmetica">
-                            <div class="product-image-container">
-                                <img src="../../assets/images/productos/Farmacia/Dermocosmetica/hidratante_eucerin.avif" alt="Hidratante Eucerin" class="product-image">
-                                <div class="product-actions">
-                                    <button class="action-btn btn-agregar" id="hidratante_eucerin" title="Agregar al carrito">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Hidratante Eucerin</h3>
-                                <div class="product-price-container">
-                                    <span class="product-price">$2,200</span>
-                                </div>
-                                <a href="../productos/farmacia/dermocosmetica/hidratante_eucerin.html" class="view-details-btn">Ver Detalles</a>
-                            </div>
-                        </div>
-
-                        <!-- Producto 5 -->
-                        <div class="product-card" data-category="dermocosmetica">
-                            <div class="product-image-container">
-                                <img src="../../assets/images/productos/Farmacia/Dermocosmetica/retinol.avif" alt="Retinol" class="product-image">
-                                <div class="product-actions">
-                                    <button class="action-btn btn-agregar" id="retinol" title="Agregar al carrito">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Retinol</h3>
-                                <div class="product-price-container">
-                                    <span class="product-price">$1,100</span>
-                                </div>
-                                <a href="../productos/farmacia/dermocosmetica/retinol.html" class="view-details-btn">Ver Detalles</a>
-                            </div>
-                        </div>
-
-                        <!-- Producto 6 -->
-                        <div class="product-card" data-category="dermocosmetica">
-                            <div class="product-image-container">
-                                <img src="../../assets/images/productos/Farmacia/Dermocosmetica/serum_vitaminC.avif" alt="Serum Vitamina C" class="product-image">
-                                <div class="product-actions">
-                                    <button class="action-btn btn-agregar" id="serum_vitamina_c" title="Agregar al carrito">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Serum Vitamina C</h3>
-                                <div class="product-price-container">
-                                    <span class="product-price">$1,400</span>
-                                </div>
-                                <a href="../productos/farmacia/dermocosmetica/serum_vitaminac.html" class="view-details-btn">Ver Detalles</a>
-                            </div>
-                        </div>
-                    </div>
+                    <button class="productos-control-next absolute right-[-20px] md:right-[-45px] top-1/2 -translate-y-1/2 w-10 h-10 md:w-[50px] md:h-[50px] bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center transition-all z-10" id="dermocosmetica-next">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-right"/></svg>
+                        <span class="sr-only">Siguiente</span>
+                    </button>
                 </div>
             </div>
         </section>
 
+        <!-- Vitaminas y Minerales -->
+        <section class="productos-destacados bg-black/80 rounded-[20px] p-5 md:py-7.5 md:px-[56px] mx-auto mb-10 reveal" id="vitaminas_y_minerales">
+            <div class="container mx-auto">
+                <h2 class="text-xl md:text-2xl text-white bg-black/70 px-4 py-2 rounded-xl mb-5 w-fit mx-auto text-center">Vitaminas y Minerales</h2>
+                
+                <div class="productos-container-wrapper relative flex items-center justify-center">
+                    <button class="productos-control-prev absolute left-[-20px] md:left-[-45px] top-1/2 -translate-y-1/2 w-10 h-10 md:w-[50px] md:h-[50px] bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center transition-all z-10" id="vitaminas_y_minerales-prev">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-left"/></svg>
+                        <span class="sr-only">Anterior</span>
+                    </button>
 
-        <!-- Sección: Vitaminas y Minerales -->
-        <section id="vitaminas_y_minerales" class="py-16 bg-white overflow-hidden">
-            <div class="container mx-auto px-4">
-                <div class="flex items-end justify-between mb-10">
-                    <div>
-                        <span class="text-emerald-600 font-bold uppercase tracking-[0.3em] text-xs">Bienestar Diario</span>
-                        <h2 class="text-3xl font-bold text-neutral-900 mt-2">Vitaminas y Minerales</h2>
+                    <div class="productos-container flex w-full gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 px-2" id="vitaminas_y_minerales-lista">
+                        <!-- Multivitamínico -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/farmacia/vitaminas_y_minerales/multivitaminico.html" class="product-card__overlay-link"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/Farmacia/vitaminas_y_minerales/multivitaminico.avif" alt="Multivitamínico" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Multivitamínico</h3>
+                            <p class="producto-price">Precio: $3,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="Multivitaminico">Agregar</button>
+                        </article>
+
+                        <!-- Omega 3 -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/farmacia/vitaminas_y_minerales/omega3.html" class="product-card__overlay-link"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/Farmacia/vitaminas_y_minerales/omega3.avif" alt="Omega 3" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Omega 3</h3>
+                            <p class="producto-price">Precio: $4,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="omega3">Agregar</button>
+                        </article>
+
+                        <!-- Vitafusion -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/farmacia/vitaminas_y_minerales/vitafusion.html" class="product-card__overlay-link"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/Farmacia/vitaminas_y_minerales/vitafusion.avif" alt="Vitafusion" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Vitafusion</h3>
+                            <p class="producto-price">Precio: $1,300</p>
+                            <button class="btn-agregar product-card__add-btn" id="Vitafusion">Agregar</button>
+                        </article>
+
+                        <!-- Vitamina C -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/farmacia/vitaminas_y_minerales/vitaminac.html" class="product-card__overlay-link"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/Farmacia/vitaminas_y_minerales/vitaminac.avif" alt="Vitamina C" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Vitamina C</h3>
+                            <p class="producto-price">Precio: $2,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="vitamina_c">Agregar</button>
+                        </article>
+
+                        <!-- Flintstones -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/farmacia/vitaminas_y_minerales/flintstones.html" class="product-card__overlay-link"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/Farmacia/vitaminas_y_minerales/flintstones.avif" alt="Flintstones" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Flintstones</h3>
+                            <p class="producto-price">Precio: $2,500</p>
+                            <button class="btn-agregar product-card__add-btn" id="flintstones">Agregar</button>
+                        </article>
                     </div>
-                    <div class="flex gap-2">
-                        <button id="vitaminas_y_minerales-prev" class="slider-nav-btn" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
-                        <button id="vitaminas_y_minerales-next" class="slider-nav-btn" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
-                    </div>
-                </div>
 
-                <div class="slider-container">
-                    <div class="slider-track" id="vitaminas_y_minerales-track">
-                        <!-- Producto 1 -->
-                        <div class="product-card" data-category="vitaminas">
-                            <div class="product-image-container">
-                                <img src="../../assets/images/productos/Farmacia/Vitaminas_y_Minerales/multivitaminico.avif" alt="Multivitamínico" class="product-image">
-                                <div class="product-actions">
-                                    <button class="action-btn btn-agregar" id="Multivitaminico" title="Agregar al carrito">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Multivitamínico</h3>
-                                <div class="product-price-container">
-                                    <span class="product-price">$3,000</span>
-                                </div>
-                                <a href="../productos/farmacia/vitaminas_y_minerales/multivitaminico.html" class="view-details-btn">Ver Detalles</a>
-                            </div>
-                        </div>
-
-                        <!-- Producto 2 -->
-                        <div class="product-card" data-category="vitaminas">
-                            <div class="product-image-container">
-                                <img src="../../assets/images/productos/Farmacia/Vitaminas_y_Minerales/omega3.avif" alt="Omega 3" class="product-image">
-                                <div class="product-actions">
-                                    <button class="action-btn btn-agregar" id="omega3" title="Agregar al carrito">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Omega 3</h3>
-                                <div class="product-price-container">
-                                    <span class="product-price">$4,000</span>
-                                </div>
-                                <a href="../productos/farmacia/vitaminas_y_minerales/omega3.html" class="view-details-btn">Ver Detalles</a>
-                            </div>
-                        </div>
-
-                        <!-- Producto 3 -->
-                        <div class="product-card" data-category="vitaminas">
-                            <div class="product-image-container">
-                                <img src="../../assets/images/productos/Farmacia/Vitaminas_y_Minerales/vitafusion.avif" alt="Vitafusion" class="product-image">
-                                <div class="product-actions">
-                                    <button class="action-btn btn-agregar" id="Vitafusion" title="Agregar al carrito">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Vitafusion</h3>
-                                <div class="product-price-container">
-                                    <span class="product-price">$1,300</span>
-                                </div>
-                                <a href="../productos/farmacia/vitaminas_y_minerales/vitafusion.html" class="view-details-btn">Ver Detalles</a>
-                            </div>
-                        </div>
-
-                        <!-- Producto 4 -->
-                        <div class="product-card" data-category="vitaminas">
-                            <div class="product-image-container">
-                                <img src="../../assets/images/productos/Farmacia/Vitaminas_y_Minerales/vitaminaC.avif" alt="Vitamina C" class="product-image">
-                                <div class="product-actions">
-                                    <button class="action-btn btn-agregar" id="vitamina_c" title="Agregar al carrito">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Vitamina C</h3>
-                                <div class="product-price-container">
-                                    <span class="product-price">$2,000</span>
-                                </div>
-                                <a href="../productos/farmacia/vitaminas_y_minerales/vitaminac.html" class="view-details-btn">Ver Detalles</a>
-                            </div>
-                        </div>
-
-                        <!-- Producto 5 -->
-                        <div class="product-card" data-category="vitaminas">
-                            <div class="product-image-container">
-                                <img src="../../assets/images/productos/Farmacia/Vitaminas_y_Minerales/flintstones.avif" alt="Flintstones" class="product-image">
-                                <div class="product-actions">
-                                    <button class="action-btn btn-agregar" id="flintstones" title="Agregar al carrito">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Flintstones</h3>
-                                <div class="product-price-container">
-                                    <span class="product-price">$2,500</span>
-                                </div>
-                                <a href="../productos/farmacia/vitaminas_y_minerales/flintstones.html" class="view-details-btn">Ver Detalles</a>
-                            </div>
-                        </div>
-                    </div>
+                    <button class="productos-control-next absolute right-[-20px] md:right-[-45px] top-1/2 -translate-y-1/2 w-10 h-10 md:w-[50px] md:h-[50px] bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center transition-all z-10" id="vitaminas_y_minerales-next">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-right"/></svg>
+                        <span class="sr-only">Siguiente</span>
+                    </button>
                 </div>
             </div>
         </section>
 
+        <!-- Antigripales y Resfriado -->
+        <section class="productos-destacados bg-black/80 rounded-[20px] p-5 md:py-7.5 md:px-[56px] mx-auto mb-10 reveal" id="antigripales_y_resfriado">
+            <div class="container mx-auto">
+                <h2 class="text-xl md:text-2xl text-white bg-black/70 px-4 py-2 rounded-xl mb-5 w-fit mx-auto text-center">Antigripales y Resfriado</h2>
+                
+                <div class="productos-container-wrapper relative flex items-center justify-center">
+                    <button class="productos-control-prev absolute left-[-20px] md:left-[-45px] top-1/2 -translate-y-1/2 w-10 h-10 md:w-[50px] md:h-[50px] bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center transition-all z-10" id="antigripales_y_resfriado-prev">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-left"/></svg>
+                        <span class="sr-only">Anterior</span>
+                    </button>
 
-        <!-- Sección: Antigripales y Resfriado -->
-        <section id="antigripales_y_resfriado" class="py-16 bg-gray-50 overflow-hidden">
-            <div class="container mx-auto px-4">
-                <div class="flex items-end justify-between mb-10">
-                    <div>
-                        <span class="text-emerald-600 font-bold uppercase tracking-[0.3em] text-xs">Alivio Rápido</span>
-                        <h2 class="text-3xl font-bold text-neutral-900 mt-2">Antigripales y Resfriado</h2>
+                    <div class="productos-container flex w-full gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 px-2" id="antigripales_y_resfriado-lista">
+                        <!-- Antiflu-Des -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/farmacia/antigripales_y_resfriado/antiflu_Des.html" class="product-card__overlay-link"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/Farmacia/antigripales/antiflu-Des.avif" alt="Antiflu-Des" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Antiflu-Des</h3>
+                            <p class="producto-price">Precio: $1,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="antiflu_des">Agregar</button>
+                        </article>
+
+                        <!-- Coldyflu -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/farmacia/antigripales_y_resfriado/coldyflu.html" class="product-card__overlay-link"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/Farmacia/antigripales/coldyflu.avif" alt="Coldyflu" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Coldyflu</h3>
+                            <p class="producto-price">Precio: $2,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="coldyflu">Agregar</button>
+                        </article>
+
+                        <!-- Mucinex -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/farmacia/antigripales_y_resfriado/mucinex.html" class="product-card__overlay-link"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/Farmacia/antigripales/mucinex.avif" alt="Mucinex" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Mucinex</h3>
+                            <p class="producto-price">Precio: $3,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="mucinex">Agregar</button>
+                        </article>
+
+                        <!-- Nyquil -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/farmacia/antigripales_y_resfriado/nyquil.html" class="product-card__overlay-link"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/Farmacia/antigripales/nyquil.avif" alt="Nyquil" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Nyquil</h3>
+                            <p class="producto-price">Precio: $3,500</p>
+                            <button class="btn-agregar product-card__add-btn" id="nyquil">Agregar</button>
+                        </article>
+
+                        <!-- Theraflu -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/farmacia/antigripales_y_resfriado/theraflu.html" class="product-card__overlay-link"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/Farmacia/antigripales/theraflu.avif" alt="Theraflu" loading="lazy">
+                            </div>
+                            <h3 class="producto-title">Theraflu</h3>
+                            <p class="producto-price">Precio: $2,200</p>
+                            <button class="btn-agregar product-card__add-btn" id="theraflu">Agregar</button>
+                        </article>
                     </div>
-                    <div class="flex gap-2">
-                        <button id="antigripales_y_resfriado-prev" class="slider-nav-btn" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
-                        <button id="antigripales_y_resfriado-next" class="slider-nav-btn" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
-                    </div>
-                </div>
 
-                <div class="slider-container">
-                    <div class="slider-track" id="antigripales_y_resfriado-track">
-                        <!-- Producto 1 -->
-                        <div class="product-card" data-category="antigripales">
-                            <div class="product-image-container">
-                                <img src="../../assets/images/productos/Farmacia/Antigripales/Antiflu-Des.avif" alt="Antiflu-Des" class="product-image">
-                                <div class="product-actions">
-                                    <button class="action-btn btn-agregar" id="antiflu_des" title="Agregar al carrito">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Antiflu-Des</h3>
-                                <div class="product-price-container">
-                                    <span class="product-price">$1,000</span>
-                                </div>
-                                <a href="../productos/farmacia/antigripales_y_resfriado/antiflu_Des.html" class="view-details-btn">Ver Detalles</a>
-                            </div>
-                        </div>
-
-                        <!-- Producto 2 -->
-                        <div class="product-card" data-category="antigripales">
-                            <div class="product-image-container">
-                                <img src="../../assets/images/productos/Farmacia/Antigripales/coldyflu.avif" alt="Coldyflu" class="product-image">
-                                <div class="product-actions">
-                                    <button class="action-btn btn-agregar" id="coldyflu" title="Agregar al carrito">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Coldyflu</h3>
-                                <div class="product-price-container">
-                                    <span class="product-price">$2,000</span>
-                                </div>
-                                <a href="../productos/farmacia/antigripales_y_resfriado/coldyflu.html" class="view-details-btn">Ver Detalles</a>
-                            </div>
-                        </div>
-
-                        <!-- Producto 3 -->
-                        <div class="product-card" data-category="antigripales">
-                            <div class="product-image-container">
-                                <img src="../../assets/images/productos/Farmacia/Antigripales/mucinex.avif" alt="Mucinex" class="product-image">
-                                <div class="product-actions">
-                                    <button class="action-btn btn-agregar" id="mucinex" title="Agregar al carrito">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Mucinex</h3>
-                                <div class="product-price-container">
-                                    <span class="product-price">$3,000</span>
-                                </div>
-                                <a href="../productos/farmacia/antigripales_y_resfriado/mucinex.html" class="view-details-btn">Ver Detalles</a>
-                            </div>
-                        </div>
-
-                        <!-- Producto 4 -->
-                        <div class="product-card" data-category="antigripales">
-                            <div class="product-image-container">
-                                <img src="../../assets/images/productos/Farmacia/Antigripales/nyquil.avif" alt="Nyquil" class="product-image">
-                                <div class="product-actions">
-                                    <button class="action-btn btn-agregar" id="nyquil" title="Agregar al carrito">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Nyquil</h3>
-                                <div class="product-price-container">
-                                    <span class="product-price">$3,500</span>
-                                </div>
-                                <a href="../productos/farmacia/antigripales_y_resfriado/nyquil.html" class="view-details-btn">Ver Detalles</a>
-                            </div>
-                        </div>
-
-                        <!-- Producto 5 -->
-                        <div class="product-card" data-category="antigripales">
-                            <div class="product-image-container">
-                                <img src="../../assets/images/productos/Farmacia/Antigripales/theraflu.avif" alt="Theraflu" class="product-image">
-                                <div class="product-actions">
-                                    <button class="action-btn btn-agregar" id="theraflu" title="Agregar al carrito">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <h3 class="product-title">Theraflu</h3>
-                                <div class="product-price-container">
-                                    <span class="product-price">$2,200</span>
-                                </div>
-                                <a href="../productos/farmacia/antigripales_y_resfriado/theraflu.html" class="view-details-btn">Ver Detalles</a>
-                            </div>
-                        </div>
-                    </div>
+                    <button class="productos-control-next absolute right-[-20px] md:right-[-45px] top-1/2 -translate-y-1/2 w-10 h-10 md:w-[50px] md:h-[50px] bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center transition-all z-10" id="antigripales_y_resfriado-next">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-right"/></svg>
+                        <span class="sr-only">Siguiente</span>
+                    </button>
                 </div>
             </div>
         </section>
     </main>
 
-
+    <!-- Footer global -->
     <footer class="footer-global">
       <div class="footer-content">
         <!-- Derechos reservados -->
@@ -656,14 +675,13 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="../../assets/js/productos.js"></script>
-    <script src="../../assets/js/boton_de_busqueda.js"></script>
-    <script src="../../assets/js/hamburger_menu.js"></script>
-    <script src="../../assets/js/tablet_menu_click.js"></script>
-    <script src="../../assets/js/productos_navegacion.js"></script>
-    <script src="../../assets/js/ofertas_animation.js"></script>
-    <script src="../../assets/js/scroll_animations.js"></script>
+    <script src="../../assets/js/productos.js" defer></script>
+    <script src="../../assets/js/boton_de_busqueda.js" defer></script>
+    <script src="../../assets/js/hamburger_menu.js" defer></script>
+    <script src="../../assets/js/tablet_menu_click.js" defer></script>
+    <script src="../../assets/js/productos_navegacion.js" defer></script>
+    <script src="../../assets/js/ofertas_animation.js" defer></script>
+    <script src="../../assets/js/scroll_animations.js" defer></script>
+    <script src="../../assets/js/carrito.js" defer></script>
 </body>
 </html>
-
-

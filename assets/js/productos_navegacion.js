@@ -25,6 +25,36 @@ document.addEventListener('DOMContentLoaded', function () {
     setupCarousel('vitaminas_y_minerales');
     setupCarousel('antigripales_y_resfriado');
 
+    // Configurar para secciones de Ferretería
+    setupCarousel('herramientas_manuales');
+    setupCarousel('pinturas');
+    setupCarousel('electricidad');
+    setupCarousel('plomeria');
+
+    // Configurar para secciones de Juguetes
+    setupCarousel('juguetes_para_ninos');
+    setupCarousel('juguetes_para_ninas');
+
+    // Configurar para secciones de Muebles y Decoración
+    setupCarousel('sofas');
+    setupCarousel('sillones');
+    setupCarousel('mesas');
+    setupCarousel('floreros');
+
+    // Configurar para secciones de Ropa
+    setupCarousel('pantalones_para_hombres');
+    setupCarousel('pantalones_para_mujeres');
+    setupCarousel('pantalones_para_niños');
+    setupCarousel('trajes_para_hombres');
+    setupCarousel('vestidos');
+
+    // Configurar para secciones de Tecnología
+    setupCarousel('televisores');
+    setupCarousel('laptops');
+    setupCarousel('tablets');
+    setupCarousel('celulares');
+    setupCarousel('bocinas');
+
     function setupCarousel(type) {
         const container = document.querySelector(`#${type} .productos-container`);
         const prevBtn = document.getElementById(`${type}-prev`);

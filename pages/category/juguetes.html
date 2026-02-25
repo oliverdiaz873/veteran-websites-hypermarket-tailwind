@@ -1,445 +1,517 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
-    <!-- META ETIQUETAS -->
+    <!-- Meta etiquetas -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Explora en la sección de Juguetes de Hipermercado Superior los mejores regalos para niños y niñas: autos, muñecas, legos y más.">
-    <meta name="keywords" content="juguetes, niños, niñas, regalos, muñecas, autos, legos, diversión, Hipermercado Superior">
-    <meta name="author" content="Oliver Antonio Díaz">
-    <meta name="robots" content="index, follow">
+    <meta name="author" content="Oliver Antonio Díaz"/>
+    <meta name="robots" content="index, follow">  
     <meta name="copyright" content="Oliver Antonio Díaz. Todos los derechos reservados.">
-    <meta name="theme-color" content="#FF9800">
+    <meta name="theme-color" content="#ef4444">
 
-    <!-- OPEN GRAPH -->
+    <!-- Enlace Canónico -->
+    <link rel="canonical" href="https://www.hipermercadosuperior.com/juguetes">
+
+    <!-- Open Graph -->
     <meta property="og:title" content="Juguetes - Hipermercado Superior">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.hipermercadosuperior.com/juguetes">
-    <meta property="og:image" content="https://www.hipermercadosuperior.com/imagenes/juguetes-banner.jpg">
+    <meta property="og:image" content="../../assets/images/fondos/fondo.avif">
     <meta property="og:description" content="Explora en la sección de Juguetes de Hipermercado Superior los mejores regalos para niños y niñas.">
     <meta property="og:site_name" content="Hipermercado Superior">
     <meta property="og:locale" content="es_ES">
 
-    <!-- TWITTER CARDS -->
+    <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Juguetes - Hipermercado Superior">
     <meta name="twitter:description" content="Explora en la sección de Juguetes de Hipermercado Superior los mejores regalos para niños y niñas.">
-    <meta name="twitter:image" content="https://www.hipermercadosuperior.com/imagenes/juguetes-banner.jpg">
+    <meta name="twitter:image" content="../../assets/images/fondos/fondo.avif">
 
-    <!-- TÍTULO, CSS Y FUENTES -->
-    <title>Juguetes | Hipermercado Superior</title>
+    <!-- Título específico de la página -->
+    <title>Juguetes - Hipermercado Superior</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+   
+    <!-- CSS y Fonts -->
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../assets/css/components/header.css">
+    <link rel="stylesheet" href="../../assets/css/components/navigation.css">
+    <link rel="stylesheet" href="../../assets/css/components/product-card.css">
+    <link rel="stylesheet" href="../../assets/css/components/offer-card.css">
+    <link rel="stylesheet" href="../../assets/css/components/featured-products.css">
+    <link rel="stylesheet" href="../../assets/css/components/about-us-section.css">
+    <link rel="stylesheet" href="../../assets/css/components/footer.css">
+    <link rel="stylesheet" href="../../assets/css/pages/category.css">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/components/breadcrumb.css">
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="../../assets/css/categorias.css">
-    <link rel="stylesheet" href="../../assets/css/components/footer.css">
-    <link rel="stylesheet" href="../../assets/css/fonts.css">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Scripts -->
+    <script src="../../assets/js/productos.js" defer></script>
+    <script src="../../assets/js/boton_de_busqueda.js" defer></script>
+    <script src="../../assets/js/hamburger_menu.js" defer></script>
+    <script src="../../assets/js/tablet_menu_click.js" defer></script>
+    <script src="../../assets/js/productos_navegacion.js" defer></script>
+    <script src="../../assets/js/ofertas_animation.js" defer></script>
+    <script src="../../assets/js/scroll_animations.js" defer></script>
 
-     <!-- Favicons -->
-    <link rel="icon" href="../../assets/icons/favicons/icon-16x16.jpg" type="image/jpg" sizes="16x16">
-    <link rel="icon" href="../../assets/icons/favicons/icon-32x32.jpg" type="image/jpg" sizes="32x32">
-    <link rel="icon" href="../../assets/icons/favicons/icon-48x48.jpg" type="image/jpg" sizes="48x48">
   </head>
 
+  <body class="text-gray-900" id="fondo_juguetes">
 
 
+  <!-- ===== HEADER GLOBAL ===== -->
+  <header class="fixed top-0 left-0 w-full rounded-none xl:top-[10px] xl:left-1/2 xl:-translate-x-1/2 xl:rounded-[15px] xl:w-max xl:max-w-[calc(100vw-40px)] bg-black/80 px-2.5 py-1.5 z-[1000] flex justify-center text-white">
+    <div class="flex items-center gap-2.5 justify-between md:justify-center w-full px-0 md:px-3.5">
 
-<body id="juguetes" class="category-page">
-    <!-- ===== HEADER GLOBAL ===== -->
-    <header class="header-global">
-        <div class="header-container">
-            <!-- Botón hamburguesa solo en móvil -->
-            <button class="menu-btn" aria-label="Abrir menú">
-                <i class="fas fa-bars"></i>
-            </button>
+      <!-- Botón hamburguesa solo en móvil -->
+      <button class="menu-btn text-[22px] bg-transparent border-none text-white cursor-pointer transition-colors duration-300 rounded hover:bg-white/15 p-1 md:hidden">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-menu"/></svg>
+      </button>
 
-            <!-- Logo + título -->
-            <a href="../../index.html" class="brand">
-                <img src="../../assets/images/logo/logo.jpeg" alt="Logo de Hipermercado Superior">
-                <h1 class="brand-name">Superior</h1>
+      <!-- Logo -->
+      <a href="../../index.html" class="brand flex items-center gap-1 text-white no-underline" aria-label="Ir a la página principal de Hipermercado Superior">
+        <img src="../../assets/images/logo/logo.png" alt="Logo de Hipermercado Superior">
+        <h1 class="whitespace-nowrap block ml-1">Hipermercado Superior</h1>
+      </a>
+
+      <!-- Menú de navegación Desktop -->
+      <nav class="nav-links hidden md:flex justify-center" role="navigation" aria-label="Menú principal">
+        <ul class="flex gap-5 items-center list-none p-0 m-0">
+          <li><a href="../../index.html" class="text-white no-underline text-base px-2.5 py-2 block text-left transition-colors duration-300 rounded-[10px] hover:bg-white/15">Inicio</a></li>
+
+          <!-- Categorías Dropdown -->
+          <li class="relative group">
+            <a href="#" class="text-white no-underline text-base px-2.5 py-2 block text-left transition-colors duration-300 rounded-[10px] hover:bg-white/15" aria-haspopup="true" aria-expanded="false">
+              Categorías <span class="text-[0.7em] ml-0.75 opacity-80">▼</span>
             </a>
-
-            <!-- Menú de navegación Desktop -->
-            <nav class="nav-links-desktop" role="navigation" aria-label="Menú principal">
-                <ul>
-                    <li><a href="../../index.html">Inicio</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="active">Categorías <i class="fas fa-chevron-down"></i></a>
-                        <div class="dropdown-content">
-                            <a href="alimentos.html">Alimentos</a>
-                            <a href="electrodomesticos.html">Electrodomésticos</a>
-                            <a href="tecnologia.html">Tecnología</a>
-                            <a href="ropa.html">Ropa</a>
-                            <a href="muebles_y_decoracion.html">Muebles y Decoración</a>
-                            <a href="farmacia.html">Farmacia</a>
-                            <a href="ferreteria.html">Ferretería</a>
-                            <a href="juguetes.html" class="active">Juguetes</a>
-                        </div>
-                    </li>
-                    <li><a href="../../index.html#ofertas">Ofertas</a></li>
-                    <li><a href="../contacto/index.html">Contacto</a></li>
-                </ul>
-            </nav>
-
-            <!-- Acciones (Búsqueda, Carrito) -->
-            <div class="header-actions">
-                <div class="search-container">
-                    <input type="text" id="input-buscar" placeholder="Buscar..." aria-label="Buscar productos">
-                    <button type="button" id="btn-buscar" aria-label="Buscar">
-                        <i class="fas fa-search"></i>
-                    </button>
-                    <ul id="resultados-busqueda" class="search-results"></ul>
-                </div>
-                <a href="../cart/index.html" class="cart-btn" aria-label="Ver carrito">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span id="contador-carrito">0</span>
+            <ul class="absolute top-full left-0 bg-black/90 rounded-lg min-w-[220px] hidden group-hover:flex flex-col z-[1000] text-left list-none p-0 m-0">
+              <!-- Alimentos -->
+              <li class="relative group/sub">
+                <a href="alimentos.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Alimentos <span class="right-arrow">▸</span>
                 </a>
-            </div>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="alimentos.html#frutas_y_verduras" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Frutas y Verduras</a></li>
+                  <li><a href="alimentos.html#despensa" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Despensa</a></li>
+                  <li><a href="alimentos.html#carnes_pescados_mariscos" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Carnes, Pescados y Mariscos</a></li>
+                  <li><a href="alimentos.html#lacteos_y_huevos" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Lácteos y Huevos</a></li>
+                  <li><a href="alimentos.html#bebidas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Bebidas</a></li>
+                  <li><a href="alimentos.html#enlatados" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Enlatados</a></li>
+                </ul>
+              </li>
+              <!-- Electrodomésticos -->
+              <li class="relative group/sub">
+                <a href="electrodomesticos.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Electrodomésticos <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="electrodomesticos.html#cocina" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Cocina</a></li>
+                  <li><a href="electrodomesticos.html#lavado" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Lavado</a></li>
+                  <li><a href="electrodomesticos.html#climatizacion" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Climatización</a></li>
+                </ul>
+              </li>
+              <!-- Tecnología -->
+              <li class="relative group/sub">
+                <a href="tecnologia.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Tecnología <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="tecnologia.html#televisores" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Televisores</a></li>
+                  <li><a href="tecnologia.html#laptops" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Laptops</a></li>
+                  <li><a href="tecnologia.html#tablets" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Tablets</a></li>
+                  <li><a href="tecnologia.html#celulares" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Celulares</a></li>
+                  <li><a href="tecnologia.html#bocinas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Bocinas</a></li>
+                </ul>
+              </li>
+              <!-- Ropa -->
+              <li class="relative group/sub">
+                <a href="ropa.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Ropa <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="ropa.html#pantalones_para_hombres" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Pantalones para Hombres</a></li>
+                  <li><a href="ropa.html#pantalones_para_mujeres" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Pantalones para Mujeres</a></li>
+                  <li><a href="ropa.html#pantalones_para_niños" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Pantalones para Niños</a></li>
+                  <li><a href="ropa.html#trajes_para_hombres" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Trajes para Hombres</a></li>
+                  <li><a href="ropa.html#vestidos" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Vestidos</a></li>
+                </ul>
+              </li>
+              <!-- Muebles -->
+              <li class="relative group/sub">
+                <a href="muebles_y_decoracion.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Muebles y Decoración <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="muebles_y_decoracion.html#sofas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Sofás</a></li>
+                  <li><a href="muebles_y_decoracion.html#sillones" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Sillones</a></li>
+                  <li><a href="muebles_y_decoracion.html#mesas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Mesas</a></li>
+                  <li><a href="muebles_y_decoracion.html#floreros" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Floreros</a></li>
+                </ul>
+              </li>
+              <!-- Farmacia -->
+              <li class="relative group/sub">
+                <a href="farmacia.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Farmacia <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="farmacia.html#analgesicos" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Analgésicos</a></li>
+                  <li><a href="farmacia.html#dermocosmetica" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Dermocosmética</a></li>
+                  <li><a href="farmacia.html#vitaminas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Vitaminas</a></li>
+                  <li><a href="farmacia.html#antigripales" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Antigripales</a></li>
+                </ul>
+              </li>
+              <!-- Ferretería -->
+              <li class="relative group/sub">
+                <a href="ferreteria.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Ferretería <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="ferreteria.html#herramientas_manuales" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Herramientas Manuales</a></li>
+                  <li><a href="ferreteria.html#pinturas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Pinturas</a></li>
+                  <li><a href="ferreteria.html#electricidad" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Electricidad</a></li>
+                  <li><a href="ferreteria.html#plomeria" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Plomería</a></li>
+                </ul>
+              </li>
+              <!-- Juguetes -->
+              <li class="relative group/sub">
+                <a href="juguetes.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Juguetes <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="juguetes.html#juguetes_para_ninos" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Juguetes para Niños</a></li>
+                  <li><a href="juguetes.html#juguetes_para_ninas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Juguetes para Niñas</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li><a href="../../index.html#ofertas" class="text-white no-underline text-base px-2.5 py-2 block transition-colors duration-300 rounded-[10px] hover:bg-white/15">Ofertas</a></li>
+          <li><a href="../contacto/index.html" class="text-white no-underline text-base px-2.5 py-2 block transition-colors duration-300 rounded-[10px] hover:bg-white/15">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Utilidades (Buscador y Carrito) -->
+      <div class="header-utils">
+        <!-- Buscador -->
+        <div class="relative flex items-center">
+          <input type="text" id="input-buscar" placeholder="Buscar productos..." class="search-input-modern" autocomplete="off">
+          <button type="button" id="btn-buscar" class="util-btn">
+            <svg id="icono-buscar" class="util-icon" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-search"/></svg>
+            <svg id="icono-cerrar" class="util-icon hidden" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-close"/></svg>
+          </button>
+          <ul id="resultados-busqueda" class="search-results-list"></ul>
         </div>
 
-        <!-- Menú móvil colapsable -->
-        <nav class="nav-links-mobile">
-            <ul>
-                <li><a href="../../index.html">Inicio</a></li>
-                <li>
-                    <button class="mobile-dropdown-btn">Categorías <i class="fas fa-chevron-down"></i></button>
-                    <ul class="mobile-dropdown-content">
-                        <li><a href="alimentos.html">Alimentos</a></li>
-                        <li><a href="electrodomesticos.html">Electrodomésticos</a></li>
-                        <li><a href="tecnologia.html">Tecnología</a></li>
-                        <li><a href="ropa.html">Ropa</a></li>
-                        <li><a href="muebles_y_decoracion.html">Muebles y Decoración</a></li>
-                        <li><a href="farmacia.html">Farmacia</a></li>
-                        <li><a href="ferreteria.html">Ferretería</a></li>
-                        <li><a href="juguetes.html" class="active">Juguetes</a></li>
-                    </ul>
-                </li>
-                <li><a href="../../index.html#ofertas">Ofertas</a></li>
-                <li><a href="../contacto/index.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+        <!-- Carrito -->
+        <a href="../cart/index.html" class="util-btn" aria-label="Ver carrito">
+          <svg class="util-icon" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-cart"/></svg>
+          <span id="contador-carrito" class="cart-badge">0</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Menú móvil colapsable -->
+    <nav id="mobile-menu" class="fixed top-[49px] left-0 w-full bg-black/95 text-white hidden z-[999] max-h-[calc(100vh-49px)] overflow-y-auto py-5 shadow-xl">
+      <ul class="list-none p-0 m-0">
+        <li class="px-5 py-2.5 border-b border-white/10"><a href="../../index.html" class="block">Inicio</a></li>
+        <li class="px-5 py-2.5 border-b border-white/10">
+          <button class="mobile-dropdown-btn w-full text-left flex justify-between items-center">
+            Categorías <span class="text-[0.7em] opacity-70">▼</span>
+          </button>
+          <ul class="hidden pl-5 mt-2 transition-all duration-300 opacity-0 overflow-hidden">
+            <!-- Categorías en móvil -->
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Alimentos <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="alimentos.html#frutas_y_verduras" class="block py-2">Frutas y Verduras</a></li>
+                <li><a href="alimentos.html#despensa" class="block py-2">Despensa</a></li>
+                <li><a href="alimentos.html#carnes_pescados_mariscos" class="block py-2">Carnes y Mariscos</a></li>
+                <li><a href="alimentos.html#lacteos_y_huevos" class="block py-2">Lácteos</a></li>
+                <li><a href="alimentos.html#bebidas" class="block py-2">Bebidas</a></li>
+                <li><a href="alimentos.html#enlatados" class="block py-2">Enlatados</a></li>
+              </ul>
+            </li>
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Electrodomésticos <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="electrodomesticos.html#cocina" class="block py-2">Cocina</a></li>
+                <li><a href="electrodomesticos.html#lavado" class="block py-2">Lavado</a></li>
+                <li><a href="electrodomesticos.html#climatizacion" class="block py-2">Climatización</a></li>
+              </ul>
+            </li>
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Tecnología <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="tecnologia.html#televisores" class="block py-2">Televisores</a></li>
+                <li><a href="tecnologia.html#laptops" class="block py-2">Laptops</a></li>
+                <li><a href="tecnologia.html#tablets" class="block py-2">Tablets</a></li>
+                <li><a href="tecnologia.html#celulares" class="block py-2">Celulares</a></li>
+                <li><a href="tecnologia.html#bocinas" class="block py-2">Bocinas</a></li>
+              </ul>
+            </li>
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Ropa <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="ropa.html#pantalones_para_hombres" class="block py-2">Hombres</a></li>
+                <li><a href="ropa.html#pantalones_para_mujeres" class="block py-2">Mujeres</a></li>
+                <li><a href="ropa.html#pantalones_para_niños" class="block py-2">Niños</a></li>
+                <li><a href="ropa.html#trajes_para_hombres" class="block py-2">Trajes para Hombres</a></li>
+                <li><a href="ropa.html#vestidos" class="block py-2">Vestidos</a></li>
+              </ul>
+            </li>
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Muebles y Decoración <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="muebles_y_decoracion.html#sofas" class="block py-2">Sofás</a></li>
+                <li><a href="muebles_y_decoracion.html#sillones" class="block py-2">Sillones</a></li>
+                <li><a href="muebles_y_decoracion.html#mesas" class="block py-2">Mesas</a></li>
+                <li><a href="muebles_y_decoracion.html#floreros" class="block py-2">Floreros</a></li>
+              </ul>
+            </li>
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Farmacia <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="farmacia.html#analgesicos" class="block py-2">Analgésicos</a></li>
+                <li><a href="farmacia.html#dermocosmetica" class="block py-2">Dermocosmética</a></li>
+                <li><a href="farmacia.html#vitaminas" class="block py-2">Vitaminas</a></li>
+                <li><a href="farmacia.html#antigripales" class="block py-2">Antigripales</a></li>
+              </ul>
+            </li>
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Ferretería <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="ferreteria.html#herramientas_manuales" class="block py-2">Herramientas</a></li>
+                <li><a href="ferreteria.html#pinturas" class="block py-2">Pinturas</a></li>
+                <li><a href="ferreteria.html#electricidad" class="block py-2">Electricidad</a></li>
+                <li><a href="ferreteria.html#plomeria" class="block py-2">Plomería</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Juguetes <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="juguetes.html#juguetes_para_ninos" class="block py-2">Niños</a></li>
+                <li><a href="juguetes.html#juguetes_para_ninas" class="block py-2">Niñas</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="px-5 py-2.5 border-b border-white/10"><a href="../../index.html#ofertas" class="block">Ofertas</a></li>
+        <li class="px-5 py-2.5 border-b border-white/10"><a href="../contacto/index.html" class="block">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<!-- Breadcrumb -->
+<nav aria-label="Breadcrumb">
+  <ol class="breadcrumb breadcrumb-category">
+    <li><a href="../../index.html">Inicio</a></li>
+    <li><span>Categorías</span></li>
+    <li aria-current="page">Juguetes</li>
+  </ol>
+</nav>
 
     <main>
-        <!-- Banner de Categoría -->
-        <section class="category-banner" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../assets/images/productos/Juguetes/juguetes_banner.jpg');">
-            <div class="container mx-auto px-4 h-full flex flex-col justify-center items-center text-center text-white">
-                <h2 class="text-5xl font-bold mb-4">Mundo de Diversión</h2>
-                <p class="text-xl max-w-2xl">Los mejores juguetes para todas las edades. Encuentra aventuras, creatividad y risas en cada pasillo.</p>
-            </div>
-        </section>
-
-        <!-- Filtros Rápidos -->
-        <nav class="quick-filters py-6 bg-white border-b sticky top-[70px] z-40">
-            <div class="container mx-auto px-4 overflow-x-auto">
-                <div class="flex justify-center gap-4 min-w-max">
-                    <a href="#juguetes_para_niños" class="filter-chip">Juguetes para Niños</a>
-                    <a href="#juguetes_para_niñas" class="filter-chip">Juguetes para Niñas</a>
-                </div>
-            </div>
-        </nav>
-       
-     <main> <!--main-->
-
         <!-- Juguetes para Niños -->
-        <section id="juguetes_para_niños" class="product-section py-16">
-            <div class="container mx-auto px-4">
-                <div class="flex items-center justify-between mb-8">
-                    <div>
-                        <h3 class="text-3xl font-bold text-gray-800">Juguetes para Niños</h3>
-                        <p class="text-gray-600">Autos, legos y más aventuras.</p>
-                    </div>
-                    <div class="slider-controls flex gap-2">
-                        <button class="slider-prev w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-orange-500 hover:text-white hover:border-orange-500 transition-all" aria-label="Anterior">
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
-                        <button class="slider-next w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-orange-500 hover:text-white hover:border-orange-500 transition-all" aria-label="Siguiente">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                    </div>
-                </div>
+        <section class="productos-destacados bg-black/80 rounded-[20px] p-5 md:py-7.5 md:px-[56px] mx-auto mb-10 max-w-[1280px] xl:max-w-[calc(100vw-100px)] lg:max-w-[calc(100vw-86px)] reveal" id="juguetes_para_ninos">
+            <div class="container mx-auto">
+                <h2 class="text-xl md:text-2xl text-white bg-black/70 px-4 py-2 rounded-xl mb-5 w-fit mx-auto text-center font-bold">Juguetes para Niños</h2>
+                
+                <div class="productos-container-wrapper relative flex items-center justify-center">
+                    <button class="productos-control-prev absolute left-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="juguetes_para_ninos-prev">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-left"/></svg>
+                        <span class="sr-only">Anterior</span>
+                    </button>
 
-                <div class="slider-container overflow-hidden">
-                    <div class="slider-track flex gap-6 transition-transform duration-300">
+                    <div class="productos-container flex w-full gap-4 md:gap-5 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory">
                         <!-- Auto Azul -->
-                        <div class="product-card min-w-[280px] bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 overflow-hidden group">
-                            <div class="relative overflow-hidden aspect-square">
-                                <img src="../../assets/images/productos/Juguetes/juguetes_para_ninos/auto_azul.avif" alt="Auto Azul" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                                <span class="absolute top-2 right-2 bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded">Nuevo</span>
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/juguetes/juguetes_para_niños/auto_azul.html" class="product-card__overlay-link" aria-label="Ver detalles de Auto Azul"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/Juguetes/juguetes_para_ninos/auto_azul.avif" alt="Auto Azul" loading="lazy">
                             </div>
-                            <div class="p-4">
-                                <h4 class="font-semibold text-lg mb-1">Auto Azul</h4>
-                                <p class="text-gray-500 text-sm mb-3">Velocidad y diversión garantizada.</p>
-                                <div class="flex items-center justify-between">
-                                    <span class="text-xl font-bold text-gray-900">$1,800</span>
-                                    <button class="add-to-cart-btn p-2 rounded-full bg-gray-100 hover:bg-orange-500 hover:text-white transition-colors" data-id="auto_azul">
-                                        <i class="fas fa-cart-plus"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                            <h3 class="producto-title text-center">Auto Azul</h3>
+                            <p class="producto-price text-center font-bold">Precio: $1,800</p>
+                            <button class="btn-agregar product-card__add-btn" id="btn-auto-azul">Agregar</button>
+                        </article>
 
-                        <!-- Autos Hot Wheels -->
-                        <div class="product-card min-w-[280px] bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 overflow-hidden group">
-                            <div class="relative overflow-hidden aspect-square">
-                                <img src="../../assets/images/productos/Juguetes/juguetes_para_ninos/autos_hot_wheels.avif" alt="Autos Hot Wheels" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <!-- Hot Wheels -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/juguetes/juguetes_para_niños/hot_wheels.html" class="product-card__overlay-link" aria-label="Ver detalles de Autos Hot Wheels"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/Juguetes/juguetes_para_ninos/autos_hot_wheels.avif" alt="Autos Hot Wheels" loading="lazy">
                             </div>
-                            <div class="p-4">
-                                <h4 class="font-semibold text-lg mb-1">Autos Hot Wheels</h4>
-                                <p class="text-gray-500 text-sm mb-3">Colecciona la emoción de las pistas.</p>
-                                <div class="flex items-center justify-between">
-                                    <span class="text-xl font-bold text-gray-900">$3,500</span>
-                                    <button class="add-to-cart-btn p-2 rounded-full bg-gray-100 hover:bg-orange-500 hover:text-white transition-colors" data-id="autos_hot_wheels">
-                                        <i class="fas fa-cart-plus"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                            <h3 class="producto-title text-center">Autos Hot Wheels</h3>
+                            <p class="producto-price text-center font-bold">Precio: $3,500</p>
+                            <button class="btn-agregar product-card__add-btn" id="btn-hot-wheels">Agregar</button>
+                        </article>
 
-                        <!-- Avión de Juguete -->
-                        <div class="product-card min-w-[280px] bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 overflow-hidden group">
-                            <div class="relative overflow-hidden aspect-square">
-                                <img src="../../assets/images/productos/Juguetes/juguetes_para_ninos/avion.avif" alt="Avión de Juguete" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <!-- Avión -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/juguetes/juguetes_para_niños/avion_juguete.html" class="product-card__overlay-link" aria-label="Ver detalles de Avión de Juguete"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/Juguetes/juguetes_para_ninos/avion.avif" alt="Avión de Juguete" loading="lazy">
                             </div>
-                            <div class="p-4">
-                                <h4 class="font-semibold text-lg mb-1">Avión de Juguete</h4>
-                                <p class="text-gray-500 text-sm mb-3">Vuela alto con tu imaginación.</p>
-                                <div class="flex items-center justify-between">
-                                    <span class="text-xl font-bold text-gray-900">$2,500</span>
-                                    <button class="add-to-cart-btn p-2 rounded-full bg-gray-100 hover:bg-orange-500 hover:text-white transition-colors" data-id="avion_de_juguete">
-                                        <i class="fas fa-cart-plus"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                            <h3 class="producto-title text-center">Avión de Juguete</h3>
+                            <p class="producto-price text-center font-bold">Precio: $2,500</p>
+                            <button class="btn-agregar product-card__add-btn" id="btn-avion">Agregar</button>
+                        </article>
 
                         <!-- Legos Creeper -->
-                        <div class="product-card min-w-[280px] bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 overflow-hidden group">
-                            <div class="relative overflow-hidden aspect-square">
-                                <img src="../../assets/images/productos/Juguetes/juguetes_para_ninos/lego_creeper.avif" alt="Legos Creeper" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/juguetes/juguetes_para_niños/legos_creeper.html" class="product-card__overlay-link" aria-label="Ver detalles de Legos Creeper"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/Juguetes/juguetes_para_ninos/lego_creeper.avif" alt="Legos Creeper" loading="lazy">
                             </div>
-                            <div class="p-4">
-                                <h4 class="font-semibold text-lg mb-1">Legos Creeper</h4>
-                                <p class="text-gray-500 text-sm mb-3">Construye tu mundo Minecraft.</p>
-                                <div class="flex items-center justify-between">
-                                    <span class="text-xl font-bold text-gray-900">$4,000</span>
-                                    <button class="add-to-cart-btn p-2 rounded-full bg-gray-100 hover:bg-orange-500 hover:text-white transition-colors" data-id="legos_de_creeper">
-                                        <i class="fas fa-cart-plus"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                            <h3 class="producto-title text-center">Legos Creeper</h3>
+                            <p class="producto-price text-center font-bold">Precio: $4,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="btn-legos-creeper">Agregar</button>
+                        </article>
 
                         <!-- Legos Minecraft -->
-                        <div class="product-card min-w-[280px] bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 overflow-hidden group">
-                            <div class="relative overflow-hidden aspect-square">
-                                <img src="../../assets/images/productos/Juguetes/juguetes_para_ninos/lego_minecraft.avif" alt="Legos Minecraft" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/juguetes/juguetes_para_niños/legos_minecraft.html" class="product-card__overlay-link" aria-label="Ver detalles de Legos Minecraft"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/juguetes/juguetes_para_ninos/lego_minecraft.avif" alt="Legos Minecraft" loading="lazy">
                             </div>
-                            <div class="p-4">
-                                <h4 class="font-semibold text-lg mb-1">Legos Minecraft</h4>
-                                <p class="text-gray-500 text-sm mb-3">Explora y construye sin límites.</p>
-                                <div class="flex items-center justify-between">
-                                    <span class="text-xl font-bold text-gray-900">$6,000</span>
-                                    <button class="add-to-cart-btn p-2 rounded-full bg-gray-100 hover:bg-orange-500 hover:text-white transition-colors" data-id="legos_de_minecraft">
-                                        <i class="fas fa-cart-plus"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                            <h3 class="producto-title text-center">Legos Minecraft</h3>
+                            <p class="producto-price text-center font-bold">Precio: $6,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="btn-legos-minecraft">Agregar</button>
+                        </article>
                     </div>
+
+                    <button class="productos-control-next absolute right-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="juguetes_para_ninos-next">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-right"/></svg>
+                        <span class="sr-only">Siguiente</span>
+                    </button>
                 </div>
             </div>
         </section>
 
         <!-- Juguetes para Niñas -->
-        <section id="juguetes_para_niñas" class="product-section py-16 bg-gray-50">
-            <div class="container mx-auto px-4">
-                <div class="flex items-center justify-between mb-8">
-                    <div>
-                        <h3 class="text-3xl font-bold text-gray-800">Juguetes para Niñas</h3>
-                        <p class="text-gray-600">Muñecas, kits de belleza y creatividad.</p>
-                    </div>
-                    <div class="slider-controls flex gap-2">
-                        <button class="slider-prev w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-orange-500 hover:text-white hover:border-orange-500 transition-all" aria-label="Anterior">
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
-                        <button class="slider-next w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-orange-500 hover:text-white hover:border-orange-500 transition-all" aria-label="Siguiente">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                    </div>
-                </div>
+        <section class="productos-destacados bg-black/80 rounded-[20px] p-5 md:py-7.5 md:px-[56px] mx-auto mb-20 max-w-[1280px] xl:max-w-[calc(100vw-100px)] lg:max-w-[calc(100vw-86px)] reveal" id="juguetes_para_ninas">
+            <div class="container mx-auto">
+                <h2 class="text-xl md:text-2xl text-white bg-black/70 px-4 py-2 rounded-xl mb-5 w-fit mx-auto text-center font-bold">Juguetes para Niñas</h2>
+                
+                <div class="productos-container-wrapper relative flex items-center justify-center">
+                    <button class="productos-control-prev absolute left-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="juguetes_para_ninas-prev">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-left"/></svg>
+                        <span class="sr-only">Anterior</span>
+                    </button>
 
-                <div class="slider-container overflow-hidden">
-                    <div class="slider-track flex gap-6 transition-transform duration-300">
-                        <!-- Muñeca Baby Doll -->
-                        <div class="product-card min-w-[280px] bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 overflow-hidden group">
-                            <div class="relative overflow-hidden aspect-square">
-                                <img src="../../assets/images/productos/Juguetes/juguetes_para_ninas/baby_doll.avif" alt="Muñeca Baby Doll" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="productos-container flex w-full gap-4 md:gap-5 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory">
+                        <!-- Baby Doll -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/juguetes/juguetes_para_niñas/baby_doll.html" class="product-card__overlay-link" aria-label="Ver detalles de Muñeca Baby Doll"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/juguetes/juguetes_para_ninas/baby_doll.avif" alt="Muñeca Baby Doll" loading="lazy">
                             </div>
-                            <div class="p-4">
-                                <h4 class="font-semibold text-lg mb-1">Muñeca Baby Doll</h4>
-                                <p class="text-gray-500 text-sm mb-3">Cuida de tu pequeña compañera.</p>
-                                <div class="flex items-center justify-between">
-                                    <span class="text-xl font-bold text-gray-900">$500</span>
-                                    <button class="add-to-cart-btn p-2 rounded-full bg-gray-100 hover:bg-orange-500 hover:text-white transition-colors" data-id="muñeca_baby_doll">
-                                        <i class="fas fa-cart-plus"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                            <h3 class="producto-title text-center">Muñeca Baby Doll</h3>
+                            <p class="producto-price text-center font-bold">Precio: $500</p>
+                            <button class="btn-agregar product-card__add-btn" id="btn-baby-doll">Agregar</button>
+                        </article>
 
-                        <!-- Muñeca Barbie -->
-                        <div class="product-card min-w-[280px] bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 overflow-hidden group">
-                            <div class="relative overflow-hidden aspect-square">
-                                <img src="../../assets/images/productos/Juguetes/juguetes_para_ninas/barbie.avif" alt="Muñeca Barbie" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <!-- Barbie -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/juguetes/juguetes_para_niñas/barbie.html" class="product-card__overlay-link" aria-label="Ver detalles de Muñeca Barbie"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/juguetes/juguetes_para_ninas/barbie.avif" alt="Muñeca Barbie" loading="lazy">
                             </div>
-                            <div class="p-4">
-                                <h4 class="font-semibold text-lg mb-1">Muñeca Barbie</h4>
-                                <p class="text-gray-500 text-sm mb-3">Sé lo que quieras ser.</p>
-                                <div class="flex items-center justify-between">
-                                    <span class="text-xl font-bold text-gray-900">$1,000</span>
-                                    <button class="add-to-cart-btn p-2 rounded-full bg-gray-100 hover:bg-orange-500 hover:text-white transition-colors" data-id="muñeca_barbie">
-                                        <i class="fas fa-cart-plus"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                            <h3 class="producto-title text-center">Muñeca Barbie</h3>
+                            <p class="producto-price text-center font-bold">Precio: $1,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="btn-barbie">Agregar</button>
+                        </article>
 
-                        <!-- Juguetes de Peluquería -->
-                        <div class="product-card min-w-[280px] bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 overflow-hidden group">
-                            <div class="relative overflow-hidden aspect-square">
-                                <img src="../../assets/images/productos/Juguetes/juguetes_para_ninas/juguetes_de_peluqueria.avif" alt="Juguetes de Peluquería" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <!-- Peluquería -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/juguetes/juguetes_para_niñas/juguetes_peluqueria.html" class="product-card__overlay-link" aria-label="Ver detalles de Juguetes de Peluquería"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/juguetes/juguetes_para_ninas/juguetes_de_peluqueria.avif" alt="Juguetes de Peluquería" loading="lazy">
                             </div>
-                            <div class="p-4">
-                                <h4 class="font-semibold text-lg mb-1">Juguetes de Peluquería</h4>
-                                <p class="text-gray-500 text-sm mb-3">Estilo y creatividad en tus manos.</p>
-                                <div class="flex items-center justify-between">
-                                    <span class="text-xl font-bold text-gray-900">$2,500</span>
-                                    <button class="add-to-cart-btn p-2 rounded-full bg-gray-100 hover:bg-orange-500 hover:text-white transition-colors" data-id="juguetes_de_peluqueria">
-                                        <i class="fas fa-cart-plus"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                            <h3 class="producto-title text-center">Juguetes de Peluquería</h3>
+                            <p class="producto-price text-center font-bold">Precio: $2,500</p>
+                            <button class="btn-agregar product-card__add-btn" id="btn-peluqueria">Agregar</button>
+                        </article>
 
-                        <!-- Kit de Maquillaje -->
-                        <div class="product-card min-w-[280px] bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 overflow-hidden group">
-                            <div class="relative overflow-hidden aspect-square">
-                                <img src="../../assets/images/productos/Juguetes/juguetes_para_ninas/kit_de_maquillaje.avif" alt="Kit de Maquillaje" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <!-- Kit Maquillaje -->
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/juguetes/juguetes_para_niñas/kit_de_maquillaje.html" class="product-card__overlay-link" aria-label="Ver detalles de Kit de Maquillaje"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/juguetes/juguetes_para_ninas/kit_de_maquillaje.avif" alt="Kit de Maquillaje" loading="lazy">
                             </div>
-                            <div class="p-4">
-                                <h4 class="font-semibold text-lg mb-1">Kit de Maquillaje</h4>
-                                <p class="text-gray-500 text-sm mb-3">Realza tu belleza natural.</p>
-                                <div class="flex items-center justify-between">
-                                    <span class="text-xl font-bold text-gray-900">$2,000</span>
-                                    <button class="add-to-cart-btn p-2 rounded-full bg-gray-100 hover:bg-orange-500 hover:text-white transition-colors" data-id="kit_de_maquillaje">
-                                        <i class="fas fa-cart-plus"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                            <h3 class="producto-title text-center">Kit de Maquillaje</h3>
+                            <p class="producto-price text-center font-bold">Precio: $2,000</p>
+                            <button class="btn-agregar product-card__add-btn" id="btn-kit-maquillaje">Agregar</button>
+                        </article>
 
                         <!-- Pinta Uñas -->
-                        <div class="product-card min-w-[280px] bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 overflow-hidden group">
-                            <div class="relative overflow-hidden aspect-square">
-                                <img src="../../assets/images/productos/Juguetes/juguetes_para_ninas/pinta_unas.avif" alt="Pinta Uñas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <a href="../product/juguetes/juguetes_para_niñas/pinta_unas.html" class="product-card__overlay-link" aria-label="Ver detalles de Pinta Uñas"></a>
+                            <div class="producto-img-container">
+                                <img src="../../assets/images/productos/juguetes/juguetes_para_ninas/pinta_unas.avif" alt="Pinta Uñas" loading="lazy">
                             </div>
-                            <div class="p-4">
-                                <h4 class="font-semibold text-lg mb-1">Pinta Uñas</h4>
-                                <p class="text-gray-500 text-sm mb-3">Colores divertidos para tus uñas.</p>
-                                <div class="flex items-center justify-between">
-                                    <span class="text-xl font-bold text-gray-900">$1,400</span>
-                                    <button class="add-to-cart-btn p-2 rounded-full bg-gray-100 hover:bg-orange-500 hover:text-white transition-colors" data-id="pinta_uñas">
-                                        <i class="fas fa-cart-plus"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                            <h3 class="producto-title text-center">Pinta Uñas</h3>
+                            <p class="producto-price text-center font-bold">Precio: $1,400</p>
+                            <button class="btn-agregar product-card__add-btn" id="btn-pinta-unas">Agregar</button>
+                        </article>
                     </div>
+
+                    <button class="productos-control-next absolute right-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="juguetes_para_ninas-next">
+                        <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-right"/></svg>
+                        <span class="sr-only">Siguiente</span>
+                    </button>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer global -->
+    <footer class="footer-global">
+      <div class="footer-content">
+        <!-- Derechos reservados -->
+        <small>&copy; 2026 Hipermercado Superior. Todos los derechos reservados.</small>
 
-    <!-- Footer Global -->
-    <footer class="footer-global bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <!-- Info de la Marca -->
-                <div class="col-span-1 md:col-span-1">
-                    <a href="../../index.html" class="flex items-center gap-2 mb-4 group">
-                        <img src="../../assets/images/logo/logo.jpeg" alt="Logo Superior" class="w-10 h-10 rounded-full">
-                        <span class="text-2xl font-bold tracking-tight group-hover:text-orange-500 transition-colors">Superior</span>
-                    </a>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Tu hipermercado de confianza. Calidad Superior, precios increíbles y la mejor atención en cada una de tus compras.
-                    </p>
-                </div>
-
-                <!-- Enlaces Rápidos -->
-                <div>
-                    <h4 class="text-lg font-semibold mb-4 text-orange-500">Categorías</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="alimentos.html" class="hover:text-white transition-colors">Alimentos</a></li>
-                        <li><a href="electrodomesticos.html" class="hover:text-white transition-colors">Electrodomésticos</a></li>
-                        <li><a href="tecnologia.html" class="hover:text-white transition-colors">Tecnología</a></li>
-                        <li><a href="ropa.html" class="hover:text-white transition-colors">Ropa</a></li>
-                        <li><a href="juguetes.html" class="hover:text-white transition-colors">Juguetes</a></li>
-                    </ul>
-                </div>
-
-                <!-- Atención al Cliente -->
-                <div>
-                    <h4 class="text-lg font-semibold mb-4 text-orange-500">Ayuda</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="../contacto/index.html" class="hover:text-white transition-colors">Contacto</a></li>
-                        <li><a href="../contacto/index.html#sucursales" class="hover:text-white transition-colors">Nuestras Tiendas</a></li>
-                        <li><a href="../legal/terms.html" class="hover:text-white transition-colors">Términos y Condiciones</a></li>
-                        <li><a href="../legal/privacy.html" class="hover:text-white transition-colors">Privacidad</a></li>
-                    </ul>
-                </div>
-
-                <!-- Redes Sociales -->
-                <div>
-                    <h4 class="text-lg font-semibold mb-4 text-orange-500">Síguenos</h4>
-                    <div class="flex gap-4">
-                        <a href="https://facebook.com" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition-all shadow-lg" aria-label="Facebook">
-                            <i class="fab fa-facebook-f text-lg"></i>
-                        </a>
-                        <a href="https://instagram.com" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition-all shadow-lg" aria-label="Instagram">
-                            <i class="fab fa-instagram text-lg"></i>
-                        </a>
-                        <a href="https://twitter.com" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-400 transition-all shadow-lg" aria-label="Twitter">
-                            <i class="fab fa-twitter text-lg"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-xs">
-                <p>&copy; 2026 Hipermercado Superior. Todos los derechos reservados.</p>
-                <div class="flex gap-6 mt-4 md:mt-0">
-                    <a href="../legal/privacy.html" class="hover:text-white transition-colors">Privacidad</a>
-                    <a href="../legal/terms.html" class="hover:text-white transition-colors">Términos</a>
-                    <a href="#" class="hover:text-white transition-colors">Cookies</a>
-                </div>
-            </div>
+        <!-- Íconos de redes sociales (sprite SVG) -->
+        <div class="social-icons">
+          <a href="https://facebook.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Facebook" class="social-link">
+            <svg aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-facebook"/></svg>
+          </a>
+          <a href="https://twitter.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en X (antes Twitter)" class="social-link">
+            <svg aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-x"/></svg>
+          </a>
+          <a href="https://instagram.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Instagram" class="social-link">
+            <svg aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-instagram"/></svg>
+          </a>
         </div>
+
+        <!-- Enlaces legales -->
+        <div class="footer-links">
+          <a href="../../legal/privacy.html" title="Política de Privacidad">Política de Privacidad</a>
+          <span class="separator">|</span>
+          <a href="../../legal/terms.html" title="Términos de Uso">Términos de Uso</a>
+        </div>
+      </div>
     </footer>
 
-    <!-- Scripts Globales -->
-    <script src="../../assets/js/utils/slider.js" defer></script>
-    <script src="../../assets/js/components/header.js" defer></script>
-    <script src="../../assets/js/components/search.js" defer></script>
-    <script src="../../assets/js/core/cart.js" defer></script>
 </body>
 </html>
-
-

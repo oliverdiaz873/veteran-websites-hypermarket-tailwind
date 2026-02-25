@@ -12,15 +12,14 @@
     <meta name="copyright" content="Oliver Antonio Díaz. Todos los derechos reservados.">
     <meta name="theme-color" content="#ef4444">
 
-    <!-- Enlace Canónico (Muy importante para SEO) -->
+    <!-- Enlace Canónico -->
     <link rel="canonical" href="https://www.hipermercadosuperior.com">
 
-    <!-- Etiquetas Open Graph -->
+    <!-- Open Graph -->
     <meta property="og:title" content="Hipermercado Superior - Todo lo que necesitas en un solo lugar">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.hipermercadosuperior.com">
-    <meta property="og:image" content="https://www.hipermercadosuperior.com/assets/images/logo.png">
-    <meta property="og:image:alt" content="Logotipo de Hipermercado Superior">
+    <meta property="og:image" content="assets/images/logo/logo.png">
     <meta property="og:description" content="Hipermercado Superior: tu destino para compras inteligentes con la mejor selección de productos.">
     <meta property="og:site_name" content="Hipermercado Superior">
     <meta property="og:locale" content="es_ES"> 
@@ -29,16 +28,15 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Hipermercado Superior - Todo lo que necesitas en un solo lugar">
     <meta name="twitter:description" content="Tu destino para compras inteligentes con la mejor selección de productos.">
-    <meta name="twitter:image" content="https://www.hipermercadosuperior.com/assets/images/logo.png">
-    <meta name="twitter:image:alt" content="Logotipo de Hipermercado Superior">
+    <meta name="twitter:image" content="assets/images/logo/logo.png">
 
     <!-- Título -->
     <title>Hipermercado Superior | Compras inteligentes y productos de calidad</title>
    
-    <!-- Favicons (Rutas absolutas) -->
-    <link rel="icon" href="/assets/icons/favicons/icon-16x16.jpg" type="image/jpg" sizes="16x16">
-    <link rel="icon" href="/assets/icons/favicons/icon-32x32.jpg" type="image/jpg" sizes="32x32">
-    <link rel="icon" href="/assets/icons/favicons/icon-48x48.jpg" type="image/jpg" sizes="48x48">
+    <!-- Favicons -->
+    <link rel="icon" href="assets/icons/favicons/icon-16x16.jpg" type="image/jpg" sizes="16x16">
+    <link rel="icon" href="assets/icons/favicons/icon-32x32.jpg" type="image/jpg" sizes="32x32">
+    <link rel="icon" href="assets/icons/favicons/icon-48x48.jpg" type="image/jpg" sizes="48x48">
 
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -53,6 +51,7 @@
     <link rel="stylesheet" href="assets/css/components/about-us-section.css">
     <link rel="stylesheet" href="assets/css/components/footer.css">
     <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- Scripts -->
     <script src="assets/js/productos.js" defer></script>
@@ -64,20 +63,15 @@
     <script src="assets/js/scroll_animations.js" defer></script>
 </head>
 
-
-
-
-
 <body class="text-gray-900">
    
-
   <!-- ===== HEADER GLOBAL ===== -->
   <header class="fixed top-0 left-0 w-full rounded-none xl:top-[10px] xl:left-1/2 xl:-translate-x-1/2 xl:rounded-[15px] xl:w-max xl:max-w-[calc(100vw-40px)] bg-black/80 px-2.5 py-1.5 z-[1000] flex justify-center text-white">
     <div class="flex items-center gap-2.5 justify-between md:justify-center w-full px-0 md:px-3.5">
 
       <!-- Botón hamburguesa solo en móvil -->
       <button class="menu-btn text-[22px] bg-transparent border-none text-white cursor-pointer transition-colors duration-300 rounded hover:bg-white/15 p-1 md:hidden">
-        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-menu"/></svg>
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-menu"/></svg>
       </button>
 
       <!-- Logo -->
@@ -86,7 +80,7 @@
         <h1 class="whitespace-nowrap block ml-1">Hipermercado Superior</h1>
       </a>
 
-      <!-- Menú de navegación Desktop (Solo enlaces) - Visible en Tablets y Desktop -->
+      <!-- Menú de navegación Desktop -->
       <nav class="nav-links hidden md:flex justify-center" role="navigation" aria-label="Menú principal">
         <ul class="flex gap-5 items-center list-none p-0 m-0">
           <li><a href="index.html" class="text-white no-underline text-base px-2.5 py-2 block text-left transition-colors duration-300 rounded-[10px] hover:bg-white/15">Inicio</a></li>
@@ -151,7 +145,7 @@
               <!-- Muebles -->
               <li class="relative group/sub">
                 <a href="pages/category/muebles_y_decoracion.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
-                  Muebles <span class="right-arrow">▸</span>
+                  Muebles y Decoración <span class="right-arrow">▸</span>
                 </a>
                 <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
                   <li><a href="pages/category/muebles_y_decoracion.html#sofas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Sofás</a></li>
@@ -168,8 +162,8 @@
                 <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
                   <li><a href="pages/category/farmacia.html#analgesicos" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Analgésicos</a></li>
                   <li><a href="pages/category/farmacia.html#dermocosmetica" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Dermocosmética</a></li>
-                  <li><a href="pages/category/farmacia.html#vitaminas_y_minerales" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Vitaminas y Minerales</a></li>
-                  <li><a href="pages/category/farmacia.html#antigripales_y_resfriado" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Antigripales y Resfriado</a></li>
+                  <li><a href="pages/category/farmacia.html#vitaminas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Vitaminas</a></li>
+                  <li><a href="pages/category/farmacia.html#antigripales" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Antigripales</a></li>
                 </ul>
               </li>
               <!-- Ferretería -->
@@ -179,7 +173,7 @@
                 </a>
                 <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
                   <li><a href="pages/category/ferreteria.html#herramientas_manuales" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Herramientas Manuales</a></li>
-                  <li><a href="pages/category/ferreteria.html#pinturas_y_acabados" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Pinturas y Acabados</a></li>
+                  <li><a href="pages/category/ferreteria.html#pinturas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Pinturas</a></li>
                   <li><a href="pages/category/ferreteria.html#electricidad" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Electricidad</a></li>
                   <li><a href="pages/category/ferreteria.html#plomeria" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Plomería</a></li>
                 </ul>
@@ -190,8 +184,8 @@
                   Juguetes <span class="right-arrow">▸</span>
                 </a>
                 <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
-                  <li><a href="pages/category/juguetes.html#juguetes_para_niños" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Juguetes para Niños</a></li>
-                  <li><a href="pages/category/juguetes.html#juguetes_para_niñas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Juguetes para Niñas</a></li>
+                  <li><a href="pages/category/juguetes.html#juguetes_para_ninos" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Juguetes para Niños</a></li>
+                  <li><a href="pages/category/juguetes.html#juguetes_para_ninas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Juguetes para Niñas</a></li>
                 </ul>
               </li>
             </ul>
@@ -202,22 +196,21 @@
         </ul>
       </nav>
 
-      <!-- Utilidades (Buscador y Carrito) - Visibles en todos los dispositivos -->
+      <!-- Utilidades (Buscador y Carrito) -->
       <div class="header-utils">
         <!-- Buscador -->
         <div class="relative flex items-center">
           <input type="text" id="input-buscar" placeholder="Buscar productos..." class="search-input-modern" autocomplete="off">
           <button type="button" id="btn-buscar" class="util-btn">
-            <!-- Icono Lupa / Cerrar (sprite) -->
-            <svg id="icono-buscar" class="util-icon" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-search"/></svg>
-            <svg id="icono-cerrar" class="util-icon hidden" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-close"/></svg>
+            <svg id="icono-buscar" class="util-icon" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-search"/></svg>
+            <svg id="icono-cerrar" class="util-icon hidden" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-close"/></svg>
           </button>
           <ul id="resultados-busqueda" class="search-results-list"></ul>
         </div>
 
         <!-- Carrito -->
         <a href="pages/cart/index.html" class="util-btn" aria-label="Ver carrito">
-          <svg class="util-icon" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-cart"/></svg>
+          <svg class="util-icon" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-cart"/></svg>
           <span id="contador-carrito" class="cart-badge">0</span>
         </a>
       </div>
@@ -232,7 +225,6 @@
             Categorías <span class="text-[0.7em] opacity-70">▼</span>
           </button>
           <ul class="hidden pl-5 mt-2 transition-all duration-300 opacity-0 overflow-hidden">
-            <!-- Alimentos -->
             <li class="border-b border-white/5">
               <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
                 Alimentos <span class="opacity-50 transition-transform duration-300">▸</span>
@@ -246,7 +238,6 @@
                 <li><a href="pages/category/alimentos.html#enlatados" class="block py-2">Enlatados</a></li>
               </ul>
             </li>
-            <!-- Electrodomésticos -->
             <li class="border-b border-white/5">
               <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
                 Electrodomésticos <span class="opacity-50 transition-transform duration-300">▸</span>
@@ -257,7 +248,6 @@
                 <li><a href="pages/category/electrodomesticos.html#climatizacion" class="block py-2">Climatización</a></li>
               </ul>
             </li>
-            <!-- Tecnología -->
             <li class="border-b border-white/5">
               <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
                 Tecnología <span class="opacity-50 transition-transform duration-300">▸</span>
@@ -270,7 +260,6 @@
                 <li><a href="pages/category/tecnologia.html#bocinas" class="block py-2">Bocinas</a></li>
               </ul>
             </li>
-            <!-- Ropa -->
             <li class="border-b border-white/5">
               <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
                 Ropa <span class="opacity-50 transition-transform duration-300">▸</span>
@@ -283,10 +272,9 @@
                 <li><a href="pages/category/ropa.html#vestidos" class="block py-2">Vestidos</a></li>
               </ul>
             </li>
-            <!-- Muebles -->
             <li class="border-b border-white/5">
               <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
-                Muebles <span class="opacity-50 transition-transform duration-300">▸</span>
+                Muebles y Decoración <span class="opacity-50 transition-transform duration-300">▸</span>
               </button>
               <ul class="hidden pl-4 pb-2 text-[13px]">
                 <li><a href="pages/category/muebles_y_decoracion.html#sofas" class="block py-2">Sofás</a></li>
@@ -295,7 +283,6 @@
                 <li><a href="pages/category/muebles_y_decoracion.html#floreros" class="block py-2">Floreros</a></li>
               </ul>
             </li>
-            <!-- Farmacia -->
             <li class="border-b border-white/5">
               <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
                 Farmacia <span class="opacity-50 transition-transform duration-300">▸</span>
@@ -307,26 +294,24 @@
                 <li><a href="pages/category/farmacia.html#antigripales" class="block py-2">Antigripales</a></li>
               </ul>
             </li>
-            <!-- Ferretería -->
             <li class="border-b border-white/5">
               <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
                 Ferretería <span class="opacity-50 transition-transform duration-300">▸</span>
               </button>
               <ul class="hidden pl-4 pb-2 text-[13px]">
-                <li><a href="pages/category/ferreteria.html#herramientas" class="block py-2">Herramientas</a></li>
+                <li><a href="pages/category/ferreteria.html#herramientas_manuales" class="block py-2">Herramientas</a></li>
                 <li><a href="pages/category/ferreteria.html#pinturas" class="block py-2">Pinturas</a></li>
                 <li><a href="pages/category/ferreteria.html#electricidad" class="block py-2">Electricidad</a></li>
                 <li><a href="pages/category/ferreteria.html#plomeria" class="block py-2">Plomería</a></li>
               </ul>
             </li>
-            <!-- Juguetes -->
-            <li class="">
+            <li>
               <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
                 Juguetes <span class="opacity-50 transition-transform duration-300">▸</span>
               </button>
               <ul class="hidden pl-4 pb-2 text-[13px]">
-                <li><a href="pages/category/juguetes.html#niños" class="block py-2">Niños</a></li>
-                <li><a href="pages/category/juguetes.html#niñas" class="block py-2">Niñas</a></li>
+                <li><a href="pages/category/juguetes.html#juguetes_para_ninos" class="block py-2">Niños</a></li>
+                <li><a href="pages/category/juguetes.html#juguetes_para_ninas" class="block py-2">Niñas</a></li>
               </ul>
             </li>
           </ul>
@@ -337,48 +322,46 @@
     </nav>
   </header>
 
-    <!-- main -->
     <main>
-
     <!-- Sección: Productos Destacados -->
     <section class="productos-destacados bg-black/80 rounded-[20px] p-5 md:py-7.5 md:px-[56px] mx-auto mb-10 max-w-[1280px] xl:max-w-[calc(100vw-100px)] lg:max-w-[calc(100vw-86px)] reveal" id="productos-destacados">
         <div class="container mx-auto">
-            <h2 class="text-xl md:text-2xl text-white bg-black/70 px-4 py-2 rounded-xl mb-5 w-fit mx-auto text-center">Productos Destacados</h2>
+            <h2 class="text-xl md:text-2xl text-white bg-black/70 px-4 py-2 rounded-xl mb-5 w-fit mx-auto text-center font-bold">Productos Destacados</h2>
 
             <div class="productos-container-wrapper relative flex items-center justify-center">
                 <button class="productos-control-prev absolute left-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="productos-destacados-prev">
-                    <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-chevron-left"/></svg>
+                    <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-chevron-left"/></svg>
                     <span class="sr-only">Anterior</span>
                 </button>
                 
                 <div class="productos-container flex w-full gap-4 md:gap-5 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory">
                     <!-- Producto 1 -->
                     <article class="producto product-card offer-card block shrink-0 snap-start">
-                        <a href="productos/tecnologia/televisores/tv_samsung_75.html" class="product-card__overlay-link" aria-label="Ver detalles de Televisor Samsung 75 pulgadas"></a>
+                        <a href="pages/product/tecnologia/televisores/tv_samsung_75.html" class="product-card__overlay-link" aria-label="Ver detalles de Televisor Samsung 75 pulgadas"></a>
                         <div class="producto-img-container">
                             <img src="assets/images/productos/tecnologia/televisores/tv_led_samsung.avif" alt="Televisor Samsung 75 pulgadas" loading="lazy">
                         </div>
-                        <h3 class="producto-title">Televisor Samsung 75 pulgadas</h3>
+                        <h3 class="producto-title">Televisor Samsung 75"</h3>
                         <p class="producto-price">Precio: $44,000</p>
                         <button class="btn-agregar product-card__add-btn" id="televisor_samsung_75_pulgadas">Agregar</button>
                     </article>
 
                     <!-- Producto 2 -->
                     <article class="producto product-card offer-card block shrink-0 snap-start">
-                        <a href="productos/electrodomesticos/cocina/nevera_lg.html" class="product-card__overlay-link" aria-label="Ver detalles de Nevera LG Grande Moderna"></a>
+                        <a href="pages/product/electrodomesticos/cocina/nevera_lg.html" class="product-card__overlay-link" aria-label="Ver detalles de Nevera LG Grande Moderna"></a>
                         <div class="producto-img-container">
                             <img src="assets/images/productos/electrodomesticos/cocina/neveras/nevera_lg.png" alt="Nevera LG Grande" loading="lazy">
                         </div>
-                        <h3 class="producto-title">Nevera LG Grande Moderna</h3>
+                        <h3 class="producto-title">Nevera LG Grande</h3>
                         <p class="producto-price">Precio: $80,000</p>
                         <button class="btn-agregar product-card__add-btn" id="nevera_lg_grande_moderna">Agregar</button>
                     </article>
 
                     <!-- Producto 3 -->
                     <article class="producto product-card offer-card block shrink-0 snap-start">
-                        <a href="productos/electrodomesticos/climatizacion/ventilador_daiwa.html" class="product-card__overlay-link" aria-label="Ver detalles de Ventilador Daiwa"></a>
+                        <a href="pages/product/electrodomesticos/climatizacion/ventilador_daiwa.html" class="product-card__overlay-link" aria-label="Ver detalles de Ventilador Daiwa"></a>
                         <div class="producto-img-container">
-                            <img src="assets/images/productos/electrodomesticos/climatizacion/ventiladores/ventilador_daiwa.png" alt="Ventilador Daiwa de mesa color negro" loading="lazy">
+                            <img src="assets/images/productos/electrodomesticos/climatizacion/ventiladores/ventilador_daiwa.png" alt="Ventilador Daiwa" loading="lazy">
                         </div>
                         <h3 class="producto-title">Ventilador Daiwa</h3>
                         <p class="producto-price">Precio: $15,000</p>
@@ -387,7 +370,7 @@
 
                     <!-- Producto 4 -->
                     <article class="producto product-card offer-card block shrink-0 snap-start">
-                        <a href="productos/muebles_y_decoracion/sofas/sofa_cama_blanco.html" class="product-card__overlay-link" aria-label="Ver detalles de Sofá cama blanco"></a>
+                        <a href="pages/product/muebles_y_decoracion/sofas/sofa_cama_blanco.html" class="product-card__overlay-link" aria-label="Ver detalles de Sofá cama blanco"></a>
                         <div class="producto-img-container">
                             <img src="assets/images/productos/muebles_y_decoracion/sofa/sofa_cama_blanco.png" alt="Sofá cama blanco" loading="lazy">
                         </div>
@@ -398,29 +381,29 @@
 
                     <!-- Producto 5 -->
                     <article class="producto product-card offer-card block shrink-0 snap-start">
-                        <a href="productos/alimentos/carnes_pescados_y_mariscos/carne_de_res_para_hamburguesas.html" class="product-card__overlay-link" aria-label="Ver detalles de Carne de Res para Hamburguesas"></a>
+                        <a href="pages/product/alimentos/carnes_pescados_y_mariscos/carne_de_res_para_hamburguesas.html" class="product-card__overlay-link" aria-label="Ver detalles de Carne de Res para Hamburguesas"></a>
                         <div class="producto-img-container">
                             <img src="assets/images/productos/alimentos/carnes_pescados_mariscos/res/carne_de_res.avif" alt="Carne de Res para Hamburguesas" loading="lazy">
                         </div>
-                        <h3 class="producto-title">Carne de Res para Hamburguesas</h3>
+                        <h3 class="producto-title">Carne de Res</h3>
                         <p class="producto-price">Precio: $370.00 /1 LB</p>
                         <button class="btn-agregar product-card__add-btn" id="carne_de_res_para_hamburguesas">Agregar</button>
                     </article>
 
                     <!-- Producto 6 -->
                     <article class="producto product-card offer-card block shrink-0 snap-start">
-                        <a href="productos/alimentos/carnes_pescados_y_mariscos/pollo_entero_don_pollo.html" class="product-card__overlay-link" aria-label="Ver detalles de Pollo Entero Don Pollo"></a>
+                        <a href="pages/product/alimentos/carnes_pescados_y_mariscos/pollo_entero_don_pollo.html" class="product-card__overlay-link" aria-label="Ver detalles de Pollo Entero Don Pollo"></a>
                         <div class="producto-img-container">
                             <img src="assets/images/productos/alimentos/carnes_pescados_mariscos/pollo/pollo.avif" alt="Pollo fresco entero" loading="lazy">
                         </div>
-                        <h3 class="producto-title">Pollo Entero Don Pollo</h3>
+                        <h3 class="producto-title">Pollo Entero</h3>
                         <p class="producto-price">$300.00 / 1 unidad</p>
                         <button class="btn-agregar product-card__add-btn" id="pollo_entero_don_pollo">Agregar</button>
                     </article>
                 </div>
                 
                 <button class="productos-control-next absolute right-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="productos-destacados-next">
-                    <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-chevron-right"/></svg>
+                    <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-chevron-right"/></svg>
                     <span class="sr-only">Siguiente</span>
                 </button>
             </div>
@@ -430,28 +413,28 @@
     <!-- Sección ofertas de la semana -->
     <section class="productos-destacados mt-12 md:mt-20 bg-black/80 rounded-[20px] p-5 md:py-7.5 md:px-[56px] mx-auto mb-10 max-w-[1280px] xl:max-w-[calc(100vw-100px)] lg:max-w-[calc(100vw-86px)] reveal" id="ofertas">
         <div class="container mx-auto">
-            <h2 class="text-xl md:text-2xl text-white bg-black/70 px-4 py-2 rounded-xl mb-5 w-fit mx-auto text-center">Ofertas de la Semana</h2>
+            <h2 class="text-xl md:text-2xl text-white bg-black/70 px-4 py-2 rounded-xl mb-5 w-fit mx-auto text-center font-bold">Ofertas de la Semana</h2>
 
             <div class="productos-container-wrapper relative flex items-center justify-center">
                 <button class="productos-control-prev absolute left-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="ofertas-prev">
-                    <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-chevron-left"/></svg>
+                    <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-chevron-left"/></svg>
                     <span class="sr-only">Anterior</span>
                 </button>
                 
                 <div class="productos-container flex w-full gap-4 md:gap-5 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory">
                     <!-- Producto 1 -->
                     <article class="producto product-card offer-card block shrink-0 snap-start oferta_height">
-                        <a href="productos/alimentos/frutas_y_verduras/manzanas_verdes.html" class="product-card__overlay-link" aria-label="Ver detalles de Manzanas Verdes -20%"></a>
+                        <a href="pages/product/alimentos/frutas_y_verduras/manzanas_verdes.html" class="product-card__overlay-link" aria-label="Ver detalles de Manzanas Verdes -20%"></a>
                         <div class="producto-img-container">
                             <img src="assets/images/productos/alimentos/frutas_y_verduras/manzana_verde.avif" alt="Descuento en Manzanas Verdes" loading="lazy">
                         </div>
                         <h3 class="producto-title">Manzanas Verdes -20%</h3>
                         <div class="price-block">
                             <div class="price-line">
-                                <span class="texto-antes">Antes:</span> <del class="precio-antiguo">RD$ 56.25/ 1 KG</del>
+                                <span class="texto-antes">Antes:</span> <del class="precio-antiguo">RD$ 56.25</del>
                             </div>
                             <div class="price-line">
-                                <span class="texto-ahora">Ahora:</span> <ins class="precio-nuevo">RD$ 45.00/ 1 KG</ins>
+                                <span class="texto-ahora">Ahora:</span> <ins class="precio-nuevo">RD$ 45.00</ins>
                             </div>
                         </div>
                         <button class="btn-agregar product-card__add-btn" id="manzanas_verdes">Agregar</button> 
@@ -459,17 +442,17 @@
 
                     <!-- Producto 2 -->
                     <article class="producto product-card offer-card block shrink-0 snap-start oferta_height">
-                        <a href="productos/alimentos/lacteos_y_huevos/huevos.html" class="product-card__overlay-link" aria-label="Ver detalles de Huevos -10%"></a>
+                        <a href="pages/product/alimentos/lacteos_y_huevos/huevos.html" class="product-card__overlay-link" aria-label="Ver detalles de Huevos -10%"></a>
                         <div class="producto-img-container">
                             <img src="assets/images/productos/alimentos/lacteos_y_huevos/huevos/huevos_30unidades.avif" alt="Huevos en Oferta" loading="lazy">
                         </div>
                         <h3 class="producto-title">Huevos -10%</h3>
                         <div class="price-block">
                             <div class="price-line">
-                                <span class="texto-antes">Antes:</span> <del class="precio-antiguo">RD$ 222.22 / 30 unidades</del>
+                                <span class="texto-antes">Antes:</span> <del class="precio-antiguo">RD$ 222.22</del>
                             </div>
                             <div class="price-line">
-                                <span class="texto-ahora">Ahora:</span> <ins class="precio-nuevo">RD$ 200.00 / 30 unidades</ins>
+                                <span class="texto-ahora">Ahora:</span> <ins class="precio-nuevo">RD$ 200.00</ins>
                             </div>
                         </div>
                         <button class="btn-agregar product-card__add-btn" id="huevos_don_pancho">Agregar</button>
@@ -477,7 +460,7 @@
 
                     <!-- Producto 3 -->
                     <article class="producto product-card offer-card block shrink-0 snap-start oferta_height">
-                        <a href="productos/electrodomesticos/cocina/freezer_7_pies.html" class="product-card__overlay-link" aria-label="Ver detalles de Freezer 7 pies -15%"></a>
+                        <a href="pages/product/electrodomesticos/cocina/freezer_7_pies.html" class="product-card__overlay-link" aria-label="Ver detalles de Freezer 7 pies -15%"></a>
                         <div class="producto-img-container">
                             <img src="assets/images/productos/electrodomesticos/cocina/freezer/freezer_7pies.png" alt="Freezer en Oferta" loading="lazy">
                         </div>
@@ -495,11 +478,11 @@
 
                     <!-- Producto 4 -->
                     <article class="producto product-card offer-card block shrink-0 snap-start oferta_height">
-                        <a href="productos/tecnologia/celulares/celular_a26.html" class="product-card__overlay-link" aria-label="Ver detalles de Celular Samsung A26 -10%"></a>
+                        <a href="pages/product/tecnologia/celulares/celular_a26.html" class="product-card__overlay-link" aria-label="Ver detalles de Celular Samsung A26 -10%"></a>
                         <div class="producto-img-container">
                             <img src="assets/images/productos/tecnologia/celulares/celular_samsung_a26.png" alt="Oferta en Celulares Samsung" loading="lazy">
                         </div>
-                        <h3 class="producto-title">Celular Samsung A26 -10%</h3>
+                        <h3 class="producto-title">Samsung A26 -10%</h3>
                         <div class="price-block">
                             <div class="price-line">
                                 <span class="texto-antes">Antes:</span> <del class="precio-antiguo">RD$ 44,444</del>
@@ -513,11 +496,11 @@
 
                     <!-- Producto 5 -->
                     <article class="producto product-card offer-card block shrink-0 snap-start oferta_height">
-                        <a href="productos/electrodomesticos/cocina/cilindro_duragas.html" class="product-card__overlay-link" aria-label="Ver detalles de Cilindros de Gas -15%"></a>
+                        <a href="pages/product/electrodomesticos/cocina/cilindro_duragas.html" class="product-card__overlay-link" aria-label="Ver detalles de Cilindros de Gas -15%"></a>
                         <div class="producto-img-container">
                             <img src="assets/images/productos/electrodomesticos/cocina/cilindros_de_gas/cilindro_de_gas_duragas.avif" alt="Oferta en Cilindros de Gas" loading="lazy">
                         </div>
-                        <h3 class="producto-title">Cilindros de Gas -15%</h3>
+                        <h3 class="producto-title">Cilindro Gas -15%</h3>
                         <div class="price-block">
                             <div class="price-line">
                                 <span class="texto-antes">Antes:</span> <del class="precio-antiguo">RD$ 6,117</del>
@@ -549,13 +532,12 @@
                 </div>
                 
                 <button class="productos-control-next absolute right-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="ofertas-next">
-                    <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-chevron-right"/></svg>
+                    <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-chevron-right"/></svg>
                     <span class="sr-only">Siguiente</span>
                 </button>
             </div>
         </div>
     </section>
-
 
       <!-- Sección: Sobre Nosotros -->
       <section class="about-us-section w-[calc(100vw-40px)] max-w-full mx-auto mt-10 mb-6 md:mt-9 md:mb-10 bg-black text-white py-5 rounded-[20px] overflow-hidden">
@@ -571,37 +553,35 @@
         </div>
       </section>
 
-
     </main>
 
-    <!-- Footer global -->
-    <footer class="footer-global">
-      <div class="footer-content">
-        <!-- Derechos reservados -->
-        <small>&copy; 2026 Hipermercado Superior. Todos los derechos reservados.</small>
+  <!-- Footer global -->
+  <footer class="footer-global">
+    <div class="footer-content">
+      <!-- Derechos reservados -->
+      <small>&copy; 2026 Hipermercado Superior. Todos los derechos reservados.</small>
 
-        <!-- Íconos de redes sociales (sprite SVG) -->
-        <div class="social-icons">
-          <a href="https://facebook.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Facebook" class="social-link">
-            <svg aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-facebook"/></svg>
-          </a>
-          <a href="https://twitter.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en X (antes Twitter)" class="social-link">
-            <svg aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-x"/></svg>
-          </a>
-          <a href="https://instagram.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Instagram" class="social-link">
-            <svg aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-instagram"/></svg>
-          </a>
-        </div>
-
-        <!-- Enlaces legales -->
-        <div class="footer-links">
-          <a href="legal/privacy.html" title="Política de Privacidad">Política de Privacidad</a>
-          <span class="separator">|</span>
-          <a href="legal/terms.html" title="Términos de Uso">Términos de Uso</a>
-        </div>
+      <!-- Íconos de redes sociales (sprite SVG) -->
+      <div class="social-icons">
+        <a href="https://facebook.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Facebook" class="social-link">
+          <svg aria-hidden="true"><use href="assets/icons/sprite.svg#icon-facebook"/></svg>
+        </a>
+        <a href="https://twitter.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en X (antes Twitter)" class="social-link">
+          <svg aria-hidden="true"><use href="assets/icons/sprite.svg#icon-x"/></svg>
+        </a>
+        <a href="https://instagram.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Instagram" class="social-link">
+          <svg aria-hidden="true"><use href="assets/icons/sprite.svg#icon-instagram"/></svg>
+        </a>
       </div>
-    </footer>
 
+      <!-- Enlaces legales -->
+      <div class="footer-links">
+        <a href="legal/privacy.html" title="Política de Privacidad">Política de Privacidad</a>
+        <span class="separator">|</span>
+        <a href="legal/terms.html" title="Términos de Uso">Términos de Uso</a>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
