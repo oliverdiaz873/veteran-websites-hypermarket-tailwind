@@ -1,4 +1,3 @@
-﻿
 <!DOCTYPE html>
 <html lang="es">
 
@@ -12,317 +11,339 @@
     <meta name="copyright" content="Oliver Antonio Díaz. Todos los derechos reservados.">
     <meta name="theme-color" content="#7ed957">
 
+    <!-- Enlace Canónico -->
+    <link rel="canonical" href="https://www.hipermercadosuperior.com/productos/red_bull.html">
+
     <!-- Etiquetas Open Graph -->
     <meta property="og:title" content="Red Bull | Hipermercado Superior">
     <meta property="og:type" content="product">
     <meta property="og:url" content="https://www.hipermercadosuperior.com/productos/red_bull.html">
-    <meta property="og:image" content="https://www.hipermercadosuperior.com/imagenes/productos/Alimentos/Bebidas/energizantes/red_bull.avif">
+    <meta property="og:image" content="https://www.hipermercadosuperior.com/assets/images/productos/alimentos/bebidas/energizantes/red_bull.avif">
     <meta property="og:description" content="Red Bull: te da alas. Bebida energizante premium para revitalizar cuerpo y mente.">
     <meta property="og:site_name" content="Hipermercado Superior">
-    <meta property="og:locale" content="es_ES">
+    <meta property="og:locale" content="es_DO">
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Red Bull | Hipermercado Superior">
     <meta name="twitter:description" content="Red Bull, vitalidad cuando la necesitas.">
-    <meta name="twitter:image" content="https://www.hipermercadosuperior.com/imagenes/productos/Alimentos/Bebidas/energizantes/red_bull.avif">
+    <meta name="twitter:image" content="https://www.hipermercadosuperior.com/assets/images/productos/alimentos/bebidas/energizantes/red_bull.avif">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+   
 
-    <!-- Título y CSS -->
+    <!-- CSS y Fonts -->
+    <link rel="stylesheet" href="../../../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../../../assets/css/components/header.css">
+    <link rel="stylesheet" href="../../../../assets/css/components/navigation.css">
+    <link rel="stylesheet" href="../../../../assets/css/components/product-card.css">
+    <link rel="stylesheet" href="../../../../assets/css/components/offer-card.css">
+    <link rel="stylesheet" href="../../../../assets/css/components/featured-products.css">
+    <link rel="stylesheet" href="../../../../assets/css/components/about-us-section.css">
+    <link rel="stylesheet" href="../../../../assets/css/components/footer.css">
+    <link rel="stylesheet" href="../../../../assets/css/components/breadcrumb.css">
+    <link rel="stylesheet" href="../../../../assets/css/global.css">
+    <link rel="stylesheet" href="../../../../assets/css/pages/product/product.css">
+
+    <!-- Título -->
     <title>Red Bull | Hipermercado Superior</title>
-    <link rel="stylesheet" href="../../../assets/css/style.css">
-    <link rel="stylesheet" href="../../../assets/css/fonts.css">
-    <link rel="stylesheet" href="../../../assets/css/productos.css">
 
     <!-- Favicons -->
-    <link rel="icon" href="../../../assets/images/iconos/favicon/icon-16x16.jpg" type="image/jpg" sizes="16x16">
-    <link rel="icon" href="../../../assets/images/iconos/favicon/icon-32x32.jpg" type="image/jpg" sizes="32x32">
-    <link rel="icon" href="../../../assets/images/iconos/favicon/icon-48x48.jpg" type="image/jpg" sizes="48x48">
+    <link rel="icon" href="../../../../assets/icons/favicons/icon-16x16.jpg" type="image/jpg" sizes="16x16">
+    <link rel="icon" href="../../../../assets/icons/favicons/icon-32x32.jpg" type="image/jpg" sizes="32x32">
+    <link rel="icon" href="../../../../assets/icons/favicons/icon-48x48.jpg" type="image/jpg" sizes="48x48">
 
     <!-- Scripts -->
-    <script src="../../../assets/js/productos.js" defer></script> 
-    <script src="../../../assets/js/boton_de_busqueda.js" defer></script> 
-    <script src="../../../assets/js/carrito.js" defer></script>
-    <script src="../../../assets/js/productos_navegacion.js" defer></script>
-    <script src="../../../assets/js/scroll_animations.js" defer></script>
-    <script src="../../../assets/js/ofertas_animation.js" defer></script>
-    <script src="../../../assets/js/tablet_menu_click.js" defer></script>
-    <script src="../../../assets/js/hamburger_menu.js" defer></script>   <!-- codigo js para el comportamiento del menu en dispositivos móviles --></head>
+    <script src="../../../../assets/js/productos.js" defer></script>
+    <script src="../../../../assets/js/boton_de_busqueda.js" defer></script>
+    <script src="../../../../assets/js/carrito.js" defer></script>
+    <script src="../../../../assets/js/productos_navegacion.js" defer></script>
+    <script src="../../../../assets/js/scroll_animations.js" defer></script>
+    <script src="../../../../assets/js/ofertas_animation.js" defer></script>
+    <script src="../../../../assets/js/tablet_menu_click.js" defer></script>
+    <script src="../../../../assets/js/hamburger_menu.js" defer></script>
+</head>
 
 <body id="fondo_alimentos">
 
+    
   <!-- ===== HEADER GLOBAL ===== -->
-  <header>
-  <div class="header-container">
-    <!-- Botón hamburguesa solo en móvil -->
-    <button class="menu-btn">
-      <i class="bi bi-list"></i> 
-    </button>
+  <header class="fixed top-0 left-0 w-full rounded-none xl:top-[10px] xl:left-1/2 xl:-translate-x-1/2 xl:rounded-[15px] xl:w-max xl:max-w-[calc(100vw-40px)] bg-black/80 px-2.5 py-1.5 z-[1000] flex justify-center text-white">
+    <div class="flex items-center gap-2.5 justify-between md:justify-center w-full px-0 md:px-3.5">
 
-    <!-- Logo + título -->
-    <a href="../../../index.html" class="brand" aria-label="Ir a la página principal de Hipermercado Superior">
-      <img src="../../../assets/images/logo/logo.jpeg" alt="Logo de Hipermercado Superior">
-      <span>Hipermercado Superior</span>
-    </a>
+      <!-- Botón hamburguesa solo en móvil -->
+      <button class="menu-btn text-[22px] bg-transparent border-none text-white cursor-pointer transition-colors duration-300 rounded hover:bg-white/15 p-1 md:hidden">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-menu"/></svg>
+      </button>
 
-    <!-- Menú de navegación -->
-    <nav class="nav-links" role="navigation" aria-label="Menú principal">
+      <!-- Logo -->
+      <a href="../../../../index.html" class="brand flex items-center gap-1 text-white no-underline" aria-label="Ir a la página principal de Hipermercado Superior">
+        <img src="../../../../assets/images/logo/logo.png" alt="Logo de Hipermercado Superior">
+        <span class="whitespace-nowrap block ml-1">Hipermercado Superior</span>
+      </a>
 
-     <ul>
+      <!-- Menú de navegación Desktop (Solo enlaces) - Visible en Tablets y Desktop -->
+      <nav class="nav-links hidden md:flex justify-center" role="navigation" aria-label="Menú principal">
+        <ul class="flex gap-5 items-center list-none p-0 m-0">
+          <li><a href="../../../../index.html" class="text-white no-underline text-base px-2.5 py-2 block text-left transition-colors duration-300 rounded-[10px] hover:bg-white/15">Inicio</a></li>
 
-        <!-- Nivel 1 -->
-        <li><a href="../../../index.html">Inicio</a></li>
-
-        <!-- Nivel 1: Categorías <span class="dropdown-arrow">▼</span> -->
-        <li><a href="#" aria-haspopup="true" aria-expanded="false">Categorías <span class="dropdown-arrow">▼</span></a>
-
-            <ul>
-
-                <!-- Nivel 2: Alimentos -->
-                <li>
-                    <a href="../../../categorias/Alimentos.html">Alimentos <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../../../categorias/Alimentos.html#frutas_y_verduras">Frutas y Verduras</a></li>
-                        <li><a href="../../../categorias/Alimentos.html#despensa">Despensa</a></li>
-                        <li><a href="../../../categorias/Alimentos.html#carnes_pescados_mariscos">Carnes, Pescados y Mariscos</a></li>
-                        <li><a href="../../../categorias/Alimentos.html#lacteos_y_huevos">Lácteos y Huevos</a></li>
-                        <li><a href="../../../categorias/Alimentos.html#bebidas">Bebidas</a></li>
-                        <li><a href="../../../categorias/Alimentos.html#enlatados">Enlatados</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Electrodomésticos -->
-                <li>
-                    <a href="../../../categorias/Electrodomesticos.html">Electrodomésticos <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../../../categorias/Electrodomesticos.html#cocina">Cocina</a></li>
-                        <li><a href="../../../categorias/Electrodomesticos.html#lavado">Lavado</a></li>
-                        <li><a href="../../../categorias/Electrodomesticos.html#climatizacion">Climatización</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Tecnología -->
-                <li>
-                    <a href="../../../categorias/tecnologia.html">Tecnología <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../../../categorias/tecnologia.html#televisores">Televisores</a></li>
-                        <li><a href="../../../categorias/tecnologia.html#laptops">Laptops</a></li>
-                        <li><a href="../../../categorias/tecnologia.html#tablets">Tablets</a></li>
-                        <li><a href="../../../categorias/tecnologia.html#celulares">Celulares</a></li>
-                        <li><a href="../../../categorias/tecnologia.html#bocinas">Bocinas</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Ropa -->
-                <li>
-                    <a href="../../../categorias/Ropa.html">Ropa <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../../../categorias/Ropa.html#pantalones_para_hombres">Pantalones para Hombres</a></li>
-                        <li><a href="../../../categorias/Ropa.html#pantalones_para_mujeres">Pantalones para Mujeres</a></li>
-                        <li><a href="../../../categorias/Ropa.html#pantalones_para_niños">Pantalones para Niños</a></li>
-                        <li><a href="../../../categorias/Ropa.html#trajes_para_hombres">Trajes para Hombres</a></li>
-                        <li><a href="../../../categorias/Ropa.html#vestidos">Vestidos</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Muebles y Decoración -->
-                <li>
-                    <a href="../../../categorias/muebles_y_decoracion.html">Muebles y Decoración <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../../../categorias/muebles_y_decoracion.html#sofas">Sofás</a></li>
-                        <li><a href="../../../categorias/muebles_y_decoracion.html#sillones">Sillones</a></li>
-                        <li><a href="../../../categorias/muebles_y_decoracion.html#mesas">Mesas</a></li>
-                        <li><a href="../../../categorias/muebles_y_decoracion.html#floreros">Floreros</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Farmacia -->
-                <li>
-                    <a href="../../../categorias/Farmacia.html">Farmacia <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../../../categorias/Farmacia.html#analgesicos">Analgésicos</a></li>
-                        <li><a href="../../../categorias/Farmacia.html#dermocosmetica">Dermocosmética</a></li>
-                        <li><a href="../../../categorias/Farmacia.html#vitaminas_y_minerales">Vitaminas y Minerales</a></li>
-                        <li><a href="../../../categorias/Farmacia.html#antigripales_y_resfriado">Antigripales y Resfriado</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Ferretería -->
-                <li>
-                    <a href="../../../categorias/Ferreteria.html">Ferretería <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../../../categorias/Ferreteria.html#herramientas_manuales">Herramientas Manuales</a></li>
-                        <li><a href="../../../categorias/Ferreteria.html#pinturas_y_acabados">Pinturas y Acabados</a></li>
-                        <li><a href="../../../categorias/Ferreteria.html#electricidad">Electricidad</a></li>
-                        <li><a href="../../../categorias/Ferreteria.html#plomeria">Plomería</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Juguetes -->
-                <li>
-                    <a href="../../../categorias/juguetes.html">Juguetes <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../../../categorias/juguetes.html#juguetes_para_niños">Juguetes para Niños</a></li>
-                        <li><a href="../../../categorias/juguetes.html#juguetes_para_niñas">Juguetes para Niñas</a></li>
-                    </ul>
-                </li>
-
+          <!-- Categorías Dropdown -->
+          <li class="relative group">
+            <a href="#" class="text-white no-underline text-base px-2.5 py-2 block text-left transition-colors duration-300 rounded-[10px] hover:bg-white/15" aria-haspopup="true" aria-expanded="false">
+              Categorías <span class="text-[0.7em] ml-0.75 opacity-80">▼</span>
+            </a>
+            <ul class="absolute top-full left-0 bg-black/90 rounded-lg min-w-[220px] hidden group-hover:flex flex-col z-[1000] text-left list-none p-0 m-0">
+              <!-- Alimentos -->
+              <li class="relative group/sub">
+                <a href="../../../../pages/category/alimentos.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Alimentos <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="../../../../pages/category/alimentos.html#frutas_y_verduras" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Frutas y Verduras</a></li>
+                  <li><a href="../../../../pages/category/alimentos.html#despensa" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Despensa</a></li>
+                  <li><a href="../../../../pages/category/alimentos.html#carnes_pescados_mariscos" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Carnes, Pescados y Mariscos</a></li>
+                  <li><a href="../../../../pages/category/alimentos.html#lacteos_y_huevos" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Lácteos y Huevos</a></li>
+                  <li><a href="../../../../pages/category/alimentos.html#bebidas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Bebidas</a></li>
+                  <li><a href="../../../../pages/category/alimentos.html#enlatados" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Enlatados</a></li>
+                </ul>
+              </li>
+              <!-- Electrodomésticos -->
+              <li class="relative group/sub">
+                <a href="../../../../pages/category/electrodomesticos.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Electrodomésticos <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="../../../../pages/category/electrodomesticos.html#cocina" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Cocina</a></li>
+                  <li><a href="../../../../pages/category/electrodomesticos.html#lavado" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Lavado</a></li>
+                  <li><a href="../../../../pages/category/electrodomesticos.html#climatizacion" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Climatización</a></li>
+                </ul>
+              </li>
+              <!-- Tecnología -->
+              <li class="relative group/sub">
+                <a href="../../../../pages/category/tecnologia.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Tecnología <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="../../../../pages/category/tecnologia.html#televisores" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Televisores</a></li>
+                  <li><a href="../../../../pages/category/tecnologia.html#laptops" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Laptops</a></li>
+                  <li><a href="../../../../pages/category/tecnologia.html#tablets" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Tablets</a></li>
+                  <li><a href="../../../../pages/category/tecnologia.html#celulares" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Celulares</a></li>
+                  <li><a href="../../../../pages/category/tecnologia.html#bocinas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Bocinas</a></li>
+                </ul>
+              </li>
+              <!-- Ropa -->
+              <li class="relative group/sub">
+                <a href="../../../../pages/category/ropa.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Ropa <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="../../../../pages/category/ropa.html#pantalones_para_hombres" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Pantalones para Hombres</a></li>
+                  <li><a href="../../../../pages/category/ropa.html#pantalones_para_mujeres" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Pantalones para Mujeres</a></li>
+                  <li><a href="../../../../pages/category/ropa.html#pantalones_para_niños" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Pantalones para Niños</a></li>
+                  <li><a href="../../../../pages/category/ropa.html#trajes_para_hombres" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Trajes para Hombres</a></li>
+                  <li><a href="../../../../pages/category/ropa.html#vestidos" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Vestidos</a></li>
+                </ul>
+              </li>
+              <!-- Muebles -->
+              <li class="relative group/sub">
+                <a href="../../../../pages/category/muebles_y_decoracion.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Muebles <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="../../../../pages/category/muebles_y_decoracion.html#sofas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Sofás</a></li>
+                  <li><a href="../../../../pages/category/muebles_y_decoracion.html#sillones" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Sillones</a></li>
+                  <li><a href="../../../../pages/category/muebles_y_decoracion.html#mesas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Mesas</a></li>
+                  <li><a href="../../../../pages/category/muebles_y_decoracion.html#floreros" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Floreros</a></li>
+                </ul>
+              </li>
+              <!-- Farmacia -->
+              <li class="relative group/sub">
+                <a href="../../../../pages/category/farmacia.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Farmacia <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="../../../../pages/category/farmacia.html#analgesicos" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Analgésicos</a></li>
+                  <li><a href="../../../../pages/category/farmacia.html#dermocosmetica" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Dermocosmética</a></li>
+                  <li><a href="../../../../pages/category/farmacia.html#vitaminas_y_minerales" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Vitaminas y Minerales</a></li>
+                  <li><a href="../../../../pages/category/farmacia.html#antigripales_y_resfriado" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Antigripales y Resfriado</a></li>
+                </ul>
+              </li>
+              <!-- Ferretería -->
+              <li class="relative group/sub">
+                <a href="../../../../pages/category/ferreteria.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Ferretería <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="../../../../pages/category/ferreteria.html#herramientas_manuales" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Herramientas Manuales</a></li>
+                  <li><a href="../../../../pages/category/ferreteria.html#pinturas_y_acabados" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Pinturas y Acabados</a></li>
+                  <li><a href="../../../../pages/category/ferreteria.html#electricidad" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Electricidad</a></li>
+                  <li><a href="../../../../pages/category/ferreteria.html#plomeria" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Plomería</a></li>
+                </ul>
+              </li>
+              <!-- Juguetes -->
+              <li class="relative group/sub">
+                <a href="../../../../pages/category/juguetes.html" class="text-white no-underline text-base px-4 py-3 block text-left transition-colors duration-300 hover:bg-white/15 flex justify-between items-center">
+                  Juguetes <span class="right-arrow">▸</span>
+                </a>
+                <ul class="absolute top-0 left-full bg-black/90 rounded-lg min-w-[220px] hidden group-hover/sub:flex flex-col z-[1000] text-left list-none p-0 m-0">
+                  <li><a href="../../../../pages/category/juguetes.html#juguetes_para_niños" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Juguetes para Niños</a></li>
+                  <li><a href="../../../../pages/category/juguetes.html#juguetes_para_niñas" class="text-white no-underline text-base px-4 py-2 block hover:bg-white/15">Juguetes para Niñas</a></li>
+                </ul>
+              </li>
             </ul>
+          </li>
+
+          <li><a href="../../../../index.html#ofertas" class="text-white no-underline text-base px-2.5 py-2 block transition-colors duration-300 rounded-[10px] hover:bg-white/15">Ofertas</a></li>
+          <li><a href="../../../../pages/contacto/index.html" class="text-white no-underline text-base px-2.5 py-2 block transition-colors duration-300 rounded-[10px] hover:bg-white/15">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Utilidades (Buscador y Carrito) - Visibles en todos los dispositivos -->
+      <div class="header-utils">
+        <!-- Buscador -->
+        <div class="relative flex items-center">
+          <input type="text" id="input-buscar" placeholder="Buscar productos..." class="search-input-modern" autocomplete="off">
+          <button type="button" id="btn-buscar" class="util-btn">
+            <!-- Icono Lupa / Cerrar (sprite) -->
+            <svg id="icono-buscar" class="util-icon" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-search"/></svg>
+            <svg id="icono-cerrar" class="util-icon hidden" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-close"/></svg>
+          </button>
+          <ul id="resultados-busqueda" class="search-results-list"></ul>
+        </div>
+
+        <!-- Carrito -->
+        <a href="../../../../pages/cart/index.html" class="util-btn" aria-label="Ver carrito">
+          <svg class="util-icon" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-cart"/></svg>
+          <span id="contador-carrito" class="cart-badge">0</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Menú móvil colapsable -->
+    <nav id="mobile-menu" class="fixed top-[49px] left-0 w-full bg-black/95 text-white hidden z-[999] max-h-[calc(100vh-49px)] overflow-y-auto py-5 shadow-xl">
+      <ul class="list-none p-0 m-0">
+        <li class="px-5 py-2.5 border-b border-white/10"><a href="../../../../index.html" class="block">Inicio</a></li>
+        <li class="px-5 py-2.5 border-b border-white/10">
+          <button class="mobile-dropdown-btn w-full text-left flex justify-between items-center">
+            Categorías <span class="text-[0.7em] opacity-70">▼</span>
+          </button>
+          <ul class="hidden pl-5 mt-2 transition-all duration-300 opacity-0 overflow-hidden">
+            <!-- Alimentos -->
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Alimentos <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="../../../../pages/category/alimentos.html#frutas_y_verduras" class="block py-2">Frutas y Verduras</a></li>
+                <li><a href="../../../../pages/category/alimentos.html#despensa" class="block py-2">Despensa</a></li>
+                <li><a href="../../../../pages/category/alimentos.html#carnes_pescados_mariscos" class="block py-2">Carnes y Mariscos</a></li>
+                <li><a href="../../../../pages/category/alimentos.html#lacteos_y_huevos" class="block py-2">Lácteos</a></li>
+                <li><a href="../../../../pages/category/alimentos.html#bebidas" class="block py-2">Bebidas</a></li>
+                <li><a href="../../../../pages/category/alimentos.html#enlatados" class="block py-2">Enlatados</a></li>
+              </ul>
+            </li>
+            <!-- Electrodomésticos -->
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Electrodomésticos <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="../../../../pages/category/electrodomesticos.html#cocina" class="block py-2">Cocina</a></li>
+                <li><a href="../../../../pages/category/electrodomesticos.html#lavado" class="block py-2">Lavado</a></li>
+                <li><a href="../../../../pages/category/electrodomesticos.html#climatizacion" class="block py-2">Climatización</a></li>
+              </ul>
+            </li>
+            <!-- Tecnología -->
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Tecnología <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="../../../../pages/category/tecnologia.html#televisores" class="block py-2">Televisores</a></li>
+                <li><a href="../../../../pages/category/tecnologia.html#laptops" class="block py-2">Laptops</a></li>
+                <li><a href="../../../../pages/category/tecnologia.html#tablets" class="block py-2">Tablets</a></li>
+                <li><a href="../../../../pages/category/tecnologia.html#celulares" class="block py-2">Celulares</a></li>
+                <li><a href="../../../../pages/category/tecnologia.html#bocinas" class="block py-2">Bocinas</a></li>
+              </ul>
+            </li>
+            <!-- Ropa -->
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Ropa <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="../../../../pages/category/ropa.html#pantalones_para_hombres" class="block py-2">Hombres</a></li>
+                <li><a href="../../../../pages/category/ropa.html#pantalones_para_mujeres" class="block py-2">Mujeres</a></li>
+                <li><a href="../../../../pages/category/ropa.html#pantalones_para_niños" class="block py-2">Niños</a></li>
+                <li><a href="../../../../pages/category/ropa.html#trajes_para_hombres" class="block py-2">Trajes para Hombres</a></li>
+                <li><a href="../../../../pages/category/ropa.html#vestidos" class="block py-2">Vestidos</a></li>
+              </ul>
+            </li>
+            <!-- Muebles -->
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Muebles <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="../../../../pages/category/muebles_y_decoracion.html#sofas" class="block py-2">Sofás</a></li>
+                <li><a href="../../../../pages/category/muebles_y_decoracion.html#sillones" class="block py-2">Sillones</a></li>
+                <li><a href="../../../../pages/category/muebles_y_decoracion.html#mesas" class="block py-2">Mesas</a></li>
+                <li><a href="../../../../pages/category/muebles_y_decoracion.html#floreros" class="block py-2">Floreros</a></li>
+              </ul>
+            </li>
+            <!-- Farmacia -->
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Farmacia <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="../../../../pages/category/farmacia.html#analgesicos" class="block py-2">Analgésicos</a></li>
+                <li><a href="../../../../pages/category/farmacia.html#dermocosmetica" class="block py-2">Dermocosmética</a></li>
+                <li><a href="../../../../pages/category/farmacia.html#vitaminas" class="block py-2">Vitaminas</a></li>
+                <li><a href="../../../../pages/category/farmacia.html#antigripales" class="block py-2">Antigripales</a></li>
+              </ul>
+            </li>
+            <!-- Ferretería -->
+            <li class="border-b border-white/5">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Ferretería <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="../../../../pages/category/ferreteria.html#herramientas" class="block py-2">Herramientas</a></li>
+                <li><a href="../../../../pages/category/ferreteria.html#pinturas" class="block py-2">Pinturas</a></li>
+                <li><a href="../../../../pages/category/ferreteria.html#electricidad" class="block py-2">Electricidad</a></li>
+                <li><a href="../../../../pages/category/ferreteria.html#plomeria" class="block py-2">Plomería</a></li>
+              </ul>
+            </li>
+            <!-- Juguetes -->
+            <li class="">
+              <button class="mobile-sub-dropdown-btn w-full text-left py-3 flex justify-between items-center text-sm">
+                Juguetes <span class="opacity-50 transition-transform duration-300">▸</span>
+              </button>
+              <ul class="hidden pl-4 pb-2 text-[13px]">
+                <li><a href="../../../../pages/category/juguetes.html#niños" class="block py-2">Niños</a></li>
+                <li><a href="../../../../pages/category/juguetes.html#niñas" class="block py-2">Niñas</a></li>
+              </ul>
+            </li>
+          </ul>
         </li>
-
-        <!-- Nivel 1 -->
-        <li><a href="../../../index.html#ofertas">Ofertas</a></li>
-        <li><a href="../../../contacto/">Contacto</a></li>
-
-        <!-- botón de búsqueda -->
-       <li class="buscador-header">
-         <input type="text" id="input-buscar" placeholder="Buscar productos..."  autocomplete="off" aria-label="Escribe tu búsqueda">
-            <button type="button" aria-label="Buscar productos" id="btn-buscar">
-              <i class="bi bi-search" id="icono-buscar"></i>
-            </button>
-         <ul id="resultados-busqueda" class="resultados-busqueda"></ul> 
-       </li>
-
-       <!-- botón del carrito -->
-     <li class="carrito-item">
-       <a href="../../../pages/cart/index.html" class="carrito-header" aria-label="Ver carrito">
-              <img 
-                 src="../../../assets/icons/shopping_cart_icon/shopping_car_icon.png" 
-                 alt="Carrito de compras"
-                 class="icono-carrito"
-               >
-                <span id="contador-carrito">0</span>
-       </a>
-     </li>
-
-    </ul>
+        <li class="px-5 py-2.5 border-b border-white/10"><a href="../../../../index.html#ofertas" class="block">Ofertas</a></li>
+        <li class="px-5 py-2.5 border-b border-white/10"><a href="../../../../pages/contacto/index.html" class="block">Contacto</a></li>
+      </ul>
     </nav>
-  </div>
+  </header>
 
-  
-  <!-- Menú móvil colapsable -->
-<nav class="nav-links-mobile">
-  <ul>
-     <!-- Nivel 1 -->
-        <li><a href="../../../index.html">Inicio</a></li>
-
-        <!-- Nivel 1: Categorías <span class="dropdown-arrow">▼</span> -->
-        <li><a href="#" aria-haspopup="true" aria-expanded="false">Categorías <span class="dropdown-arrow">▼</span></a>
-
-            <ul>
-
-                <!-- Nivel 2: Alimentos -->
-                <li>
-                    <a href="../../../categorias/Alimentos.html">Alimentos <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../../../categorias/Alimentos.html#frutas_y_verduras">Frutas y Verduras</a></li>
-                        <li><a href="../../../categorias/Alimentos.html#despensa">Despensa</a></li>
-                        <li><a href="../../../categorias/Alimentos.html#carnes_pescados_mariscos">Carnes, Pescados y Mariscos</a></li>
-                        <li><a href="../../../categorias/Alimentos.html#lacteos_y_huevos">Lácteos y Huevos</a></li>
-                        <li><a href="../../../categorias/Alimentos.html#bebidas">Bebidas</a></li>
-                        <li><a href="../../../categorias/Alimentos.html#enlatados">Enlatados</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Electrodomésticos -->
-                <li>
-                    <a href="../../../categorias/Electrodomesticos.html">Electrodomésticos <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../../../categorias/Electrodomesticos.html#cocina">Cocina</a></li>
-                        <li><a href="../../../categorias/Electrodomesticos.html#lavado">Lavado</a></li>
-                        <li><a href="../../../categorias/Electrodomesticos.html#climatizacion">Climatización</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Tecnología -->
-                <li>
-                    <a href="../../../categorias/tecnologia.html">Tecnología <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../../../categorias/tecnologia.html#televisores">Televisores</a></li>
-                        <li><a href="../../../categorias/tecnologia.html#laptops">Laptops</a></li>
-                        <li><a href="../../../categorias/tecnologia.html#tablets">Tablets</a></li>
-                        <li><a href="../../../categorias/tecnologia.html#celulares">Celulares</a></li>
-                        <li><a href="../../../categorias/tecnologia.html#bocinas">Bocinas</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Ropa -->
-                <li>
-                    <a href="../../../categorias/Ropa.html">Ropa <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../../../categorias/Ropa.html#pantalones_para_hombres">Pantalones para Hombres</a></li>
-                        <li><a href="../../../categorias/Ropa.html#pantalones_para_mujeres">Pantalones para Mujeres</a></li>
-                        <li><a href="../../../categorias/Ropa.html#pantalones_para_niños">Pantalones para Niños</a></li>
-                        <li><a href="../../../categorias/Ropa.html#trajes_para_hombres">Trajes para Hombres</a></li>
-                        <li><a href="../../../categorias/Ropa.html#vestidos">Vestidos</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Muebles y Decoración -->
-                <li>
-                    <a href="../../../categorias/muebles_y_decoracion.html">Muebles y Decoración <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../../../categorias/muebles_y_decoracion.html#sofas">Sofás</a></li>
-                        <li><a href="../../../categorias/muebles_y_decoracion.html#sillones">Sillones</a></li>
-                        <li><a href="../../../categorias/muebles_y_decoracion.html#mesas">Mesas</a></li>
-                        <li><a href="../../../categorias/muebles_y_decoracion.html#floreros">Floreros</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Farmacia -->
-                <li>
-                    <a href="../../../categorias/Farmacia.html">Farmacia <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../../../categorias/Farmacia.html#analgesicos">Analgésicos</a></li>
-                        <li><a href="../../../categorias/Farmacia.html#dermocosmetica">Dermocosmética</a></li>
-                        <li><a href="../../../categorias/Farmacia.html#vitaminas_y_minerales">Vitaminas y Minerales</a></li>
-                        <li><a href="../../../categorias/Farmacia.html#antigripales_y_resfriado">Antigripales y Resfriado</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Ferretería -->
-                <li>
-                    <a href="../../../categorias/Ferreteria.html">Ferretería <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../../../categorias/Ferreteria.html#herramientas_manuales">Herramientas Manuales</a></li>
-                        <li><a href="../../../categorias/Ferreteria.html#pinturas_y_acabados">Pinturas y Acabados</a></li>
-                        <li><a href="../../../categorias/Ferreteria.html#electricidad">Electricidad</a></li>
-                        <li><a href="../../../categorias/Ferreteria.html#plomeria">Plomería</a></li>
-                    </ul>
-                </li>
-
-                <!-- Nivel 2: Juguetes -->
-                <li>
-                    <a href="../../../categorias/juguetes.html">Juguetes <span class="right-arrow">▸</span></a>
-                    <ul> <!-- Nivel 3: -->
-                        <li><a href="../../../categorias/juguetes.html#juguetes_para_niños">Juguetes para Niños</a></li>
-                        <li><a href="../../../categorias/juguetes.html#juguetes_para_niñas">Juguetes para Niñas</a></li>
-                    </ul>
-                </li>
-
-            </ul>
-        </li>
-
-        <!-- Nivel 1 -->
-        <li><a href="../../../index.html#ofertas">Ofertas</a></li>
-        <li><a href="../../../contacto/">Contacto</a></li>
-   
-  </ul>
-</nav>
-</header>
-
+ 
 <!-- Breadcrumb -->
-<nav class="breadcrumb" aria-label="Ruta de navegación">
-    <a href="../../../index.html">Inicio</a> ›
-    <span class="truncate-mobile"><span>Categorías</span> ›</span>
-    <a href="../../../categorias/Alimentos.html">Alimentos</a> ›
-    <span class="truncate-mobile"><a href="../../../categorias/Alimentos.html#bebidas">Bebidas</a> ›</span>
-    <span class="ellipsis-mobile"></span>
-    <span class="actual">Red Bull</span>
+<nav aria-label="Breadcrumb">
+  <ol class="breadcrumb breadcrumb-product">
+    <li><a href="../../../../index.html">Inicio</a></li>
+    <li><span>Categorías</span></li>
+    <li><a href="../../../../pages/category/alimentos.html">Alimentos</a></li>
+    <li><a href="../../../../pages/category/alimentos.html#bebidas">Bebidas</a></li>
+    <li aria-current="page">Red Bull</li>
+  </ol>
 </nav>
 
 <main class="producto-main">
@@ -330,18 +351,18 @@
         <div class="contenedor-producto">
             <figure class="imagen-producto">
                 <a href="#img-full">
-                    <img src="../../../assets/images/productos/Alimentos/Bebidas/energizantes/red_bull.avif" alt="Red Bull">
+                    <img src="../../../../assets/images/productos/alimentos/bebidas/energizantes/red_bull.avif" alt="Red Bull">
                 </a>
             </figure>
 
             <div id="img-full" class="modal-imagen" aria-modal="true" role="dialog" aria-label="Imagen ampliada de Red Bull">
                 <a href="#close" class="cerrar" aria-label="Cerrar imagen ampliada"></a>
-                <img src="../../../assets/images/productos/Alimentos/Bebidas/energizantes/red_bull.avif" alt="Red Bull ampliado">
+                <img src="../../../../assets/images/productos/alimentos/bebidas/energizantes/red_bull.avif" alt="Red Bull ampliado">
             </div>
 
             <div class="info-producto">
                 <h1>Red Bull</h1>
-                <p class="precio">Precio: $90</p>
+                <p class="precio">Precio: $90.00</p>
 
                 <p class="descripcion">
                     <strong>Red Bull</strong> es la bebida energizante que revitaliza cuerpo y mente. Perfecta para cuando necesitas un impulso extra en tus estudios, trabajo o deportes.
@@ -352,131 +373,120 @@
                     <li>Sabor: Original</li>
                     <li>Beneficios: Energía instantánea</li>
                     <li>Ideal para: momentos de alta exigencia</li>
+                    <li>Presentación: Lata de 250 ml</li>
                 </ul>
 
-                     <button class="btn-agregar-producto" id="red_bull">
-                        Agregar
-                     </button>
+                <button class="btn-agregar-producto" id="red_bull">
+                    Agregar
+                </button>
 
+            </div>
+        </div>
     </section>
 
     <!-- Productos similares -->
-    <section class="productos-destacados reveal">
-        <div class="container">
-            <h2>Productos Similares</h2>
+    <section class="productos-destacados bg-black/80 rounded-[20px] p-5 md:py-7.5 md:px-[56px] mx-auto mb-10 max-w-[1280px] xl:max-w-[calc(100vw-100px)] lg:max-w-[calc(100vw-86px)] reveal" id="productos-destacados">
+        <div class="container mx-auto">
+            <h2 class="text-xl md:text-2xl text-white bg-black/70 px-4 py-2 rounded-xl mb-5 w-fit mx-auto text-center">Productos Similares</h2>
 
-            <div class="productos-container-wrapper">
-                <button class="productos-control-prev" type="button">
-                    <i class="bi bi-chevron-left"></i>
-                    <span class="visually-hidden">Anterior</span>
+            <div class="productos-container-wrapper relative flex items-center justify-center">
+                <button class="productos-control-prev absolute left-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="productos-destacados-prev">
+                    <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-chevron-left"/></svg>
+                    <span class="sr-only">Anterior</span>
                 </button>
                 
-                <div class="productos-container">
+                <div class="productos-container flex w-full gap-4 md:gap-5 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory">
                     <a href="coca_cola.html">
-                        <article class="producto">
-                            <img src="../../../assets/images/productos/Alimentos/Bebidas/refresco/coca_cola.avif" loading="lazy" alt="Coca Cola">
-                            <h3>Coca Cola</h3>
-                            <p>Precio: $80</p>
-                            <button class="btn-agregar" id="coca_cola">Agregar</button>
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <img src="../../../../assets/images/productos/alimentos/bebidas/refresco/coca_cola.avif" loading="lazy" alt="Coca Cola">
+                            <h3 class="producto-title">Coca Cola</h3>
+                            <p class="producto-price">Precio: $80.00</p>
+                            <button class="btn-agregar product-card__add-btn" id="coca_cola">Agregar</button>
                         </article>
                     </a>
 
                     <a href="coca_cola_zero.html">
-                        <article class="producto">
-                            <img src="../../../assets/images/productos/Alimentos/Bebidas/refresco/coca_cola_zero.avif" loading="lazy" alt="Coca Cola Zero">
-                            <h3>Coca Cola Zero</h3>
-                            <p>Precio: $80.00</p>
-                            <button class="btn-agregar" id="coca_cola_zero">Agregar</button>
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <img src="../../../../assets/images/productos/alimentos/bebidas/refresco/coca_cola_zero.avif" loading="lazy" alt="Coca Cola Zero">
+                            <h3 class="producto-title">Coca Cola Zero</h3>
+                            <p class="producto-price">Precio: $80.00</p>
+                            <button class="btn-agregar product-card__add-btn" id="coca_cola_zero">Agregar</button>
                         </article>
                     </a>
 
                     <a href="gatorade_uva.html">
-                        <article class="producto">
-                            <img src="../../../assets/images/productos/Alimentos/Bebidas/energizantes/gatorade_uva.avif" loading="lazy" alt="Gatorade Uva">
-                            <h3>Gatorade Uva</h3>
-                            <p>Precio: $75</p>
-                            <button class="btn-agregar" id="gatorade_uva">Agregar</button>
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <img src="../../../../assets/images/productos/alimentos/bebidas/energizantes/gatorade_uva.avif" loading="lazy" alt="Gatorade Uva">
+                            <h3 class="producto-title">Gatorade Uva</h3>
+                            <p class="producto-price">Precio: $75.00</p>
+                            <button class="btn-agregar product-card__add-btn" id="gatorade_uva">Agregar</button>
                         </article>
                     </a>
 
                     <a href="country_club_frambuesa.html">
-                        <article class="producto">
-                            <img src="../../../assets/images/productos/Alimentos/Bebidas/refresco/country_club_frambuesa.avif" loading="lazy" alt="Country Club Frambuesa">
-                            <h3>Country Club Frambuesa</h3>
-                            <p>Precio: $70</p>
-                            <button class="btn-agregar" id="country_club_frambuesa">Agregar</button>
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <img src="../../../../assets/images/productos/alimentos/bebidas/refresco/country_club_frambuesa.avif" loading="lazy" alt="Country Club Frambuesa">
+                            <h3 class="producto-title">Country Club Frambuesa</h3>
+                            <p class="producto-price">Precio: $70 / 2 Litros</p>
+                            <button class="btn-agregar product-card__add-btn" id="country_club_frambuesa">Agregar</button>
                         </article>
                     </a>
 
                     <a href="country_club_uva.html">
-                        <article class="producto">
-                            <img src="../../../assets/images/productos/Alimentos/Bebidas/refresco/country_club_uva.avif" loading="lazy" alt="Country Club Uva">
-                            <h3>Country Club Uva</h3>
-                            <p>Precio: $70 / 2 Lt</p>
-                            <button class="btn-agregar" id="country_club_uva">Agregar</button>
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <img src="../../../../assets/images/productos/alimentos/bebidas/refresco/country_club_uva.avif" loading="lazy" alt="Country Club Uva">
+                            <h3 class="producto-title">Country Club Uva</h3>
+                            <p class="producto-price">Precio: $70 / 2 Litros</p>
+                            <button class="btn-agregar product-card__add-btn" id="country_club_uva">Agregar</button>
                         </article>
                     </a>
 
                     <a href="jugo_naranja_rica.html">
-                        <article class="producto">
-                            <img src="../../../assets/images/productos/Alimentos/Bebidas/jugo/jugo_naranja_rica.avif" loading="lazy" alt="Jugo de Naranja Rica">
-                            <h3>Jugo de Naranja Rica</h3>
-                            <p>Precio: $55</p>
-                            <button class="btn-agregar" id="jugo_de_naranja_rica">Agregar</button>
-                        </article>
-                    </a>
-                    
-                    <a href="jugo_pera_santal.html">
-                        <article class="producto">
-                            <img src="../../../assets/images/productos/Alimentos/Bebidas/jugo/jugo_pera_santal.avif" loading="lazy" alt="Jugo de Pera Santal">
-                            <h3>Jugo de Pera Santal</h3>
-                            <p>Precio: $30</p>
-                            <button class="btn-agregar" id="jugo_de_pera_santal">Agregar</button>
+                        <article class="producto product-card offer-card block shrink-0 snap-start">
+                            <img src="../../../../assets/images/productos/alimentos/bebidas/jugo/jugo_naranja_rica.avif" loading="lazy" alt="Jugo de Naranja Rica">
+                            <h3 class="producto-title">Jugo de Naranja Rica</h3>
+                            <p class="producto-price">Precio: $55.00</p>
+                            <button class="btn-agregar product-card__add-btn" id="jugo_de_naranja_rica">Agregar</button>
                         </article>
                     </a>
                 </div>
                 
-                <button class="productos-control-next" type="button">
-                    <i class="bi bi-chevron-right"></i>
-                    <span class="visually-hidden">Siguiente</span>
+                <button class="productos-control-next absolute right-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="productos-destacados-next">
+                    <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-chevron-right"/></svg>
+                    <span class="sr-only">Siguiente</span>
                 </button>
             </div>
         </div>
     </section>
 </main>
 
- <!--footer Global-->
-    <footer> 
-        
-         <div class=" container_fluid footer-content">
-              <!-- Derechos reservados -->
-              <small>&copy; 2026 Hipermercado Superior. Todos los derechos reservados.</small>
+  <!-- Footer global -->
+    <footer class="footer-global">
+      <div class="footer-content">
+        <!-- Derechos reservados -->
+        <small>&copy; 2026 Hipermercado Superior. Todos los derechos reservados.</small>
 
-              <!-- Íconos de redes sociales -->
-              <div class="social-icons">
-                   <a href="https://facebook.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Facebook">
-                    <i class="bi bi-facebook"></i>
-                   </a>
+        <!-- Íconos de redes sociales (sprite SVG) -->
+        <div class="social-icons">
+          <a href="https://facebook.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Facebook" class="social-link">
+            <svg aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-facebook"/></svg>
+          </a>
+          <a href="https://twitter.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en X (antes Twitter)" class="social-link">
+            <svg aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-x"/></svg>
+          </a>
+          <a href="https://instagram.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Instagram" class="social-link">
+            <svg aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-instagram"/></svg>
+          </a>
+        </div>
 
-                   <a href="https://twitter.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en X (antes Twitter)">
-                    <i class="bi bi-twitter-x"></i>
-                   </a>
-
-                   <a href="https://instagram.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Instagram">
-                    <i class="bi bi-instagram"></i>
-                   </a>
-              </div>
-
-                 <!-- Enlaces legales -->
-                <div class="footer-links">
-                  <a href="../../../legal/privacy.html" title="Política de Privacidad">Política de Privacidad</a> |
-                  <a href="../../../legal/terms.html" title="Términos de Uso">Términos de Uso</a>
-                </div>
-            </div>
+        <!-- Enlaces legales -->
+        <div class="footer-links">
+          <a href="../../../../legal/privacy.html" title="Política de Privacidad">Política de Privacidad</a>
+          <span class="separator">|</span>
+          <a href="../../../../legal/terms.html" title="Términos de Uso">Términos de Uso</a>
+        </div>
+      </div>
     </footer>
-
-     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

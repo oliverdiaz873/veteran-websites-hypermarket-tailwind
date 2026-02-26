@@ -57,9 +57,16 @@
 
 /* Separadores automáticos */
 .breadcrumb li:not(:last-child)::after {
-    content: "›" !important;
-    color: #ffffff !important;
-    margin-left: 5px !important;
+    content: "›";
+    color: #ffffff;
+    margin-left: 5px;
+}
+
+/* Override específico para breadcrumbs de productos */
+.breadcrumb.breadcrumb-product li:nth-child(3)::after {
+    content: "›";
+    color: #ffffff;
+    margin-left: 5px;
 }
 
 /* Enlaces y elementos dentro del breadcrumb */
@@ -83,16 +90,10 @@
 
 /* Mobile truncation - ocultar elementos intermedios en pantallas pequeñas */
 @media (max-width: 767px) {
-    /* Para breadcrumbs de productos (5 niveles) - truncar */
+    /* Para breadcrumbs de productos (5 niveles) - mostrar solo: Inicio › Bebidas › [Producto] */
     .breadcrumb.breadcrumb-product li:nth-child(2),
-    .breadcrumb.breadcrumb-product li:nth-child(4) {
+    .breadcrumb.breadcrumb-product li:nth-child(3) {
         display: none !important;
-    }
-    
-    .breadcrumb.breadcrumb-product li:nth-child(3)::after {
-        content: " › ..." !important;
-        color: #ffffff !important;
-        margin-left: 5px !important;
     }
     
     /* Para breadcrumbs de categorías (3 niveles) - mostrar todo */
@@ -103,62 +104,60 @@
     .breadcrumb.breadcrumb-category li:nth-child(3)::after {
         content: none !important;
     }
+    
+    /* Truncamiento para nombres largos en móviles */
+    .breadcrumb li {
+        max-width: 90px !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+    
+    /* El elemento actual (producto) puede tener más espacio */
+    .breadcrumb li[aria-current="page"] {
+        max-width: 140px !important;
+    }
 }
 
-/* ========================== MEDIA QUERIES ========================== */
-
-/* Tablet (768px en adelante) */
+/* Tablet y Desktop - mostrar todos los elementos */
 @media (min-width: 768px) {
     .breadcrumb {
-        font-size: 15px !important;
-        padding: 10px 20px !important;
-        max-width: 95% !important;
+        font-size: 15px;
+        padding: 10px 20px;
+        max-width: 95%;
+        overflow: visible;
+        text-overflow: unset;
+        white-space: normal;
+    }
+    
+    /* Restaurar ancho completo en tablet y desktop */
+    .breadcrumb li {
+        max-width: none !important;
+        white-space: normal !important;
         overflow: visible !important;
         text-overflow: unset !important;
-        white-space: normal !important;
     }
     
-    /* Restaurar elementos intermedios en tablet/desktop */
-    .breadcrumb li:nth-child(2),
-    .breadcrumb li:nth-child(4) {
-        display: flex !important;
-    }
-    
-    /* Quitar "..." en tablet/desktop */
-    .breadcrumb li:nth-child(3)::after {
-        content: none !important;
+    /* Solo mostrar elementos que no estén ocultos por mobile */
+    .breadcrumb li:not([style*="display: none"]) {
+        display: flex;
     }
 }
 
-/* Desktop (1024px en adelante) */
+/* Desktop específico */
 @media (min-width: 1024px) {
     .breadcrumb {
-        font-size: 14px !important;
+        font-size: 14px;
         padding: 8px 20px;
-        max-width: 70% !important;
-        border-radius: 10px !important;
-        top: var(--breadcrumb-top-desktop) !important;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
-        overflow: visible !important;
-        text-overflow: unset !important;
-        white-space: normal !important;
-    }
-    
-    /* Mantener elementos intermedios visibles en desktop */
-    .breadcrumb li:nth-child(2),
-    .breadcrumb li:nth-child(4) {
-        display: flex !important;
-    }
-    
-    /* Sin "..." en desktop */
-    .breadcrumb li:nth-child(3)::after {
-        content: none !important;
+        max-width: 70%;
+        top: var(--breadcrumb-top-desktop);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     }
 }
 
-/* Tablet (768px - 1023px) */
+/* Tablet específico */
 @media (min-width: 768px) and (max-width: 1023px) {
     .breadcrumb {
-        top: var(--breadcrumb-top-base) !important;
+        top: var(--breadcrumb-top-base);
     }
 }
