@@ -401,20 +401,16 @@ function irAResultados(texto) {
 function getRelativePrefix() {
     const path = window.location.pathname;
 
-    if (path.includes('/productos/')) {
-        const parts = path.split('/productos/');
+    if (path.includes('/pages/product/')) {
+        const parts = path.split('/pages/product/');
         if (parts.length > 1) {
             const subPath = parts[1];
             const depth = subPath.split('/').length - 1;
-            let up = '../';
+            let up = '../../../'; // Start from pages/product/
             for (let i = 0; i < depth; i++) up += '../';
             return up;
         }
-        return '../';
-    }
-
-    if (path.includes('/categorias/')) {
-        return '../';
+        return '../../';
     }
 
     if (path.includes('/pages/category/')) {
