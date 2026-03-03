@@ -271,16 +271,16 @@ const productos = [
     {
         id: "ajies_morrones",
         nombre: "Ajíes Morrones",
-        url: "pages/product/Alimentos/frutas_y_verduras/ajies_morrones.html",
+        url: "pages/product/Alimentos/Frutas_y_verduras/ajies_morrones.html",
         categoria: "frutas_y_verduras",
-        precio: 80, // número para carrito
-        precioTexto: "$80.00 / La unidad", // texto para mostrar en resultados
+        precio: 100, // número para carrito
+        precioTexto: "Precio: $100 1LB", // texto para mostrar en resultados
         imagen: "/assets/images/productos/alimentos/frutas_y_verduras/ajies_morron.avif"
     },
     {
         id: "cebollas_rojas",
         nombre: "Cebollas Rojas",
-        url: "pages/product/Alimentos/frutas_y_verduras/cebollas_rojas.html",
+        url: "pages/product/Alimentos/Frutas_y_verduras/cebollas_rojas.html",
         categoria: "frutas_y_verduras",
         precio: 170, // número para carrito
         precioTexto: "$170.00 / 1 kg", // texto para mostrar en resultados
@@ -289,7 +289,7 @@ const productos = [
     {
         id: "limones_persa",
         nombre: "Limones Persa",
-        url: "pages/product/Alimentos/frutas_y_verduras/limones_persa.html",
+        url: "pages/product/Alimentos/Frutas_y_verduras/limones_persa.html",
         categoria: "frutas_y_verduras",
         precio: 200, // número para carrito
         precioTexto: "$200 / 1 kg", // texto para mostrar en resultados
@@ -298,7 +298,7 @@ const productos = [
     {
         id: "mandarinas",
         nombre: "Mandarinas",
-        url: "pages/product/Alimentos/frutas_y_verduras/mandarinas.html",
+        url: "pages/product/Alimentos/Frutas_y_verduras/mandarinas.html",
         categoria: "frutas_y_verduras",
         precio: 100, // número para carrito
         precioTexto: "$100.00 / 1 kg", // texto para mostrar en resultados
@@ -307,7 +307,7 @@ const productos = [
     {
         id: "manzanas_amarillas",
         nombre: "Manzanas Amarillas",
-        url: "pages/product/Alimentos/frutas_y_verduras/manzanas_amarillas.html",
+        url: "pages/product/Alimentos/Frutas_y_verduras/manzanas_amarillas.html",
         categoria: "frutas_y_verduras",
         precio: 50, // número para carrito
         precioTexto: "$50.00 / 1 kg", // texto para mostrar en resultados
@@ -316,7 +316,7 @@ const productos = [
     {
         id: "manzanas_rojas",
         nombre: "Manzanas Rojas",
-        url: "pages/product/Alimentos/frutas_y_verduras/manzanas_rojas.html",
+        url: "pages/product/Alimentos/Frutas_y_verduras/manzanas_rojas.html",
         categoria: "frutas_y_verduras",
         precio: 65, // número para carrito
         precioTexto: "$65.00 / 1 kg", // texto para mostrar en resultados
@@ -325,7 +325,7 @@ const productos = [
     {
         id: "manzanas_verdes",
         nombre: "Manzanas Verdes",
-        url: "pages/product/Alimentos/frutas_y_verduras/manzanas_verdes.html",
+        url: "pages/product/Alimentos/Frutas_y_verduras/manzanas_verdes.html",
         categoria: "frutas_y_verduras",
         precio: 45, // número para carrito
         precioTexto: "$45.00 / 1 kg", // texto para mostrar en resultados
@@ -334,7 +334,7 @@ const productos = [
     {
         id: "paquete_de_fresas",
         nombre: "Paquete de Fresas",
-        url: "pages/product/Alimentos/frutas_y_verduras/paquete_de_fresas.html",
+        url: "pages/product/Alimentos/Frutas_y_verduras/paquete_de_fresas.html",
         categoria: "frutas_y_verduras",
         precio: 350, // número para carrito
         precioTexto: "$350.00 / 1 paquete", // texto para mostrar en resultados
@@ -343,7 +343,7 @@ const productos = [
     {
         id: "pepinos",
         nombre: "Pepinos",
-        url: "pages/product/Alimentos/frutas_y_verduras/pepinos.html",
+        url: "pages/product/Alimentos/Frutas_y_verduras/pepinos.html",
         categoria: "frutas_y_verduras",
         precio: 35, // número para carrito
         precioTexto: "$35.00 / 1 kg", // texto para mostrar en resultados
@@ -352,7 +352,7 @@ const productos = [
     {
         id: "tomates_de_ensalada",
         nombre: "Tomates de Ensalada",
-        url: "pages/product/Alimentos/frutas_y_verduras/tomates_de_ensalada.html",
+        url: "pages/product/Alimentos/Frutas_y_verduras/tomates_de_ensalada.html",
         categoria: "frutas_y_verduras",
         precio: 80, // número para carrito
         precioTexto: "$80.00 / 1 kg", // texto para mostrar en resultados
@@ -361,7 +361,7 @@ const productos = [
     {
         id: "uvas_moradas",
         nombre: "Uvas Moradas",
-        url: "pages/product/Alimentos/frutas_y_verduras/uvas_moradas.html",
+        url: "pages/product/Alimentos/Frutas_y_verduras/uvas_moradas.html",
         categoria: "frutas_y_verduras",
         precio: 150, // número para carrito
         precioTexto: "$150.00 / 1 kg", // texto para mostrar en resultados
@@ -370,7 +370,7 @@ const productos = [
     {
         id: "zanahorias",
         nombre: "Zanahorias",
-        url: "pages/product/Alimentos/frutas_y_verduras/zanahorias.html",
+        url: "pages/product/Alimentos/Frutas_y_verduras/zanahorias.html",
         categoria: "frutas_y_verduras",
         precio: 80, // número para carrito
         precioTexto: "$80.00 / 1 kg", // texto para mostrar en resultados
@@ -1731,7 +1731,7 @@ const productos = [
         categoria: "televisores",
         precio: 55200, // número para carrito
         precioTexto: "Precio: $55,200", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/tecnologia/televisores/tv_led_tecnomaster.png"
+        imagen: "/assets/images/productos/tecnologia/televisores/tv_led_tecnomaster.avif"
     },
     {
         id: "televisor_samsung_75_pulgadas",
