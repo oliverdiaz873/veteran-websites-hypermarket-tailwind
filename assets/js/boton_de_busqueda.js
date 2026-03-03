@@ -401,12 +401,15 @@ function irAResultados(texto) {
 function getRelativePrefix() {
     const path = window.location.pathname;
 
+    // Detectar profundidad basada en carpetas reales
     if (path.includes('/pages/product/')) {
+        // Estamos en pages/product/categoria/subcategoria/producto.html -> 4 niveles (o más)
+        // Pero el array de productos.js usa urls relativas a la raíz o absolutas
         const parts = path.split('/pages/product/');
         if (parts.length > 1) {
             const subPath = parts[1];
-            const depth = subPath.split('/').length - 1;
-            let up = '../../../'; // Start from pages/product/
+            const depth = subPath.split('/').filter(p => p.length > 0).length;
+            let up = '../../'; // Mínimo para salir de pages/product/
             for (let i = 0; i < depth; i++) up += '../';
             return up;
         }
@@ -422,15 +425,15 @@ function getRelativePrefix() {
     }
 
     if (path.includes('/pages/cart/')) {
-        return '../../../';
-    }
-
-    if (path.includes('/contacto/')) {
-        return '../';
+        return '../../';
     }
 
     if (path.includes('/legal/')) {
         return '../';
+    }
+
+    if (path.includes('/contacto/')) {
+        return '../../'; // Si está en pages/contacto/index.html
     }
 
     return ''; // Root

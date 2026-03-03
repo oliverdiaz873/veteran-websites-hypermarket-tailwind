@@ -82,21 +82,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Ajustar ruta de imagen para soporte local (file://) y diferentes subdirectorios
             let imgBtn = p.img;
-            if (imgBtn.startsWith('/')) {
-                // Detectar si estamos en pages/cart/
-                const isInCartPage = window.location.pathname.includes('/pages/cart/');
-                const isInSubDir = window.location.pathname.includes('/categorias/') || window.location.pathname.includes('/productos/');
-                
-                if (isInCartPage) {
-                    // Desde pages/cart/ necesitamos ir 3 niveles arriba para llegar a assets/
-                    imgBtn = '../../..' + imgBtn;
-                } else if (isInSubDir) {
-                    // Desde categorias/ o productos/ necesitamos ir 2 niveles arriba
-                    imgBtn = '..' + imgBtn;
-                } else {
-                    // Desde root, quitar '/' inicial
-                    imgBtn = imgBtn.substring(1);
-                }
+            if (imgBtn && imgBtn.startsWith('/')) {
+                // Usar el prefijo dinámico
+                imgBtn = getRelativePrefix() + imgBtn.substring(1);
             }
 
             const contenido = `
@@ -179,20 +167,24 @@ document.addEventListener('DOMContentLoaded', () => {
 function getRelativePrefix() {
     const path = window.location.pathname;
 
-    if (path.includes('/productos/')) {
-        const parts = path.split('/productos/');
+    // Detectar profundidad basada en carpetas reales
+    if (path.includes('/pages/product/')) {
+        // Estamos en pages/product/categoria/subcategoria/producto.html -> 4 niveles (o más)
+        // Pero el array de productos.js usa urls relativas a la raíz o absolutas
+        // Si estamos en un subdirectorio de product/, necesitamos ir hacia arriba
+        const parts = path.split('/pages/product/');
         if (parts.length > 1) {
             const subPath = parts[1];
-            const depth = subPath.split('/').length - 1;
-            let up = '../';
+            const depth = subPath.split('/').filter(p => p.length > 0).length;
+            let up = '../../'; // Mínimo para salir de pages/product/
             for (let i = 0; i < depth; i++) up += '../';
             return up;
         }
-        return '../';
+        return '../../';
     }
 
-    if (path.includes('/categorias/')) {
-        return '../';
+    if (path.includes('/pages/category/')) {
+        return '../../';
     }
 
     if (path.includes('/pages/search/')) {
@@ -200,7 +192,7 @@ function getRelativePrefix() {
     }
 
     if (path.includes('/pages/cart/')) {
-        return '../../../';
+        return '../../';
     }
 
     if (path.includes('/legal/')) {
@@ -208,7 +200,7 @@ function getRelativePrefix() {
     }
 
     if (path.includes('/contacto/')) {
-        return '../';
+        return '../../'; // Si está en pages/contacto/index.html
     }
 
     return ''; // Root
