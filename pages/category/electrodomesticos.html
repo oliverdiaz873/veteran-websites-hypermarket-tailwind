@@ -30,29 +30,29 @@
     <script src="https://cdn.tailwindcss.com"></script>
    
     <!-- CSS y Fonts -->
-    <link rel="stylesheet" href="../../assets/css/fonts.css">
-    <link rel="stylesheet" href="../../assets/css/components/header.css">
-    <link rel="stylesheet" href="../../assets/css/components/navigation.css">
-    <link rel="stylesheet" href="../../assets/css/components/product-card.css">
-    <link rel="stylesheet" href="../../assets/css/components/offer-card.css">
-    <link rel="stylesheet" href="../../assets/css/components/featured-products.css">
-    <link rel="stylesheet" href="../../assets/css/components/about-us-section.css">
-    <link rel="stylesheet" href="../../assets/css/components/footer.css">
-    <link rel="stylesheet" href="../../assets/css/pages/category.css">
-    <link rel="stylesheet" href="../../assets/css/global.css">
-    <link rel="stylesheet" href="../../assets/css/components/breadcrumb.css">
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="stylesheet" href="../../assets/css/categorias.css">
+    <link rel="stylesheet" href="/assets/css/fonts.css">
+    <link rel="stylesheet" href="/assets/css/components/header.css">
+    <link rel="stylesheet" href="/assets/css/components/navigation.css">
+    <link rel="stylesheet" href="/assets/css/components/product-card.css">
+    <link rel="stylesheet" href="/assets/css/components/offer-card.css">
+    <link rel="stylesheet" href="/assets/css/components/featured-products.css">
+    <link rel="stylesheet" href="/assets/css/components/about-us-section.css">
+    <link rel="stylesheet" href="/assets/css/components/footer.css">
+    <link rel="stylesheet" href="/assets/css/pages/category.css">
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/components/breadcrumb.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/categorias.css">
 
     <!-- Scripts -->
-    <script src="../../assets/js/productos.js" defer></script>
-    <script src="../../assets/js/boton_de_busqueda.js" defer></script>
-    <script src="../../assets/js/carrito.js" defer></script>
-    <script src="../../assets/js/hamburger_menu.js" defer></script>
-    <script src="../../assets/js/tablet_menu_click.js" defer></script>
-    <script src="../../assets/js/productos_navegacion.js" defer></script>
-    <script src="../../assets/js/ofertas_animation.js" defer></script>
-    <script src="../../assets/js/scroll_animations.js" defer></script>
+    <script src="/assets/js/productos.js" defer></script>
+    <script src="/assets/js/boton_de_busqueda.js" defer></script>
+    <script src="/assets/js/carrito.js" defer></script>
+    <script src="/assets/js/hamburger_menu.js" defer></script>
+    <script src="/assets/js/tablet_menu_click.js" defer></script>
+    <script src="/assets/js/productos_navegacion.js" defer></script>
+    <script src="/assets/js/ofertas_animation.js" defer></script>
+    <script src="/assets/js/scroll_animations.js" defer></script>
 
   </head>
 
@@ -65,19 +65,19 @@
 
       <!-- Botón hamburguesa solo en móvil -->
       <button class="menu-btn text-[22px] bg-transparent border-none text-white cursor-pointer transition-colors duration-300 rounded hover:bg-white/15 p-1 md:hidden">
-        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-menu"/></svg>
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-menu"/></svg>
       </button>
 
       <!-- Logo -->
-      <a href="../../index.html" class="brand flex items-center gap-1 text-white no-underline" aria-label="Ir a la página principal de Hipermercado Superior">
-        <img src="../../assets/images/logo/logo.png" alt="Logo de Hipermercado Superior">
+      <a href="/index.html" class="brand flex items-center gap-1 text-white no-underline" aria-label="Ir a la página principal de Hipermercado Superior">
+        <img src="/assets/images/logo/logo.png" alt="Logo de Hipermercado Superior">
         <h1 class="whitespace-nowrap block ml-1">Hipermercado Superior</h1>
       </a>
 
       <!-- Menú de navegación Desktop (Solo enlaces) - Visible en Tablets y Desktop -->
       <nav class="nav-links hidden md:flex justify-center" role="navigation" aria-label="Menú principal">
         <ul class="flex gap-5 items-center list-none p-0 m-0">
-          <li><a href="../../index.html" class="text-white no-underline text-base px-2.5 py-2 block text-left transition-colors duration-300 rounded-[10px] hover:bg-white/15">Inicio</a></li>
+          <li><a href="/index.html" class="text-white no-underline text-base px-2.5 py-2 block text-left transition-colors duration-300 rounded-[10px] hover:bg-white/15">Inicio</a></li>
 
           <!-- Categorías Dropdown -->
           <li class="relative group">
@@ -185,8 +185,8 @@
             </ul>
           </li>
 
-          <li><a href="../../index.html#ofertas" class="text-white no-underline text-base px-2.5 py-2 block transition-colors duration-300 rounded-[10px] hover:bg-white/15">Ofertas</a></li>
-          <li><a href="../contacto/index.html" class="text-white no-underline text-base px-2.5 py-2 block transition-colors duration-300 rounded-[10px] hover:bg-white/15">Contacto</a></li>
+          <li><a href="/index.html#ofertas" class="text-white no-underline text-base px-2.5 py-2 block transition-colors duration-300 rounded-[10px] hover:bg-white/15">Ofertas</a></li>
+          <li><a href="/contacto/index.html" class="text-white no-underline text-base px-2.5 py-2 block transition-colors duration-300 rounded-[10px] hover:bg-white/15">Contacto</a></li>
         </ul>
       </nav>
 
@@ -197,15 +197,15 @@
           <input type="text" id="input-buscar" placeholder="Buscar productos..." class="search-input-modern" autocomplete="off">
           <button type="button" id="btn-buscar" class="util-btn">
             <!-- Icono Lupa / Cerrar (sprite) -->
-            <svg id="icono-buscar" class="util-icon" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-search"/></svg>
-            <svg id="icono-cerrar" class="util-icon hidden" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-close"/></svg>
+            <svg id="icono-buscar" class="util-icon" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-search"/></svg>
+            <svg id="icono-cerrar" class="util-icon hidden" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-close"/></svg>
           </button>
           <ul id="resultados-busqueda" class="search-results-list"></ul>
         </div>
 
         <!-- Carrito -->
-        <a href="../cart/index.html" class="util-btn" aria-label="Ver carrito">
-          <svg class="util-icon" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-cart"/></svg>
+        <a href="/cart/index.html" class="util-btn" aria-label="Ver carrito">
+          <svg class="util-icon" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-cart"/></svg>
           <span id="contador-carrito" class="cart-badge">0</span>
         </a>
       </div>
@@ -214,7 +214,7 @@
     <!-- Menú móvil colapsable -->
     <nav id="mobile-menu" class="fixed top-[49px] left-0 w-full bg-black/95 text-white hidden z-[999] max-h-[calc(100vh-49px)] overflow-y-auto py-5 shadow-xl">
       <ul class="list-none p-0 m-0">
-        <li class="px-5 py-2.5 border-b border-white/10"><a href="../../index.html" class="block">Inicio</a></li>
+        <li class="px-5 py-2.5 border-b border-white/10"><a href="/index.html" class="block">Inicio</a></li>
         <li class="px-5 py-2.5 border-b border-white/10">
           <button class="mobile-dropdown-btn w-full text-left flex justify-between items-center">
             Categorías <span class="text-[0.7em] opacity-70">▼</span>
@@ -319,8 +319,8 @@
             </li>
           </ul>
         </li>
-        <li class="px-5 py-2.5 border-b border-white/10"><a href="../../index.html#ofertas" class="block">Ofertas</a></li>
-        <li class="px-5 py-2.5 border-b border-white/10"><a href="../contacto/index.html" class="block">Contacto</a></li>
+        <li class="px-5 py-2.5 border-b border-white/10"><a href="/index.html#ofertas" class="block">Ofertas</a></li>
+        <li class="px-5 py-2.5 border-b border-white/10"><a href="/contacto/index.html" class="block">Contacto</a></li>
       </ul>
     </nav>
   </header>
@@ -328,7 +328,7 @@
 <!-- Breadcrumb -->
 <nav aria-label="Breadcrumb">
   <ol class="breadcrumb breadcrumb-category">
-    <li><a href="../../index.html">Inicio</a></li>
+    <li><a href="/index.html">Inicio</a></li>
     <li><span>Categorías</span></li>
     <li aria-current="page">Electrodomésticos</li>
   </ol>
@@ -343,16 +343,16 @@
 
             <div class="productos-container-wrapper relative flex items-center justify-center">
                 <button class="productos-control-prev absolute left-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="cocina-prev">
-                    <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-left"/></svg>
+                    <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-chevron-left"/></svg>
                     <span class="sr-only">Anterior</span>
                 </button>
                 
                 <div id="cocina" class="productos-container flex w-full gap-4 md:gap-5 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory">
                     <!-- Producto 1 -->
                     <article class="producto product-card offer-card block shrink-0 snap-start">
-                        <a href="../product/electrodomesticos/cocina/nevera_lg.html" class="product-card__overlay-link" aria-label="Ver detalles de Nevera LG"></a>
+                        <a href="/product/electrodomesticos/cocina/nevera_lg.html" class="product-card__overlay-link" aria-label="Ver detalles de Nevera LG"></a>
                         <div class="producto-img-container">
-                            <img src="../../assets/images/productos/electrodomesticos/cocina/neveras/nevera_lg.png" alt="Nevera LG" loading="lazy">
+                            <img src="/assets/images/productos/electrodomesticos/cocina/neveras/nevera_lg.png" alt="Nevera LG" loading="lazy">
                         </div>
                         <h3 class="producto-title">Nevera LG</h3>
                         <p class="producto-price">Precio: $80,000</p>
@@ -361,9 +361,9 @@
 
                     <!-- Producto 2 -->
                     <article class="producto product-card offer-card block shrink-0 snap-start">
-                        <a href="../product/electrodomesticos/cocina/estufa_lg.html" class="product-card__overlay-link" aria-label="Ver detalles de Estufa LG"></a>
+                        <a href="/product/electrodomesticos/cocina/estufa_lg.html" class="product-card__overlay-link" aria-label="Ver detalles de Estufa LG"></a>
                         <div class="producto-img-container">
-                            <img src="../../assets/images/productos/electrodomesticos/cocina/estufas/estufa_lg.avif" alt="Estufa LG" loading="lazy">
+                            <img src="/assets/images/productos/electrodomesticos/cocina/estufas/estufa_lg.avif" alt="Estufa LG" loading="lazy">
                         </div>
                         <h3 class="producto-title">Estufa LG</h3>
                         <p class="producto-price">Precio: $66,000</p>
@@ -372,9 +372,9 @@
 
                     <!-- Producto 3 -->
                     <article class="producto product-card offer-card block shrink-0 snap-start">
-                        <a href="../product/electrodomesticos/cocina/extractor_drija.html" class="product-card__overlay-link" aria-label="Ver detalles de Extractor Drija"></a>
+                        <a href="/product/electrodomesticos/cocina/extractor_drija.html" class="product-card__overlay-link" aria-label="Ver detalles de Extractor Drija"></a>
                         <div class="producto-img-container">
-                            <img src="../../assets/images/productos/electrodomesticos/cocina/extractor_de_grasa/extractor_de_grasa_drija.avif" alt="Extractor Drija" loading="lazy">
+                            <img src="/assets/images/productos/electrodomesticos/cocina/extractor_de_grasa/extractor_de_grasa_drija.avif" alt="Extractor Drija" loading="lazy">
                         </div>
                         <h3 class="producto-title">Extractor Drija</h3>
                         <p class="producto-price">Precio: $6,000</p>
@@ -383,9 +383,9 @@
 
                     <!-- Producto 4 -->
                     <article class="producto product-card offer-card block shrink-0 snap-start">
-                        <a href="../product/electrodomesticos/cocina/cilindro_duragas.html" class="product-card__overlay-link" aria-label="Ver detalles de Cilindro Duragas"></a>
+                        <a href="/product/electrodomesticos/cocina/cilindro_duragas.html" class="product-card__overlay-link" aria-label="Ver detalles de Cilindro Duragas"></a>
                         <div class="producto-img-container">
-                            <img src="../../assets/images/productos/electrodomesticos/cocina/cilindros_de_gas/cilindro_de_gas_duragas.avif" alt="Cilindro Duragas" loading="lazy">
+                            <img src="/assets/images/productos/electrodomesticos/cocina/cilindros_de_gas/cilindro_de_gas_duragas.avif" alt="Cilindro Duragas" loading="lazy">
                         </div>
                         <h3 class="producto-title">Cilindro Duragas</h3>
                         <p class="producto-price">Precio: $5,200</p>
@@ -394,9 +394,9 @@
 
                     <!-- Producto 5 -->
                     <article class="producto product-card offer-card block shrink-0 snap-start">
-                        <a href="../product/electrodomesticos/cocina/freezer_7_pies.html" class="product-card__overlay-link" aria-label="Ver detalles de Freezer 7 Pies"></a>
+                        <a href="/product/electrodomesticos/cocina/freezer_7_pies.html" class="product-card__overlay-link" aria-label="Ver detalles de Freezer 7 Pies"></a>
                         <div class="producto-img-container">
-                            <img src="../../assets/images/productos/electrodomesticos/cocina/freezer/freezer_7pies.png" alt="Freezer 7 Pies" loading="lazy">
+                            <img src="/assets/images/productos/electrodomesticos/cocina/freezer/freezer_7pies.png" alt="Freezer 7 Pies" loading="lazy">
                         </div>
                         <h3 class="producto-title">Freezer 7 Pies</h3>
                         <p class="producto-price">Precio: $16,500</p>
@@ -405,9 +405,9 @@
 
                     <!-- Producto 6 -->
                     <article class="producto product-card offer-card block shrink-0 snap-start">
-                        <a href="../product/electrodomesticos/cocina/bebedero_tecnomaster.html" class="product-card__overlay-link" aria-label="Ver detalles de Bebedero Tecnomaster"></a>
+                        <a href="/product/electrodomesticos/cocina/bebedero_tecnomaster.html" class="product-card__overlay-link" aria-label="Ver detalles de Bebedero Tecnomaster"></a>
                         <div class="producto-img-container">
-                          <img src="../../assets/images/productos/electrodomesticos/cocina/bebedero/bebedero_tecnomaster.avif" alt="Bebedero Tecnomaster" loading="lazy">
+                          <img src="/assets/images/productos/electrodomesticos/cocina/bebedero/bebedero_tecnomaster.avif" alt="Bebedero Tecnomaster" loading="lazy">
                         </div>
                         <h3 class="producto-title">Bebedero Tecnomaster</h3>
                         <p class="producto-price">Precio: $5,000</p>
@@ -416,7 +416,7 @@
                 </div>
 
                 <button class="productos-control-next absolute right-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="cocina-next">
-                    <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-right"/></svg>
+                    <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-chevron-right"/></svg>
                     <span class="sr-only">Siguiente</span>
                 </button>
             </div>
@@ -430,16 +430,16 @@
 
             <div class="productos-container-wrapper relative flex items-center justify-center">
                 <button class="productos-control-prev absolute left-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="lavado-prev">
-                    <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-left"/></svg>
+                    <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-chevron-left"/></svg>
                     <span class="sr-only">Anterior</span>
                 </button>
                 
                 <div id="lavado" class="productos-container flex w-full gap-4 md:gap-5 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory">
                     <!-- Producto 1 -->
                     <article class="producto product-card offer-card block shrink-0 snap-start">
-                        <a href="../product/electrodomesticos/lavado/lavadora_frigidaire.html" class="product-card__overlay-link" aria-label="Ver detalles de Lavadora Frigidaire"></a>
+                        <a href="/product/electrodomesticos/lavado/lavadora_frigidaire.html" class="product-card__overlay-link" aria-label="Ver detalles de Lavadora Frigidaire"></a>
                         <div class="producto-img-container">
-                          <img src="../../assets/images/productos/electrodomesticos/lavado/lavadora/lavadora_frigidaire.png" alt="Lavadora Frigidaire" loading="lazy">
+                          <img src="/assets/images/productos/electrodomesticos/lavado/lavadora/lavadora_frigidaire.png" alt="Lavadora Frigidaire" loading="lazy">
                         </div>
                         <h3 class="producto-title">Lavadora Frigidaire</h3>
                         <p class="producto-price">Precio: $35,000</p>
@@ -448,9 +448,9 @@
 
                     <!-- Producto 2 -->
                     <article class="producto product-card offer-card block shrink-0 snap-start">
-                        <a href="../product/electrodomesticos/lavado/lavadora_tecnomaster.html" class="product-card__overlay-link" aria-label="Ver detalles de Lavadora y Secadora Tecnomaster"></a>
+                        <a href="/product/electrodomesticos/lavado/lavadora_tecnomaster.html" class="product-card__overlay-link" aria-label="Ver detalles de Lavadora y Secadora Tecnomaster"></a>
                         <div class="producto-img-container">
-                          <img src="../../assets/images/productos/electrodomesticos/lavado/lavadora_y_secadora/lavadora_y_secadora_tecnomaster.png" alt="Lavadora y Secadora Tecnomaster" loading="lazy">
+                          <img src="/assets/images/productos/electrodomesticos/lavado/lavadora_y_secadora/lavadora_y_secadora_tecnomaster.png" alt="Lavadora y Secadora Tecnomaster" loading="lazy">
                         </div>
                         <h3 class="producto-title">Torre Tecnomaster</h3>
                         <p class="producto-price">Precio: $40,000</p>
@@ -459,9 +459,9 @@
 
                     <!-- Producto 3 -->
                     <article class="producto product-card offer-card block shrink-0 snap-start">
-                        <a href="../product/electrodomesticos/lavado/lavadora_lg.html" class="product-card__overlay-link" aria-label="Ver detalles de Lavadora LG"></a>
+                        <a href="/product/electrodomesticos/lavado/lavadora_lg.html" class="product-card__overlay-link" aria-label="Ver detalles de Lavadora LG"></a>
                         <div class="producto-img-container">
-                          <img src="../../assets/images/productos/electrodomesticos/lavado/lavadora/lavadora_lg.avif" alt="Lavadora LG" loading="lazy">
+                          <img src="/assets/images/productos/electrodomesticos/lavado/lavadora/lavadora_lg.avif" alt="Lavadora LG" loading="lazy">
                         </div>
                         <h3 class="producto-title">Lavadora LG</h3>
                         <p class="producto-price">Precio: $53,000</p>
@@ -470,9 +470,9 @@
 
                     <!-- Producto 4 -->
                     <article class="producto product-card offer-card block shrink-0 snap-start">
-                        <a href="../product/electrodomesticos/lavado/lavadora_secadora_lg.html" class="product-card__overlay-link" aria-label="Ver detalles de Lavadora y Secadora LG"></a>
+                        <a href="/product/electrodomesticos/lavado/lavadora_secadora_lg.html" class="product-card__overlay-link" aria-label="Ver detalles de Lavadora y Secadora LG"></a>
                         <div class="producto-img-container">
-                          <img src="../../assets/images/productos/electrodomesticos/lavado/lavadora_y_secadora/lavadora_y_secadora_lg.avif" alt="Lavadora y Secadora LG" loading="lazy">
+                          <img src="/assets/images/productos/electrodomesticos/lavado/lavadora_y_secadora/lavadora_y_secadora_lg.avif" alt="Lavadora y Secadora LG" loading="lazy">
                         </div>
                         <h3 class="producto-title">Torre LG</h3>
                         <p class="producto-price">Precio: $55,000</p>
@@ -481,9 +481,9 @@
 
                     <!-- Producto 5 -->
                     <article class="producto product-card offer-card block shrink-0 snap-start">
-                        <a href="../product/electrodomesticos/lavado/lavadora_dimensions.html" class="product-card__overlay-link" aria-label="Ver detalles de Lavadora Dimensions"></a>
+                        <a href="/product/electrodomesticos/lavado/lavadora_dimensions.html" class="product-card__overlay-link" aria-label="Ver detalles de Lavadora Dimensions"></a>
                         <div class="producto-img-container">
-                          <img src="../../assets/images/productos/electrodomesticos/lavado/lavadora/lavadora_dimensions.png" alt="Lavadora Dimensions" loading="lazy">
+                          <img src="/assets/images/productos/electrodomesticos/lavado/lavadora/lavadora_dimensions.png" alt="Lavadora Dimensions" loading="lazy">
                         </div>
                         <h3 class="producto-title">Lavadora Dimensions</h3>
                         <p class="producto-price">Precio: $10,000</p>
@@ -492,7 +492,7 @@
                 </div>
 
                 <button class="productos-control-next absolute right-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="lavado-next">
-                    <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-right"/></svg>
+                    <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-chevron-right"/></svg>
                     <span class="sr-only">Siguiente</span>
                 </button>
             </div>
@@ -506,16 +506,16 @@
 
             <div class="productos-container-wrapper relative flex items-center justify-center">
                 <button class="productos-control-prev absolute left-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="climatizacion-prev">
-                    <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-left"/></svg>
+                    <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-chevron-left"/></svg>
                     <span class="sr-only">Anterior</span>
                 </button>
                 
                 <div id="climatizacion" class="productos-container flex w-full gap-4 md:gap-5 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory">
                     <!-- Producto 1 -->
                     <article class="producto product-card offer-card block shrink-0 snap-start">
-                        <a href="../product/electrodomesticos/climatizacion/ventilador_daiwa.html" class="product-card__overlay-link" aria-label="Ver detalles de Ventilador Daiwa"></a>
+                        <a href="/product/electrodomesticos/climatizacion/ventilador_daiwa.html" class="product-card__overlay-link" aria-label="Ver detalles de Ventilador Daiwa"></a>
                         <div class="producto-img-container">
-                          <img src="../../assets/images/productos/electrodomesticos/climatizacion/ventiladores/ventilador_daiwa.png" alt="Ventilador Daiwa" loading="lazy">
+                          <img src="/assets/images/productos/electrodomesticos/climatizacion/ventiladores/ventilador_daiwa.png" alt="Ventilador Daiwa" loading="lazy">
                         </div>
                         <h3 class="producto-title">Ventilador Daiwa</h3>
                         <p class="producto-price">Precio: $15,000</p>
@@ -524,9 +524,9 @@
 
                     <!-- Producto 2 -->
                     <article class="producto product-card offer-card block shrink-0 snap-start">
-                        <a href="../product/electrodomesticos/climatizacion/aire_acondicionado_whirlpool.html" class="product-card__overlay-link" aria-label="Ver detalles de Aire Whirlpool"></a>
+                        <a href="/product/electrodomesticos/climatizacion/aire_acondicionado_whirlpool.html" class="product-card__overlay-link" aria-label="Ver detalles de Aire Whirlpool"></a>
                         <div class="producto-img-container">
-                          <img src="../../assets/images/productos/electrodomesticos/climatizacion/aire_acondicionado/aire_acondicionado_whirlpool.png" alt="Aire Whirlpool" loading="lazy">
+                          <img src="/assets/images/productos/electrodomesticos/climatizacion/aire_acondicionado/aire_acondicionado_whirlpool.png" alt="Aire Whirlpool" loading="lazy">
                         </div>
                         <h3 class="producto-title">Aire Whirlpool</h3>
                         <p class="producto-price">Precio: $40,000</p>
@@ -535,9 +535,9 @@
 
                     <!-- Producto 3 -->
                     <article class="producto product-card offer-card block shrink-0 snap-start">
-                        <a href="../product/electrodomesticos/climatizacion/aire_acondicionado_tecnomaster.html" class="product-card__overlay-link" aria-label="Ver detalles de Aire Tecnomaster"></a>
+                        <a href="/product/electrodomesticos/climatizacion/aire_acondicionado_tecnomaster.html" class="product-card__overlay-link" aria-label="Ver detalles de Aire Tecnomaster"></a>
                         <div class="producto-img-container">
-                          <img src="../../assets/images/productos/electrodomesticos/climatizacion/aire_acondicionado/aire_acondicionado_tecnomaster.png" alt="Aire Tecnomaster" loading="lazy">
+                          <img src="/assets/images/productos/electrodomesticos/climatizacion/aire_acondicionado/aire_acondicionado_tecnomaster.png" alt="Aire Tecnomaster" loading="lazy">
                         </div>
                         <h3 class="producto-title">Aire Tecnomaster</h3>
                         <p class="producto-price">Precio: $33,000</p>
@@ -546,9 +546,9 @@
 
                     <!-- Producto 4 -->
                     <article class="producto product-card offer-card block shrink-0 snap-start">
-                        <a href="../product/electrodomesticos/climatizacion/ventilador_kdk.html" class="product-card__overlay-link" aria-label="Ver detalles de Ventilador KDK"></a>
+                        <a href="/product/electrodomesticos/climatizacion/ventilador_kdk.html" class="product-card__overlay-link" aria-label="Ver detalles de Ventilador KDK"></a>
                         <div class="producto-img-container">
-                          <img src="../../assets/images/productos/electrodomesticos/climatizacion/ventiladores/ventilador_kdk.avif" alt="Ventilador KDK" loading="lazy">
+                          <img src="/assets/images/productos/electrodomesticos/climatizacion/ventiladores/ventilador_kdk.avif" alt="Ventilador KDK" loading="lazy">
                         </div>
                         <h3 class="producto-title">Ventilador KDK</h3>
                         <p class="producto-price">Precio: $6,000</p>
@@ -557,9 +557,9 @@
 
                     <!-- Producto 5 -->
                     <article class="producto product-card offer-card block shrink-0 snap-start">
-                        <a href="../product/electrodomesticos/climatizacion/ventilador_techo_kdk.html" class="product-card__overlay-link" aria-label="Ver detalles de Ventilador de Techo"></a>
+                        <a href="/product/electrodomesticos/climatizacion/ventilador_techo_kdk.html" class="product-card__overlay-link" aria-label="Ver detalles de Ventilador de Techo"></a>
                         <div class="producto-img-container">
-                          <img src="../../assets/images/productos/electrodomesticos/climatizacion/ventiladores_de_techo/ventilador_de_techo_kdk.avif" alt="Ventilador de Techo" loading="lazy">
+                          <img src="/assets/images/productos/electrodomesticos/climatizacion/ventiladores_de_techo/ventilador_de_techo_kdk.avif" alt="Ventilador de Techo" loading="lazy">
                         </div>
                         <h3 class="producto-title">Ventilador de Techo</h3>
                         <p class="producto-price">Precio: $20,000</p>
@@ -568,9 +568,9 @@
 
                     <!-- Producto 6 -->
                     <article class="producto product-card offer-card block shrink-0 snap-start">
-                        <a href="../product/electrodomesticos/climatizacion/ventilador_pequeno.html" class="product-card__overlay-link" aria-label="Ver detalles de Ventilador Pequeño"></a>
+                        <a href="/product/electrodomesticos/climatizacion/ventilador_pequeno.html" class="product-card__overlay-link" aria-label="Ver detalles de Ventilador Pequeño"></a>
                         <div class="producto-img-container">
-                          <img src="../../assets/images/productos/electrodomesticos/climatizacion/ventiladores/ventilador_pequeno.png" alt="Ventilador Pequeño" loading="lazy">
+                          <img src="/assets/images/productos/electrodomesticos/climatizacion/ventiladores/ventilador_pequeno.png" alt="Ventilador Pequeño" loading="lazy">
                         </div>
                         <h3 class="producto-title">Ventilador Pequeño</h3>
                         <p class="producto-price">Precio: $8,000</p>
@@ -579,7 +579,7 @@
                 </div>
 
                 <button class="productos-control-next absolute right-[-44px] z-10 hidden md:flex items-center justify-center w-10 h-10 bg-black/50 text-white rounded-full hover:bg-black/80 transition-all" type="button" id="climatizacion-next">
-                    <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-chevron-right"/></svg>
+                    <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-chevron-right"/></svg>
                     <span class="sr-only">Siguiente</span>
                 </button>
             </div>
@@ -596,21 +596,21 @@
         <!-- Íconos de redes sociales (sprite SVG) -->
         <div class="social-icons">
           <a href="https://facebook.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Facebook" class="social-link">
-            <svg aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-facebook"/></svg>
+            <svg aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-facebook"/></svg>
           </a>
           <a href="https://twitter.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en X (antes Twitter)" class="social-link">
-            <svg aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-x"/></svg>
+            <svg aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-x"/></svg>
           </a>
           <a href="https://instagram.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Instagram" class="social-link">
-            <svg aria-hidden="true"><use href="../../assets/icons/sprite.svg#icon-instagram"/></svg>
+            <svg aria-hidden="true"><use href="/assets/icons/sprite.svg#icon-instagram"/></svg>
           </a>
         </div>
 
         <!-- Enlaces legales -->
         <div class="footer-links">
-          <a href="../../legal/privacy.html" title="Política de Privacidad">Política de Privacidad</a>
+          <a href="/legal/privacy.html" title="Política de Privacidad">Política de Privacidad</a>
           <span class="separator">|</span>
-          <a href="../../legal/terms.html" title="Términos de Uso">Términos de Uso</a>
+          <a href="/legal/terms.html" title="Términos de Uso">Términos de Uso</a>
         </div>
       </div>
     </footer>

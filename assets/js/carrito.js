@@ -81,10 +81,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const subtotal = p.precio * p.cantidad;
 
             // Ajustar ruta de imagen para soporte local (file://) y diferentes subdirectorios
-            let imgBtn = p.img;
-            if (imgBtn && imgBtn.startsWith('/')) {
-                // Usar el prefijo dinámico
-                imgBtn = getRelativePrefix() + imgBtn.substring(1);
+            let imgBtn = p.img || '';
+            if (!imgBtn.startsWith('/') && imgBtn.includes('assets/')) {
+                imgBtn = '/' + imgBtn;
             }
 
             const contenido = `
@@ -95,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="item-carrito" data-id="${escapeHtml(p.id)}">
                     <div class="carrito-item-info">
                         ${p.url
-                    ? `<a href="${getRelativePrefix() + escapeHtml(p.url)}" class="carrito-link">${contenido}</a>`
+                    ? `<a href="${p.url.startsWith('/') ? p.url : '/' + p.url}" class="carrito-link">${contenido}</a>`
                     : contenido}
                         <div>RD$ ${p.precio.toLocaleString()}</div>
                     </div>

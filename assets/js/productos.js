@@ -11,7 +11,7 @@ const productos = [
     {
         id: "coca_cola",
         nombre: "Coca Cola",
-        url: "pages/product/Alimentos/bebidas/coca_cola.html",
+        url: "/pages/product/alimentos/bebidas/coca_cola.html",
         categoria: "bebidas",
         precio: 80, // número para carrito
         precioTexto: "Precio: $80 / 2 Litros", // texto para mostrar en resultados
@@ -20,7 +20,7 @@ const productos = [
     {
         id: "coca_cola_zero",
         nombre: "Coca Cola Zero",
-        url: "pages/product/Alimentos/bebidas/coca_cola_zero.html",
+        url: "/pages/product/alimentos/bebidas/coca_cola_zero.html",
         categoria: "bebidas",
         precio: 80, // número para carrito
         precioTexto: "Precio: $80 / 2 Litros", // texto para mostrar en resultados
@@ -29,7 +29,7 @@ const productos = [
     {
         id: "country_club_frambuesa",
         nombre: "Country Club Frambuesa",
-        url: "pages/product/Alimentos/bebidas/country_club_frambuesa.html",
+        url: "/pages/product/alimentos/bebidas/country_club_frambuesa.html",
         categoria: "bebidas",
         precio: 70, // número para carrito
         precioTexto: "Precio: $70 / 2 Litros", // texto para mostrar en resultados
@@ -38,7 +38,7 @@ const productos = [
     {
         id: "country_club_uva",
         nombre: "Country Club Uva",
-        url: "pages/product/Alimentos/bebidas/country_club_uva.html",
+        url: "/pages/product/alimentos/bebidas/country_club_uva.html",
         categoria: "bebidas",
         precio: 70, // número para carrito
         precioTexto: "Precio: $70 / 2 Litros", // texto para mostrar en resultados
@@ -47,7 +47,7 @@ const productos = [
     {
         id: "gatorade_uva",
         nombre: "Gatorade Uva",
-        url: "pages/product/Alimentos/bebidas/gatorade_uva.html",
+        url: "/pages/product/alimentos/bebidas/gatorade_uva.html",
         categoria: "bebidas",
         precio: 75, // número para carrito
         precioTexto: "Precio: $75", // texto para mostrar en resultados
@@ -56,7 +56,7 @@ const productos = [
     {
         id: "jugo_de_naranja_rica",
         nombre: "Jugo de Naranja Rica",
-        url: "pages/product/Alimentos/bebidas/jugo_naranja_rica.html",
+        url: "/pages/product/alimentos/bebidas/jugo_naranja_rica.html",
         categoria: "bebidas",
         precio: 55, // número para carrito
         precioTexto: "Precio: $55", // texto para mostrar en resultados
@@ -65,7 +65,7 @@ const productos = [
     {
         id: "jugo_de_pera_santal",
         nombre: "Jugo de Pera Santal",
-        url: "pages/product/Alimentos/bebidas/jugo_pera_santal.html",
+        url: "/pages/product/alimentos/bebidas/jugo_pera_santal.html",
         categoria: "bebidas",
         precio: 30, // número para carrito
         precioTexto: "Precio: $30", // texto para mostrar en resultados
@@ -74,7 +74,7 @@ const productos = [
     {
         id: "red_bull",
         nombre: "Red Bull",
-        url: "pages/product/Alimentos/bebidas/red_bull.html",
+        url: "/pages/product/alimentos/bebidas/red_bull.html",
         categoria: "bebidas",
         precio: 90, // número para carrito
         precioTexto: "Precio: $90", // texto para mostrar en resultados
@@ -85,7 +85,7 @@ const productos = [
     {
         id: "camarones_crudos",
         nombre: "Camarones Crudos",
-        url: "pages/product/Alimentos/carnes_pescados_y_mariscos/camarones_crudos.html",
+        url: "/pages/product/alimentos/carnes_pescados_y_mariscos/camarones_crudos.html",
         categoria: "carnes_pescados_mariscos",
         precio: 350, // número para carrito
         precioTexto: "$350.00 / 1 LB", // texto para mostrar en resultados
@@ -94,7 +94,7 @@ const productos = [
     {
         id: "camarones_pre_cocidos",
         nombre: "Camarones Pre-cocidos",
-        url: "pages/product/Alimentos/carnes_pescados_y_mariscos/camarones_precocidos.html",
+        url: "/pages/product/alimentos/carnes_pescados_y_mariscos/camarones_precocidos.html",
         categoria: "carnes_pescados_mariscos",
         precio: 400, // número para carrito
         precioTexto: "$400.00 / 1 LB", // texto para mostrar en resultados
@@ -103,7 +103,7 @@ const productos = [
     {
         id: "carne_de_res_para_hamburguesas",
         nombre: "Carne de Res para Hamburguesas",
-        url: "pages/product/Alimentos/carnes_pescados_y_mariscos/carne_de_res_para_hamburguesas.html",
+        url: "/pages/product/alimentos/carnes_pescados_y_mariscos/carne_de_res_para_hamburguesas.html",
         categoria: "carnes_pescados_mariscos",
         precio: 370, // número para carrito
         precioTexto: "$370.00 / 1 LB", // texto para mostrar en resultados
@@ -112,7 +112,7 @@ const productos = [
     {
         id: "chuleta_de_cerdo",
         nombre: "Chuleta de Cerdo",
-        url: "pages/product/Alimentos/carnes_pescados_y_mariscos/chuleta_de_cerdo.html",
+        url: "/pages/product/alimentos/carnes_pescados_y_mariscos/chuleta_de_cerdo.html",
         categoria: "carnes_pescados_mariscos",
         precio: 300, // número para carrito
         precioTexto: "$300.00 / 1 LB", // texto para mostrar en resultados
@@ -121,7 +121,7 @@ const productos = [
     {
         id: "pollo_entero_don_pollo",
         nombre: "Pollo Entero Don Pollo",
-        url: "pages/product/Alimentos/carnes_pescados_y_mariscos/pollo_entero_don_pollo.html",
+        url: "/pages/product/alimentos/carnes_pescados_y_mariscos/pollo_entero_don_pollo.html",
         categoria: "carnes_pescados_mariscos",
         precio: 300, // número para carrito
         precioTexto: "$300.00 / unidad", // texto para mostrar en resultados
@@ -130,7 +130,7 @@ const productos = [
     {
         id: "tilapia_roja",
         nombre: "Tilapia Roja",
-        url: "pages/product/Alimentos/carnes_pescados_y_mariscos/tilapia_roja.html",
+        url: "/pages/product/alimentos/carnes_pescados_y_mariscos/tilapia_roja.html",
         categoria: "carnes_pescados_mariscos",
         precio: 250, // número para carrito
         precioTexto: "$250.00 / 1 LB", // texto para mostrar en resultados
@@ -141,7 +141,7 @@ const productos = [
     {
         id: "aceite_crisol",
         nombre: "Aceite Crisol",
-        url: "pages/product/Alimentos/despensa/aceite_crisol.html",
+        url: "/pages/product/alimentos/despensa/aceite_crisol.html",
         categoria: "despensa",
         precio: 95, // número para carrito
         precioTexto: "$95.00", // texto para mostrar en resultados
@@ -150,7 +150,7 @@ const productos = [
     {
         id: "aceite_de_oliva_extra_virgen",
         nombre: "Aceite de Oliva Extra Virgen",
-        url: "pages/product/Alimentos/despensa/aceite_oliva_extra_virgen.html",
+        url: "/pages/product/alimentos/despensa/aceite_oliva_extra_virgen.html",
         categoria: "despensa",
         precio: 230, // número para carrito
         precioTexto: "$230.00", // texto para mostrar en resultados
@@ -159,7 +159,7 @@ const productos = [
     {
         id: "mayonesa_baldom",
         nombre: "Mayonesa Baldom",
-        url: "pages/product/Alimentos/despensa/mayonesa_baldom.html",
+        url: "/pages/product/alimentos/despensa/mayonesa_baldom.html",
         categoria: "despensa",
         precio: 95, // número para carrito
         precioTexto: "$95", // texto para mostrar en resultados
@@ -168,7 +168,7 @@ const productos = [
     {
         id: "sal_marina_refisal",
         nombre: "Sal Marina Refisal",
-        url: "pages/product/Alimentos/despensa/sal_refisal.html",
+        url: "/pages/product/alimentos/despensa/sal_refisal.html",
         categoria: "despensa",
         precio: 65, // número para carrito
         precioTexto: "$65.00", // texto para mostrar en resultados
@@ -177,7 +177,7 @@ const productos = [
     {
         id: "sazon_completo_maggi",
         nombre: "Sazón Completo Maggi",
-        url: "pages/product/Alimentos/despensa/sazon_completo_maggi.html",
+        url: "/pages/product/alimentos/despensa/sazon_completo_maggi.html",
         categoria: "despensa",
         precio: 80, // número para carrito
         precioTexto: "$80.00", // texto para mostrar en resultados
@@ -186,7 +186,7 @@ const productos = [
     {
         id: "sopita_doña_gallina",
         nombre: "Sopita Doña Gallina",
-        url: "pages/product/Alimentos/despensa/sopita_dona_gallina.html",
+        url: "/pages/product/alimentos/despensa/sopita_dona_gallina.html",
         categoria: "despensa",
         precio: 150, // número para carrito
         precioTexto: "$150 / la caja", // texto para mostrar en resultados
@@ -195,7 +195,7 @@ const productos = [
     {
         id: "vinagre_baldom",
         nombre: "Vinagre Baldom",
-        url: "pages/product/Alimentos/despensa/vinagre_baldom.html",
+        url: "/pages/product/alimentos/despensa/vinagre_baldom.html",
         categoria: "despensa",
         precio: 87, // número para carrito
         precioTexto: "$87 / botella", // texto para mostrar en resultados
@@ -206,7 +206,7 @@ const productos = [
     {
         id: "atun_dimar",
         nombre: "Atún Dimar",
-        url: "pages/product/Alimentos/enlatados/atun_dimar.html",
+        url: "/pages/product/alimentos/enlatados/atun_dimar.html",
         categoria: "enlatados",
         precio: 120, // número para carrito
         precioTexto: "Precio: $120 / 1 Lata", // texto para mostrar en resultados
@@ -215,7 +215,7 @@ const productos = [
     {
         id: "gandules_verdes_goya",
         nombre: "Gandules Verdes Goya",
-        url: "pages/product/Alimentos/enlatados/gandules_verdes_goya.html",
+        url: "/pages/product/alimentos/enlatados/gandules_verdes_goya.html",
         categoria: "enlatados",
         precio: 180, // número para carrito
         precioTexto: "Precio: $180 / 1 Lata", // texto para mostrar en resultados
@@ -224,7 +224,7 @@ const productos = [
     {
         id: "habichuelas_negras_goya",
         nombre: "Habichuelas Negras Goya",
-        url: "pages/product/Alimentos/enlatados/habichuelas_negras_goya.html",
+        url: "/pages/product/alimentos/enlatados/habichuelas_negras_goya.html",
         categoria: "enlatados",
         precio: 50, // número para carrito
         precioTexto: "Precio: $50 / 1 Lata", // texto para mostrar en resultados
@@ -233,7 +233,7 @@ const productos = [
     {
         id: "maiz_la_famosa",
         nombre: "Maíz La Famosa",
-        url: "pages/product/Alimentos/enlatados/maiz_la_famosa.html",
+        url: "/pages/product/alimentos/enlatados/maiz_la_famosa.html",
         categoria: "enlatados",
         precio: 45, // número para carrito
         precioTexto: "Precio: $45 / 1 Lata", // texto para mostrar en resultados
@@ -242,7 +242,7 @@ const productos = [
     {
         id: "salchichas_jaja",
         nombre: "Salchichas Jajá",
-        url: "pages/product/Alimentos/enlatados/salchichas_jaja.html",
+        url: "/pages/product/alimentos/enlatados/salchichas_jaja.html",
         categoria: "enlatados",
         precio: 45, // número para carrito
         precioTexto: "Precio: $45 / 1 Lata", // texto para mostrar en resultados
@@ -251,7 +251,7 @@ const productos = [
     {
         id: "sardinas_gord",
         nombre: "Sardinas Gord",
-        url: "pages/product/Alimentos/enlatados/sardinas_gord.html",
+        url: "/pages/product/alimentos/enlatados/sardinas_gord.html",
         categoria: "enlatados",
         precio: 85, // número para carrito
         precioTexto: "Precio: $85 / 1 Lata", // texto para mostrar en resultados
@@ -260,7 +260,7 @@ const productos = [
     {
         id: "tomates_pelados_la_famosa",
         nombre: "Tomates Pelados La Famosa",
-        url: "pages/product/Alimentos/enlatados/tomates_pelados_la_famosa.html",
+        url: "/pages/product/alimentos/enlatados/tomates_pelados_la_famosa.html",
         categoria: "enlatados",
         precio: 60, // número para carrito
         precioTexto: "Precio: $60 / 1 Lata", // texto para mostrar en resultados
@@ -271,7 +271,7 @@ const productos = [
     {
         id: "ajies_morrones",
         nombre: "Ajíes Morrones",
-        url: "pages/product/Alimentos/frutas_y_verduras/ajies_morrones.html",
+        url: "/pages/product/alimentos/frutas_y_verduras/ajies_morrones.html",
         categoria: "frutas_y_verduras",
         precio: 80, // número para carrito
         precioTexto: "Precio: $80 la unidad", // texto para mostrar en resultados
@@ -280,7 +280,7 @@ const productos = [
     {
         id: "cebollas_rojas",
         nombre: "Cebollas rojas",
-        url: "pages/product/Alimentos/frutas_y_verduras/cebollas_rojas.html",
+        url: "/pages/product/alimentos/frutas_y_verduras/cebollas_rojas.html",
         categoria: "frutas_y_verduras",
         precio: 170, // número para carrito
         precioTexto: "Precio: $170 1KG", // texto para mostrar en resultados
@@ -289,7 +289,7 @@ const productos = [
     {
         id: "fresas",
         nombre: "Fresas",
-        url: "pages/product/Alimentos/frutas_y_verduras/fresas.html",
+        url: "/pages/product/alimentos/frutas_y_verduras/fresas.html",
         categoria: "frutas_y_verduras",
         precio: 250, // número para carrito
         precioTexto: "Precio: $250 1 paquete", // texto para mostrar en resultados
@@ -298,7 +298,7 @@ const productos = [
     {
         id: "limones_persa",
         nombre: "Limones Persa",
-        url: "pages/product/Alimentos/frutas_y_verduras/limones_persa.html",
+        url: "/pages/product/alimentos/frutas_y_verduras/limones_persa.html",
         categoria: "frutas_y_verduras",
         precio: 200, // número para carrito
         precioTexto: "Precio: $200 1KG", // texto para mostrar en resultados
@@ -307,7 +307,7 @@ const productos = [
     {
         id: "mandarinas",
         nombre: "Mandarinas",
-        url: "pages/product/Alimentos/frutas_y_verduras/mandarinas.html",
+        url: "/pages/product/alimentos/frutas_y_verduras/mandarinas.html",
         categoria: "frutas_y_verduras",
         precio: 100, // número para carrito
         precioTexto: "Precio: $100 1KG", // texto para mostrar en resultados
@@ -316,7 +316,7 @@ const productos = [
     {
         id: "manzanas_amarillas",
         nombre: "Manzanas amarillas",
-        url: "pages/product/Alimentos/frutas_y_verduras/manzanas_amarillas.html",
+        url: "/pages/product/alimentos/frutas_y_verduras/manzanas_amarillas.html",
         categoria: "frutas_y_verduras",
         precio: 50, // número para carrito
         precioTexto: "Precio: $50 1KG", // texto para mostrar en resultados
@@ -325,7 +325,7 @@ const productos = [
     {
         id: "manzanas_rojas",
         nombre: "Manzanas rojas",
-        url: "pages/product/Alimentos/frutas_y_verduras/manzanas_rojas.html",
+        url: "/pages/product/alimentos/frutas_y_verduras/manzanas_rojas.html",
         categoria: "frutas_y_verduras",
         precio: 65, // número para carrito
         precioTexto: "Precio: $65 1KG", // texto para mostrar en resultados
@@ -334,7 +334,7 @@ const productos = [
     {
         id: "manzanas_verdes",
         nombre: "Manzanas verdes",
-        url: "pages/product/Alimentos/frutas_y_verduras/manzanas_verdes.html",
+        url: "/pages/product/alimentos/frutas_y_verduras/manzanas_verdes.html",
         categoria: "frutas_y_verduras",
         precio: 45, // número para carrito
         precioTexto: "Precio: $45 / 1 kg", // texto para mostrar en resultados
@@ -343,7 +343,7 @@ const productos = [
     {
         id: "pepinos",
         nombre: "Pepinos",
-        url: "pages/product/Alimentos/frutas_y_verduras/pepinos.html",
+        url: "/pages/product/alimentos/frutas_y_verduras/pepinos.html",
         categoria: "frutas_y_verduras",
         precio: 70, // número para carrito
         precioTexto: "Precio: $70 1KG", // texto para mostrar en resultados
@@ -352,7 +352,7 @@ const productos = [
     {
         id: "tomates_de_ensalada",
         nombre: "Tomates de ensalada",
-        url: "pages/product/Alimentos/frutas_y_verduras/tomates_de_ensalada.html",
+        url: "/pages/product/alimentos/frutas_y_verduras/tomates_de_ensalada.html",
         categoria: "frutas_y_verduras",
         precio: 80, // número para carrito
         precioTexto: "Precio: $80 1KG", // texto para mostrar en resultados
@@ -361,7 +361,7 @@ const productos = [
     {
         id: "uvas_moradas",
         nombre: "Uvas moradas",
-        url: "pages/product/Alimentos/frutas_y_verduras/uvas_moradas.html",
+        url: "/pages/product/alimentos/frutas_y_verduras/uvas_moradas.html",
         categoria: "frutas_y_verduras",
         precio: 350, // número para carrito
         precioTexto: "Precio: $350 1KG", // texto para mostrar en resultados
@@ -370,7 +370,7 @@ const productos = [
     {
         id: "zanahorias",
         nombre: "Zanahorias",
-        url: "pages/product/Alimentos/frutas_y_verduras/zanahorias.html",
+        url: "/pages/product/alimentos/frutas_y_verduras/zanahorias.html",
         categoria: "frutas_y_verduras",
         precio: 80, // número para carrito
         precioTexto: "Precio: $80 1KG", // texto para mostrar en resultados
@@ -381,7 +381,7 @@ const productos = [
     {
         id: "huevos_don_pancho",
         nombre: "Huevos Don Pancho",
-        url: "pages/product/Alimentos/lacteos_y_huevos/huevos.html",
+        url: "/pages/product/alimentos/lacteos_y_huevos/huevos.html",
         categoria: "lacteos_y_huevos",
         precio: 200, // número para carrito
         precioTexto: "Precio: $200 / 30 unidades", // texto para mostrar en resultados
@@ -390,7 +390,7 @@ const productos = [
     {
         id: "leche_entera_rica",
         nombre: "Leche Entera Rica",
-        url: "pages/product/Alimentos/lacteos_y_huevos/leche_entera_rica.html",
+        url: "/pages/product/alimentos/lacteos_y_huevos/leche_entera_rica.html",
         categoria: "lacteos_y_huevos",
         precio: 65, // número para carrito
         precioTexto: "$65.00", // texto para mostrar en resultados
@@ -399,7 +399,7 @@ const productos = [
     {
         id: "queso_gorgonzola",
         nombre: "Queso Gorgonzola",
-        url: "pages/product/Alimentos/lacteos_y_huevos/queso_gorgonzola.html",
+        url: "/pages/product/alimentos/lacteos_y_huevos/queso_gorgonzola.html",
         categoria: "lacteos_y_huevos",
         precio: 350, // número para carrito
         precioTexto: "Precio: $350 / 1 LB", // texto para mostrar en resultados
@@ -408,7 +408,7 @@ const productos = [
     {
         id: "queso_gouda",
         nombre: "Queso Gouda",
-        url: "pages/product/Alimentos/lacteos_y_huevos/queso_gouda.html",
+        url: "/pages/product/alimentos/lacteos_y_huevos/queso_gouda.html",
         categoria: "lacteos_y_huevos",
         precio: 280, // número para carrito
         precioTexto: "Precio: $280 / 1 LB", // texto para mostrar en resultados
@@ -417,7 +417,7 @@ const productos = [
     {
         id: "yogurt_de_fresa_yoka",
         nombre: "Yogurt de Fresa Yoka",
-        url: "pages/product/Alimentos/lacteos_y_huevos/yogurt_fresa_yoka.html",
+        url: "/pages/product/alimentos/lacteos_y_huevos/yogurt_fresa_yoka.html",
         categoria: "lacteos_y_huevos",
         precio: 150, // número para carrito
         precioTexto: "Precio: $150", // texto para mostrar en resultados
@@ -426,7 +426,7 @@ const productos = [
     {
         id: "yogurt_natural_rica",
         nombre: "Yogurt Natural Rica",
-        url: "pages/product/Alimentos/lacteos_y_huevos/yogurt_natural_rica.html",
+        url: "/pages/product/alimentos/lacteos_y_huevos/yogurt_natural_rica.html",
         categoria: "lacteos_y_huevos",
         precio: 210, // número para carrito
         precioTexto: "Precio: $210 / 2 Litros", // texto para mostrar en resultados
@@ -439,7 +439,7 @@ const productos = [
     {
         id: "aire_acondicionado_tecnomaster",
         nombre: "Aire Acondicionado tecnomaster",
-        url: "pages/product/electrodomesticos/climatizacion/aire_acondicionado_tecnomaster.html",
+        url: "/pages/product/electrodomesticos/climatizacion/aire_acondicionado_tecnomaster.html",
         categoria: "climatizacion",
         precio: 33000, // número para carrito
         precioTexto: "Precio: $33,000", // texto para mostrar en resultados
@@ -448,7 +448,7 @@ const productos = [
     {
         id: "aire_acondicionado_whirlpool",
         nombre: "Aire Acondicionado whirlpool",
-        url: "pages/product/electrodomesticos/climatizacion/aire_acondicionado_whirlpool.html",
+        url: "/pages/product/electrodomesticos/climatizacion/aire_acondicionado_whirlpool.html",
         categoria: "climatizacion",
         precio: 40000, // número para carrito
         precioTexto: "Precio: $40,000", // texto para mostrar en resultados
@@ -457,7 +457,7 @@ const productos = [
     {
         id: "ventilador_daiwa",
         nombre: "Ventilador Daiwa",
-        url: "pages/product/electrodomesticos/climatizacion/ventilador_daiwa.html",
+        url: "/pages/product/electrodomesticos/climatizacion/ventilador_daiwa.html",
         categoria: "climatizacion",
         precio: 15000, // número para carrito
         precioTexto: "Precio: $15,000", // texto para mostrar en resultados
@@ -466,7 +466,7 @@ const productos = [
     {
         id: "ventilador_kdk",
         nombre: "Ventilador KDK",
-        url: "pages/product/electrodomesticos/climatizacion/ventilador_kdk.html",
+        url: "/pages/product/electrodomesticos/climatizacion/ventilador_kdk.html",
         categoria: "climatizacion",
         precio: 6000, // número para carrito
         precioTexto: "Precio: $6,000", // texto para mostrar en resultados
@@ -475,7 +475,7 @@ const productos = [
     {
         id: "ventilador_pequeno",
         nombre: "Ventilador Pequeño",
-        url: "pages/product/electrodomesticos/climatizacion/ventilador_pequeno.html",
+        url: "/pages/product/electrodomesticos/climatizacion/ventilador_pequeno.html",
         categoria: "climatizacion",
         precio: 2500, // número para carrito
         precioTexto: "Precio: $2,500", // texto para mostrar en resultados
@@ -484,7 +484,7 @@ const productos = [
     {
         id: "ventilador_de_techo_kdk",
         nombre: "Ventilador de Techo KDK",
-        url: "pages/product/electrodomesticos/climatizacion/ventilador_techo_kdk.html",
+        url: "/pages/product/electrodomesticos/climatizacion/ventilador_techo_kdk.html",
         categoria: "climatizacion",
         precio: 20000, // número para carrito
         precioTexto: "Precio: $20,000", // texto para mostrar en resultados
@@ -495,7 +495,7 @@ const productos = [
     {
         id: "bebedero_tecnomaster",
         nombre: "Bebedero tecnomaster",
-        url: "pages/product/electrodomesticos/cocina/bebedero_tecnomaster.html",
+        url: "/pages/product/electrodomesticos/cocina/bebedero_tecnomaster.html",
         categoria: "cocina",
         precio: 5000, // número para carrito
         precioTexto: "Precio: $5,000", // texto para mostrar en resultados
@@ -504,7 +504,7 @@ const productos = [
     {
         id: "cilindro_de_gas_duragas",
         nombre: "Cilindro de gas Duragas",
-        url: "pages/product/electrodomesticos/cocina/cilindro_duragas.html",
+        url: "/pages/product/electrodomesticos/cocina/cilindro_duragas.html",
         categoria: "cocina",
         precio: 5200, // número para carrito
         precioTexto: "Precio: $5,200", // texto para mostrar en resultados
@@ -513,7 +513,7 @@ const productos = [
     {
         id: "estufa_lg",
         nombre: "Estufa LG",
-        url: "pages/product/electrodomesticos/cocina/estufa_lg.html",
+        url: "/pages/product/electrodomesticos/cocina/estufa_lg.html",
         categoria: "cocina",
         precio: 66000, // número para carrito
         precioTexto: "Precio: $66,000", // texto para mostrar en resultados
@@ -522,7 +522,7 @@ const productos = [
     {
         id: "extractor_de_grasa_drija",
         nombre: "Extractor de grasa drija",
-        url: "pages/product/electrodomesticos/cocina/extractor_drija.html",
+        url: "/pages/product/electrodomesticos/cocina/extractor_drija.html",
         categoria: "cocina",
         precio: 6000, // número para carrito
         precioTexto: "Precio: $6,000", // texto para mostrar en resultados
@@ -531,7 +531,7 @@ const productos = [
     {
         id: "freezer_7_pies",
         nombre: "Freezer 7 Pies",
-        url: "pages/product/electrodomesticos/cocina/freezer_7_pies.html",
+        url: "/pages/product/electrodomesticos/cocina/freezer_7_pies.html",
         categoria: "cocina",
         precio: 16500, // número para carrito
         precioTexto: "Precio: $16,500", // texto para mostrar en resultados
@@ -540,7 +540,7 @@ const productos = [
     {
         id: "nevera_lg_grande_moderna",
         nombre: "Nevera LG Grande Moderna",
-        url: "pages/product/electrodomesticos/cocina/nevera_lg.html",
+        url: "/pages/product/electrodomesticos/cocina/nevera_lg.html",
         categoria: "cocina",
         precio: 80000, // número para carrito
         precioTexto: "Precio: $80,000", // texto para mostrar en resultados
@@ -551,7 +551,7 @@ const productos = [
     {
         id: "lavadora_dimensions",
         nombre: "Lavadora Dimensions",
-        url: "pages/product/electrodomesticos/lavado/lavadora_dimensions.html",
+        url: "/pages/product/electrodomesticos/lavado/lavadora_dimensions.html",
         categoria: "lavado",
         precio: 10000, // número para carrito
         precioTexto: "Precio: $10,000", // texto para mostrar en resultados
@@ -560,7 +560,7 @@ const productos = [
     {
         id: "lavadora_frigidaire",
         nombre: "Lavadora Frigidaire",
-        url: "pages/product/electrodomesticos/lavado/lavadora_frigidaire.html",
+        url: "/pages/product/electrodomesticos/lavado/lavadora_frigidaire.html",
         categoria: "lavado",
         precio: 35000, // número para carrito
         precioTexto: "Precio: $35,000", // texto para mostrar en resultados
@@ -569,7 +569,7 @@ const productos = [
     {
         id: "lavadora_lg",
         nombre: "Lavadora LG",
-        url: "pages/product/electrodomesticos/lavado/lavadora_lg.html",
+        url: "/pages/product/electrodomesticos/lavado/lavadora_lg.html",
         categoria: "lavado",
         precio: 53000, // número para carrito
         precioTexto: "Precio: $53,000", // texto para mostrar en resultados
@@ -578,7 +578,7 @@ const productos = [
     {
         id: "lavadora_y_secadora_lg",
         nombre: "Lavadora y Secadora LG",
-        url: "pages/product/electrodomesticos/lavado/lavadora_secadora_lg.html",
+        url: "/pages/product/electrodomesticos/lavado/lavadora_secadora_lg.html",
         categoria: "lavado",
         precio: 55000, // número para carrito
         precioTexto: "Precio: $55,000", // texto para mostrar en resultados
@@ -587,7 +587,7 @@ const productos = [
     {
         id: "lavadora_y_secadora_tecnomaster",
         nombre: "Lavadora y Secadora tecnomaster",
-        url: "pages/product/electrodomesticos/lavado/lavadora_tecnomaster.html",
+        url: "/pages/product/electrodomesticos/lavado/lavadora_tecnomaster.html",
         categoria: "lavado",
         precio: 40000, // número para carrito
         precioTexto: "Precio: $40,000", // texto para mostrar en resultados
@@ -599,7 +599,7 @@ const productos = [
     {
         id: "equate_analgesico",
         nombre: "Equate Analgésico",
-        url: "pages/product/farmacia/analgesicos/equate_analgesico.html",
+        url: "/pages/product/farmacia/analgesicos/equate_analgesico.html",
         categoria: "analgesicos",
         precio: 1000, // número para carrito
         precioTexto: "Precio: $1000", // texto para mostrar en resultados
@@ -608,7 +608,7 @@ const productos = [
     {
         id: "flanax_analgesico",
         nombre: "Flanax Analgésico",
-        url: "pages/product/farmacia/analgesicos/flanax.html",
+        url: "/pages/product/farmacia/analgesicos/flanax.html",
         categoria: "analgesicos",
         precio: 2000, // número para carrito
         precioTexto: "Precio: $2000", // texto para mostrar en resultados
@@ -617,7 +617,7 @@ const productos = [
     {
         id: "thera_gesic_analgesico",
         nombre: "Thera-Gesic Analgésico",
-        url: "pages/product/farmacia/analgesicos/thera_gesic.html",
+        url: "/pages/product/farmacia/analgesicos/thera_gesic.html",
         categoria: "analgesicos",
         precio: 3000, // número para carrito
         precioTexto: "Precio: $3000", // texto para mostrar en resultados
@@ -626,7 +626,7 @@ const productos = [
     {
         id: "tylenol_analgesico",
         nombre: "Tylenol Analgésico",
-        url: "pages/product/farmacia/analgesicos/tylenol.html",
+        url: "/pages/product/farmacia/analgesicos/tylenol.html",
         categoria: "analgesicos",
         precio: 5000, // número para carrito
         precioTexto: "Precio: $5000", // texto para mostrar en resultados
@@ -635,7 +635,7 @@ const productos = [
     {
         id: "vaporizing_analgesico",
         nombre: "Vaporizing Analgésico",
-        url: "pages/product/farmacia/analgesicos/vaporizing.html",
+        url: "/pages/product/farmacia/analgesicos/vaporizing.html",
         categoria: "analgesicos",
         precio: 3000, // número para carrito
         precioTexto: "Precio: $3000", // texto para mostrar en resultados
@@ -646,7 +646,7 @@ const productos = [
     {
         id: "antiflu_des",
         nombre: "Antiflu-Des",
-        url: "pages/product/farmacia/antigripales_y_resfriado/antiflu_Des.html",
+        url: "/pages/product/farmacia/antigripales_y_resfriado/antiflu_Des.html",
         categoria: "antigripales_y_resfriado",
         precio: 1000, // número para carrito
         precioTexto: "Precio: $1,000", // texto para mostrar en resultados
@@ -655,7 +655,7 @@ const productos = [
     {
         id: "coldyflu",
         nombre: "Coldyflu",
-        url: "pages/product/farmacia/antigripales_y_resfriado/coldyflu.html",
+        url: "/pages/product/farmacia/antigripales_y_resfriado/coldyflu.html",
         categoria: "antigripales_y_resfriado",
         precio: 2000, // número para carrito
         precioTexto: "Precio: $2000", // texto para mostrar en resultados
@@ -664,7 +664,7 @@ const productos = [
     {
         id: "mucinex",
         nombre: "Mucinex",
-        url: "pages/product/farmacia/antigripales_y_resfriado/mucinex.html",
+        url: "/pages/product/farmacia/antigripales_y_resfriado/mucinex.html",
         categoria: "antigripales_y_resfriado",
         precio: 3000, // número para carrito
         precioTexto: "Precio: $3,000", // texto para mostrar en resultados
@@ -673,7 +673,7 @@ const productos = [
     {
         id: "nyquil",
         nombre: "NyQuil",
-        url: "pages/product/farmacia/antigripales_y_resfriado/nyquil.html",
+        url: "/pages/product/farmacia/antigripales_y_resfriado/nyquil.html",
         categoria: "antigripales_y_resfriado",
         precio: 3500, // número para carrito
         precioTexto: "Precio: $3,500", // texto para mostrar en resultados
@@ -682,7 +682,7 @@ const productos = [
     {
         id: "theraflu",
         nombre: "Theraflu",
-        url: "pages/product/farmacia/antigripales_y_resfriado/theraflu.html",
+        url: "/pages/product/farmacia/antigripales_y_resfriado/theraflu.html",
         categoria: "antigripales_y_resfriado",
         precio: 2200, // número para carrito
         precioTexto: "Precio: $2,200", // texto para mostrar en resultados
@@ -693,7 +693,7 @@ const productos = [
     {
         id: "cerave_acido_hialuronico",
         nombre: "Cerave Ácido Hialurónico",
-        url: "pages/product/farmacia/dermocosmetica/acido_hialuronico.html",
+        url: "/pages/product/farmacia/dermocosmetica/acido_hialuronico.html",
         categoria: "dermocosmetica",
         precio: 2500, // número para carrito
         precioTexto: "Precio: $2,500", // texto para mostrar en resultados
@@ -702,7 +702,7 @@ const productos = [
     {
         id: "hidratante_cerave",
         nombre: "Hidratante Cerave",
-        url: "pages/product/farmacia/dermocosmetica/hidratante_cerave.html",
+        url: "/pages/product/farmacia/dermocosmetica/hidratante_cerave.html",
         categoria: "dermocosmetica",
         precio: 1500, // número para carrito
         precioTexto: "Precio: $1,500", // texto para mostrar en resultados
@@ -711,7 +711,7 @@ const productos = [
     {
         id: "hidratante_eucerin",
         nombre: "Hidratante Eucerin",
-        url: "pages/product/farmacia/dermocosmetica/hidratante_eucerin.html",
+        url: "/pages/product/farmacia/dermocosmetica/hidratante_eucerin.html",
         categoria: "dermocosmetica",
         precio: 2200, // número para carrito
         precioTexto: "Precio: $2,200", // texto para mostrar en resultados
@@ -720,7 +720,7 @@ const productos = [
     {
         id: "hidratante_cerave_grande",
         nombre: "Hidratante Cerave Grande",
-        url: "pages/product/farmacia/dermocosmetica/hidratante_grande.html",
+        url: "/pages/product/farmacia/dermocosmetica/hidratante_grande.html",
         categoria: "dermocosmetica",
         precio: 2000, // número para carrito
         precioTexto: "Precio: $2,000", // texto para mostrar en resultados
@@ -729,7 +729,7 @@ const productos = [
     {
         id: "retinol",
         nombre: "Retinol",
-        url: "pages/product/farmacia/dermocosmetica/retinol.html",
+        url: "/pages/product/farmacia/dermocosmetica/retinol.html",
         categoria: "dermocosmetica",
         precio: 1100, // número para carrito
         precioTexto: "Precio: $1,100", // texto para mostrar en resultados
@@ -738,7 +738,7 @@ const productos = [
     {
         id: "serum_vitamina_c",
         nombre: "Serum Vitamina C",
-        url: "pages/product/farmacia/dermocosmetica/serum_vitaminac.html",
+        url: "/pages/product/farmacia/dermocosmetica/serum_vitaminac.html",
         categoria: "dermocosmetica",
         precio: 1400, // número para carrito
         precioTexto: "Precio: $1,400", // texto para mostrar en resultados
@@ -749,7 +749,7 @@ const productos = [
     {
         id: "flintstones",
         nombre: "Flintstones Multivitamínico para Niños",
-        url: "pages/product/farmacia/vitaminas_y_minerales/flintstones.html",
+        url: "/pages/product/farmacia/vitaminas_y_minerales/flintstones.html",
         categoria: "vitaminas_y_minerales",
         precio: 2500, // número para carrito
         precioTexto: "Precio: $2,500", // texto para mostrar en resultados
@@ -758,7 +758,7 @@ const productos = [
     {
         id: "Multivitaminico",
         nombre: "Multivitamínico",
-        url: "pages/product/farmacia/vitaminas_y_minerales/Multivitaminico.html",
+        url: "/pages/product/farmacia/vitaminas_y_minerales/Multivitaminico.html",
         categoria: "vitaminas_y_minerales",
         precio: 3000, // número para carrito
         precioTexto: "Precio: $3,000", // texto para mostrar en resultados
@@ -767,7 +767,7 @@ const productos = [
     {
         id: "omega3",
         nombre: "Omega 3",
-        url: "pages/product/farmacia/vitaminas_y_minerales/omega3.html",
+        url: "/pages/product/farmacia/vitaminas_y_minerales/omega3.html",
         categoria: "vitaminas_y_minerales",
         precio: 4000, // número para carrito
         precioTexto: "Precio: $4,000", // texto para mostrar en resultados
@@ -776,7 +776,7 @@ const productos = [
     {
         id: "Vitafusion",
         nombre: "Vitafusion",
-        url: "pages/product/farmacia/vitaminas_y_minerales/vitafusion.html",
+        url: "/pages/product/farmacia/vitaminas_y_minerales/vitafusion.html",
         categoria: "vitaminas_y_minerales",
         precio: 1300, // número para carrito
         precioTexto: "Precio: $1,300", // texto para mostrar en resultados
@@ -785,7 +785,7 @@ const productos = [
     {
         id: "vitamina_c",
         nombre: "Vitamina C",
-        url: "pages/product/farmacia/vitaminas_y_minerales/vitaminac.html",
+        url: "/pages/product/farmacia/vitaminas_y_minerales/vitaminac.html",
         categoria: "vitaminas_y_minerales",
         precio: 2000, // número para carrito
         precioTexto: "Precio: $2000", // texto para mostrar en resultados
@@ -798,7 +798,7 @@ const productos = [
     {
         id: "bombillas_led",
         nombre: "Bombillas LED",
-        url: "pages/product/ferreteria/electricidad/bombillas_led.html",
+        url: "/pages/product/ferreteria/electricidad/bombillas_led.html",
         categoria: "electricidad",
         precio: 2000, // número para carrito
         precioTexto: "Precio: $2,000", // texto para mostrar en resultados
@@ -807,7 +807,7 @@ const productos = [
     {
         id: "bombillas",
         nombre: "Bombillas",
-        url: "pages/product/ferreteria/electricidad/bombillas.html",
+        url: "/pages/product/ferreteria/electricidad/bombillas.html",
         categoria: "electricidad",
         precio: 1500, // número para carrito
         precioTexto: "Precio: $1,500", // texto para mostrar en resultados
@@ -816,7 +816,7 @@ const productos = [
     {
         id: "extension_electrica",
         nombre: "Extensión Eléctrica",
-        url: "pages/product/ferreteria/electricidad/extension.html",
+        url: "/pages/product/ferreteria/electricidad/extension.html",
         categoria: "electricidad",
         precio: 3300, // número para carrito
         precioTexto: "Precio: $3,300", // texto para mostrar en resultados
@@ -825,7 +825,7 @@ const productos = [
     {
         id: "linterna",
         nombre: "Linterna",
-        url: "pages/product/ferreteria/electricidad/linterna.html",
+        url: "/pages/product/ferreteria/electricidad/linterna.html",
         categoria: "electricidad",
         precio: 4000, // número para carrito
         precioTexto: "Precio: $4,000", // texto para mostrar en resultados
@@ -834,7 +834,7 @@ const productos = [
     {
         id: "toma_corriente",
         nombre: "Toma Corriente",
-        url: "pages/product/ferreteria/electricidad/toma_corriente.html",
+        url: "/pages/product/ferreteria/electricidad/toma_corriente.html",
         categoria: "electricidad",
         precio: 5500, // número para carrito
         precioTexto: "Precio: $5,500", // texto para mostrar en resultados
@@ -845,7 +845,7 @@ const productos = [
     {
         id: "destornillador",
         nombre: "Destornillador",
-        url: "pages/product/ferreteria/herramientas_manuales/destornillador.html",
+        url: "/pages/product/ferreteria/herramientas_manuales/destornillador.html",
         categoria: "herramientas_manuales",
         precio: 2000, // número para carrito
         precioTexto: "Precio: $2000", // texto para mostrar en resultados
@@ -854,7 +854,7 @@ const productos = [
     {
         id: "llave_de_tuerca",
         nombre: "Llave de Tuerca",
-        url: "pages/product/ferreteria/herramientas_manuales/llave_de_tuerca.html",
+        url: "/pages/product/ferreteria/herramientas_manuales/llave_de_tuerca.html",
         categoria: "herramientas_manuales",
         precio: 2500, // número para carrito
         precioTexto: "Precio: $2500", // texto para mostrar en resultados
@@ -863,7 +863,7 @@ const productos = [
     {
         id: "martillo",
         nombre: "Martillo",
-        url: "pages/product/ferreteria/herramientas_manuales/martillo.html",
+        url: "/pages/product/ferreteria/herramientas_manuales/martillo.html",
         categoria: "herramientas_manuales",
         precio: 1500, // número para carrito
         precioTexto: "Precio: $1,500", // texto para mostrar en resultados
@@ -872,7 +872,7 @@ const productos = [
     {
         id: "pinza",
         nombre: "Pinza",
-        url: "pages/product/ferreteria/herramientas_manuales/pinza.html",
+        url: "/pages/product/ferreteria/herramientas_manuales/pinza.html",
         categoria: "herramientas_manuales",
         precio: 500, // número para carrito
         precioTexto: "Precio: $500", // texto para mostrar en resultados
@@ -881,7 +881,7 @@ const productos = [
     {
         id: "sierra_de_mano",
         nombre: "Sierra de Mano",
-        url: "pages/product/ferreteria/herramientas_manuales/sierra_de_mano.html",
+        url: "/pages/product/ferreteria/herramientas_manuales/sierra_de_mano.html",
         categoria: "herramientas_manuales",
         precio: 3000, // número para carrito
         precioTexto: "Precio: $3000", // texto para mostrar en resultados
@@ -892,7 +892,7 @@ const productos = [
     {
         id: "brocha",
         nombre: "Brocha",
-        url: "pages/product/ferreteria/pinturas_y_acabados/brocha.html",
+        url: "/pages/product/ferreteria/pinturas_y_acabados/brocha.html",
         categoria: "pinturas_y_acabados",
         precio: 500, // número para carrito
         precioTexto: "Precio: $500", // texto para mostrar en resultados
@@ -901,7 +901,7 @@ const productos = [
     {
         id: "kit_de_pintura",
         nombre: "Kit de Pintura",
-        url: "pages/product/ferreteria/pinturas_y_acabados/kit_de_pintura.html",
+        url: "/pages/product/ferreteria/pinturas_y_acabados/kit_de_pintura.html",
         categoria: "pinturas_y_acabados",
         precio: 1500, // número para carrito
         precioTexto: "Precio: $1,500", // texto para mostrar en resultados
@@ -910,7 +910,7 @@ const productos = [
     {
         id: "pinturas_tropical",
         nombre: "Pinturas Tropical",
-        url: "pages/product/ferreteria/pinturas_y_acabados/pinturas_tropical.html",
+        url: "/pages/product/ferreteria/pinturas_y_acabados/pinturas_tropical.html",
         categoria: "pinturas_y_acabados",
         precio: 2500, // número para carrito
         precioTexto: "Precio: $2,500", // texto para mostrar en resultados
@@ -919,7 +919,7 @@ const productos = [
     {
         id: "pinturas_tucan",
         nombre: "Pinturas Tucán",
-        url: "pages/product/ferreteria/pinturas_y_acabados/pinturas_tucan.html",
+        url: "/pages/product/ferreteria/pinturas_y_acabados/pinturas_tucan.html",
         categoria: "pinturas_y_acabados",
         precio: 2700, // número para carrito
         precioTexto: "Precio: $2,700", // texto para mostrar en resultados
@@ -928,7 +928,7 @@ const productos = [
     {
         id: "rodillo_de_pintura",
         nombre: "Rodillo de Pintura",
-        url: "pages/product/ferreteria/pinturas_y_acabados/rodillo_de_pintura.html",
+        url: "/pages/product/ferreteria/pinturas_y_acabados/rodillo_de_pintura.html",
         categoria: "pinturas_y_acabados",
         precio: 1400, // número para carrito
         precioTexto: "Precio: $1,400", // texto para mostrar en resultados
@@ -939,7 +939,7 @@ const productos = [
     {
         id: "grifo_moderno",
         nombre: "Grifo Moderno",
-        url: "pages/product/ferreteria/plomeria/grifo_moderno.html",
+        url: "/pages/product/ferreteria/plomeria/grifo_moderno.html",
         categoria: "plomeria",
         precio: 2000, // número para carrito
         precioTexto: "Precio: $2,000", // texto para mostrar en resultados
@@ -948,7 +948,7 @@ const productos = [
     {
         id: "grifo",
         nombre: "Grifo",
-        url: "pages/product/ferreteria/plomeria/grifo.html",
+        url: "/pages/product/ferreteria/plomeria/grifo.html",
         categoria: "plomeria",
         precio: 3000, // número para carrito
         precioTexto: "Precio: $3,000", // texto para mostrar en resultados
@@ -957,7 +957,7 @@ const productos = [
     {
         id: "manguera_de_jardin",
         nombre: "Manguera de Jardín",
-        url: "pages/product/ferreteria/plomeria/manguera_de_jardin.html",
+        url: "/pages/product/ferreteria/plomeria/manguera_de_jardin.html",
         categoria: "plomeria",
         precio: 3100, // número para carrito
         precioTexto: "Precio: $3,100", // texto para mostrar en resultados
@@ -966,7 +966,7 @@ const productos = [
     {
         id: "manguera",
         nombre: "Manguera",
-        url: "pages/product/ferreteria/plomeria/manguera.html",
+        url: "/pages/product/ferreteria/plomeria/manguera.html",
         categoria: "plomeria",
         precio: 2400, // número para carrito
         precioTexto: "Precio: $2,400", // texto para mostrar en resultados
@@ -975,7 +975,7 @@ const productos = [
     {
         id: "tubo_de_drenaje",
         nombre: "Tubo de Drenaje",
-        url: "pages/product/ferreteria/plomeria/tubo.html",
+        url: "/pages/product/ferreteria/plomeria/tubo.html",
         categoria: "plomeria",
         precio: 600, // número para carrito
         precioTexto: "Precio: $600", // texto para mostrar en resultados
@@ -988,7 +988,7 @@ const productos = [
     {
         id: "muñeca_baby_doll",
         nombre: "Muñeca Baby Doll",
-        url: "pages/product/juguetes/juguetes_para_niñas/baby_doll.html",
+        url: "/pages/product/juguetes/juguetes_para_niñas/baby_doll.html",
         categoria: "juguetes_para_ninas",
         precio: 500, // número para carrito
         precioTexto: "Precio: $500", // texto para mostrar en resultados
@@ -997,7 +997,7 @@ const productos = [
     {
         id: "muñeca_barbie",
         nombre: "Muñeca Barbie",
-        url: "pages/product/juguetes/juguetes_para_niñas/barbie.html",
+        url: "/pages/product/juguetes/juguetes_para_niñas/barbie.html",
         categoria: "juguetes_para_ninas",
         precio: 1000, // número para carrito
         precioTexto: "Precio: $1,000", // texto para mostrar en resultados
@@ -1006,7 +1006,7 @@ const productos = [
     {
         id: "juguetes_de_peluqueria",
         nombre: "Juguetes de Peluquería",
-        url: "pages/product/juguetes/juguetes_para_niñas/juguetes_peluqueria.html",
+        url: "/pages/product/juguetes/juguetes_para_niñas/juguetes_peluqueria.html",
         categoria: "juguetes_para_ninas",
         precio: 2500, // número para carrito
         precioTexto: "Precio: $2,500", // texto para mostrar en resultados
@@ -1015,7 +1015,7 @@ const productos = [
     {
         id: "kit_de_maquillaje",
         nombre: "Kit de Maquillaje",
-        url: "pages/product/juguetes/juguetes_para_niñas/kit_de_maquillaje.html",
+        url: "/pages/product/juguetes/juguetes_para_niñas/kit_de_maquillaje.html",
         categoria: "juguetes_para_ninas",
         precio: 2000, // número para carrito
         precioTexto: "Precio: $2,000", // texto para mostrar en resultados
@@ -1024,7 +1024,7 @@ const productos = [
     {
         id: "pinta_uñas",
         nombre: "Pinta Uñas",
-        url: "pages/product/juguetes/juguetes_para_niñas/pinta_unas.html",
+        url: "/pages/product/juguetes/juguetes_para_niñas/pinta_unas.html",
         categoria: "juguetes_para_ninas",
         precio: 1400, // número para carrito
         precioTexto: "Precio: $1,400", // texto para mostrar en resultados
@@ -1035,7 +1035,7 @@ const productos = [
     {
         id: "auto_azul",
         nombre: "Auto Azul",
-        url: "pages/product/juguetes/juguetes_para_niños/auto_azul.html",
+        url: "/pages/product/juguetes/juguetes_para_niños/auto_azul.html",
         categoria: "juguetes_para_ninos",
         precio: 1800, // número para carrito
         precioTexto: "Precio: $1,800", // texto para mostrar en resultados
@@ -1044,7 +1044,7 @@ const productos = [
     {
         id: "avion_de_juguete",
         nombre: "Avión de Juguete",
-        url: "pages/product/juguetes/juguetes_para_niños/avion_juguete.html",
+        url: "/pages/product/juguetes/juguetes_para_niños/avion_juguete.html",
         categoria: "juguetes_para_ninos",
         precio: 2500, // número para carrito
         precioTexto: "Precio: $2,500", // texto para mostrar en resultados
@@ -1053,7 +1053,7 @@ const productos = [
     {
         id: "autos_hot_wheels",
         nombre: "Autos Hot Wheels",
-        url: "pages/product/juguetes/juguetes_para_niños/hot_wheels.html",
+        url: "/pages/product/juguetes/juguetes_para_niños/hot_wheels.html",
         categoria: "juguetes_para_ninos",
         precio: 3500, // número para carrito
         precioTexto: "Precio: $3,500", // texto para mostrar en resultados
@@ -1062,7 +1062,7 @@ const productos = [
     {
         id: "legos_de_creeper",
         nombre: "Legos de Creeper",
-        url: "pages/product/juguetes/juguetes_para_niños/legos_creeper.html",
+        url: "/pages/product/juguetes/juguetes_para_niños/legos_creeper.html",
         categoria: "juguetes_para_ninos",
         precio: 4000, // número para carrito
         precioTexto: "Precio: $4,000", // texto para mostrar en resultados
@@ -1071,7 +1071,7 @@ const productos = [
     {
         id: "legos_de_minecraft",
         nombre: "Legos de Minecraft",
-        url: "pages/product/juguetes/juguetes_para_niños/legos_minecraft.html",
+        url: "/pages/product/juguetes/juguetes_para_niños/legos_minecraft.html",
         categoria: "juguetes_para_ninos",
         precio: 6000, // número para carrito
         precioTexto: "Precio: $6,000", // texto para mostrar en resultados
@@ -1084,7 +1084,7 @@ const productos = [
     {
         id: "florero_de_plantas",
         nombre: "Florero de Plantas",
-        url: "pages/product/muebles_y_decoracion/floreros/florero_de_plantas.html",
+        url: "/pages/product/muebles_y_decoracion/floreros/florero_de_plantas.html",
         categoria: "floreros",
         precio: 2000, // número para carrito
         precioTexto: "Precio: $2,000", // texto para mostrar en resultados
@@ -1093,7 +1093,7 @@ const productos = [
     {
         id: "florero_de_vidrio",
         nombre: "Florero de Vidrio",
-        url: "pages/product/muebles_y_decoracion/floreros/florero_de_vidrio.html",
+        url: "/pages/product/muebles_y_decoracion/floreros/florero_de_vidrio.html",
         categoria: "floreros",
         precio: 4000, // número para carrito
         precioTexto: "Precio: $4,000", // texto para mostrar en resultados
@@ -1102,7 +1102,7 @@ const productos = [
     {
         id: "jarron",
         nombre: "Jarrón",
-        url: "pages/product/muebles_y_decoracion/floreros/jarron.html",
+        url: "/pages/product/muebles_y_decoracion/floreros/jarron.html",
         categoria: "floreros",
         precio: 3000, // número para carrito
         precioTexto: "Precio: $3,000", // texto para mostrar en resultados
@@ -1111,7 +1111,7 @@ const productos = [
     {
         id: "jarrones",
         nombre: "Jarrones",
-        url: "pages/product/muebles_y_decoracion/floreros/jarrones.html",
+        url: "/pages/product/muebles_y_decoracion/floreros/jarrones.html",
         categoria: "floreros",
         precio: 3500, // número para carrito
         precioTexto: "Precio: $3,500", // texto para mostrar en resultados
@@ -1120,7 +1120,7 @@ const productos = [
     {
         id: "tulipanes",
         nombre: "Tulipanes",
-        url: "pages/product/muebles_y_decoracion/floreros/tulipanes.html",
+        url: "/pages/product/muebles_y_decoracion/floreros/tulipanes.html",
         categoria: "floreros",
         precio: 4200, // número para carrito
         precioTexto: "Precio: $4,200", // texto para mostrar en resultados
@@ -1131,7 +1131,7 @@ const productos = [
     {
         id: "Mesa_de_Madera",
         nombre: "Mesa de Madera",
-        url: "pages/product/muebles_y_decoracion/mesas/mesa_de_madera.html",
+        url: "/pages/product/muebles_y_decoracion/mesas/mesa_de_madera.html",
         categoria: "mesas",
         precio: 4000, // número para carrito
         precioTexto: "Precio: $4,000", // texto para mostrar en resultados
@@ -1140,7 +1140,7 @@ const productos = [
     {
         id: "mesa_de_noche",
         nombre: "Mesa de Noche",
-        url: "pages/product/muebles_y_decoracion/mesas/mesa_de_noche.html",
+        url: "/pages/product/muebles_y_decoracion/mesas/mesa_de_noche.html",
         categoria: "mesas",
         precio: 3000, // número para carrito
         precioTexto: "Precio: $3,000", // texto para mostrar en resultados
@@ -1149,7 +1149,7 @@ const productos = [
     {
         id: "mesa_moderna",
         nombre: "Mesa Moderna",
-        url: "pages/product/muebles_y_decoracion/mesas/mesa_moderna.html",
+        url: "/pages/product/muebles_y_decoracion/mesas/mesa_moderna.html",
         categoria: "mesas",
         precio: 6300, // número para carrito
         precioTexto: "Precio: $6,300", // texto para mostrar en resultados
@@ -1158,7 +1158,7 @@ const productos = [
     {
         id: "mesa_oscura",
         nombre: "Mesa Oscura",
-        url: "pages/product/muebles_y_decoracion/mesas/mesa_oscura.html",
+        url: "/pages/product/muebles_y_decoracion/mesas/mesa_oscura.html",
         categoria: "mesas",
         precio: 8000, // número para carrito
         precioTexto: "Precio: $8,000", // texto para mostrar en resultados
@@ -1167,7 +1167,7 @@ const productos = [
     {
         id: "mesa_pequena",
         nombre: "Mesa Pequeña",
-        url: "pages/product/muebles_y_decoracion/mesas/mesa_pequena.html",
+        url: "/pages/product/muebles_y_decoracion/mesas/mesa_pequena.html",
         categoria: "mesas",
         precio: 12500, // número para carrito
         precioTexto: "Precio: $12,500", // texto para mostrar en resultados
@@ -1178,7 +1178,7 @@ const productos = [
     {
         id: "sillon_amarillo",
         nombre: "Sillón Amarillo",
-        url: "pages/product/muebles_y_decoracion/sillones/sillon_amarillo.html",
+        url: "/pages/product/muebles_y_decoracion/sillones/sillon_amarillo.html",
         categoria: "sillones",
         precio: 4500, // número para carrito
         precioTexto: "Precio: $4,500", // texto para mostrar en resultados
@@ -1187,7 +1187,7 @@ const productos = [
     {
         id: "sillon_azul",
         nombre: "Sillón Azul",
-        url: "pages/product/muebles_y_decoracion/sillones/sillon_azul.html",
+        url: "/pages/product/muebles_y_decoracion/sillones/sillon_azul.html",
         categoria: "sillones",
         precio: 5500, // número para carrito
         precioTexto: "Precio: $5,500", // texto para mostrar en resultados
@@ -1196,7 +1196,7 @@ const productos = [
     {
         id: "sillon_blanco",
         nombre: "Sillón Blanco",
-        url: "pages/product/muebles_y_decoracion/sillones/sillon_blanco.html",
+        url: "/pages/product/muebles_y_decoracion/sillones/sillon_blanco.html",
         categoria: "sillones",
         precio: 4000, // número para carrito
         precioTexto: "Precio: $4,000", // texto para mostrar en resultados
@@ -1205,7 +1205,7 @@ const productos = [
     {
         id: "sillon_gris",
         nombre: "Sillón Gris",
-        url: "pages/product/muebles_y_decoracion/sillones/sillon_gris.html",
+        url: "/pages/product/muebles_y_decoracion/sillones/sillon_gris.html",
         categoria: "sillones",
         precio: 5000, // número para carrito
         precioTexto: "Precio: $5,000", // texto para mostrar en resultados
@@ -1214,7 +1214,7 @@ const productos = [
     {
         id: "sillon_verde",
         nombre: "Sillón Verde",
-        url: "pages/product/muebles_y_decoracion/sillones/sillon_verde.html",
+        url: "/pages/product/muebles_y_decoracion/sillones/sillon_verde.html",
         categoria: "sillones",
         precio: 7000, // número para carrito
         precioTexto: "Precio: $7,000", // texto para mostrar en resultados
@@ -1225,7 +1225,7 @@ const productos = [
     {
         id: "sofa_cama_blanco",
         nombre: "Sofá Cama Blanco",
-        url: "pages/product/muebles_y_decoracion/sofas/sofa_cama_blanco.html",
+        url: "/pages/product/muebles_y_decoracion/sofas/sofa_cama_blanco.html",
         categoria: "sofas",
         precio: 9000, // número para carrito
         precioTexto: "Precio: $9,000", // texto para mostrar en resultados
@@ -1234,7 +1234,7 @@ const productos = [
     {
         id: "Sofa_gris",
         nombre: "Sofá Gris",
-        url: "pages/product/muebles_y_decoracion/sofas/sofa_gris.html",
+        url: "/pages/product/muebles_y_decoracion/sofas/sofa_gris.html",
         categoria: "sofas",
         precio: 8000, // número para carrito
         precioTexto: "Precio: $8,000", // texto para mostrar en resultados
@@ -1243,7 +1243,7 @@ const productos = [
     {
         id: "Sofa_media_luna",
         nombre: "Sofá Media Luna",
-        url: "pages/product/muebles_y_decoracion/sofas/sofa_media_luna.html",
+        url: "/pages/product/muebles_y_decoracion/sofas/sofa_media_luna.html",
         categoria: "sofas",
         precio: 3000, // número para carrito
         precioTexto: "Precio: $3,000", // texto para mostrar en resultados
@@ -1252,7 +1252,7 @@ const productos = [
     {
         id: "Sofa_negro",
         nombre: "Sofá Negro",
-        url: "pages/product/muebles_y_decoracion/sofas/sofa_negro.html",
+        url: "/pages/product/muebles_y_decoracion/sofas/sofa_negro.html",
         categoria: "sofas",
         precio: 5000, // número para carrito
         precioTexto: "Precio: $5,000", // texto para mostrar en resultados
@@ -1261,7 +1261,7 @@ const productos = [
     {
         id: "Sofa_verde",
         nombre: "Sofá Verde",
-        url: "pages/product/muebles_y_decoracion/sofas/sofa_verde.html",
+        url: "/pages/product/muebles_y_decoracion/sofas/sofa_verde.html",
         categoria: "sofas",
         precio: 14000, // número para carrito
         precioTexto: "Precio: $14,000", // texto para mostrar en resultados
@@ -1274,7 +1274,7 @@ const productos = [
     {
         id: "pantalon_negro",
         nombre: "Pantalón Negro",
-        url: "pages/product/ropa/pantalones_para_hombres/pantalon_negro.html",
+        url: "/pages/product/ropa/pantalones_para_hombres/pantalon_negro.html",
         categoria: "pantalones_para_hombres",
         precio: 4000, // número para carrito
         precioTexto: "Precio: $4,000", // texto para mostrar en resultados
@@ -1283,7 +1283,7 @@ const productos = [
     {
         id: "pantalones_de_golf",
         nombre: "Pantalones de Golf",
-        url: "pages/product/ropa/pantalones_para_hombres/pantalones_de_golf.html",
+        url: "/pages/product/ropa/pantalones_para_hombres/pantalones_de_golf.html",
         categoria: "pantalones_para_hombres",
         precio: 2000, // número para carrito
         precioTexto: "Precio: $2,000", // texto para mostrar en resultados
@@ -1292,7 +1292,7 @@ const productos = [
     {
         id: "pantalones_deportivos_joggers",
         nombre: "Pantalones Deportivos Joggers",
-        url: "pages/product/ropa/pantalones_para_hombres/pantalones_deportivos_joggers.html",
+        url: "/pages/product/ropa/pantalones_para_hombres/pantalones_deportivos_joggers.html",
         categoria: "pantalones_para_hombres",
         precio: 3000, // número para carrito
         precioTexto: "Precio: $3,000", // texto para mostrar en resultados
@@ -1301,7 +1301,7 @@ const productos = [
     {
         id: "pantalones_jeans",
         nombre: "Pantalones Jeans",
-        url: "pages/product/ropa/pantalones_para_hombres/pantalones_jeans.html",
+        url: "/pages/product/ropa/pantalones_para_hombres/pantalones_jeans.html",
         categoria: "pantalones_para_hombres",
         precio: 5000, // número para carrito
         precioTexto: "Precio: $5,000", // texto para mostrar en resultados
@@ -1310,7 +1310,7 @@ const productos = [
     {
         id: "pantalones_joggers",
         nombre: "Pantalones Joggers",
-        url: "pages/product/ropa/pantalones_para_hombres/pantalones_joggers.html",
+        url: "/pages/product/ropa/pantalones_para_hombres/pantalones_joggers.html",
         categoria: "pantalones_para_hombres",
         precio: 4000, // número para carrito
         precioTexto: "Precio: $4,000", // texto para mostrar en resultados
@@ -1322,7 +1322,7 @@ const productos = [
     {
         id: "leggings_de_licra",
         nombre: "Leggings de Licra",
-        url: "pages/product/ropa/pantalones_para_mujeres/leggings.html",
+        url: "/pages/product/ropa/pantalones_para_mujeres/leggings.html",
         categoria: "pantalones_para_mujeres",
         precio: 1500, // número para carrito
         precioTexto: "Precio: $1,500", // texto para mostrar en resultados
@@ -1331,7 +1331,7 @@ const productos = [
     {
         id: "pantalon_acampanado",
         nombre: "Pantalón Acampanado",
-        url: "pages/product/ropa/pantalones_para_mujeres/pantalon_acampanado.html",
+        url: "/pages/product/ropa/pantalones_para_mujeres/pantalon_acampanado.html",
         categoria: "pantalones_para_mujeres",
         precio: 2500, // número para carrito
         precioTexto: "Precio: $2,500", // texto para mostrar en resultados
@@ -1340,7 +1340,7 @@ const productos = [
     {
         id: "pantalon_casual",
         nombre: "Pantalón Casual",
-        url: "pages/product/ropa/pantalones_para_mujeres/pantalon_casual.html",
+        url: "/pages/product/ropa/pantalones_para_mujeres/pantalon_casual.html",
         categoria: "pantalones_para_mujeres",
         precio: 4000, // número para carrito
         precioTexto: "Precio: $4,000", // texto para mostrar en resultados
@@ -1349,7 +1349,7 @@ const productos = [
     {
         id: "pantalon_jean",
         nombre: "Pantalón Jean",
-        url: "pages/product/ropa/pantalones_para_mujeres/pantalon_jean.html",
+        url: "/pages/product/ropa/pantalones_para_mujeres/pantalon_jean.html",
         categoria: "pantalones_para_mujeres",
         precio: 5000, // número para carrito
         precioTexto: "Precio: $5,000", // texto para mostrar en resultados
@@ -1358,7 +1358,7 @@ const productos = [
     {
         id: "pantalon_liso_mujer",
         nombre: "Pantalón Liso Mujer",
-        url: "pages/product/ropa/pantalones_para_mujeres/pantalon_liso.html",
+        url: "/pages/product/ropa/pantalones_para_mujeres/pantalon_liso.html",
         categoria: "pantalones_para_mujeres",
         precio: 4000, // número para carrito
         precioTexto: "Precio: $4,000", // texto para mostrar en resultados
@@ -1369,7 +1369,7 @@ const productos = [
     {
         id: "jean_para_ninos",
         nombre: "Jean para Niños",
-        url: "pages/product/ropa/pantalones_para_ninos/jean_para_ninos.html",
+        url: "/pages/product/ropa/pantalones_para_ninos/jean_para_ninos.html",
         categoria: "pantalones_para_ninos",
         precio: 1000, // número para carrito
         precioTexto: "Precio: $1,000", // texto para mostrar en resultados
@@ -1378,7 +1378,7 @@ const productos = [
     {
         id: "licra_para_ninos",
         nombre: "Licra para Niños",
-        url: "pages/product/ropa/pantalones_para_ninos/licra_para_ninos.html",
+        url: "/pages/product/ropa/pantalones_para_ninos/licra_para_ninos.html",
         categoria: "pantalones_para_ninos",
         precio: 1500, // número para carrito
         precioTexto: "Precio: $1,500", // texto para mostrar en resultados
@@ -1387,7 +1387,7 @@ const productos = [
     {
         id: "pantalon_deportivo",
         nombre: "Pantalón Deportivo",
-        url: "pages/product/ropa/pantalones_para_ninos/pantalon_deportivo.html",
+        url: "/pages/product/ropa/pantalones_para_ninos/pantalon_deportivo.html",
         categoria: "pantalones_para_ninos",
         precio: 2300, // número para carrito
         precioTexto: "Precio: $2,300", // texto para mostrar en resultados
@@ -1396,7 +1396,7 @@ const productos = [
     {
         id: "pantalon_liso",
         nombre: "Pantalón Liso",
-        url: "pages/product/ropa/pantalones_para_ninos/pantalon_liso.html",
+        url: "/pages/product/ropa/pantalones_para_ninos/pantalon_liso.html",
         categoria: "pantalones_para_ninos",
         precio: 2000, // número para carrito
         precioTexto: "Precio: $2,000", // texto para mostrar en resultados
@@ -1405,7 +1405,7 @@ const productos = [
     {
         id: "pantalones_lisos_para_ninos",
         nombre: "Pantalones Lisos para Niños",
-        url: "pages/product/ropa/pantalones_para_ninos/pantalones_lisos.html",
+        url: "/pages/product/ropa/pantalones_para_ninos/pantalones_lisos.html",
         categoria: "pantalones_para_ninos",
         precio: 2500, // número para carrito
         precioTexto: "Precio: $2,500", // texto para mostrar en resultados
@@ -1416,7 +1416,7 @@ const productos = [
     {
         id: "traje_2_piezas",
         nombre: "Traje 2 Piezas",
-        url: "pages/product/ropa/trajes_para_hombres/traje_2piezas.html",
+        url: "/pages/product/ropa/trajes_para_hombres/traje_2piezas.html",
         categoria: "trajes_para_hombres",
         precio: 5000, // número para carrito
         precioTexto: "Precio: $5,000", // texto para mostrar en resultados
@@ -1425,7 +1425,7 @@ const productos = [
     {
         id: "traje_azul",
         nombre: "Traje Azul",
-        url: "pages/product/ropa/trajes_para_hombres/traje_azul.html",
+        url: "/pages/product/ropa/trajes_para_hombres/traje_azul.html",
         categoria: "trajes_para_hombres",
         precio: 4000, // número para carrito
         precioTexto: "Precio: $4,000", // texto para mostrar en resultados
@@ -1434,7 +1434,7 @@ const productos = [
     {
         id: "traje_completo",
         nombre: "Traje Completo",
-        url: "pages/product/ropa/trajes_para_hombres/traje_completo.html",
+        url: "/pages/product/ropa/trajes_para_hombres/traje_completo.html",
         categoria: "trajes_para_hombres",
         precio: 3000, // número para carrito
         precioTexto: "Precio: $3,000", // texto para mostrar en resultados
@@ -1443,7 +1443,7 @@ const productos = [
     {
         id: "traje_elegante",
         nombre: "Traje Elegante",
-        url: "pages/product/ropa/trajes_para_hombres/traje_elegante.html",
+        url: "/pages/product/ropa/trajes_para_hombres/traje_elegante.html",
         categoria: "trajes_para_hombres",
         precio: 3500, // número para carrito
         precioTexto: "Precio: $3,500", // texto para mostrar en resultados
@@ -1452,7 +1452,7 @@ const productos = [
     {
         id: "traje_negro",
         nombre: "Traje Negro",
-        url: "pages/product/ropa/trajes_para_hombres/traje_negro.html",
+        url: "/pages/product/ropa/trajes_para_hombres/traje_negro.html",
         categoria: "trajes_para_hombres",
         precio: 4200, // número para carrito
         precioTexto: "Precio: $4,200", // texto para mostrar en resultados
@@ -1463,7 +1463,7 @@ const productos = [
     {
         id: "vestido_ajustado",
         nombre: "Vestido Ajustado",
-        url: "pages/product/ropa/vestidos/vestido_ajustado.html",
+        url: "/pages/product/ropa/vestidos/vestido_ajustado.html",
         categoria: "vestidos",
         precio: 5000, // número para carrito
         precioTexto: "Precio: $5,000", // texto para mostrar en resultados
@@ -1472,7 +1472,7 @@ const productos = [
     {
         id: "vestido_cuello_cuadrado",
         nombre: "Vestido de Cuello Cuadrado",
-        url: "pages/product/ropa/vestidos/vestido_de_cuello_cuadrado.html",
+        url: "/pages/product/ropa/vestidos/vestido_de_cuello_cuadrado.html",
         categoria: "vestidos",
         precio: 4500, // número para carrito
         precioTexto: "Precio: $4,500", // texto para mostrar en resultados
@@ -1481,7 +1481,7 @@ const productos = [
     {
         id: "vestido_de_invierno",
         nombre: "Vestido de Invierno",
-        url: "pages/product/ropa/vestidos/vestido_de_invierno.html",
+        url: "/pages/product/ropa/vestidos/vestido_de_invierno.html",
         categoria: "vestidos",
         precio: 6000, // número para carrito
         precioTexto: "Precio: $6,000", // texto para mostrar en resultados
@@ -1490,7 +1490,7 @@ const productos = [
     {
         id: "vestido_elegante",
         nombre: "Vestido Elegante",
-        url: "pages/product/ropa/vestidos/vestido_elegante.html",
+        url: "/pages/product/ropa/vestidos/vestido_elegante.html",
         categoria: "vestidos",
         precio: 3500, // número para carrito
         precioTexto: "Precio: $3,500", // texto para mostrar en resultados
@@ -1499,7 +1499,7 @@ const productos = [
     {
         id: "vestido_negro",
         nombre: "Vestido Negro",
-        url: "pages/product/ropa/vestidos/vestido_negro.html",
+        url: "/pages/product/ropa/vestidos/vestido_negro.html",
         categoria: "vestidos",
         precio: 4200, // número para carrito
         precioTexto: "Precio: $4,200", // texto para mostrar en resultados
@@ -1512,7 +1512,7 @@ const productos = [
     {
         id: "bocina_aiwa",
         nombre: "Bocina Aiwa",
-        url: "pages/product/tecnologia/bocinas/bocina_Aiwa.html",
+        url: "/pages/product/tecnologia/bocinas/bocina_Aiwa.html",
         categoria: "bocinas",
         precio: 5000, // número para carrito
         precioTexto: "Precio: $5000", // texto para mostrar en resultados
@@ -1521,7 +1521,7 @@ const productos = [
     {
         id: "bocina_lg",
         nombre: "Bocina LG",
-        url: "pages/product/tecnologia/bocinas/bocina_lg.html",
+        url: "/pages/product/tecnologia/bocinas/bocina_lg.html",
         categoria: "bocinas",
         precio: 4500, // número para carrito
         precioTexto: "Precio: $4,500", // texto para mostrar en resultados
@@ -1530,7 +1530,7 @@ const productos = [
     {
         id: "bocina_samsung",
         nombre: "Bocina Samsung",
-        url: "pages/product/tecnologia/bocinas/bocina_samsung.html",
+        url: "/pages/product/tecnologia/bocinas/bocina_samsung.html",
         categoria: "bocinas",
         precio: 6000, // número para carrito
         precioTexto: "Precio: $6,000", // texto para mostrar en resultados
@@ -1539,7 +1539,7 @@ const productos = [
     {
         id: "bocina_stage",
         nombre: "Bocina Stage",
-        url: "pages/product/tecnologia/bocinas/bocina_stage.html",
+        url: "/pages/product/tecnologia/bocinas/bocina_stage.html",
         categoria: "bocinas",
         precio: 5500, // número para carrito
         precioTexto: "Precio: $5,500", // texto para mostrar en resultados
@@ -1548,7 +1548,7 @@ const productos = [
     {
         id: "bocina_tecnomaster",
         nombre: "Bocina tecnomaster",
-        url: "pages/product/tecnologia/bocinas/bocina_tecnomaster.html",
+        url: "/pages/product/tecnologia/bocinas/bocina_tecnomaster.html",
         categoria: "bocinas",
         precio: 9000, // número para carrito
         precioTexto: "Precio: $9,000", // texto para mostrar en resultados
@@ -1559,7 +1559,7 @@ const productos = [
     {
         id: "celular_samsung_a26",
         nombre: "Celular Samsung A26",
-        url: "pages/product/tecnologia/celulares/celular_a26.html",
+        url: "/pages/product/tecnologia/celulares/celular_a26.html",
         categoria: "celulares",
         precio: 40000, // número para carrito
         precioTexto: "Precio: $40,000", // texto para mostrar en resultados
@@ -1568,7 +1568,7 @@ const productos = [
     {
         id: "celular_samsung_a35",
         nombre: "Celular Samsung A35",
-        url: "pages/product/tecnologia/celulares/celular_a35.html",
+        url: "/pages/product/tecnologia/celulares/celular_a35.html",
         categoria: "celulares",
         precio: 23000, // número para carrito
         precioTexto: "Precio: $23,000", // texto para mostrar en resultados
@@ -1577,7 +1577,7 @@ const productos = [
     {
         id: "celular_s24_ultra",
         nombre: "Celular S24 Ultra",
-        url: "pages/product/tecnologia/celulares/celular_s24.html",
+        url: "/pages/product/tecnologia/celulares/celular_s24.html",
         categoria: "celulares",
         precio: 55000, // número para carrito
         precioTexto: "Precio: $55,000", // texto para mostrar en resultados
@@ -1586,7 +1586,7 @@ const productos = [
     {
         id: "iphone_14",
         nombre: "iPhone 14",
-        url: "pages/product/tecnologia/celulares/iphone_14.html",
+        url: "/pages/product/tecnologia/celulares/iphone_14.html",
         categoria: "celulares",
         precio: 35000, // número para carrito
         precioTexto: "Precio: $35,000", // texto para mostrar en resultados
@@ -1595,7 +1595,7 @@ const productos = [
     {
         id: "iphone_14_pro",
         nombre: "iPhone 14 Pro",
-        url: "pages/product/tecnologia/celulares/iphone_14pro.html",
+        url: "/pages/product/tecnologia/celulares/iphone_14pro.html",
         categoria: "celulares",
         precio: 42000, // número para carrito
         precioTexto: "Precio: $42,000", // texto para mostrar en resultados
@@ -1606,7 +1606,7 @@ const productos = [
     {
         id: "laptop_asus",
         nombre: "Laptop Asus",
-        url: "pages/product/tecnologia/laptops/laptop_asus.html",
+        url: "/pages/product/tecnologia/laptops/laptop_asus.html",
         categoria: "laptops",
         precio: 45000, // número para carrito
         precioTexto: "Precio: $45,000", // texto para mostrar en resultados
@@ -1615,7 +1615,7 @@ const productos = [
     {
         id: "laptop_dell",
         nombre: "Laptop Dell",
-        url: "pages/product/tecnologia/laptops/laptop_dell.html",
+        url: "/pages/product/tecnologia/laptops/laptop_dell.html",
         categoria: "laptops",
         precio: 48000, // número para carrito
         precioTexto: "Precio: $48,000", // texto para mostrar en resultados
@@ -1624,7 +1624,7 @@ const productos = [
     {
         id: "laptop_dragonx",
         nombre: "Laptop DragonX",
-        url: "pages/product/tecnologia/laptops/laptop_dragonx.html",
+        url: "/pages/product/tecnologia/laptops/laptop_dragonx.html",
         categoria: "laptops",
         precio: 54000, // número para carrito
         precioTexto: "Precio: $54,000", // texto para mostrar en resultados
@@ -1633,7 +1633,7 @@ const productos = [
     {
         id: "laptop_hp",
         nombre: "Laptop HP",
-        url: "pages/product/tecnologia/laptops/laptop_hp.html",
+        url: "/pages/product/tecnologia/laptops/laptop_hp.html",
         categoria: "laptops",
         precio: 56000, // número para carrito
         precioTexto: "Precio: $56,000", // texto para mostrar en resultados
@@ -1642,7 +1642,7 @@ const productos = [
     {
         id: "laptop_lenovo",
         nombre: "Laptop Lenovo",
-        url: "pages/product/tecnologia/laptops/laptop_lenovo.html",
+        url: "/pages/product/tecnologia/laptops/laptop_lenovo.html",
         categoria: "laptops",
         precio: 70000, // número para carrito
         precioTexto: "Precio: $70,000", // texto para mostrar en resultados
@@ -1653,7 +1653,7 @@ const productos = [
     {
         id: "tablet_apple",
         nombre: "Tablet Apple",
-        url: "pages/product/tecnologia/tablets/tablet_apple.html",
+        url: "/pages/product/tecnologia/tablets/tablet_apple.html",
         categoria: "tablets",
         precio: 30000, // número para carrito
         precioTexto: "Precio: $30,000", // texto para mostrar en resultados
@@ -1662,7 +1662,7 @@ const productos = [
     {
         id: "tablet_rted",
         nombre: "Tablet RTED",
-        url: "pages/product/tecnologia/tablets/tablet_rted.html",
+        url: "/pages/product/tecnologia/tablets/tablet_rted.html",
         categoria: "tablets",
         precio: 23000, // número para carrito
         precioTexto: "Precio: $23,000", // texto para mostrar en resultados
@@ -1671,7 +1671,7 @@ const productos = [
     {
         id: "tablet_samsung",
         nombre: "Tablet Samsung",
-        url: "pages/product/tecnologia/tablets/tablet_samsung.html",
+        url: "/pages/product/tecnologia/tablets/tablet_samsung.html",
         categoria: "tablets",
         precio: 26000, // número para carrito
         precioTexto: "Precio: $26,000", // texto para mostrar en resultados
@@ -1680,7 +1680,7 @@ const productos = [
     {
         id: "tablet_tcl",
         nombre: "Tablet TCL",
-        url: "pages/product/tecnologia/tablets/tablet_tcl.html",
+        url: "/pages/product/tecnologia/tablets/tablet_tcl.html",
         categoria: "tablets",
         precio: 15000, // número para carrito
         precioTexto: "Precio: $15,000", // texto para mostrar en resultados
@@ -1689,7 +1689,7 @@ const productos = [
     {
         id: "tablet_tecnomaster",
         nombre: "Tablet tecnomaster",
-        url: "pages/product/tecnologia/tablets/tablet_tecnomaster.html",
+        url: "/pages/product/tecnologia/tablets/tablet_tecnomaster.html",
         categoria: "tablets",
         precio: 22000, // número para carrito
         precioTexto: "Precio: $22,000", // texto para mostrar en resultados
@@ -1700,7 +1700,7 @@ const productos = [
     {
         id: "televisor_led_50",
         nombre: "Televisor LED 50 Pulgadas",
-        url: "pages/product/tecnologia/televisores/televisor_led_50.html",
+        url: "/pages/product/tecnologia/televisores/televisor_led_50.html",
         categoria: "televisores",
         precio: 36500, // número para carrito
         precioTexto: "Precio: $36,500", // texto para mostrar en resultados
@@ -1709,7 +1709,7 @@ const productos = [
     {
         id: "televisor_led_lg",
         nombre: "Televisor LED LG",
-        url: "pages/product/tecnologia/televisores/televisor_lg.html",
+        url: "/pages/product/tecnologia/televisores/televisor_lg.html",
         categoria: "televisores",
         precio: 57000, // número para carrito
         precioTexto: "Precio: $57,000", // texto para mostrar en resultados
@@ -1718,7 +1718,7 @@ const productos = [
     {
         id: "televisor_led_samsung",
         nombre: "Televisor LED Samsung",
-        url: "pages/product/tecnologia/televisores/televisor_samsung_led.html",
+        url: "/pages/product/tecnologia/televisores/televisor_samsung_led.html",
         categoria: "televisores",
         precio: 56000, // número para carrito
         precioTexto: "Precio: $56,000", // texto para mostrar en resultados
@@ -1727,7 +1727,7 @@ const productos = [
     {
         id: "televisor_led_tecnomaster",
         nombre: "Televisor LED tecnomaster",
-        url: "pages/product/tecnologia/televisores/televisor_tecnomaster.html",
+        url: "/pages/product/tecnologia/televisores/televisor_tecnomaster.html",
         categoria: "televisores",
         precio: 55200, // número para carrito
         precioTexto: "Precio: $55,200", // texto para mostrar en resultados
@@ -1736,7 +1736,7 @@ const productos = [
     {
         id: "televisor_samsung_75_pulgadas",
         nombre: "Televisor Samsung 75 pulgadas",
-        url: "pages/product/tecnologia/televisores/tv_samsung_75.html",
+        url: "/pages/product/tecnologia/televisores/tv_samsung_75.html",
         categoria: "televisores",
         precio: 44000, // número para carrito
         precioTexto: "Precio: $44,000", // texto para mostrar en resultados

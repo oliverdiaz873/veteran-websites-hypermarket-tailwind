@@ -74,12 +74,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 // Resolver ruta de imagen (local logic)
                 let imgSrc = item.img || '';
-                if (imgSrc.startsWith('/')) {
-                    imgSrc = getRelativePrefix() + imgSrc.substring(1);
+                // Use absolute path directly if it starts with /
+                if (!imgSrc.startsWith('/') && imgSrc.includes('assets/')) {
+                    imgSrc = '/' + imgSrc;
                 }
 
                 // Resolver URL del producto para enlace
-                let itemUrl = item.url ? (getRelativePrefix() + item.url) : '#';
+                let itemUrl = item.url || '#';
+                if (!itemUrl.startsWith('/') && itemUrl !== '#') {
+                    itemUrl = '/' + itemUrl;
+                }
 
                 const contenidoInfo = `
                      ${imgSrc ? `<img src="${imgSrc}" class="item-img" style="width: 50px; height: 50px; object-fit: contain; margin-right: 10px;">` : ''}
@@ -278,10 +282,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 const li = document.createElement("li");
                 li.className = "item-busqueda";
 
-                // Resolver ruta relativa para la imagen
+                // Resolver ruta absoluta para la imagen
                 let imgSrc = p.imagen;
-                if (imgSrc.startsWith('/')) {
-                    imgSrc = getRelativePrefix() + imgSrc.substring(1);
+                if (!imgSrc.startsWith('/')) {
+                    imgSrc = '/' + imgSrc;
                 }
 
                 // Crear HTML con manejo de error de imagen
@@ -348,10 +352,10 @@ document.addEventListener("DOMContentLoaded", function () {
             const card = document.createElement("div");
             card.className = "resultado-card";
 
-            // Resolver ruta relativa para la imagen
+            // Resolver ruta absoluta para la imagen
             let imgSrc = p.imagen;
-            if (imgSrc.startsWith('/')) {
-                imgSrc = getRelativePrefix() + imgSrc.substring(1);
+            if (!imgSrc.startsWith('/')) {
+                imgSrc = '/' + imgSrc;
             }
 
             card.innerHTML = `
@@ -375,8 +379,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
             card.addEventListener("click", e => {
                 if (!e.target.closest('.btn-agregar')) {
-                    // Fix: usar prefijo relativo para la URL del producto
-                    window.location.href = getRelativePrefix() + p.url;
+                    // Use absolute path for product URL
+                    let targetUrl = p.url;
+                    if (!targetUrl.startsWith('/')) targetUrl = '/' + targetUrl;
+                    window.location.href = targetUrl;
                 }
             });
 
@@ -394,8 +400,8 @@ function normalizarTexto(texto) {
 
 function irAResultados(texto) {
     const q = encodeURIComponent(texto.trim());
-    // Redirigir a pages/search/index.html con la ruta relativa correcta
-    window.location.href = getRelativePrefix() + `pages/search/index.html?q=${q}`;
+    // Redirigir a pages/search/index.html con ruta absoluta
+    window.location.href = `/pages/search/index.html?q=${q}`;
 }
 
 function getRelativePrefix() {
