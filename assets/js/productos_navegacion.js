@@ -1,6 +1,6 @@
-// Botones del carrusel para la navegación de productos destacados y ofertas 
+﻿// Botones del carrusel para la navegaciÃ³n de productos destacados y ofertas 
 document.addEventListener('DOMContentLoaded', function () {
-    // Configurar para productos destacados (id de sección: productos-destacados)
+    // Configurar para productos destacados (id de secciÃ³n: productos-destacados)
     setupCarousel('productos-destacados');
 
     // Configurar para ofertas
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     setupCarousel('bebidas');
     setupCarousel('enlatados');
 
-    // Configurar para secciones de Electrodomésticos
+    // Configurar para secciones de ElectrodomÃ©sticos
     setupCarousel('cocina');
     setupCarousel('lavado');
     setupCarousel('climatizacion');
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
     setupCarousel('vitaminas_y_minerales');
     setupCarousel('antigripales_y_resfriado');
 
-    // Configurar para secciones de Ferretería
+    // Configurar para secciones de FerreterÃ­a
     setupCarousel('herramientas_manuales');
     setupCarousel('pinturas');
     setupCarousel('electricidad');
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
     setupCarousel('juguetes_para_ninos');
     setupCarousel('juguetes_para_ninas');
 
-    // Configurar para secciones de Muebles y Decoración
+    // Configurar para secciones de Muebles y DecoraciÃ³n
     setupCarousel('sofas');
     setupCarousel('sillones');
     setupCarousel('mesas');
@@ -44,11 +44,11 @@ document.addEventListener('DOMContentLoaded', function () {
     // Configurar para secciones de Ropa
     setupCarousel('pantalones_para_hombres');
     setupCarousel('pantalones_para_mujeres');
-    setupCarousel('pantalones_para_niños');
+    setupCarousel('pantalones_para_ninos');
     setupCarousel('trajes_para_hombres');
     setupCarousel('vestidos');
 
-    // Configurar para secciones de Tecnología
+    // Configurar para secciones de TecnologÃ­a
     setupCarousel('televisores');
     setupCarousel('laptops');
     setupCarousel('tablets');
@@ -148,3 +148,4 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(updateButtonStates, 500);
     }
 });
+

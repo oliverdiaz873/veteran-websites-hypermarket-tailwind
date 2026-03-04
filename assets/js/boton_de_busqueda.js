@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+﻿document.addEventListener("DOMContentLoaded", function () {
 
     const btnBuscar = document.getElementById("btn-buscar");
     const inputBuscar = document.getElementById("input-buscar");
@@ -9,17 +9,17 @@ document.addEventListener("DOMContentLoaded", function () {
         inputBuscar,
         resultados
     });
-    // Debug: Detectar si estamos en móvil
+    // Debug: Detectar si estamos en mÃ³vil
     const isMobile = window.innerWidth <= 767;
-    console.log('Debug - Es móvil:', isMobile);
-    // Debug: Verificar si hay múltiples inputs
+    console.log('Debug - Es mÃ³vil:', isMobile);
+    // Debug: Verificar si hay mÃºltiples inputs
     const allInputs = document.querySelectorAll('#input-buscar');
     console.log('Debug - Todos los inputs encontrados:', allInputs.length, allInputs);
-    // Debug: Verificar si hay múltiples resultados
+    // Debug: Verificar si hay mÃºltiples resultados
     const allResultados = document.querySelectorAll('.resultados-busqueda');
     console.log('Debug - Todos los resultados encontrados:', allResultados.length, allResultados);
 
-    // Debug: Verificar si los productos están cargados
+    // Debug: Verificar si los productos estÃ¡n cargados
     console.log('Debug - Productos cargados:', typeof productos !== 'undefined' ? productos.length : 'NO DEFINIDO');
     if (typeof productos !== 'undefined') {
         console.log('Debug - Primer producto:', productos[0]);
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         if (carrito.length === 0) {
-            listaCarrito.innerHTML = '<p>Tu carrito está vacío.</p>';
+            listaCarrito.innerHTML = '<p>Tu carrito estÃ¡ vacÃ­o.</p>';
         } else {
             listaCarrito.innerHTML = carrito.map(item => {
                 const subtotal = (Number(item.precio) || 0) * (item.cantidad || 0);
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             </a>
                         </div>
                         <div class="carrito-item-cantidad">
-                            <button class="btn-decrease">−</button>
+                            <button class="btn-decrease">âˆ’</button>
                             <span>${item.cantidad}</span>
                             <button class="btn-increase">+</button>
                         </div>
@@ -177,7 +177,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (carritoEl) carritoEl.classList.toggle('activo');
     };
 
-    // Delegación global (Agregar / Carrito)
+    // DelegaciÃ³n global (Agregar / Carrito)
     document.addEventListener('click', (e) => {
 
         const btnAgregar = e.target.closest('.btn-agregar');
@@ -226,7 +226,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (btnBuscar && inputBuscar) {
         const iconoBuscar = document.getElementById("icono-buscar");
         const iconoCerrar = document.getElementById("icono-cerrar");
-        const desktopNav = document.querySelector('header nav'); // Menú de navegación desktop
+        const desktopNav = document.querySelector('header nav'); // MenÃº de navegaciÃ³n desktop
 
         btnBuscar.addEventListener("click", () => {
             const activo = body.classList.toggle("menu-busqueda-activa");
@@ -237,7 +237,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (iconoCerrar) iconoCerrar.classList.remove("hidden");
                 inputBuscar.focus();
 
-                // Ocultar menú de navegación desktop
+                // Ocultar menÃº de navegaciÃ³n desktop
                 if (desktopNav) desktopNav.classList.add('md:hidden');
             } else {
                 // Volver a icono Lupa
@@ -246,7 +246,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 inputBuscar.value = "";
                 resultados.style.display = "none";
 
-                // Mostrar menú de navegación desktop
+                // Mostrar menÃº de navegaciÃ³n desktop
                 if (desktopNav) desktopNav.classList.remove('md:hidden');
             }
         });
@@ -295,7 +295,7 @@ document.addEventListener("DOMContentLoaded", function () {
                              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" 
                              style="width: 40px; height: 40px; object-fit: cover; margin-right: 10px;">
                         <div class="resultado-placeholder" style="display: none; width: 40px; height: 40px; background: #f0f0f0; border-radius: 4px; margin-right: 10px; align-items: center; justify-content: center; color: #666; font-size: 12px;">
-                            📦
+                            ðŸ“¦
                         </div>
                         <span style="color: white !important;">${escapeHtml(p.nombre)}</span>
                     </div>
@@ -409,13 +409,13 @@ function getRelativePrefix() {
 
     // Detectar profundidad basada en carpetas reales
     if (path.includes('/pages/product/')) {
-        // Estamos en pages/product/categoria/subcategoria/producto.html -> 4 niveles (o más)
-        // Pero el array de productos.js usa urls relativas a la raíz o absolutas
+        // Estamos en pages/pages/product/categoria/subcategoria/producto.html -> 4 niveles (o mÃ¡s)
+        // Pero el array de productos.js usa urls relativas a la raÃ­z o absolutas
         const parts = path.split('/pages/product/');
         if (parts.length > 1) {
             const subPath = parts[1];
             const depth = subPath.split('/').filter(p => p.length > 0).length;
-            let up = '../../'; // Mínimo para salir de pages/product/
+            let up = '../../'; // MÃ­nimo para salir de pages/pages/product/
             for (let i = 0; i < depth; i++) up += '../';
             return up;
         }
@@ -439,8 +439,9 @@ function getRelativePrefix() {
     }
 
     if (path.includes('/contacto/')) {
-        return '../../'; // Si está en pages/contacto/index.html
+        return '../../'; // Si estÃ¡ en pages/contacto/index.html
     }
 
     return ''; // Root
 }
+

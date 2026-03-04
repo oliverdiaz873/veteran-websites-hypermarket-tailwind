@@ -289,11 +289,11 @@ const productos = [
     {
         id: "fresas",
         nombre: "Fresas",
-        url: "/pages/product/alimentos/frutas_y_verduras/fresas.html",
+        url: "/pages/product/alimentos/frutas_y_verduras/paquete_de_paquete_de_fresas.html",
         categoria: "frutas_y_verduras",
         precio: 250, // nÃºmero para carrito
         precioTexto: "Precio: $250 1 paquete", // texto para mostrar en resultados
-        imagen: "/assets/images/productos/alimentos/frutas_y_verduras/fresas.avif"
+        imagen: "/assets/images/productos/alimentos/frutas_y_verduras/paquete_de_fresas.avif"
     },
     {
         id: "limones_persa",
@@ -748,7 +748,7 @@ const productos = [
     //Vitaminas y Minerales
     {
         id: "flintstones",
-        nombre: "Flintstones MultivitamÃ­nico para NiÃ±os",
+        nombre: "Flintstones MultivitamÃ­nico para ninos",
         url: "/pages/product/farmacia/vitaminas_y_minerales/flintstones.html",
         categoria: "vitaminas_y_minerales",
         precio: 2500, // nÃºmero para carrito
@@ -984,11 +984,11 @@ const productos = [
 
     //--Juguetes--//
 
-    //juguetes para niÃ±as
+    //juguetes para ninas
     {
         id: "muÃ±eca_baby_doll",
         nombre: "MuÃ±eca Baby Doll",
-        url: "/pages/product/juguetes/juguetes_para_niÃ±as/baby_doll.html",
+        url: "/pages/product/juguetes/juguetes_para_ninas/baby_doll.html",
         categoria: "juguetes_para_ninas",
         precio: 500, // nÃºmero para carrito
         precioTexto: "Precio: $500", // texto para mostrar en resultados
@@ -997,7 +997,7 @@ const productos = [
     {
         id: "muÃ±eca_barbie",
         nombre: "MuÃ±eca Barbie",
-        url: "/pages/product/juguetes/juguetes_para_niÃ±as/barbie.html",
+        url: "/pages/product/juguetes/juguetes_para_ninas/barbie.html",
         categoria: "juguetes_para_ninas",
         precio: 1000, // nÃºmero para carrito
         precioTexto: "Precio: $1,000", // texto para mostrar en resultados
@@ -1006,7 +1006,7 @@ const productos = [
     {
         id: "juguetes_de_peluqueria",
         nombre: "Juguetes de PeluquerÃ­a",
-        url: "/pages/product/juguetes/juguetes_para_niÃ±as/juguetes_peluqueria.html",
+        url: "/pages/product/juguetes/juguetes_para_ninas/juguetes_peluqueria.html",
         categoria: "juguetes_para_ninas",
         precio: 2500, // nÃºmero para carrito
         precioTexto: "Precio: $2,500", // texto para mostrar en resultados
@@ -1015,7 +1015,7 @@ const productos = [
     {
         id: "kit_de_maquillaje",
         nombre: "Kit de Maquillaje",
-        url: "/pages/product/juguetes/juguetes_para_niÃ±as/kit_de_maquillaje.html",
+        url: "/pages/product/juguetes/juguetes_para_ninas/kit_de_maquillaje.html",
         categoria: "juguetes_para_ninas",
         precio: 2000, // nÃºmero para carrito
         precioTexto: "Precio: $2,000", // texto para mostrar en resultados
@@ -1024,18 +1024,18 @@ const productos = [
     {
         id: "pinta_uÃ±as",
         nombre: "Pinta UÃ±as",
-        url: "/pages/product/juguetes/juguetes_para_niÃ±as/pinta_unas.html",
+        url: "/pages/product/juguetes/juguetes_para_ninas/pinta_unas.html",
         categoria: "juguetes_para_ninas",
         precio: 1400, // nÃºmero para carrito
         precioTexto: "Precio: $1,400", // texto para mostrar en resultados
         imagen: "/assets/images/productos/juguetes/juguetes_para_ninas/pinta_unas.avif"
     },
 
-    //juguetes para niÃ±os
+    //juguetes para ninos
     {
         id: "auto_azul",
         nombre: "Auto Azul",
-        url: "/pages/product/juguetes/juguetes_para_niÃ±os/auto_azul.html",
+        url: "/pages/product/juguetes/juguetes_para_ninos/auto_azul.html",
         categoria: "juguetes_para_ninos",
         precio: 1800, // nÃºmero para carrito
         precioTexto: "Precio: $1,800", // texto para mostrar en resultados
@@ -1044,7 +1044,7 @@ const productos = [
     {
         id: "avion_de_juguete",
         nombre: "AviÃ³n de Juguete",
-        url: "/pages/product/juguetes/juguetes_para_niÃ±os/avion_juguete.html",
+        url: "/pages/product/juguetes/juguetes_para_ninos/avion_juguete.html",
         categoria: "juguetes_para_ninos",
         precio: 2500, // nÃºmero para carrito
         precioTexto: "Precio: $2,500", // texto para mostrar en resultados
@@ -1053,7 +1053,7 @@ const productos = [
     {
         id: "autos_hot_wheels",
         nombre: "Autos Hot Wheels",
-        url: "/pages/product/juguetes/juguetes_para_niÃ±os/hot_wheels.html",
+        url: "/pages/product/juguetes/juguetes_para_ninos/hot_wheels.html",
         categoria: "juguetes_para_ninos",
         precio: 3500, // nÃºmero para carrito
         precioTexto: "Precio: $3,500", // texto para mostrar en resultados
@@ -1062,7 +1062,7 @@ const productos = [
     {
         id: "legos_de_creeper",
         nombre: "Legos de Creeper",
-        url: "/pages/product/juguetes/juguetes_para_niÃ±os/legos_creeper.html",
+        url: "/pages/product/juguetes/juguetes_para_ninos/legos_creeper.html",
         categoria: "juguetes_para_ninos",
         precio: 4000, // nÃºmero para carrito
         precioTexto: "Precio: $4,000", // texto para mostrar en resultados
@@ -1071,7 +1071,7 @@ const productos = [
     {
         id: "legos_de_minecraft",
         nombre: "Legos de Minecraft",
-        url: "/pages/product/juguetes/juguetes_para_niÃ±os/legos_minecraft.html",
+        url: "/pages/product/juguetes/juguetes_para_ninos/legos_minecraft.html",
         categoria: "juguetes_para_ninos",
         precio: 6000, // nÃºmero para carrito
         precioTexto: "Precio: $6,000", // texto para mostrar en resultados
@@ -1365,10 +1365,10 @@ const productos = [
         imagen: "/assets/images/productos/ropa/pantalones_para_mujeres/pantalon_liso_mujer.avif"
     },
 
-    // Pantalones para NiÃ±os
+    // Pantalones para ninos
     {
         id: "jean_para_ninos",
-        nombre: "Jean para NiÃ±os",
+        nombre: "Jean para ninos",
         url: "/pages/product/ropa/pantalones_para_ninos/jean_para_ninos.html",
         categoria: "pantalones_para_ninos",
         precio: 1000, // nÃºmero para carrito
@@ -1377,7 +1377,7 @@ const productos = [
     },
     {
         id: "licra_para_ninos",
-        nombre: "Licra para NiÃ±os",
+        nombre: "Licra para ninos",
         url: "/pages/product/ropa/pantalones_para_ninos/licra_para_ninos.html",
         categoria: "pantalones_para_ninos",
         precio: 1500, // nÃºmero para carrito
@@ -1404,7 +1404,7 @@ const productos = [
     },
     {
         id: "pantalones_lisos_para_ninos",
-        nombre: "Pantalones Lisos para NiÃ±os",
+        nombre: "Pantalones Lisos para ninos",
         url: "/pages/product/ropa/pantalones_para_ninos/pantalones_lisos.html",
         categoria: "pantalones_para_ninos",
         precio: 2500, // nÃºmero para carrito
@@ -1744,3 +1744,4 @@ const productos = [
     },
 
 ];
+

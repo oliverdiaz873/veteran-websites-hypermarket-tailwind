@@ -1,4 +1,4 @@
-// Scroll-Driven Scale Animation progresiva para sección Sobre Nosotros
+﻿// Scroll-Driven Scale Animation progresiva para secciÃ³n Sobre Nosotros
 document.addEventListener('DOMContentLoaded', function() {
     const section = document.querySelector('.about-us-section');
     if (!section) return;
@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (sectionTop <= windowHeight && sectionBottom >= 0) {
             if (isMobile()) {
-                // Móvil: progreso según posición del borde superior en el viewport.
-                // Así la animación termina en un scroll predecible (cuando la sección "llega" al tope).
+                // MÃ³vil: progreso segÃºn posiciÃ³n del borde superior en el viewport.
+                // AsÃ­ la animaciÃ³n termina en un scroll predecible (cuando la secciÃ³n "llega" al tope).
                 // progress = 1 cuando sectionTop <= 0, progress = 0 cuando sectionTop >= windowHeight
                 progress = 1 - (sectionTop / windowHeight);
                 progress = Math.max(0, Math.min(1, progress));
@@ -60,3 +60,4 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', onScrollOrResize);
     updateScale();
 });
+

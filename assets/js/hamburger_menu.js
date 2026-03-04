@@ -1,4 +1,4 @@
-
+﻿
 document.addEventListener('DOMContentLoaded', function () {
     const menuBtn = document.querySelector('.menu-btn');
     const mobileMenu = document.querySelector('.nav-links-mobile');
@@ -6,37 +6,37 @@ document.addEventListener('DOMContentLoaded', function () {
     const btnBuscar = document.getElementById('btn-buscar');
     const inputBuscar = document.getElementById('input-buscar');
 
-    // ========== FUNCIONALIDAD PARA MENÚ LEGACY (.nav-links-mobile) ==========
+    // ========== FUNCIONALIDAD PARA MENÃš LEGACY (.nav-links-mobile) ==========
     if (menuBtn && mobileMenu) {
-        // Función para agregar botones "Ver todos los productos" en móvil
+        // FunciÃ³n para agregar botones "Ver todos los productos" en mÃ³vil
         function agregarVerTodosLosProductosMovil() {
-            console.log('=== Agregando "Ver todos los productos" en móvil ===');
+            console.log('=== Agregando "Ver todos los productos" en mÃ³vil ===');
 
-            // Encontrar todos los enlaces de nivel 2 que tienen submenús de nivel 3
+            // Encontrar todos los enlaces de nivel 2 que tienen submenÃºs de nivel 3
             const nivel2Links = mobileMenu.querySelectorAll('.nav-links-mobile > ul > li > ul > li:has(ul) > a');
-            console.log('Enlaces de nivel 2 con submenús encontrados en móvil:', nivel2Links.length);
+            console.log('Enlaces de nivel 2 con submenÃºs encontrados en mÃ³vil:', nivel2Links.length);
 
             nivel2Links.forEach((nivel2Link, index) => {
                 const parentLi = nivel2Link.parentElement;
-                const submenu = parentLi.querySelector('ul'); // Este es el submenú de nivel 3
+                const submenu = parentLi.querySelector('ul'); // Este es el submenÃº de nivel 3
                 const href = nivel2Link.getAttribute('href') || '#';
                 const parentText = nivel2Link.textContent.trim();
 
-                console.log(`Procesando móvil nivel 2 ${index}: ${parentText} -> ${href}`);
+                console.log(`Procesando mÃ³vil nivel 2 ${index}: ${parentText} -> ${href}`);
 
                 if (!submenu) {
-                    console.log(`✗ No se encontró submenú de nivel 3 para ${parentText} en móvil`);
+                    console.log(`âœ— No se encontrÃ³ submenÃº de nivel 3 para ${parentText} en mÃ³vil`);
                     return;
                 }
 
-                // Verificar si ya existe el botón para evitar duplicados
+                // Verificar si ya existe el botÃ³n para evitar duplicados
                 const existingBtn = submenu.querySelector('.ver-todos-btn-movil');
                 if (existingBtn) {
-                    console.log(`Botón ya existe para ${parentText} en móvil, omitiendo`);
+                    console.log(`BotÃ³n ya existe para ${parentText} en mÃ³vil, omitiendo`);
                     return;
                 }
 
-                // Crear el botón "Ver todos los productos" para esta sección
+                // Crear el botÃ³n "Ver todos los productos" para esta secciÃ³n
                 const verTodosLi = document.createElement('li');
                 verTodosLi.className = 'ver-todos-btn-movil';
                 verTodosLi.innerHTML = `
@@ -50,23 +50,23 @@ document.addEventListener('DOMContentLoaded', function () {
                         display: block;
                         width: 100%;
                     ">
-                        Ver todos los productos ▸
+                        Ver todos los productos â–¸
                     </a>
                 `;
 
-                // Agregar al final del submenú de nivel 3
+                // Agregar al final del submenÃº de nivel 3
                 submenu.appendChild(verTodosLi);
 
-                console.log(`✓ Botón "Ver todos los productos" agregado para móvil: ${parentText}`);
+                console.log(`âœ“ BotÃ³n "Ver todos los productos" agregado para mÃ³vil: ${parentText}`);
             });
 
-            console.log('=== Botones "Ver todos los productos" agregados en móvil ===');
+            console.log('=== Botones "Ver todos los productos" agregados en mÃ³vil ===');
         }
 
-        // Llamar a la función para agregar los botones
+        // Llamar a la funciÃ³n para agregar los botones
         agregarVerTodosLosProductosMovil();
 
-        // Abrir / cerrar menú móvil
+        // Abrir / cerrar menÃº mÃ³vil
         menuBtn.addEventListener('click', (e) => {
             e.stopPropagation();
             mobileMenu.classList.toggle('show');
@@ -79,11 +79,11 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-        // Evitar cierre al hacer click dentro del menú
+        // Evitar cierre al hacer click dentro del menÃº
         mobileMenu.addEventListener('click', (e) => e.stopPropagation());
 
-        // Submenús móviles - manejo simplificado
-        // Encontrar todos los enlaces que tienen submenús inmediatamente después
+        // SubmenÃºs mÃ³viles - manejo simplificado
+        // Encontrar todos los enlaces que tienen submenÃºs inmediatamente despuÃ©s
         const allLinksWithSubmenu = mobileMenu.querySelectorAll('a + ul');
 
         allLinksWithSubmenu.forEach(ul => {
@@ -91,14 +91,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (parentLink && parentLink.tagName === 'A') {
                 parentLink.addEventListener('click', function (e) {
-                    e.preventDefault(); // Siempre prevenir navegación para enlaces con submenú
+                    e.preventDefault(); // Siempre prevenir navegaciÃ³n para enlaces con submenÃº
 
                     const parentLi = this.parentElement;
 
-                    // Alterna submenú actual
+                    // Alterna submenÃº actual
                     parentLi.classList.toggle('show');
 
-                    // Solo cerrar submenús hermanos que también tienen submenús (no los elementos del nivel 2)
+                    // Solo cerrar submenÃºs hermanos que tambiÃ©n tienen submenÃºs (no los elementos del nivel 2)
                     const parentContainer = parentLi.parentElement;
                     const siblingSubmenus = Array.from(parentContainer.children)
                         .filter(li => li !== parentLi && li.querySelector('ul'));
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-        // Cierra menú si se hace click fuera
+        // Cierra menÃº si se hace click fuera
         document.addEventListener('click', () => {
             mobileMenu.classList.remove('show');
             const openSubs = mobileMenu.querySelectorAll('li.show');
@@ -116,9 +116,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // ========== FUNCIONALIDAD PARA NUEVO MENÚ (#mobile-menu) ==========
+    // ========== FUNCIONALIDAD PARA NUEVO MENÃš (#mobile-menu) ==========
     if (menuBtn && mobileMenuNew) {
-        // Función para agregar botones "Ver todos los productos" en el nuevo móvil
+        // FunciÃ³n para agregar botones "Ver todos los productos" en el nuevo mÃ³vil
         function agregarVerTodosLosProductosNuevoMovil() {
             const subDropdownBtns = mobileMenuNew.querySelectorAll('.mobile-sub-dropdown-btn');
 
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     // Evitar duplicados
                     if (submenu.querySelector('.ver-todos-btn-movil-nuevo')) return;
 
-                    // Intentar obtener el href base del primer enlace del submenú
+                    // Intentar obtener el href base del primer enlace del submenÃº
                     const firstLink = submenu.querySelector('a');
                     let hrefBase = '#';
 
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         }
                     }
 
-                    // Crear el botón "Ver todos los productos"
+                    // Crear el botÃ³n "Ver todos los productos"
                     const verTodosLi = document.createElement('li');
                     verTodosLi.className = 'ver-todos-btn-movil-nuevo';
                     verTodosLi.innerHTML = `
@@ -150,17 +150,17 @@ document.addEventListener('DOMContentLoaded', function () {
                             color: #ffcc00; 
                             font-weight: bold;
                         ">
-                            Ver todos los productos ▸
+                            Ver todos los productos â–¸
                         </a>
                     `;
 
-                    // Agregar al final del submenú
+                    // Agregar al final del submenÃº
                     submenu.appendChild(verTodosLi);
                 }
             });
         }
 
-        // Llamar a la función inmediatamente
+        // Llamar a la funciÃ³n inmediatamente
         agregarVerTodosLosProductosNuevoMovil();
 
         // Toggle Mobile Menu
@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function () {
             mobileMenuNew.classList.toggle('hidden');
         });
 
-        // Toggle Mobile Dropdown (Categorías principales)
+        // Toggle Mobile Dropdown (CategorÃ­as principales)
         const mobileDropdownBtn = document.querySelector('.mobile-dropdown-btn');
         if (mobileDropdownBtn) {
             mobileDropdownBtn.addEventListener('click', () => {
@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
 
-        // Toggle Mobile Sub-Dropdowns (Subcategorías)
+        // Toggle Mobile Sub-Dropdowns (SubcategorÃ­as)
         const subDropdownBtns = document.querySelectorAll('.mobile-sub-dropdown-btn');
         subDropdownBtns.forEach(btn => {
             btn.addEventListener('click', () => {
@@ -204,3 +204,4 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+

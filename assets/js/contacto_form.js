@@ -1,8 +1,8 @@
-document.addEventListener('DOMContentLoaded', () => {
+﻿document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('formulario-contacto');
     const toast = document.getElementById('mi-toast');
 
-    // Función para mostrar toast (Usando la clase .mostrar del CSS)
+    // FunciÃ³n para mostrar toast (Usando la clase .mostrar del CSS)
     const showToast = (message) => {
         toast.textContent = message;
         toast.classList.add('mostrar');
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 4000);
     };
 
-    // Validación detallada (Usando clases .invalid-value del CSS)
+    // ValidaciÃ³n detallada (Usando clases .invalid-value del CSS)
     const validateField = (id, value) => {
         let errorMsg = '';
         const trimmedValue = value.trim();
@@ -21,16 +21,16 @@ document.addEventListener('DOMContentLoaded', () => {
             case 'nombre':
                 if (!trimmedValue) errorMsg = 'El nombre es obligatorio.';
                 else if (trimmedValue.length < 2 || trimmedValue.length > 50) errorMsg = 'El nombre debe tener entre 2 y 50 caracteres.';
-                else if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/.test(trimmedValue)) errorMsg = 'El nombre solo puede contener letras y espacios.';
+                else if (!/^[a-zA-ZÃ¡Ã©Ã­Ã³ÃºÃÃ‰ÃÃ“ÃšÃ±Ã‘\s]+$/.test(trimmedValue)) errorMsg = 'El nombre solo puede contener letras y espacios.';
                 break;
             case 'email':
                 if (!trimmedValue) errorMsg = 'El correo es obligatorio.';
-                else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmedValue)) errorMsg = 'El formato del correo no es válido.';
+                else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmedValue)) errorMsg = 'El formato del correo no es vÃ¡lido.';
                 break;
             case 'telefono':
                 if (trimmedValue) {
                     const cleanPhone = trimmedValue.replace(/[\s\-\(\)]/g, '');
-                    if (!/^[0-9]{8,15}$/.test(cleanPhone)) errorMsg = 'El teléfono debe tener entre 8 y 15 dígitos.';
+                    if (!/^[0-9]{8,15}$/.test(cleanPhone)) errorMsg = 'El telÃ©fono debe tener entre 8 y 15 dÃ­gitos.';
                 }
                 break;
             case 'mensaje':
@@ -86,19 +86,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 btn.textContent = 'Enviando...';
 
                 setTimeout(() => {
-                    showToast('✓ ¡Mensaje enviado con éxito!');
+                    showToast('âœ“ Â¡Mensaje enviado con Ã©xito!');
                     form.reset();
-                    // Limpiar clases de validación
+                    // Limpiar clases de validaciÃ³n
                     form.querySelectorAll('input, textarea').forEach(el => el.classList.remove('invalid-value'));
                     btn.disabled = false;
                     btn.textContent = originalText;
                 }, 1500);
             } else {
-                // Los mensajes de error inline ya indican qué corregir
-                // Se hace scroll al primer campo inválido para mejor UX
+                // Los mensajes de error inline ya indican quÃ© corregir
+                // Se hace scroll al primer campo invÃ¡lido para mejor UX
                 const firstInvalid = form.querySelector('.invalid-value');
                 if (firstInvalid) firstInvalid.focus();
             }
         });
     }
 });
+

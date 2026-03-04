@@ -1,7 +1,7 @@
-document.addEventListener('DOMContentLoaded', () => {
+﻿document.addEventListener('DOMContentLoaded', () => {
     const STORAGE_KEY = 'carrito';
 
-    // Cargar carrito desde localStorage o iniciar vacío
+    // Cargar carrito desde localStorage o iniciar vacÃ­o
     let carrito = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
 
     // LIMPIEZA DE SEGURIDAD
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function renderizarCarrito(listaCarrito) {
         if (carrito.length === 0) {
-            listaCarrito.innerHTML = '<p>Tu carrito está vacío.</p>';
+            listaCarrito.innerHTML = '<p>Tu carrito estÃ¡ vacÃ­o.</p>';
             return;
         }
 
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div>RD$ ${p.precio.toLocaleString()}</div>
                     </div>
                     <div class="carrito-item-cantidad">
-                        <button class="btn-decrease">−</button>
+                        <button class="btn-decrease">âˆ’</button>
                         <span>${p.cantidad}</span>
                         <button class="btn-increase">+</button>
                     </div>
@@ -110,8 +110,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }).join('');
     }
 
-    // === Delegación de eventos para agregar productos ===
-    // === Delegación de eventos para agregar productos (FUENTE ÚNICA) ===
+    // === DelegaciÃ³n de eventos para agregar productos ===
+    // === DelegaciÃ³n de eventos para agregar productos (FUENTE ÃšNICA) ===
     document.addEventListener('click', e => {
         const btn = e.target.closest('.btn-agregar, .btn-agregar-producto');
         if (!btn) return;
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const id = btn.id;
         if (!id) return;
 
-        // 🔥 siempre tomar el producto real desde productos[]
+        // ðŸ”¥ siempre tomar el producto real desde productos[]
         const producto = productos.find(p => p.id === id);
         if (!producto) return;
 
@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    // === Delegación de eventos dentro del carrito ===
+    // === DelegaciÃ³n de eventos dentro del carrito ===
     document.addEventListener('click', e => {
         const itemEl = e.target.closest('.item-carrito');
         if (!itemEl) return;
@@ -158,24 +158,24 @@ document.addEventListener('DOMContentLoaded', () => {
         if (link) window.location.href = link.href;
     });
 
-    // === Inicializar UI al cargar la página ===
+    // === Inicializar UI al cargar la pÃ¡gina ===
     actualizarUI();
 });
 
-// Función para obtener el prefijo relativo según la profundidad del directorio
+// FunciÃ³n para obtener el prefijo relativo segÃºn la profundidad del directorio
 function getRelativePrefix() {
     const path = window.location.pathname;
 
     // Detectar profundidad basada en carpetas reales
     if (path.includes('/pages/product/')) {
-        // Estamos en pages/product/categoria/subcategoria/producto.html -> 4 niveles (o más)
-        // Pero el array de productos.js usa urls relativas a la raíz o absolutas
+        // Estamos en pages/pages/product/categoria/subcategoria/producto.html -> 4 niveles (o mÃ¡s)
+        // Pero el array de productos.js usa urls relativas a la raÃ­z o absolutas
         // Si estamos en un subdirectorio de product/, necesitamos ir hacia arriba
         const parts = path.split('/pages/product/');
         if (parts.length > 1) {
             const subPath = parts[1];
             const depth = subPath.split('/').filter(p => p.length > 0).length;
-            let up = '../../'; // Mínimo para salir de pages/product/
+            let up = '../../'; // MÃ­nimo para salir de pages/pages/product/
             for (let i = 0; i < depth; i++) up += '../';
             return up;
         }
@@ -199,8 +199,9 @@ function getRelativePrefix() {
     }
 
     if (path.includes('/contacto/')) {
-        return '../../'; // Si está en pages/contacto/index.html
+        return '../../'; // Si estÃ¡ en pages/contacto/index.html
     }
 
     return ''; // Root
 }
+
