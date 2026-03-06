@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         display: block;
                         width: 100%;
                     ">
-                        Ver todos los productos â–¸
+                        Ver todos los productos ▸
                     </a>
                 `;
 
@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             color: #ffcc00; 
                             font-weight: bold;
                         ">
-                            Ver todos los productos â–¸
+                            Ver todos los productos ▸
                         </a>
                     `;
 

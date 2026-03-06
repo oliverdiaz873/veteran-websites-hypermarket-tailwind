@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         display: block;
                         font-size: 14px;
                     ">
-                        Ver todo en esta secciÃ³n â–¸
+                        Ver todo en esta sección ▸
                     </a>
                 `;
                 submenu.appendChild(verTodosLi);
